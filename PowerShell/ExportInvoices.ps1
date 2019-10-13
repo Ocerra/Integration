@@ -30,8 +30,19 @@ function Get-ScriptDirectory {
 
 function ExportFiles {
 
-    $cred = Get-Credential
-    
+    #Authenticate using creadentials
+    #$cred = Get-Credential
+
+    #authenticate using hardcoded Login/Pwd
+    #we do not reccomend storing open login or password, use encoded values instead.
+    $user = ""
+    $pass = ""
+    $pair = "${user}:${pass}"
+    $bytes = [System.Text.Encoding]::ASCII.GetBytes($pair)
+    $base64 = [System.Convert]::ToBase64String($bytes)
+    $basicAuthValue = "Basic $base64"
+    $headers = @{ Authorization = $basicAuthValue }
+
     $folder = Get-ScriptDirectory
 
     $date = Get-Date
@@ -45,7 +56,11 @@ function ExportFiles {
     Write-Host $exportMessage
 
     #retrieve invoices using OData qery
-    $allInvoices = Invoke-RestMethod -Method Get -Uri 'https://app.ocerra.com/odata/VoucherHeader?$skip=0&$top=3&$orderby=CreatedDate%20desc&$count=true&$filter=IsActive%20eq%20true&$expand=Vendor,Workflow($expand=WorkflowState),Document($expand=DocumentType,StoredFile($expand=InverseParentStoredFile))' -Credential $cred
+    $allInvoices = Invoke-RestMethod `
+        -Method Get `
+        -Uri 'https://app.ocerra.com/odata/VoucherHeader?$skip=0&$top=3&$orderby=CreatedDate%20desc&$count=true&$filter=IsActive%20eq%20true&$expand=Vendor,VoucherLines,Workflow($expand=WorkflowState),Document($expand=DocumentType,StoredFile($expand=InverseParentStoredFile))' `
+        -Headers $headers
+        #-Credential $cred
 
     [System.Collections.ArrayList]$invoices = @();
 
@@ -56,13 +71,13 @@ function ExportFiles {
         
         [System.Collections.ArrayList]$invoiceLines = @();
         ForEach($invoiceLine in $invoice.VoucherLines){
-            $invoiceLines.Add(@{
+            $invoiceLineOrder = $invoiceLines.Add(@{
                 "Description" = $invoiceLine.Description;
                 "Net" = $invoiceLine.Net;
             })
         }
         
-        $invoices.Add(@{
+        $invoiceOrder = $invoices.Add(@{
             "Number" = $invoice.Number;
             "Supplier" = $invoice.Vendor.Name;
             "Total" = $invoice.Gross;
@@ -73,11 +88,16 @@ function ExportFiles {
         });
 
         $url = "https://app.ocerra.com/api/Files/Download?storedFileId=$($fileId)"
-        Invoke-WebRequest -Uri $url -OutFile "$($folderMonth)\$($fileName)" -Credential $cred
+        $fileHandler = Invoke-WebRequest `
+            -Uri $url `
+            -OutFile "$($folderMonth)\$($fileName)" `
+            -Headers $headers
+            #-Credential $cred
+
         Write-Host "Invoice file was saved $($fileName)"
     }
 
-    $invoices | ConvertTo-Json -Depth 5 | Out-File "$($folderMonth)\Top 10 Invoices.json"
+    $invoices | ConvertTo-Json -Depth 5 | Out-File "$($folderMonth)\Top 10 Invoices.json" -Encoding ASCII
 
     Write-Host "Export complete"
 }
