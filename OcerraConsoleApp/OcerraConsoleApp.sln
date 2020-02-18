@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcerraConsoleApp", "OcerraConsoleApp.csproj", "{8BFE3C76-06CC-4134-8FFD-21A713ECDA52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BFE3C76-06CC-4134-8FFD-21A713ECDA52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFE3C76-06CC-4134-8FFD-21A713ECDA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFE3C76-06CC-4134-8FFD-21A713ECDA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFE3C76-06CC-4134-8FFD-21A713ECDA52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9CE17D1-6B38-44F1-A983-12403C545B0B}
+	EndGlobalSection
+EndGlobal
