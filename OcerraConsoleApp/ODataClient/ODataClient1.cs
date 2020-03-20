@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 18/02/2020 3:30:52 PM
+// Generation date: 20/03/2020 1:46:45 PM
 namespace OcerraConsoleApp.ODataClient.Proxies
 {
     /// <summary>
@@ -39,7 +39,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for AspNetUserProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUser")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetUser")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxySingle AspNetUserProxy
         {
             get
@@ -50,7 +50,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._AspNetUserProxy == null))
                 {
-                    this._AspNetUserProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxySingle(this.Context, GetPath("AspNetUser"));
+                    this._AspNetUserProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxySingle(this.Context, GetPath("aspNetUser"));
                 }
                 return this._AspNetUserProxy;
             }
@@ -61,7 +61,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PeopleClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClients")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxy> PeopleClientsProxy
         {
             get
@@ -72,7 +72,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PeopleClientsProxy == null))
                 {
-                    this._PeopleClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxy>(GetPath("PeopleClients"));
+                    this._PeopleClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxy>(GetPath("peopleClients"));
                 }
                 return this._PeopleClientsProxy;
             }
@@ -83,7 +83,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -94,7 +94,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._SettingValuesProxy == null))
                 {
-                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("SettingValues"));
+                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("settingValues"));
                 }
                 return this._SettingValuesProxy;
             }
@@ -105,7 +105,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowLogs")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy> WorkflowLogsProxy
         {
             get
@@ -116,7 +116,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowLogsProxy == null))
                 {
-                    this._WorkflowLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy>(GetPath("WorkflowLogs"));
+                    this._WorkflowLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy>(GetPath("workflowLogs"));
                 }
                 return this._WorkflowLogsProxy;
             }
@@ -127,7 +127,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowTransitionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitions")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy> WorkflowTransitionsProxy
         {
             get
@@ -138,7 +138,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowTransitionsProxy == null))
                 {
-                    this._WorkflowTransitionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy>(GetPath("WorkflowTransitions"));
+                    this._WorkflowTransitionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy>(GetPath("workflowTransitions"));
                 }
                 return this._WorkflowTransitionsProxy;
             }
@@ -152,7 +152,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PersonIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PersonId")]
+    [global::Microsoft.OData.Client.Key("personId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
     public partial class PersonProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -189,7 +189,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EmailAndNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("EmailAndName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("emailAndName")]
         public string EmailAndNameProxy
         {
             get
@@ -211,7 +211,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
         public global::System.Guid PersonIdProxy
         {
             get
@@ -233,7 +233,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FullNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FullName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fullName")]
         public string FullNameProxy
         {
             get
@@ -255,7 +255,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -277,7 +277,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -299,7 +299,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -321,7 +321,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -343,7 +343,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -365,7 +365,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AspNetUserIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUserId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetUserId")]
         public string AspNetUserIdProxy
         {
             get
@@ -387,7 +387,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property HasUserPicProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("HasUserPic")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasUserPic")]
         public bool HasUserPicProxy
         {
             get
@@ -409,7 +409,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AspNetUserProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUser")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetUser")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxy AspNetUserProxy
         {
             get
@@ -431,7 +431,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClients")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxy> PeopleClientsProxy
         {
             get
@@ -453,7 +453,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -475,7 +475,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowLogs")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy> WorkflowLogsProxy
         {
             get
@@ -497,7 +497,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitions")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy> WorkflowTransitionsProxy
         {
             get
@@ -544,7 +544,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle PersonProxy
         {
             get
@@ -555,7 +555,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PersonProxy == null))
                 {
-                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("Person"));
+                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("person"));
                 }
                 return this._PersonProxy;
             }
@@ -566,7 +566,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for AspNetUserClaimsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUserClaims")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetUserClaims")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserClaimProxy> AspNetUserClaimsProxy
         {
             get
@@ -577,7 +577,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._AspNetUserClaimsProxy == null))
                 {
-                    this._AspNetUserClaimsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserClaimProxy>(GetPath("AspNetUserClaims"));
+                    this._AspNetUserClaimsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserClaimProxy>(GetPath("aspNetUserClaims"));
                 }
                 return this._AspNetUserClaimsProxy;
             }
@@ -591,7 +591,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// IdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("Id")]
+    [global::Microsoft.OData.Client.Key("id")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUser")]
     public partial class AspNetUserProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -625,7 +625,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Id")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("id")]
         public string IdProxy
         {
             get
@@ -647,7 +647,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AccessFailedCountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AccessFailedCount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("accessFailedCount")]
         public int AccessFailedCountProxy
         {
             get
@@ -669,7 +669,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ConcurrencyStampProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ConcurrencyStamp")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("concurrencyStamp")]
         public string ConcurrencyStampProxy
         {
             get
@@ -691,7 +691,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Email")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("email")]
         public string EmailProxy
         {
             get
@@ -713,7 +713,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EmailConfirmedProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("EmailConfirmed")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("emailConfirmed")]
         public bool EmailConfirmedProxy
         {
             get
@@ -735,7 +735,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LockoutEnabledProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LockoutEnabled")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lockoutEnabled")]
         public bool LockoutEnabledProxy
         {
             get
@@ -757,7 +757,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LockoutEndProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LockoutEnd")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lockoutEnd")]
         public global::System.Nullable<global::System.DateTimeOffset> LockoutEndProxy
         {
             get
@@ -779,7 +779,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NormalizedEmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("NormalizedEmail")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("normalizedEmail")]
         public string NormalizedEmailProxy
         {
             get
@@ -801,7 +801,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NormalizedUserNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("NormalizedUserName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("normalizedUserName")]
         public string NormalizedUserNameProxy
         {
             get
@@ -823,7 +823,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PhoneNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PhoneNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("phoneNumber")]
         public string PhoneNumberProxy
         {
             get
@@ -845,7 +845,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PhoneNumberConfirmedProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PhoneNumberConfirmed")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("phoneNumberConfirmed")]
         public bool PhoneNumberConfirmedProxy
         {
             get
@@ -867,7 +867,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SecurityStampProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SecurityStamp")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("securityStamp")]
         public string SecurityStampProxy
         {
             get
@@ -889,7 +889,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TwoFactorEnabledProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TwoFactorEnabled")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("twoFactorEnabled")]
         public bool TwoFactorEnabledProxy
         {
             get
@@ -911,7 +911,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UserName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("userName")]
         public string UserNameProxy
         {
             get
@@ -933,7 +933,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FirstNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FirstName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("firstName")]
         public string FirstNameProxy
         {
             get
@@ -955,7 +955,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LastNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LastName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lastName")]
         public string LastNameProxy
         {
             get
@@ -977,7 +977,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AzureIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AzureId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("azureId")]
         public string AzureIdProxy
         {
             get
@@ -999,7 +999,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TimeZoneProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TimeZone")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("timeZone")]
         public string TimeZoneProxy
         {
             get
@@ -1021,7 +1021,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AspNetUserLoginsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUserLogins")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetUserLogins")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserLoginProxy> AspNetUserLoginsProxy
         {
             get
@@ -1043,7 +1043,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AspNetUserRolesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUserRoles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetUserRoles")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserRoleProxy> AspNetUserRolesProxy
         {
             get
@@ -1065,7 +1065,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxy PersonProxy
         {
             get
@@ -1087,7 +1087,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AspNetUserClaimsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUserClaims")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetUserClaims")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserClaimProxy> AspNetUserClaimsProxy
         {
             get
@@ -1134,7 +1134,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PricePlanProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PricePlan")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("pricePlan")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PricePlanProxySingle PricePlanProxy
         {
             get
@@ -1145,7 +1145,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PricePlanProxy == null))
                 {
-                    this._PricePlanProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PricePlanProxySingle(this.Context, GetPath("PricePlan"));
+                    this._PricePlanProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PricePlanProxySingle(this.Context, GetPath("pricePlan"));
                 }
                 return this._PricePlanProxy;
             }
@@ -1156,7 +1156,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ApplicationTokensProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokens")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokens")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy> ApplicationTokensProxy
         {
             get
@@ -1167,7 +1167,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ApplicationTokensProxy == null))
                 {
-                    this._ApplicationTokensProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy>(GetPath("ApplicationTokens"));
+                    this._ApplicationTokensProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy>(GetPath("applicationTokens"));
                 }
                 return this._ApplicationTokensProxy;
             }
@@ -1178,7 +1178,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientExtractRulesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientExtractRules")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientExtractRules")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy> ClientExtractRulesProxy
         {
             get
@@ -1189,7 +1189,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientExtractRulesProxy == null))
                 {
-                    this._ClientExtractRulesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy>(GetPath("ClientExtractRules"));
+                    this._ClientExtractRulesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy>(GetPath("clientExtractRules"));
                 }
                 return this._ClientExtractRulesProxy;
             }
@@ -1200,7 +1200,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for CurrencyCodesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCodes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCodes")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxy> CurrencyCodesProxy
         {
             get
@@ -1211,7 +1211,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._CurrencyCodesProxy == null))
                 {
-                    this._CurrencyCodesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxy>(GetPath("CurrencyCodes"));
+                    this._CurrencyCodesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxy>(GetPath("currencyCodes"));
                 }
                 return this._CurrencyCodesProxy;
             }
@@ -1222,7 +1222,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentEmailsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmails")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmails")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxy> DocumentEmailsProxy
         {
             get
@@ -1233,7 +1233,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentEmailsProxy == null))
                 {
-                    this._DocumentEmailsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxy>(GetPath("DocumentEmails"));
+                    this._DocumentEmailsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxy>(GetPath("documentEmails"));
                 }
                 return this._DocumentEmailsProxy;
             }
@@ -1244,7 +1244,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentSourcesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSources")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSources")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxy> DocumentSourcesProxy
         {
             get
@@ -1255,7 +1255,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentSourcesProxy == null))
                 {
-                    this._DocumentSourcesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxy>(GetPath("DocumentSources"));
+                    this._DocumentSourcesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxy>(GetPath("documentSources"));
                 }
                 return this._DocumentSourcesProxy;
             }
@@ -1266,7 +1266,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -1277,7 +1277,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentsProxy == null))
                 {
-                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("Documents"));
+                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("documents"));
                 }
                 return this._DocumentsProxy;
             }
@@ -1288,7 +1288,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterClientClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientClients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientClients")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientClientsProxy
         {
             get
@@ -1299,7 +1299,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterClientClientsProxy == null))
                 {
-                    this._InterClientClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("InterClientClients"));
+                    this._InterClientClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("interClientClients"));
                 }
                 return this._InterClientClientsProxy;
             }
@@ -1310,7 +1310,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterClientOtherClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientOtherClients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientOtherClients")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientOtherClientsProxy
         {
             get
@@ -1321,7 +1321,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterClientOtherClientsProxy == null))
                 {
-                    this._InterClientOtherClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("InterClientOtherClients"));
+                    this._InterClientOtherClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("interClientOtherClients"));
                 }
                 return this._InterClientOtherClientsProxy;
             }
@@ -1332,7 +1332,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ItemCodesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ItemCodes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("itemCodes")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxy> ItemCodesProxy
         {
             get
@@ -1343,7 +1343,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ItemCodesProxy == null))
                 {
-                    this._ItemCodesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxy>(GetPath("ItemCodes"));
+                    this._ItemCodesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxy>(GetPath("itemCodes"));
                 }
                 return this._ItemCodesProxy;
             }
@@ -1354,7 +1354,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -1365,7 +1365,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._SettingValuesProxy == null))
                 {
-                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("SettingValues"));
+                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("settingValues"));
                 }
                 return this._SettingValuesProxy;
             }
@@ -1376,7 +1376,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for StoredFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFiles")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy> StoredFilesProxy
         {
             get
@@ -1387,7 +1387,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._StoredFilesProxy == null))
                 {
-                    this._StoredFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy>(GetPath("StoredFiles"));
+                    this._StoredFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy>(GetPath("storedFiles"));
                 }
                 return this._StoredFilesProxy;
             }
@@ -1398,7 +1398,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccounts")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy> TaxAccountsProxy
         {
             get
@@ -1409,7 +1409,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxAccountsProxy == null))
                 {
-                    this._TaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy>(GetPath("TaxAccounts"));
+                    this._TaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy>(GetPath("taxAccounts"));
                 }
                 return this._TaxAccountsProxy;
             }
@@ -1420,7 +1420,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxRatesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRates")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRates")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy> TaxRatesProxy
         {
             get
@@ -1431,7 +1431,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxRatesProxy == null))
                 {
-                    this._TaxRatesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy>(GetPath("TaxRates"));
+                    this._TaxRatesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy>(GetPath("taxRates"));
                 }
                 return this._TaxRatesProxy;
             }
@@ -1442,7 +1442,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowSchemasProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemas")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemas")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy> WorkflowSchemasProxy
         {
             get
@@ -1453,7 +1453,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowSchemasProxy == null))
                 {
-                    this._WorkflowSchemasProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy>(GetPath("WorkflowSchemas"));
+                    this._WorkflowSchemasProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy>(GetPath("workflowSchemas"));
                 }
                 return this._WorkflowSchemasProxy;
             }
@@ -1467,7 +1467,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// ClientIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("ClientId")]
+    [global::Microsoft.OData.Client.Key("clientId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
     public partial class ClientProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -1513,7 +1513,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Guid ClientIdProxy
         {
             get
@@ -1535,7 +1535,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PricePlanIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PricePlanId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("pricePlanId")]
         public global::System.Nullable<short> PricePlanIdProxy
         {
             get
@@ -1557,7 +1557,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -1579,7 +1579,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -1601,7 +1601,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -1623,7 +1623,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -1645,7 +1645,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -1667,7 +1667,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -1689,7 +1689,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -1711,7 +1711,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DomainNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DomainName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("domainName")]
         public string DomainNameProxy
         {
             get
@@ -1733,7 +1733,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxNumber")]
         public string TaxNumberProxy
         {
             get
@@ -1755,7 +1755,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeriodStartDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeriodStartDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("periodStartDate")]
         public global::System.Nullable<global::System.DateTimeOffset> PeriodStartDateProxy
         {
             get
@@ -1777,7 +1777,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeriodEndDayProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeriodEndDay")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("periodEndDay")]
         public int PeriodEndDayProxy
         {
             get
@@ -1799,7 +1799,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ImportCodesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ImportCodes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("importCodes")]
         public bool ImportCodesProxy
         {
             get
@@ -1821,7 +1821,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ImportGstCodesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ImportGstCodes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("importGstCodes")]
         public bool ImportGstCodesProxy
         {
             get
@@ -1843,7 +1843,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ImportAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ImportAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("importAccounts")]
         public bool ImportAccountsProxy
         {
             get
@@ -1865,7 +1865,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BillingDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BillingDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("billingDate")]
         public global::System.Nullable<global::System.DateTimeOffset> BillingDateProxy
         {
             get
@@ -1887,7 +1887,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CustomerIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CustomerId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("customerId")]
         public string CustomerIdProxy
         {
             get
@@ -1909,7 +1909,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LastPaymentDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LastPaymentDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lastPaymentDate")]
         public global::System.Nullable<global::System.DateTimeOffset> LastPaymentDateProxy
         {
             get
@@ -1931,7 +1931,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InboxProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Inbox")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inbox")]
         public string InboxProxy
         {
             get
@@ -1953,7 +1953,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ColourProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Colour")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("colour")]
         public string ColourProxy
         {
             get
@@ -1975,7 +1975,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TimeZoneInfoProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TimeZoneInfo")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("timeZoneInfo")]
         public string TimeZoneInfoProxy
         {
             get
@@ -1997,7 +1997,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PricePlanProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PricePlan")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("pricePlan")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PricePlanProxy PricePlanProxy
         {
             get
@@ -2019,7 +2019,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApplicationTokensProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokens")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokens")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy> ApplicationTokensProxy
         {
             get
@@ -2041,7 +2041,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientExtractRulesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientExtractRules")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientExtractRules")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy> ClientExtractRulesProxy
         {
             get
@@ -2063,7 +2063,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CurrencyCodesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCodes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCodes")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxy> CurrencyCodesProxy
         {
             get
@@ -2085,7 +2085,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmails")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmails")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxy> DocumentEmailsProxy
         {
             get
@@ -2107,7 +2107,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourcesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSources")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSources")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxy> DocumentSourcesProxy
         {
             get
@@ -2129,7 +2129,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -2151,7 +2151,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterClientClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientClients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientClients")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientClientsProxy
         {
             get
@@ -2173,7 +2173,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterClientOtherClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientOtherClients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientOtherClients")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientOtherClientsProxy
         {
             get
@@ -2195,7 +2195,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ItemCodesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ItemCodes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("itemCodes")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxy> ItemCodesProxy
         {
             get
@@ -2217,7 +2217,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -2239,7 +2239,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFiles")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy> StoredFilesProxy
         {
             get
@@ -2261,7 +2261,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccounts")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy> TaxAccountsProxy
         {
             get
@@ -2283,7 +2283,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRatesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRates")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRates")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy> TaxRatesProxy
         {
             get
@@ -2305,7 +2305,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemasProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemas")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemas")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy> WorkflowSchemasProxy
         {
             get
@@ -2352,7 +2352,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -2363,7 +2363,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -2374,7 +2374,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for OtherClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle OtherClientProxy
         {
             get
@@ -2385,7 +2385,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._OtherClientProxy == null))
                 {
-                    this._OtherClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("OtherClient"));
+                    this._OtherClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("otherClient"));
                 }
                 return this._OtherClientProxy;
             }
@@ -2396,7 +2396,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for OtherTaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherTaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherTaxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle OtherTaxAccountProxy
         {
             get
@@ -2407,7 +2407,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._OtherTaxAccountProxy == null))
                 {
-                    this._OtherTaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("OtherTaxAccount"));
+                    this._OtherTaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("otherTaxAccount"));
                 }
                 return this._OtherTaxAccountProxy;
             }
@@ -2418,7 +2418,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle TaxAccountProxy
         {
             get
@@ -2429,7 +2429,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxAccountProxy == null))
                 {
-                    this._TaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("TaxAccount"));
+                    this._TaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("taxAccount"));
                 }
                 return this._TaxAccountProxy;
             }
@@ -2440,7 +2440,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterVendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVendors")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy> InterVendorsProxy
         {
             get
@@ -2451,7 +2451,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterVendorsProxy == null))
                 {
-                    this._InterVendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy>(GetPath("InterVendors"));
+                    this._InterVendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy>(GetPath("interVendors"));
                 }
                 return this._InterVendorsProxy;
             }
@@ -2465,7 +2465,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// InterClientIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("InterClientId")]
+    [global::Microsoft.OData.Client.Key("interClientId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("InterClient")]
     public partial class InterClientProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -2502,7 +2502,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientId")]
         public global::System.Guid InterClientIdProxy
         {
             get
@@ -2524,7 +2524,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -2546,7 +2546,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherClientId")]
         public global::System.Guid OtherClientIdProxy
         {
             get
@@ -2568,7 +2568,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxAccountIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccountId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccountId")]
         public global::System.Nullable<global::System.Guid> TaxAccountIdProxy
         {
             get
@@ -2590,7 +2590,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherTaxAccountIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherTaxAccountId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherTaxAccountId")]
         public global::System.Guid OtherTaxAccountIdProxy
         {
             get
@@ -2612,7 +2612,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -2634,7 +2634,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -2656,7 +2656,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -2678,7 +2678,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -2700,7 +2700,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -2722,7 +2722,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy OtherClientProxy
         {
             get
@@ -2744,7 +2744,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherTaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherTaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherTaxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy OtherTaxAccountProxy
         {
             get
@@ -2766,7 +2766,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy TaxAccountProxy
         {
             get
@@ -2788,7 +2788,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterVendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVendors")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy> InterVendorsProxy
         {
             get
@@ -2835,7 +2835,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PeopleClientRolesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientRoles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientRoles")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy> PeopleClientRolesProxy
         {
             get
@@ -2846,7 +2846,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PeopleClientRolesProxy == null))
                 {
-                    this._PeopleClientRolesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy>(GetPath("PeopleClientRoles"));
+                    this._PeopleClientRolesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy>(GetPath("peopleClientRoles"));
                 }
                 return this._PeopleClientRolesProxy;
             }
@@ -2860,7 +2860,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// IdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("Id")]
+    [global::Microsoft.OData.Client.Key("id")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetRole")]
     public partial class AspNetRoleProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -2879,7 +2879,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Id")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("id")]
         public string IdProxy
         {
             get
@@ -2901,7 +2901,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ConcurrencyStampProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ConcurrencyStamp")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("concurrencyStamp")]
         public string ConcurrencyStampProxy
         {
             get
@@ -2923,7 +2923,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -2945,7 +2945,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NormalizedNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("NormalizedName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("normalizedName")]
         public string NormalizedNameProxy
         {
             get
@@ -2967,7 +2967,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientRolesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientRoles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientRoles")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy> PeopleClientRolesProxy
         {
             get
@@ -3014,7 +3014,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -3025,7 +3025,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -3036,7 +3036,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle PersonProxy
         {
             get
@@ -3047,7 +3047,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PersonProxy == null))
                 {
-                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("Person"));
+                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("person"));
                 }
                 return this._PersonProxy;
             }
@@ -3058,7 +3058,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PeopleClientNotificationsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientNotifications")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientNotifications")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientNotificationProxy> PeopleClientNotificationsProxy
         {
             get
@@ -3069,7 +3069,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PeopleClientNotificationsProxy == null))
                 {
-                    this._PeopleClientNotificationsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientNotificationProxy>(GetPath("PeopleClientNotifications"));
+                    this._PeopleClientNotificationsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientNotificationProxy>(GetPath("peopleClientNotifications"));
                 }
                 return this._PeopleClientNotificationsProxy;
             }
@@ -3080,7 +3080,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PeopleClientRolesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientRoles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientRoles")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy> PeopleClientRolesProxy
         {
             get
@@ -3091,7 +3091,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PeopleClientRolesProxy == null))
                 {
-                    this._PeopleClientRolesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy>(GetPath("PeopleClientRoles"));
+                    this._PeopleClientRolesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy>(GetPath("peopleClientRoles"));
                 }
                 return this._PeopleClientRolesProxy;
             }
@@ -3105,7 +3105,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PeopleClientIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PeopleClientId")]
+    [global::Microsoft.OData.Client.Key("peopleClientId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClient")]
     public partial class PeopleClientProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -3132,7 +3132,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientId")]
         public global::System.Guid PeopleClientIdProxy
         {
             get
@@ -3154,7 +3154,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
         public global::System.Nullable<global::System.Guid> PersonIdProxy
         {
             get
@@ -3176,7 +3176,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -3198,7 +3198,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -3220,7 +3220,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -3242,7 +3242,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -3264,7 +3264,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -3286,7 +3286,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PreviousLoginDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PreviousLoginDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("previousLoginDate")]
         public global::System.Nullable<global::System.DateTimeOffset> PreviousLoginDateProxy
         {
             get
@@ -3308,7 +3308,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -3330,7 +3330,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxy PersonProxy
         {
             get
@@ -3352,7 +3352,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientNotificationsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientNotifications")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientNotifications")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientNotificationProxy> PeopleClientNotificationsProxy
         {
             get
@@ -3374,7 +3374,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientRolesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientRoles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientRoles")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxy> PeopleClientRolesProxy
         {
             get
@@ -3421,7 +3421,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for CurrencyCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxySingle CurrencyCodeProxy
         {
             get
@@ -3432,7 +3432,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._CurrencyCodeProxy == null))
                 {
-                    this._CurrencyCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxySingle(this.Context, GetPath("CurrencyCode"));
+                    this._CurrencyCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxySingle(this.Context, GetPath("currencyCode"));
                 }
                 return this._CurrencyCodeProxy;
             }
@@ -3443,7 +3443,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DefaultTaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultTaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultTaxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle DefaultTaxAccountProxy
         {
             get
@@ -3454,7 +3454,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DefaultTaxAccountProxy == null))
                 {
-                    this._DefaultTaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("DefaultTaxAccount"));
+                    this._DefaultTaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("defaultTaxAccount"));
                 }
                 return this._DefaultTaxAccountProxy;
             }
@@ -3465,7 +3465,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DefaultTaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultTaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultTaxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle DefaultTaxRateProxy
         {
             get
@@ -3476,7 +3476,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DefaultTaxRateProxy == null))
                 {
-                    this._DefaultTaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("DefaultTaxRate"));
+                    this._DefaultTaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("defaultTaxRate"));
                 }
                 return this._DefaultTaxRateProxy;
             }
@@ -3487,7 +3487,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PaymentTermTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PaymentTermType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("paymentTermType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PaymentTermTypeProxySingle PaymentTermTypeProxy
         {
             get
@@ -3498,7 +3498,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PaymentTermTypeProxy == null))
                 {
-                    this._PaymentTermTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PaymentTermTypeProxySingle(this.Context, GetPath("PaymentTermType"));
+                    this._PaymentTermTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PaymentTermTypeProxySingle(this.Context, GetPath("paymentTermType"));
                 }
                 return this._PaymentTermTypeProxy;
             }
@@ -3509,7 +3509,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentDesignsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesigns")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesigns")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy> DocumentDesignsProxy
         {
             get
@@ -3520,7 +3520,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentDesignsProxy == null))
                 {
-                    this._DocumentDesignsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy>(GetPath("DocumentDesigns"));
+                    this._DocumentDesignsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy>(GetPath("documentDesigns"));
                 }
                 return this._DocumentDesignsProxy;
             }
@@ -3531,7 +3531,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterVendorOtherVendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendorOtherVendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVendorOtherVendors")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy> InterVendorOtherVendorsProxy
         {
             get
@@ -3542,7 +3542,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterVendorOtherVendorsProxy == null))
                 {
-                    this._InterVendorOtherVendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy>(GetPath("InterVendorOtherVendors"));
+                    this._InterVendorOtherVendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy>(GetPath("interVendorOtherVendors"));
                 }
                 return this._InterVendorOtherVendorsProxy;
             }
@@ -3553,7 +3553,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterVendorVendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendorVendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVendorVendors")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy> InterVendorVendorsProxy
         {
             get
@@ -3564,7 +3564,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterVendorVendorsProxy == null))
                 {
-                    this._InterVendorVendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy>(GetPath("InterVendorVendors"));
+                    this._InterVendorVendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy>(GetPath("interVendorVendors"));
                 }
                 return this._InterVendorVendorsProxy;
             }
@@ -3575,7 +3575,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -3586,7 +3586,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._SettingValuesProxy == null))
                 {
-                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("SettingValues"));
+                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("settingValues"));
                 }
                 return this._SettingValuesProxy;
             }
@@ -3597,7 +3597,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowSchemasProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemas")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemas")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy> WorkflowSchemasProxy
         {
             get
@@ -3608,7 +3608,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowSchemasProxy == null))
                 {
-                    this._WorkflowSchemasProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy>(GetPath("WorkflowSchemas"));
+                    this._WorkflowSchemasProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy>(GetPath("workflowSchemas"));
                 }
                 return this._WorkflowSchemasProxy;
             }
@@ -3622,7 +3622,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VendorIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VendorId")]
+    [global::Microsoft.OData.Client.Key("vendorId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
     public partial class VendorProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -3665,7 +3665,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Guid VendorIdProxy
         {
             get
@@ -3687,7 +3687,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Guid ClientIdProxy
         {
             get
@@ -3709,7 +3709,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PaymentTermTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PaymentTermTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("paymentTermTypeId")]
         public global::System.Nullable<short> PaymentTermTypeIdProxy
         {
             get
@@ -3731,7 +3731,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CurrencyCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCodeId")]
         public global::System.Nullable<global::System.Guid> CurrencyCodeIdProxy
         {
             get
@@ -3753,7 +3753,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultTaxAccountIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultTaxAccountId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultTaxAccountId")]
         public global::System.Nullable<global::System.Guid> DefaultTaxAccountIdProxy
         {
             get
@@ -3775,7 +3775,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultTaxRateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultTaxRateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultTaxRateId")]
         public global::System.Nullable<global::System.Guid> DefaultTaxRateIdProxy
         {
             get
@@ -3797,7 +3797,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -3819,7 +3819,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -3841,7 +3841,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxType")]
         public string TaxTypeProxy
         {
             get
@@ -3863,7 +3863,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxNumber")]
         public string TaxNumberProxy
         {
             get
@@ -3885,7 +3885,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxNumberDigitsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxNumberDigits")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxNumberDigits")]
         public string TaxNumberDigitsProxy
         {
             get
@@ -3907,7 +3907,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DomainNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DomainName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("domainName")]
         public string DomainNameProxy
         {
             get
@@ -3929,7 +3929,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PostalAddressProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PostalAddress")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("postalAddress")]
         public string PostalAddressProxy
         {
             get
@@ -3951,7 +3951,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PhysicalAddressProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PhysicalAddress")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("physicalAddress")]
         public string PhysicalAddressProxy
         {
             get
@@ -3973,7 +3973,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CountryCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CountryCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("countryCode")]
         public string CountryCodeProxy
         {
             get
@@ -3995,7 +3995,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NotesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Notes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("notes")]
         public string NotesProxy
         {
             get
@@ -4017,7 +4017,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OnHoldProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OnHold")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("onHold")]
         public bool OnHoldProxy
         {
             get
@@ -4039,7 +4039,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExternalIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExternalId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("externalId")]
         public string ExternalIdProxy
         {
             get
@@ -4061,7 +4061,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FirstNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FirstName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("firstName")]
         public string FirstNameProxy
         {
             get
@@ -4083,7 +4083,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LastNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LastName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lastName")]
         public string LastNameProxy
         {
             get
@@ -4105,7 +4105,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Email")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("email")]
         public string EmailProxy
         {
             get
@@ -4127,7 +4127,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BusinessNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BusinessNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("businessNumber")]
         public string BusinessNumberProxy
         {
             get
@@ -4149,7 +4149,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DiscountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Discount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("discount")]
         public global::System.Nullable<decimal> DiscountProxy
         {
             get
@@ -4171,7 +4171,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BankAccountNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BankAccountNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("bankAccountNumber")]
         public string BankAccountNumberProxy
         {
             get
@@ -4193,7 +4193,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BankAccountNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BankAccountName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("bankAccountName")]
         public string BankAccountNameProxy
         {
             get
@@ -4215,7 +4215,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BankAccountOurRefProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BankAccountOurRef")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("bankAccountOurRef")]
         public string BankAccountOurRefProxy
         {
             get
@@ -4237,7 +4237,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BankAccountCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BankAccountCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("bankAccountCode")]
         public string BankAccountCodeProxy
         {
             get
@@ -4259,7 +4259,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BankAccountRefProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BankAccountRef")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("bankAccountRef")]
         public string BankAccountRefProxy
         {
             get
@@ -4281,7 +4281,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PaymentTermsDaysProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PaymentTermsDays")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("paymentTermsDays")]
         public global::System.Nullable<short> PaymentTermsDaysProxy
         {
             get
@@ -4303,7 +4303,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LineTaxInclusiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LineTaxInclusive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lineTaxInclusive")]
         public bool LineTaxInclusiveProxy
         {
             get
@@ -4325,7 +4325,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -4347,7 +4347,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -4369,7 +4369,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -4391,7 +4391,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -4413,7 +4413,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -4435,7 +4435,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PhoneNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PhoneNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("phoneNumber")]
         public string PhoneNumberProxy
         {
             get
@@ -4457,7 +4457,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PhoneNumberDigitsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PhoneNumberDigits")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("phoneNumberDigits")]
         public string PhoneNumberDigitsProxy
         {
             get
@@ -4479,7 +4479,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CurrencyCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxy CurrencyCodeProxy
         {
             get
@@ -4501,7 +4501,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultTaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultTaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultTaxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy DefaultTaxAccountProxy
         {
             get
@@ -4523,7 +4523,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultTaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultTaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultTaxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy DefaultTaxRateProxy
         {
             get
@@ -4545,7 +4545,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PaymentTermTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PaymentTermType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("paymentTermType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PaymentTermTypeProxy PaymentTermTypeProxy
         {
             get
@@ -4567,7 +4567,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesigns")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesigns")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy> DocumentDesignsProxy
         {
             get
@@ -4589,7 +4589,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterVendorOtherVendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendorOtherVendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVendorOtherVendors")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy> InterVendorOtherVendorsProxy
         {
             get
@@ -4611,7 +4611,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterVendorVendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendorVendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVendorVendors")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxy> InterVendorVendorsProxy
         {
             get
@@ -4633,7 +4633,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -4655,7 +4655,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemasProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemas")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemas")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy> WorkflowSchemasProxy
         {
             get
@@ -4699,7 +4699,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Guid VoucherHeaderIdProxy
         {
             get
@@ -4721,7 +4721,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ActionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Action")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("action")]
         public string ActionProxy
         {
             get
@@ -4743,7 +4743,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personName")]
         public string PersonNameProxy
         {
             get
@@ -4765,7 +4765,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LastDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LastDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lastDate")]
         public global::System.DateTimeOffset LastDateProxy
         {
             get
@@ -4787,7 +4787,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TimesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Times")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("times")]
         public int TimesProxy
         {
             get
@@ -4834,7 +4834,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for AgentPoolProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AgentPool")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("agentPool")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AgentPoolProxySingle AgentPoolProxy
         {
             get
@@ -4845,7 +4845,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._AgentPoolProxy == null))
                 {
-                    this._AgentPoolProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AgentPoolProxySingle(this.Context, GetPath("AgentPool"));
+                    this._AgentPoolProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AgentPoolProxySingle(this.Context, GetPath("agentPool"));
                 }
                 return this._AgentPoolProxy;
             }
@@ -4859,7 +4859,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// AgentIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("AgentId")]
+    [global::Microsoft.OData.Client.Key("agentId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("Agent")]
     public partial class AgentProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -4882,7 +4882,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AgentIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AgentId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("agentId")]
         public global::System.Guid AgentIdProxy
         {
             get
@@ -4904,7 +4904,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AgentPoolIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AgentPoolId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("agentPoolId")]
         public global::System.Nullable<global::System.Guid> AgentPoolIdProxy
         {
             get
@@ -4926,7 +4926,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -4948,7 +4948,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property MachineNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("MachineName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("machineName")]
         public string MachineNameProxy
         {
             get
@@ -4970,7 +4970,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -4992,7 +4992,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ConnectionIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ConnectionId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("connectionId")]
         public string ConnectionIdProxy
         {
             get
@@ -5014,7 +5014,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -5036,7 +5036,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LastPingProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LastPing")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lastPing")]
         public global::System.DateTimeOffset LastPingProxy
         {
             get
@@ -5058,7 +5058,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AgentPoolProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AgentPool")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("agentPool")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AgentPoolProxy AgentPoolProxy
         {
             get
@@ -5108,7 +5108,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentSourceTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentSourceTypeId")]
+    [global::Microsoft.OData.Client.Key("documentSourceTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceType")]
     public partial class DocumentSourceTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -5127,7 +5127,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceTypeId")]
         public short DocumentSourceTypeIdProxy
         {
             get
@@ -5149,7 +5149,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -5171,7 +5171,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -5193,7 +5193,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -5240,7 +5240,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -5251,7 +5251,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -5262,7 +5262,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentEmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmail")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmail")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxySingle DocumentEmailProxy
         {
             get
@@ -5273,7 +5273,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentEmailProxy == null))
                 {
-                    this._DocumentEmailProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxySingle(this.Context, GetPath("DocumentEmail"));
+                    this._DocumentEmailProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxySingle(this.Context, GetPath("documentEmail"));
                 }
                 return this._DocumentEmailProxy;
             }
@@ -5284,7 +5284,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentSourceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSource")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSource")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxySingle DocumentSourceProxy
         {
             get
@@ -5295,7 +5295,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentSourceProxy == null))
                 {
-                    this._DocumentSourceProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxySingle(this.Context, GetPath("DocumentSource"));
+                    this._DocumentSourceProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxySingle(this.Context, GetPath("documentSource"));
                 }
                 return this._DocumentSourceProxy;
             }
@@ -5306,7 +5306,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxySingle DocumentTypeProxy
         {
             get
@@ -5317,7 +5317,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentTypeProxy == null))
                 {
-                    this._DocumentTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxySingle(this.Context, GetPath("DocumentType"));
+                    this._DocumentTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxySingle(this.Context, GetPath("documentType"));
                 }
                 return this._DocumentTypeProxy;
             }
@@ -5328,7 +5328,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ParentDocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentDocument")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentDocument")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle ParentDocumentProxy
         {
             get
@@ -5339,7 +5339,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ParentDocumentProxy == null))
                 {
-                    this._ParentDocumentProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle(this.Context, GetPath("ParentDocument"));
+                    this._ParentDocumentProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle(this.Context, GetPath("parentDocument"));
                 }
                 return this._ParentDocumentProxy;
             }
@@ -5350,7 +5350,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle StoredFileProxy
         {
             get
@@ -5361,7 +5361,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._StoredFileProxy == null))
                 {
-                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("StoredFile"));
+                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("storedFile"));
                 }
                 return this._StoredFileProxy;
             }
@@ -5372,7 +5372,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentMatchesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentMatches")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentMatches")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentMatchProxy> DocumentMatchesProxy
         {
             get
@@ -5383,7 +5383,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentMatchesProxy == null))
                 {
-                    this._DocumentMatchesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentMatchProxy>(GetPath("DocumentMatches"));
+                    this._DocumentMatchesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentMatchProxy>(GetPath("documentMatches"));
                 }
                 return this._DocumentMatchesProxy;
             }
@@ -5394,7 +5394,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InverseParentDocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseParentDocument")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseParentDocument")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> InverseParentDocumentProxy
         {
             get
@@ -5405,7 +5405,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InverseParentDocumentProxy == null))
                 {
-                    this._InverseParentDocumentProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("InverseParentDocument"));
+                    this._InverseParentDocumentProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("inverseParentDocument"));
                 }
                 return this._InverseParentDocumentProxy;
             }
@@ -5416,7 +5416,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherHeadersProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaders")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaders")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy> VoucherHeadersProxy
         {
             get
@@ -5427,7 +5427,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherHeadersProxy == null))
                 {
-                    this._VoucherHeadersProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy>(GetPath("VoucherHeaders"));
+                    this._VoucherHeadersProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy>(GetPath("voucherHeaders"));
                 }
                 return this._VoucherHeadersProxy;
             }
@@ -5441,7 +5441,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentId")]
+    [global::Microsoft.OData.Client.Key("documentId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("Document")]
     public partial class DocumentProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -5478,7 +5478,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentId")]
         public global::System.Nullable<global::System.Guid> DocumentIdProxy
         {
             get
@@ -5500,7 +5500,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignId")]
         public global::System.Nullable<global::System.Guid> DocumentDesignIdProxy
         {
             get
@@ -5522,7 +5522,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentTypeId")]
         public global::System.Nullable<short> DocumentTypeIdProxy
         {
             get
@@ -5544,7 +5544,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ParentDocumentIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentDocumentId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentDocumentId")]
         public global::System.Nullable<global::System.Guid> ParentDocumentIdProxy
         {
             get
@@ -5566,7 +5566,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceId")]
         public global::System.Nullable<global::System.Guid> DocumentSourceIdProxy
         {
             get
@@ -5588,7 +5588,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -5610,7 +5610,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileId")]
         public global::System.Nullable<global::System.Guid> StoredFileIdProxy
         {
             get
@@ -5632,7 +5632,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmailId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmailId")]
         public global::System.Nullable<global::System.Guid> DocumentEmailIdProxy
         {
             get
@@ -5654,7 +5654,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ReferenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Reference")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("reference")]
         public string ReferenceProxy
         {
             get
@@ -5676,7 +5676,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentClassifierProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentClassifier")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentClassifier")]
         public string DocumentClassifierProxy
         {
             get
@@ -5698,7 +5698,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -5720,7 +5720,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -5742,7 +5742,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -5764,7 +5764,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -5786,7 +5786,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -5808,7 +5808,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsSupervisedProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsSupervised")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isSupervised")]
         public bool IsSupervisedProxy
         {
             get
@@ -5830,7 +5830,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property HasNewDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("HasNewDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasNewDesign")]
         public bool HasNewDesignProxy
         {
             get
@@ -5849,10 +5849,32 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         partial void OnHasNewDesignProxyChanging(bool value);
         partial void OnHasNewDesignProxyChanged();
         /// <summary>
+        /// There are no comments for Property EmotionProxy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("emotion")]
+        public global::System.Nullable<short> EmotionProxy
+        {
+            get
+            {
+                return this._EmotionProxy;
+            }
+            set
+            {
+                this.OnEmotionProxyChanging(value);
+                this._EmotionProxy = value;
+                this.OnEmotionProxyChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<short> _EmotionProxy;
+        partial void OnEmotionProxyChanging(global::System.Nullable<short> value);
+        partial void OnEmotionProxyChanged();
+        /// <summary>
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -5874,7 +5896,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmail")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmail")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxy DocumentEmailProxy
         {
             get
@@ -5896,7 +5918,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSource")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSource")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxy DocumentSourceProxy
         {
             get
@@ -5918,7 +5940,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxy DocumentTypeProxy
         {
             get
@@ -5940,7 +5962,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ParentDocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentDocument")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentDocument")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy ParentDocumentProxy
         {
             get
@@ -5962,7 +5984,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy StoredFileProxy
         {
             get
@@ -5984,7 +6006,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentMatchesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentMatches")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentMatches")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentMatchProxy> DocumentMatchesProxy
         {
             get
@@ -6006,7 +6028,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InverseParentDocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseParentDocument")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseParentDocument")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> InverseParentDocumentProxy
         {
             get
@@ -6028,7 +6050,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeadersProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaders")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaders")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy> VoucherHeadersProxy
         {
             get
@@ -6075,7 +6097,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -6086,7 +6108,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -6097,7 +6119,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentEmailLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmailLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmailLogs")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailLogProxy> DocumentEmailLogsProxy
         {
             get
@@ -6108,7 +6130,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentEmailLogsProxy == null))
                 {
-                    this._DocumentEmailLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailLogProxy>(GetPath("DocumentEmailLogs"));
+                    this._DocumentEmailLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailLogProxy>(GetPath("documentEmailLogs"));
                 }
                 return this._DocumentEmailLogsProxy;
             }
@@ -6119,7 +6141,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -6130,7 +6152,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentsProxy == null))
                 {
-                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("Documents"));
+                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("documents"));
                 }
                 return this._DocumentsProxy;
             }
@@ -6144,7 +6166,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentEmailIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentEmailId")]
+    [global::Microsoft.OData.Client.Key("documentEmailId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmail")]
     public partial class DocumentEmailProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -6181,7 +6203,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmailId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmailId")]
         public global::System.Guid DocumentEmailIdProxy
         {
             get
@@ -6203,7 +6225,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -6225,7 +6247,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FromProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("From")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("from")]
         public string FromProxy
         {
             get
@@ -6247,7 +6269,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ToProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("To")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("to")]
         public string ToProxy
         {
             get
@@ -6269,7 +6291,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SubjectProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Subject")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("subject")]
         public string SubjectProxy
         {
             get
@@ -6291,7 +6313,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsContentHtmlProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsContentHtml")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isContentHtml")]
         public bool IsContentHtmlProxy
         {
             get
@@ -6313,7 +6335,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsOpenProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsOpen")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isOpen")]
         public bool IsOpenProxy
         {
             get
@@ -6335,7 +6357,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -6357,7 +6379,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -6379,7 +6401,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -6401,7 +6423,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -6423,7 +6445,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonDataProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonData")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonData")]
         public string JsonDataProxy
         {
             get
@@ -6445,7 +6467,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -6467,7 +6489,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmailLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmailLogs")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailLogProxy> DocumentEmailLogsProxy
         {
             get
@@ -6489,7 +6511,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -6536,7 +6558,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -6547,7 +6569,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -6558,7 +6580,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxySingle DocumentTypeProxy
         {
             get
@@ -6569,7 +6591,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentTypeProxy == null))
                 {
-                    this._DocumentTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxySingle(this.Context, GetPath("DocumentType"));
+                    this._DocumentTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxySingle(this.Context, GetPath("documentType"));
                 }
                 return this._DocumentTypeProxy;
             }
@@ -6583,7 +6605,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// ClientExtractRuleIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("ClientExtractRuleId")]
+    [global::Microsoft.OData.Client.Key("clientExtractRuleId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("ClientExtractRule")]
     public partial class ClientExtractRuleProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -6617,7 +6639,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientExtractRuleIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientExtractRuleId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientExtractRuleId")]
         public global::System.Guid ClientExtractRuleIdProxy
         {
             get
@@ -6639,7 +6661,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -6661,7 +6683,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentTypeId")]
         public global::System.Nullable<short> DocumentTypeIdProxy
         {
             get
@@ -6683,7 +6705,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonDataProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonData")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonData")]
         public string JsonDataProxy
         {
             get
@@ -6705,7 +6727,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EndDateUtcProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("EndDateUtc")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("endDateUtc")]
         public global::System.DateTimeOffset EndDateUtcProxy
         {
             get
@@ -6727,7 +6749,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -6749,7 +6771,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -6771,7 +6793,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -6793,7 +6815,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -6815,7 +6837,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -6837,7 +6859,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxy DocumentTypeProxy
         {
             get
@@ -6884,7 +6906,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for CreditHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreditHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("creditHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle CreditHeaderProxy
         {
             get
@@ -6895,7 +6917,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._CreditHeaderProxy == null))
                 {
-                    this._CreditHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle(this.Context, GetPath("CreditHeader"));
+                    this._CreditHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle(this.Context, GetPath("creditHeader"));
                 }
                 return this._CreditHeaderProxy;
             }
@@ -6906,7 +6928,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for CurrencyCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxySingle CurrencyCodeProxy
         {
             get
@@ -6917,7 +6939,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._CurrencyCodeProxy == null))
                 {
-                    this._CurrencyCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxySingle(this.Context, GetPath("CurrencyCode"));
+                    this._CurrencyCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxySingle(this.Context, GetPath("currencyCode"));
                 }
                 return this._CurrencyCodeProxy;
             }
@@ -6928,7 +6950,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Document")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("document")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle DocumentProxy
         {
             get
@@ -6939,7 +6961,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentProxy == null))
                 {
-                    this._DocumentProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle(this.Context, GetPath("Document"));
+                    this._DocumentProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle(this.Context, GetPath("document"));
                 }
                 return this._DocumentProxy;
             }
@@ -6950,7 +6972,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle VendorProxy
         {
             get
@@ -6961,7 +6983,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorProxy == null))
                 {
-                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("Vendor"));
+                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("vendor"));
                 }
                 return this._VendorProxy;
             }
@@ -6972,7 +6994,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Workflow")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflow")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxySingle WorkflowProxy
         {
             get
@@ -6983,7 +7005,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowProxy == null))
                 {
-                    this._WorkflowProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxySingle(this.Context, GetPath("Workflow"));
+                    this._WorkflowProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxySingle(this.Context, GetPath("workflow"));
                 }
                 return this._WorkflowProxy;
             }
@@ -6994,7 +7016,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InverseCreditHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseCreditHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseCreditHeader")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy> InverseCreditHeaderProxy
         {
             get
@@ -7005,7 +7027,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InverseCreditHeaderProxy == null))
                 {
-                    this._InverseCreditHeaderProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy>(GetPath("InverseCreditHeader"));
+                    this._InverseCreditHeaderProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy>(GetPath("inverseCreditHeader"));
                 }
                 return this._InverseCreditHeaderProxy;
             }
@@ -7016,7 +7038,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherAuditLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherAuditLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherAuditLines")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherAuditLineProxy> VoucherAuditLinesProxy
         {
             get
@@ -7027,7 +7049,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherAuditLinesProxy == null))
                 {
-                    this._VoucherAuditLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherAuditLineProxy>(GetPath("VoucherAuditLines"));
+                    this._VoucherAuditLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherAuditLineProxy>(GetPath("voucherAuditLines"));
                 }
                 return this._VoucherAuditLinesProxy;
             }
@@ -7038,7 +7060,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherHeaderDetailsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderDetails")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderDetails")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderDetailProxy> VoucherHeaderDetailsProxy
         {
             get
@@ -7049,7 +7071,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherHeaderDetailsProxy == null))
                 {
-                    this._VoucherHeaderDetailsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderDetailProxy>(GetPath("VoucherHeaderDetails"));
+                    this._VoucherHeaderDetailsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderDetailProxy>(GetPath("voucherHeaderDetails"));
                 }
                 return this._VoucherHeaderDetailsProxy;
             }
@@ -7060,7 +7082,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherHeaderPaymentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderPayments")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderPayments")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderPaymentProxy> VoucherHeaderPaymentsProxy
         {
             get
@@ -7071,7 +7093,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherHeaderPaymentsProxy == null))
                 {
-                    this._VoucherHeaderPaymentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderPaymentProxy>(GetPath("VoucherHeaderPayments"));
+                    this._VoucherHeaderPaymentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderPaymentProxy>(GetPath("voucherHeaderPayments"));
                 }
                 return this._VoucherHeaderPaymentsProxy;
             }
@@ -7082,7 +7104,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLines")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxy> VoucherLinesProxy
         {
             get
@@ -7093,7 +7115,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherLinesProxy == null))
                 {
-                    this._VoucherLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxy>(GetPath("VoucherLines"));
+                    this._VoucherLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxy>(GetPath("voucherLines"));
                 }
                 return this._VoucherLinesProxy;
             }
@@ -7104,7 +7126,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherDuplicateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherDuplicate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherDuplicate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherDuplicateViewProxySingle VoucherDuplicateProxy
         {
             get
@@ -7115,7 +7137,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherDuplicateProxy == null))
                 {
-                    this._VoucherDuplicateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherDuplicateViewProxySingle(this.Context, GetPath("VoucherDuplicate"));
+                    this._VoucherDuplicateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherDuplicateViewProxySingle(this.Context, GetPath("voucherDuplicate"));
                 }
                 return this._VoucherDuplicateProxy;
             }
@@ -7126,7 +7148,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherValidationProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidation")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherValidation")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherValidationViewProxySingle VoucherValidationProxy
         {
             get
@@ -7137,7 +7159,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherValidationProxy == null))
                 {
-                    this._VoucherValidationProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherValidationViewProxySingle(this.Context, GetPath("VoucherValidation"));
+                    this._VoucherValidationProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherValidationViewProxySingle(this.Context, GetPath("voucherValidation"));
                 }
                 return this._VoucherValidationProxy;
             }
@@ -7151,7 +7173,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherHeaderIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherHeaderId")]
+    [global::Microsoft.OData.Client.Key("voucherHeaderId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeader")]
     public partial class VoucherHeaderProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -7191,7 +7213,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Nullable<global::System.Guid> VoucherHeaderIdProxy
         {
             get
@@ -7213,7 +7235,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentId")]
         public global::System.Nullable<global::System.Guid> DocumentIdProxy
         {
             get
@@ -7235,7 +7257,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CurrencyCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCodeId")]
         public global::System.Nullable<global::System.Guid> CurrencyCodeIdProxy
         {
             get
@@ -7257,7 +7279,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Nullable<global::System.Guid> VendorIdProxy
         {
             get
@@ -7279,7 +7301,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowId")]
         public global::System.Nullable<global::System.Guid> WorkflowIdProxy
         {
             get
@@ -7301,7 +7323,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreditHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreditHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("creditHeaderId")]
         public global::System.Nullable<global::System.Guid> CreditHeaderIdProxy
         {
             get
@@ -7323,7 +7345,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Number")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("number")]
         public string NumberProxy
         {
             get
@@ -7345,7 +7367,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderNumber")]
         public string PurchaseOrderNumberProxy
         {
             get
@@ -7367,7 +7389,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxNumber")]
         public string TaxNumberProxy
         {
             get
@@ -7389,7 +7411,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Account")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("account")]
         public string AccountProxy
         {
             get
@@ -7411,7 +7433,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Date")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("date")]
         public global::System.Nullable<global::System.DateTimeOffset> DateProxy
         {
             get
@@ -7433,7 +7455,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NetProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Net")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("net")]
         public global::System.Nullable<decimal> NetProxy
         {
             get
@@ -7455,7 +7477,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Other")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("other")]
         public global::System.Nullable<decimal> OtherProxy
         {
             get
@@ -7477,7 +7499,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Tax")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tax")]
         public global::System.Nullable<decimal> TaxProxy
         {
             get
@@ -7499,7 +7521,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property GrossProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Gross")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("gross")]
         public global::System.Nullable<decimal> GrossProxy
         {
             get
@@ -7521,7 +7543,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DiscountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Discount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("discount")]
         public global::System.Nullable<decimal> DiscountProxy
         {
             get
@@ -7543,7 +7565,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcNetProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcNet")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcNet")]
         public global::System.Nullable<decimal> FcNetProxy
         {
             get
@@ -7565,7 +7587,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcOtherProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcOther")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcOther")]
         public global::System.Nullable<decimal> FcOtherProxy
         {
             get
@@ -7587,7 +7609,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcTaxProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcTax")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcTax")]
         public global::System.Nullable<decimal> FcTaxProxy
         {
             get
@@ -7609,7 +7631,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcGrossProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcGross")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcGross")]
         public global::System.Nullable<decimal> FcGrossProxy
         {
             get
@@ -7631,7 +7653,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcDiscountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcDiscount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcDiscount")]
         public global::System.Nullable<decimal> FcDiscountProxy
         {
             get
@@ -7653,7 +7675,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DueDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DueDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("dueDate")]
         public global::System.Nullable<global::System.DateTimeOffset> DueDateProxy
         {
             get
@@ -7675,7 +7697,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -7697,7 +7719,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -7719,7 +7741,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -7741,7 +7763,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -7763,7 +7785,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SubmitDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SubmitDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("submitDate")]
         public global::System.Nullable<global::System.DateTimeOffset> SubmitDateProxy
         {
             get
@@ -7785,7 +7807,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SubmitByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SubmitBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("submitBy")]
         public global::System.Nullable<global::System.Guid> SubmitByProxy
         {
             get
@@ -7807,7 +7829,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApproveDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApproveDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("approveDate")]
         public global::System.Nullable<global::System.DateTimeOffset> ApproveDateProxy
         {
             get
@@ -7829,7 +7851,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApproveByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApproveBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("approveBy")]
         public global::System.Nullable<global::System.Guid> ApproveByProxy
         {
             get
@@ -7851,7 +7873,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExportDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExportDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("exportDate")]
         public global::System.Nullable<global::System.DateTimeOffset> ExportDateProxy
         {
             get
@@ -7873,7 +7895,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExportByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExportBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("exportBy")]
         public global::System.Nullable<global::System.Guid> ExportByProxy
         {
             get
@@ -7895,7 +7917,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExternalIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExternalId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("externalId")]
         public string ExternalIdProxy
         {
             get
@@ -7917,7 +7939,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExportNotesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExportNotes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("exportNotes")]
         public string ExportNotesProxy
         {
             get
@@ -7939,7 +7961,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExportStatusIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExportStatusId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("exportStatusId")]
         public short ExportStatusIdProxy
         {
             get
@@ -7961,7 +7983,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -7983,7 +8005,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsArchivedProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsArchived")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isArchived")]
         public bool IsArchivedProxy
         {
             get
@@ -8005,7 +8027,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsPaidProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsPaid")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isPaid")]
         public bool IsPaidProxy
         {
             get
@@ -8027,7 +8049,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterVoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVoucherHeaderId")]
         public global::System.Nullable<global::System.Guid> InterVoucherHeaderIdProxy
         {
             get
@@ -8049,7 +8071,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreditHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreditHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("creditHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy CreditHeaderProxy
         {
             get
@@ -8071,7 +8093,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CurrencyCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxy CurrencyCodeProxy
         {
             get
@@ -8093,7 +8115,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Document")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("document")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy DocumentProxy
         {
             get
@@ -8115,7 +8137,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy VendorProxy
         {
             get
@@ -8137,7 +8159,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Workflow")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflow")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxy WorkflowProxy
         {
             get
@@ -8159,7 +8181,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InverseCreditHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseCreditHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseCreditHeader")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy> InverseCreditHeaderProxy
         {
             get
@@ -8181,7 +8203,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherAuditLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherAuditLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherAuditLines")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherAuditLineProxy> VoucherAuditLinesProxy
         {
             get
@@ -8203,7 +8225,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderDetailsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderDetails")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderDetails")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderDetailProxy> VoucherHeaderDetailsProxy
         {
             get
@@ -8225,7 +8247,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderPaymentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderPayments")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderPayments")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderPaymentProxy> VoucherHeaderPaymentsProxy
         {
             get
@@ -8247,7 +8269,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLines")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxy> VoucherLinesProxy
         {
             get
@@ -8269,7 +8291,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherDuplicateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherDuplicate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherDuplicate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherDuplicateViewProxy VoucherDuplicateProxy
         {
             get
@@ -8291,7 +8313,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherValidationProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidation")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherValidation")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherValidationViewProxy VoucherValidationProxy
         {
             get
@@ -8338,7 +8360,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ItemCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ItemCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("itemCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxySingle ItemCodeProxy
         {
             get
@@ -8349,7 +8371,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ItemCodeProxy == null))
                 {
-                    this._ItemCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxySingle(this.Context, GetPath("ItemCode"));
+                    this._ItemCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxySingle(this.Context, GetPath("itemCode"));
                 }
                 return this._ItemCodeProxy;
             }
@@ -8360,7 +8382,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle TaxAccountProxy
         {
             get
@@ -8371,7 +8393,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxAccountProxy == null))
                 {
-                    this._TaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("TaxAccount"));
+                    this._TaxAccountProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(this.Context, GetPath("taxAccount"));
                 }
                 return this._TaxAccountProxy;
             }
@@ -8382,7 +8404,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle TaxRateProxy
         {
             get
@@ -8393,7 +8415,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxRateProxy == null))
                 {
-                    this._TaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("TaxRate"));
+                    this._TaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("taxRate"));
                 }
                 return this._TaxRateProxy;
             }
@@ -8404,7 +8426,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherLineDetailsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineDetails")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLineDetails")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineDetailProxy> VoucherLineDetailsProxy
         {
             get
@@ -8415,7 +8437,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherLineDetailsProxy == null))
                 {
-                    this._VoucherLineDetailsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineDetailProxy>(GetPath("VoucherLineDetails"));
+                    this._VoucherLineDetailsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineDetailProxy>(GetPath("voucherLineDetails"));
                 }
                 return this._VoucherLineDetailsProxy;
             }
@@ -8429,7 +8451,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherLineIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherLineId")]
+    [global::Microsoft.OData.Client.Key("voucherLineId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLine")]
     public partial class VoucherLineProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -8452,7 +8474,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLineIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLineId")]
         public global::System.Guid VoucherLineIdProxy
         {
             get
@@ -8474,7 +8496,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Guid VoucherHeaderIdProxy
         {
             get
@@ -8496,7 +8518,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRateId")]
         public global::System.Nullable<global::System.Guid> TaxRateIdProxy
         {
             get
@@ -8518,7 +8540,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxAccountIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccountId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccountId")]
         public global::System.Nullable<global::System.Guid> TaxAccountIdProxy
         {
             get
@@ -8540,7 +8562,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ItemCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ItemCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("itemCodeId")]
         public global::System.Nullable<global::System.Guid> ItemCodeIdProxy
         {
             get
@@ -8562,7 +8584,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SequenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Sequence")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("sequence")]
         public short SequenceProxy
         {
             get
@@ -8584,7 +8606,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -8606,7 +8628,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -8628,7 +8650,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property QuantityProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Quantity")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("quantity")]
         public global::System.Nullable<decimal> QuantityProxy
         {
             get
@@ -8650,7 +8672,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NetProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Net")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("net")]
         public global::System.Nullable<decimal> NetProxy
         {
             get
@@ -8672,7 +8694,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Tax")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tax")]
         public global::System.Nullable<decimal> TaxProxy
         {
             get
@@ -8694,7 +8716,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property GrossProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Gross")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("gross")]
         public global::System.Nullable<decimal> GrossProxy
         {
             get
@@ -8716,7 +8738,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DiscountRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DiscountRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("discountRate")]
         public global::System.Nullable<decimal> DiscountRateProxy
         {
             get
@@ -8738,7 +8760,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DiscountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Discount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("discount")]
         public global::System.Nullable<decimal> DiscountProxy
         {
             get
@@ -8760,7 +8782,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcNetProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcNet")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcNet")]
         public global::System.Nullable<decimal> FcNetProxy
         {
             get
@@ -8782,7 +8804,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcTaxProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcTax")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcTax")]
         public global::System.Nullable<decimal> FcTaxProxy
         {
             get
@@ -8804,7 +8826,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcGrossProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcGross")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcGross")]
         public global::System.Nullable<decimal> FcGrossProxy
         {
             get
@@ -8826,7 +8848,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcDicountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcDicount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcDicount")]
         public global::System.Nullable<decimal> FcDicountProxy
         {
             get
@@ -8848,7 +8870,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherClientId")]
         public global::System.Nullable<global::System.Guid> OtherClientIdProxy
         {
             get
@@ -8870,7 +8892,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ItemCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ItemCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("itemCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxy ItemCodeProxy
         {
             get
@@ -8892,7 +8914,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxAccountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccount")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy TaxAccountProxy
         {
             get
@@ -8914,7 +8936,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy TaxRateProxy
         {
             get
@@ -8936,7 +8958,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLineDetailsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineDetails")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLineDetails")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineDetailProxy> VoucherLineDetailsProxy
         {
             get
@@ -8983,7 +9005,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle VendorProxy
         {
             get
@@ -8994,7 +9016,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorProxy == null))
                 {
-                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("Vendor"));
+                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("vendor"));
                 }
                 return this._VendorProxy;
             }
@@ -9005,7 +9027,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTypeProxySingle WorkflowTypeProxy
         {
             get
@@ -9016,7 +9038,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowTypeProxy == null))
                 {
-                    this._WorkflowTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTypeProxySingle(this.Context, GetPath("WorkflowType"));
+                    this._WorkflowTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTypeProxySingle(this.Context, GetPath("workflowType"));
                 }
                 return this._WorkflowTypeProxy;
             }
@@ -9030,7 +9052,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowSchemaIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowSchemaId")]
+    [global::Microsoft.OData.Client.Key("workflowSchemaId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchema")]
     public partial class WorkflowSchemaProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -9067,7 +9089,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemaIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemaId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaId")]
         public global::System.Guid WorkflowSchemaIdProxy
         {
             get
@@ -9089,7 +9111,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Guid ClientIdProxy
         {
             get
@@ -9111,7 +9133,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Nullable<global::System.Guid> VendorIdProxy
         {
             get
@@ -9133,7 +9155,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTypeId")]
         public global::System.Nullable<short> WorkflowTypeIdProxy
         {
             get
@@ -9155,7 +9177,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -9177,7 +9199,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -9199,7 +9221,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -9221,7 +9243,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -9243,7 +9265,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -9265,7 +9287,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -9287,7 +9309,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -9309,7 +9331,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy VendorProxy
         {
             get
@@ -9331,7 +9353,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTypeProxy WorkflowTypeProxy
         {
             get
@@ -9378,7 +9400,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowStateTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStateType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateTypeProxySingle WorkflowStateTypeProxy
         {
             get
@@ -9389,7 +9411,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowStateTypeProxy == null))
                 {
-                    this._WorkflowStateTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateTypeProxySingle(this.Context, GetPath("WorkflowStateType"));
+                    this._WorkflowStateTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateTypeProxySingle(this.Context, GetPath("workflowStateType"));
                 }
                 return this._WorkflowStateTypeProxy;
             }
@@ -9403,7 +9425,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowStateIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowStateId")]
+    [global::Microsoft.OData.Client.Key("workflowStateId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowState")]
     public partial class WorkflowStateProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -9426,7 +9448,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowStateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStateId")]
         public global::System.Guid WorkflowStateIdProxy
         {
             get
@@ -9448,7 +9470,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowStateTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStateTypeId")]
         public global::System.Nullable<short> WorkflowStateTypeIdProxy
         {
             get
@@ -9470,7 +9492,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemaIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemaId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaId")]
         public global::System.Guid WorkflowSchemaIdProxy
         {
             get
@@ -9492,7 +9514,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -9514,7 +9536,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SequenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Sequence")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("sequence")]
         public short SequenceProxy
         {
             get
@@ -9536,7 +9558,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowStateTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStateType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateTypeProxy WorkflowStateTypeProxy
         {
             get
@@ -9583,7 +9605,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -9594,7 +9616,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -9608,7 +9630,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// CurrencyCodeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("CurrencyCodeId")]
+    [global::Microsoft.OData.Client.Key("currencyCodeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCode")]
     public partial class CurrencyCodeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -9645,7 +9667,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CurrencyCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCodeId")]
         public global::System.Guid CurrencyCodeIdProxy
         {
             get
@@ -9667,7 +9689,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -9689,7 +9711,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -9711,7 +9733,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CountryProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Country")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("country")]
         public string CountryProxy
         {
             get
@@ -9733,7 +9755,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CountryCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CountryCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("countryCode")]
         public string CountryCodeProxy
         {
             get
@@ -9755,7 +9777,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -9777,7 +9799,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsDefaultProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsDefault")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isDefault")]
         public bool IsDefaultProxy
         {
             get
@@ -9799,7 +9821,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SequenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Sequence")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("sequence")]
         public short SequenceProxy
         {
             get
@@ -9821,7 +9843,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -9843,7 +9865,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -9865,7 +9887,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -9887,7 +9909,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -9909,7 +9931,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -9956,7 +9978,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle VendorProxy
         {
             get
@@ -9967,7 +9989,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorProxy == null))
                 {
-                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("Vendor"));
+                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("vendor"));
                 }
                 return this._VendorProxy;
             }
@@ -9981,7 +10003,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PurchaseOrderHeaderIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PurchaseOrderHeaderId")]
+    [global::Microsoft.OData.Client.Key("purchaseOrderHeaderId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeader")]
     public partial class PurchaseOrderHeaderProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -10024,7 +10046,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeaderId")]
         public global::System.Guid PurchaseOrderHeaderIdProxy
         {
             get
@@ -10046,7 +10068,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Nullable<global::System.Guid> VendorIdProxy
         {
             get
@@ -10068,7 +10090,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CurrencyCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CurrencyCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("currencyCodeId")]
         public global::System.Guid CurrencyCodeIdProxy
         {
             get
@@ -10090,7 +10112,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Number")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("number")]
         public string NumberProxy
         {
             get
@@ -10112,7 +10134,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("docDate")]
         public global::System.DateTimeOffset DocDateProxy
         {
             get
@@ -10134,7 +10156,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaserIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaserId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaserId")]
         public string PurchaserIdProxy
         {
             get
@@ -10156,7 +10178,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaserNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaserName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaserName")]
         public string PurchaserNameProxy
         {
             get
@@ -10178,7 +10200,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaserEmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaserEmail")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaserEmail")]
         public string PurchaserEmailProxy
         {
             get
@@ -10200,7 +10222,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApprovedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApprovedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("approvedBy")]
         public string ApprovedByProxy
         {
             get
@@ -10222,7 +10244,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApprovedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApprovedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("approvedDate")]
         public global::System.Nullable<global::System.DateTimeOffset> ApprovedDateProxy
         {
             get
@@ -10244,7 +10266,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsCompleteProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsComplete")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isComplete")]
         public bool IsCompleteProxy
         {
             get
@@ -10266,7 +10288,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TotalProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Total")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("total")]
         public decimal TotalProxy
         {
             get
@@ -10288,7 +10310,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OutstandingCostProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OutstandingCost")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("outstandingCost")]
         public global::System.Nullable<decimal> OutstandingCostProxy
         {
             get
@@ -10310,7 +10332,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OutstandingQuantityProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OutstandingQuantity")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("outstandingQuantity")]
         public global::System.Nullable<decimal> OutstandingQuantityProxy
         {
             get
@@ -10332,7 +10354,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ReferenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Reference")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("reference")]
         public string ReferenceProxy
         {
             get
@@ -10354,7 +10376,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsTaxInclusiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsTaxInclusive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isTaxInclusive")]
         public global::System.Nullable<bool> IsTaxInclusiveProxy
         {
             get
@@ -10376,7 +10398,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExternalIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExternalId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("externalId")]
         public string ExternalIdProxy
         {
             get
@@ -10398,7 +10420,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -10420,7 +10442,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -10442,7 +10464,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -10464,7 +10486,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -10486,7 +10508,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeaderValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeaderValues")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderValueProxy> PurchaseOrderHeaderValuesProxy
         {
             get
@@ -10508,7 +10530,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy VendorProxy
         {
             get
@@ -10555,7 +10577,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle VoucherHeaderProxy
         {
             get
@@ -10566,7 +10588,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherHeaderProxy == null))
                 {
-                    this._VoucherHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle(this.Context, GetPath("VoucherHeader"));
+                    this._VoucherHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle(this.Context, GetPath("voucherHeader"));
                 }
                 return this._VoucherHeaderProxy;
             }
@@ -10580,7 +10602,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherHeaderPaymentIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherHeaderPaymentId")]
+    [global::Microsoft.OData.Client.Key("voucherHeaderPaymentId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderPayment")]
     public partial class VoucherHeaderPaymentProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -10605,7 +10627,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderPaymentIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderPaymentId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderPaymentId")]
         public global::System.Guid VoucherHeaderPaymentIdProxy
         {
             get
@@ -10627,7 +10649,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Nullable<global::System.Guid> VoucherHeaderIdProxy
         {
             get
@@ -10649,7 +10671,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PaymentDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PaymentDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("paymentDate")]
         public global::System.DateTimeOffset PaymentDateProxy
         {
             get
@@ -10671,7 +10693,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ReferenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Reference")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("reference")]
         public string ReferenceProxy
         {
             get
@@ -10693,7 +10715,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AmountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Amount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("amount")]
         public decimal AmountProxy
         {
             get
@@ -10715,7 +10737,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FcAmountProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FcAmount")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcAmount")]
         public decimal FcAmountProxy
         {
             get
@@ -10737,7 +10759,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExternalIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExternalId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("externalId")]
         public string ExternalIdProxy
         {
             get
@@ -10759,7 +10781,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy VoucherHeaderProxy
         {
             get
@@ -10806,7 +10828,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle TaxRateProxy
         {
             get
@@ -10817,7 +10839,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxRateProxy == null))
                 {
-                    this._TaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("TaxRate"));
+                    this._TaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("taxRate"));
                 }
                 return this._TaxRateProxy;
             }
@@ -10828,7 +10850,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterClientOtherTaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientOtherTaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientOtherTaxAccounts")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientOtherTaxAccountsProxy
         {
             get
@@ -10839,7 +10861,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterClientOtherTaxAccountsProxy == null))
                 {
-                    this._InterClientOtherTaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("InterClientOtherTaxAccounts"));
+                    this._InterClientOtherTaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("interClientOtherTaxAccounts"));
                 }
                 return this._InterClientOtherTaxAccountsProxy;
             }
@@ -10850,7 +10872,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterClientTaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientTaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientTaxAccounts")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientTaxAccountsProxy
         {
             get
@@ -10861,7 +10883,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterClientTaxAccountsProxy == null))
                 {
-                    this._InterClientTaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("InterClientTaxAccounts"));
+                    this._InterClientTaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy>(GetPath("interClientTaxAccounts"));
                 }
                 return this._InterClientTaxAccountsProxy;
             }
@@ -10872,7 +10894,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendors")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy> VendorsProxy
         {
             get
@@ -10883,7 +10905,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorsProxy == null))
                 {
-                    this._VendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy>(GetPath("Vendors"));
+                    this._VendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy>(GetPath("vendors"));
                 }
                 return this._VendorsProxy;
             }
@@ -10897,7 +10919,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// TaxAccountIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("TaxAccountId")]
+    [global::Microsoft.OData.Client.Key("taxAccountId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccount")]
     public partial class TaxAccountProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -10934,7 +10956,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CodeName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("codeName")]
         public string CodeNameProxy
         {
             get
@@ -10956,7 +10978,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxAccountIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccountId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccountId")]
         public global::System.Guid TaxAccountIdProxy
         {
             get
@@ -10978,7 +11000,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRateId")]
         public global::System.Nullable<global::System.Guid> TaxRateIdProxy
         {
             get
@@ -11000,7 +11022,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Guid ClientIdProxy
         {
             get
@@ -11022,7 +11044,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -11044,7 +11066,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -11066,7 +11088,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -11088,7 +11110,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxType")]
         public string TaxTypeProxy
         {
             get
@@ -11110,7 +11132,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -11132,7 +11154,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -11154,7 +11176,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -11176,7 +11198,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -11198,7 +11220,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -11220,7 +11242,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExternalIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExternalId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("externalId")]
         public string ExternalIdProxy
         {
             get
@@ -11242,7 +11264,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy TaxRateProxy
         {
             get
@@ -11264,7 +11286,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterClientOtherTaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientOtherTaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientOtherTaxAccounts")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientOtherTaxAccountsProxy
         {
             get
@@ -11286,7 +11308,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterClientTaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientTaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientTaxAccounts")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy> InterClientTaxAccountsProxy
         {
             get
@@ -11308,7 +11330,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendors")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy> VendorsProxy
         {
             get
@@ -11355,7 +11377,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PurchaseOrderLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderLines")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderLineProxy> PurchaseOrderLinesProxy
         {
             get
@@ -11366,7 +11388,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PurchaseOrderLinesProxy == null))
                 {
-                    this._PurchaseOrderLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderLineProxy>(GetPath("PurchaseOrderLines"));
+                    this._PurchaseOrderLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderLineProxy>(GetPath("purchaseOrderLines"));
                 }
                 return this._PurchaseOrderLinesProxy;
             }
@@ -11377,7 +11399,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccounts")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy> TaxAccountsProxy
         {
             get
@@ -11388,7 +11410,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxAccountsProxy == null))
                 {
-                    this._TaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy>(GetPath("TaxAccounts"));
+                    this._TaxAccountsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy>(GetPath("taxAccounts"));
                 }
                 return this._TaxAccountsProxy;
             }
@@ -11399,7 +11421,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendors")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy> VendorsProxy
         {
             get
@@ -11410,7 +11432,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorsProxy == null))
                 {
-                    this._VendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy>(GetPath("Vendors"));
+                    this._VendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy>(GetPath("vendors"));
                 }
                 return this._VendorsProxy;
             }
@@ -11424,7 +11446,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// TaxRateIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("TaxRateId")]
+    [global::Microsoft.OData.Client.Key("taxRateId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRate")]
     public partial class TaxRateProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -11464,7 +11486,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CodeName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("codeName")]
         public string CodeNameProxy
         {
             get
@@ -11486,7 +11508,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRateId")]
         public global::System.Guid TaxRateIdProxy
         {
             get
@@ -11508,7 +11530,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Guid ClientIdProxy
         {
             get
@@ -11530,7 +11552,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -11552,7 +11574,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxType")]
         public string TaxTypeProxy
         {
             get
@@ -11574,7 +11596,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -11596,7 +11618,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Rate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("rate")]
         public decimal RateProxy
         {
             get
@@ -11618,7 +11640,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -11640,7 +11662,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -11662,7 +11684,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -11684,7 +11706,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -11706,7 +11728,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -11728,7 +11750,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExternalIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExternalId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("externalId")]
         public string ExternalIdProxy
         {
             get
@@ -11750,7 +11772,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderLines")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderLineProxy> PurchaseOrderLinesProxy
         {
             get
@@ -11772,7 +11794,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxAccountsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccounts")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccounts")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxy> TaxAccountsProxy
         {
             get
@@ -11794,7 +11816,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendors")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy> VendorsProxy
         {
             get
@@ -11841,7 +11863,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle StoredFileProxy
         {
             get
@@ -11852,7 +11874,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._StoredFileProxy == null))
                 {
-                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("StoredFile"));
+                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("storedFile"));
                 }
                 return this._StoredFileProxy;
             }
@@ -11863,7 +11885,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TrainFileTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFileType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFileType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TrainFileTypeProxySingle TrainFileTypeProxy
         {
             get
@@ -11874,7 +11896,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TrainFileTypeProxy == null))
                 {
-                    this._TrainFileTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TrainFileTypeProxySingle(this.Context, GetPath("TrainFileType"));
+                    this._TrainFileTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TrainFileTypeProxySingle(this.Context, GetPath("trainFileType"));
                 }
                 return this._TrainFileTypeProxy;
             }
@@ -11888,7 +11910,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// TrainFileIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("TrainFileId")]
+    [global::Microsoft.OData.Client.Key("trainFileId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFile")]
     public partial class TrainFileProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -11937,7 +11959,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TrainFileIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFileId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFileId")]
         public int TrainFileIdProxy
         {
             get
@@ -11959,7 +11981,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TrainFileTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFileTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFileTypeId")]
         public global::System.Nullable<short> TrainFileTypeIdProxy
         {
             get
@@ -11981,7 +12003,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileId")]
         public global::System.Nullable<global::System.Guid> StoredFileIdProxy
         {
             get
@@ -12003,7 +12025,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -12025,7 +12047,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -12047,7 +12069,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -12069,7 +12091,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -12091,7 +12113,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RectLeftProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("RectLeft")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("rectLeft")]
         public int RectLeftProxy
         {
             get
@@ -12113,7 +12135,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RectTopProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("RectTop")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("rectTop")]
         public int RectTopProxy
         {
             get
@@ -12135,7 +12157,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RectWidthProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("RectWidth")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("rectWidth")]
         public int RectWidthProxy
         {
             get
@@ -12157,7 +12179,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RectHeightProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("RectHeight")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("rectHeight")]
         public int RectHeightProxy
         {
             get
@@ -12179,7 +12201,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WidthProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Width")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("width")]
         public int WidthProxy
         {
             get
@@ -12201,7 +12223,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property HeightProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Height")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("height")]
         public int HeightProxy
         {
             get
@@ -12223,7 +12245,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy StoredFileProxy
         {
             get
@@ -12245,7 +12267,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TrainFileTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFileType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFileType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TrainFileTypeProxy TrainFileTypeProxy
         {
             get
@@ -12295,7 +12317,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// ItemCodeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("ItemCodeId")]
+    [global::Microsoft.OData.Client.Key("itemCodeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("ItemCode")]
     public partial class ItemCodeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -12314,7 +12336,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ItemCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ItemCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("itemCodeId")]
         public global::System.Guid ItemCodeIdProxy
         {
             get
@@ -12336,7 +12358,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -12358,7 +12380,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -12380,7 +12402,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -12402,7 +12424,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -12449,7 +12471,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for AuditCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AuditCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("auditCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AuditCodeProxySingle AuditCodeProxy
         {
             get
@@ -12460,7 +12482,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._AuditCodeProxy == null))
                 {
-                    this._AuditCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AuditCodeProxySingle(this.Context, GetPath("AuditCode"));
+                    this._AuditCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AuditCodeProxySingle(this.Context, GetPath("auditCode"));
                 }
                 return this._AuditCodeProxy;
             }
@@ -12474,7 +12496,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherAuditLineIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherAuditLineId")]
+    [global::Microsoft.OData.Client.Key("voucherAuditLineId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherAuditLine")]
     public partial class VoucherAuditLineProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -12499,7 +12521,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherAuditLineIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherAuditLineId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherAuditLineId")]
         public global::System.Guid VoucherAuditLineIdProxy
         {
             get
@@ -12521,7 +12543,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Guid VoucherHeaderIdProxy
         {
             get
@@ -12543,7 +12565,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AuditCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AuditCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("auditCodeId")]
         public global::System.Nullable<short> AuditCodeIdProxy
         {
             get
@@ -12565,7 +12587,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
         public global::System.Guid PersonIdProxy
         {
             get
@@ -12587,7 +12609,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personName")]
         public string PersonNameProxy
         {
             get
@@ -12609,7 +12631,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonBeforeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonBefore")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonBefore")]
         public string JsonBeforeProxy
         {
             get
@@ -12631,7 +12653,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonAfterProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonAfter")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonAfter")]
         public string JsonAfterProxy
         {
             get
@@ -12653,7 +12675,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AuditDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AuditDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("auditDate")]
         public global::System.DateTimeOffset AuditDateProxy
         {
             get
@@ -12675,7 +12697,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AuditCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AuditCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("auditCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AuditCodeProxy AuditCodeProxy
         {
             get
@@ -12725,7 +12747,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// AuditCodeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("AuditCodeId")]
+    [global::Microsoft.OData.Client.Key("auditCodeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("AuditCode")]
     public partial class AuditCodeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -12744,7 +12766,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AuditCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AuditCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("auditCodeId")]
         public short AuditCodeIdProxy
         {
             get
@@ -12766,7 +12788,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -12788,7 +12810,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -12835,7 +12857,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for UserProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("User")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("user")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxySingle UserProxy
         {
             get
@@ -12846,7 +12868,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._UserProxy == null))
                 {
-                    this._UserProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxySingle(this.Context, GetPath("User"));
+                    this._UserProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxySingle(this.Context, GetPath("user"));
                 }
                 return this._UserProxy;
             }
@@ -12860,7 +12882,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// IdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("Id")]
+    [global::Microsoft.OData.Client.Key("id")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUserClaim")]
     public partial class AspNetUserClaimProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -12879,7 +12901,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Id")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("id")]
         public int IdProxy
         {
             get
@@ -12901,7 +12923,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClaimTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClaimType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("claimType")]
         public string ClaimTypeProxy
         {
             get
@@ -12923,7 +12945,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClaimValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClaimValue")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("claimValue")]
         public string ClaimValueProxy
         {
             get
@@ -12945,7 +12967,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UserId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("userId")]
         public string UserIdProxy
         {
             get
@@ -12967,7 +12989,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("User")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("user")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxy UserProxy
         {
             get
@@ -12996,7 +13018,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LoginProviderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LoginProvider")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("loginProvider")]
         public string LoginProviderProxy
         {
             get
@@ -13018,7 +13040,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ProviderKeyProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ProviderKey")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("providerKey")]
         public string ProviderKeyProxy
         {
             get
@@ -13040,7 +13062,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ProviderDisplayNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ProviderDisplayName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("providerDisplayName")]
         public string ProviderDisplayNameProxy
         {
             get
@@ -13062,7 +13084,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UserId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("userId")]
         public string UserIdProxy
         {
             get
@@ -13084,7 +13106,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("User")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("user")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxy UserProxy
         {
             get
@@ -13113,7 +13135,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UserId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("userId")]
         public string UserIdProxy
         {
             get
@@ -13135,7 +13157,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RoleIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("RoleId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("roleId")]
         public string RoleIdProxy
         {
             get
@@ -13157,7 +13179,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RoleProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Role")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("role")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetRoleProxy RoleProxy
         {
             get
@@ -13179,7 +13201,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("User")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("user")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxy UserProxy
         {
             get
@@ -13226,7 +13248,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for AspNetRoleProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetRole")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetRole")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetRoleProxySingle AspNetRoleProxy
         {
             get
@@ -13237,7 +13259,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._AspNetRoleProxy == null))
                 {
-                    this._AspNetRoleProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AspNetRoleProxySingle(this.Context, GetPath("AspNetRole"));
+                    this._AspNetRoleProxy = new global::OcerraConsoleApp.ODataClient.Proxies.AspNetRoleProxySingle(this.Context, GetPath("aspNetRole"));
                 }
                 return this._AspNetRoleProxy;
             }
@@ -13248,7 +13270,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PeopleClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxySingle PeopleClientProxy
         {
             get
@@ -13259,7 +13281,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PeopleClientProxy == null))
                 {
-                    this._PeopleClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxySingle(this.Context, GetPath("PeopleClient"));
+                    this._PeopleClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxySingle(this.Context, GetPath("peopleClient"));
                 }
                 return this._PeopleClientProxy;
             }
@@ -13273,7 +13295,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PeopleClientRoleIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PeopleClientRoleId")]
+    [global::Microsoft.OData.Client.Key("peopleClientRoleId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientRole")]
     public partial class PeopleClientRoleProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -13300,7 +13322,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientRoleIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientRoleId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientRoleId")]
         public global::System.Guid PeopleClientRoleIdProxy
         {
             get
@@ -13322,7 +13344,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientId")]
         public global::System.Nullable<global::System.Guid> PeopleClientIdProxy
         {
             get
@@ -13344,7 +13366,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -13366,7 +13388,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -13388,7 +13410,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -13410,7 +13432,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -13432,7 +13454,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AspNetRoleIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetRoleId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetRoleId")]
         public string AspNetRoleIdProxy
         {
             get
@@ -13454,7 +13476,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AspNetRoleProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetRole")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("aspNetRole")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AspNetRoleProxy AspNetRoleProxy
         {
             get
@@ -13476,7 +13498,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxy PeopleClientProxy
         {
             get
@@ -13523,7 +13545,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Clients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clients")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy> ClientsProxy
         {
             get
@@ -13534,7 +13556,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientsProxy == null))
                 {
-                    this._ClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy>(GetPath("Clients"));
+                    this._ClientsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy>(GetPath("clients"));
                 }
                 return this._ClientsProxy;
             }
@@ -13548,7 +13570,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PricePlanIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PricePlanId")]
+    [global::Microsoft.OData.Client.Key("pricePlanId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("PricePlan")]
     public partial class PricePlanProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -13567,7 +13589,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PricePlanIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PricePlanId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("pricePlanId")]
         public short PricePlanIdProxy
         {
             get
@@ -13589,7 +13611,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -13611,7 +13633,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -13633,7 +13655,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VouchersPerMonthProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VouchersPerMonth")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vouchersPerMonth")]
         public global::System.Nullable<int> VouchersPerMonthProxy
         {
             get
@@ -13655,7 +13677,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Clients")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clients")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy> ClientsProxy
         {
             get
@@ -13702,7 +13724,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ApplicationTokenTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokenType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokenType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenTypeProxySingle ApplicationTokenTypeProxy
         {
             get
@@ -13713,7 +13735,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ApplicationTokenTypeProxy == null))
                 {
-                    this._ApplicationTokenTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenTypeProxySingle(this.Context, GetPath("ApplicationTokenType"));
+                    this._ApplicationTokenTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenTypeProxySingle(this.Context, GetPath("applicationTokenType"));
                 }
                 return this._ApplicationTokenTypeProxy;
             }
@@ -13724,7 +13746,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -13735,7 +13757,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -13749,7 +13771,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// ApplicationTokenIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("ApplicationTokenId")]
+    [global::Microsoft.OData.Client.Key("applicationTokenId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationToken")]
     public partial class ApplicationTokenProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -13768,7 +13790,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApplicationTokenIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokenId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokenId")]
         public global::System.Guid ApplicationTokenIdProxy
         {
             get
@@ -13790,7 +13812,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -13812,7 +13834,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApplicationTokenTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokenTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokenTypeId")]
         public global::System.Nullable<short> ApplicationTokenTypeIdProxy
         {
             get
@@ -13834,7 +13856,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UserId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("userId")]
         public string UserIdProxy
         {
             get
@@ -13856,7 +13878,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TagProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Tag")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tag")]
         public string TagProxy
         {
             get
@@ -13878,7 +13900,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TokenProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Token")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("token")]
         public string TokenProxy
         {
             get
@@ -13900,7 +13922,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApplicationTokenTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokenType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokenType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenTypeProxy ApplicationTokenTypeProxy
         {
             get
@@ -13922,7 +13944,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -13969,7 +13991,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ApplicationTokensProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokens")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokens")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy> ApplicationTokensProxy
         {
             get
@@ -13980,7 +14002,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ApplicationTokensProxy == null))
                 {
-                    this._ApplicationTokensProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy>(GetPath("ApplicationTokens"));
+                    this._ApplicationTokensProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy>(GetPath("applicationTokens"));
                 }
                 return this._ApplicationTokensProxy;
             }
@@ -13994,7 +14016,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// ApplicationTokenTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("ApplicationTokenTypeId")]
+    [global::Microsoft.OData.Client.Key("applicationTokenTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokenType")]
     public partial class ApplicationTokenTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -14013,7 +14035,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApplicationTokenTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokenTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokenTypeId")]
         public short ApplicationTokenTypeIdProxy
         {
             get
@@ -14035,7 +14057,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -14057,7 +14079,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -14079,7 +14101,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -14101,7 +14123,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApplicationTokensProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationTokens")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationTokens")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxy> ApplicationTokensProxy
         {
             get
@@ -14148,7 +14170,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientExtractRulesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientExtractRules")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientExtractRules")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy> ClientExtractRulesProxy
         {
             get
@@ -14159,7 +14181,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientExtractRulesProxy == null))
                 {
-                    this._ClientExtractRulesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy>(GetPath("ClientExtractRules"));
+                    this._ClientExtractRulesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy>(GetPath("clientExtractRules"));
                 }
                 return this._ClientExtractRulesProxy;
             }
@@ -14170,7 +14192,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -14181,7 +14203,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentsProxy == null))
                 {
-                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("Documents"));
+                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("documents"));
                 }
                 return this._DocumentsProxy;
             }
@@ -14195,7 +14217,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentTypeId")]
+    [global::Microsoft.OData.Client.Key("documentTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentType")]
     public partial class DocumentTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -14214,7 +14236,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentTypeId")]
         public short DocumentTypeIdProxy
         {
             get
@@ -14236,7 +14258,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -14258,7 +14280,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -14280,7 +14302,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -14302,7 +14324,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientExtractRulesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientExtractRules")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientExtractRules")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxy> ClientExtractRulesProxy
         {
             get
@@ -14324,7 +14346,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -14371,7 +14393,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentEmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmail")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmail")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxySingle DocumentEmailProxy
         {
             get
@@ -14382,7 +14404,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentEmailProxy == null))
                 {
-                    this._DocumentEmailProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxySingle(this.Context, GetPath("DocumentEmail"));
+                    this._DocumentEmailProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxySingle(this.Context, GetPath("documentEmail"));
                 }
                 return this._DocumentEmailProxy;
             }
@@ -14396,7 +14418,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentEmailLogIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentEmailLogId")]
+    [global::Microsoft.OData.Client.Key("documentEmailLogId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmailLog")]
     public partial class DocumentEmailLogProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -14417,7 +14439,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailLogIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmailLogId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmailLogId")]
         public global::System.Guid DocumentEmailLogIdProxy
         {
             get
@@ -14439,7 +14461,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmailId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmailId")]
         public global::System.Nullable<global::System.Guid> DocumentEmailIdProxy
         {
             get
@@ -14461,7 +14483,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property MessageProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Message")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("message")]
         public string MessageProxy
         {
             get
@@ -14483,7 +14505,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ContentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Content")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("content")]
         public string ContentProxy
         {
             get
@@ -14505,7 +14527,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -14527,7 +14549,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentEmailProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentEmail")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentEmail")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxy DocumentEmailProxy
         {
             get
@@ -14574,7 +14596,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -14585,7 +14607,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -14596,7 +14618,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentSourceTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceTypeProxySingle DocumentSourceTypeProxy
         {
             get
@@ -14607,7 +14629,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentSourceTypeProxy == null))
                 {
-                    this._DocumentSourceTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceTypeProxySingle(this.Context, GetPath("DocumentSourceType"));
+                    this._DocumentSourceTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceTypeProxySingle(this.Context, GetPath("documentSourceType"));
                 }
                 return this._DocumentSourceTypeProxy;
             }
@@ -14618,7 +14640,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentSourceLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceLines")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceLineProxy> DocumentSourceLinesProxy
         {
             get
@@ -14629,7 +14651,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentSourceLinesProxy == null))
                 {
-                    this._DocumentSourceLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceLineProxy>(GetPath("DocumentSourceLines"));
+                    this._DocumentSourceLinesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceLineProxy>(GetPath("documentSourceLines"));
                 }
                 return this._DocumentSourceLinesProxy;
             }
@@ -14640,7 +14662,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -14651,7 +14673,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentsProxy == null))
                 {
-                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("Documents"));
+                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("documents"));
                 }
                 return this._DocumentsProxy;
             }
@@ -14665,7 +14687,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentSourceIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentSourceId")]
+    [global::Microsoft.OData.Client.Key("documentSourceId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSource")]
     public partial class DocumentSourceProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -14702,7 +14724,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceId")]
         public global::System.Guid DocumentSourceIdProxy
         {
             get
@@ -14724,7 +14746,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceTypeId")]
         public global::System.Nullable<short> DocumentSourceTypeIdProxy
         {
             get
@@ -14746,7 +14768,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -14768,7 +14790,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -14790,7 +14812,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -14812,7 +14834,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -14834,7 +14856,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CredentialsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Credentials")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("credentials")]
         public string CredentialsProxy
         {
             get
@@ -14856,7 +14878,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SaltProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Salt")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("salt")]
         public string SaltProxy
         {
             get
@@ -14878,7 +14900,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PathProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Path")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("path")]
         public string PathProxy
         {
             get
@@ -14900,7 +14922,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AddressProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Address")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("address")]
         public string AddressProxy
         {
             get
@@ -14922,7 +14944,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PortProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Port")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("port")]
         public global::System.Nullable<int> PortProxy
         {
             get
@@ -14944,7 +14966,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UseTlsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UseTls")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("useTls")]
         public bool UseTlsProxy
         {
             get
@@ -14966,7 +14988,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -14988,7 +15010,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -15010,7 +15032,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -15032,7 +15054,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -15054,7 +15076,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -15076,7 +15098,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceTypeProxy DocumentSourceTypeProxy
         {
             get
@@ -15098,7 +15120,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceLines")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceLineProxy> DocumentSourceLinesProxy
         {
             get
@@ -15120,7 +15142,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -15167,7 +15189,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentSourceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSource")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSource")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxySingle DocumentSourceProxy
         {
             get
@@ -15178,7 +15200,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentSourceProxy == null))
                 {
-                    this._DocumentSourceProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxySingle(this.Context, GetPath("DocumentSource"));
+                    this._DocumentSourceProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxySingle(this.Context, GetPath("documentSource"));
                 }
                 return this._DocumentSourceProxy;
             }
@@ -15192,7 +15214,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentSourceLineIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentSourceLineId")]
+    [global::Microsoft.OData.Client.Key("documentSourceLineId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceLine")]
     public partial class DocumentSourceLineProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -15213,7 +15235,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceLineIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceLineId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceLineId")]
         public global::System.Guid DocumentSourceLineIdProxy
         {
             get
@@ -15235,7 +15257,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSourceId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSourceId")]
         public global::System.Nullable<global::System.Guid> DocumentSourceIdProxy
         {
             get
@@ -15257,7 +15279,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StatusProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Status")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("status")]
         public string StatusProxy
         {
             get
@@ -15279,7 +15301,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateUtcProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDateUtc")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDateUtc")]
         public global::System.DateTimeOffset CreatedDateUtcProxy
         {
             get
@@ -15301,7 +15323,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property MessageProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Message")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("message")]
         public string MessageProxy
         {
             get
@@ -15323,7 +15345,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StackTraceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StackTrace")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("stackTrace")]
         public string StackTraceProxy
         {
             get
@@ -15345,7 +15367,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentSourceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentSource")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentSource")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxy DocumentSourceProxy
         {
             get
@@ -15392,7 +15414,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -15403,7 +15425,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -15414,7 +15436,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ParentStoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentStoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentStoredFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle ParentStoredFileProxy
         {
             get
@@ -15425,7 +15447,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ParentStoredFileProxy == null))
                 {
-                    this._ParentStoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("ParentStoredFile"));
+                    this._ParentStoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("parentStoredFile"));
                 }
                 return this._ParentStoredFileProxy;
             }
@@ -15436,7 +15458,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for StoredFileTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileTypeProxySingle StoredFileTypeProxy
         {
             get
@@ -15447,7 +15469,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._StoredFileTypeProxy == null))
                 {
-                    this._StoredFileTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileTypeProxySingle(this.Context, GetPath("StoredFileType"));
+                    this._StoredFileTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileTypeProxySingle(this.Context, GetPath("storedFileType"));
                 }
                 return this._StoredFileTypeProxy;
             }
@@ -15458,7 +15480,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentDesignsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesigns")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesigns")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy> DocumentDesignsProxy
         {
             get
@@ -15469,7 +15491,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentDesignsProxy == null))
                 {
-                    this._DocumentDesignsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy>(GetPath("DocumentDesigns"));
+                    this._DocumentDesignsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy>(GetPath("documentDesigns"));
                 }
                 return this._DocumentDesignsProxy;
             }
@@ -15480,7 +15502,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -15491,7 +15513,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentsProxy == null))
                 {
-                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("Documents"));
+                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("documents"));
                 }
                 return this._DocumentsProxy;
             }
@@ -15502,7 +15524,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InverseParentStoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseParentStoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseParentStoredFile")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy> InverseParentStoredFileProxy
         {
             get
@@ -15513,7 +15535,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InverseParentStoredFileProxy == null))
                 {
-                    this._InverseParentStoredFileProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy>(GetPath("InverseParentStoredFile"));
+                    this._InverseParentStoredFileProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy>(GetPath("inverseParentStoredFile"));
                 }
                 return this._InverseParentStoredFileProxy;
             }
@@ -15524,7 +15546,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TensorModelsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModels")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModels")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy> TensorModelsProxy
         {
             get
@@ -15535,7 +15557,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TensorModelsProxy == null))
                 {
-                    this._TensorModelsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy>(GetPath("TensorModels"));
+                    this._TensorModelsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy>(GetPath("tensorModels"));
                 }
                 return this._TensorModelsProxy;
             }
@@ -15546,7 +15568,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TrainFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFiles")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy> TrainFilesProxy
         {
             get
@@ -15557,7 +15579,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TrainFilesProxy == null))
                 {
-                    this._TrainFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy>(GetPath("TrainFiles"));
+                    this._TrainFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy>(GetPath("trainFiles"));
                 }
                 return this._TrainFilesProxy;
             }
@@ -15571,7 +15593,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// StoredFileIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("StoredFileId")]
+    [global::Microsoft.OData.Client.Key("storedFileId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
     public partial class StoredFileProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -15608,7 +15630,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileId")]
         public global::System.Nullable<global::System.Guid> StoredFileIdProxy
         {
             get
@@ -15630,7 +15652,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -15652,7 +15674,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ParentStoredFileIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentStoredFileId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentStoredFileId")]
         public global::System.Nullable<global::System.Guid> ParentStoredFileIdProxy
         {
             get
@@ -15674,7 +15696,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileTypeId")]
         public global::System.Nullable<short> StoredFileTypeIdProxy
         {
             get
@@ -15696,7 +15718,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -15718,7 +15740,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property MediaTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("MediaType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("mediaType")]
         public string MediaTypeProxy
         {
             get
@@ -15740,7 +15762,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AreaProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Area")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("area")]
         public string AreaProxy
         {
             get
@@ -15762,7 +15784,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -15784,7 +15806,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LengthProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Length")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("length")]
         public long LengthProxy
         {
             get
@@ -15806,7 +15828,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Descriptor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("descriptor")]
         public string DescriptorProxy
         {
             get
@@ -15828,7 +15850,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SequenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Sequence")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("sequence")]
         public short SequenceProxy
         {
             get
@@ -15850,7 +15872,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -15872,7 +15894,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -15894,7 +15916,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -15916,7 +15938,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -15938,7 +15960,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TokenProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Token")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("token")]
         public string TokenProxy
         {
             get
@@ -15960,7 +15982,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OriginalNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OriginalName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("originalName")]
         public string OriginalNameProxy
         {
             get
@@ -15982,7 +16004,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -16004,7 +16026,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ParentStoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentStoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentStoredFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy ParentStoredFileProxy
         {
             get
@@ -16026,7 +16048,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileTypeProxy StoredFileTypeProxy
         {
             get
@@ -16048,7 +16070,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesigns")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesigns")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy> DocumentDesignsProxy
         {
             get
@@ -16070,7 +16092,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -16092,7 +16114,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InverseParentStoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseParentStoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseParentStoredFile")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy> InverseParentStoredFileProxy
         {
             get
@@ -16114,7 +16136,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TensorModelsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModels")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModels")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy> TensorModelsProxy
         {
             get
@@ -16136,7 +16158,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TrainFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFiles")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy> TrainFilesProxy
         {
             get
@@ -16183,7 +16205,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for StoredFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFiles")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy> StoredFilesProxy
         {
             get
@@ -16194,7 +16216,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._StoredFilesProxy == null))
                 {
-                    this._StoredFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy>(GetPath("StoredFiles"));
+                    this._StoredFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy>(GetPath("storedFiles"));
                 }
                 return this._StoredFilesProxy;
             }
@@ -16208,7 +16230,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// StoredFileTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("StoredFileTypeId")]
+    [global::Microsoft.OData.Client.Key("storedFileTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileType")]
     public partial class StoredFileTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -16227,7 +16249,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileTypeId")]
         public short StoredFileTypeIdProxy
         {
             get
@@ -16249,7 +16271,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -16271,7 +16293,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -16293,7 +16315,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFiles")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy> StoredFilesProxy
         {
             get
@@ -16340,7 +16362,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -16351,7 +16373,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -16362,7 +16384,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ParentDocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentDocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentDocumentDesign")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle ParentDocumentDesignProxy
         {
             get
@@ -16373,7 +16395,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ParentDocumentDesignProxy == null))
                 {
-                    this._ParentDocumentDesignProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle(this.Context, GetPath("ParentDocumentDesign"));
+                    this._ParentDocumentDesignProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle(this.Context, GetPath("parentDocumentDesign"));
                 }
                 return this._ParentDocumentDesignProxy;
             }
@@ -16384,7 +16406,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle StoredFileProxy
         {
             get
@@ -16395,7 +16417,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._StoredFileProxy == null))
                 {
-                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("StoredFile"));
+                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("storedFile"));
                 }
                 return this._StoredFileProxy;
             }
@@ -16406,7 +16428,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle VendorProxy
         {
             get
@@ -16417,7 +16439,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorProxy == null))
                 {
-                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("Vendor"));
+                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("vendor"));
                 }
                 return this._VendorProxy;
             }
@@ -16428,7 +16450,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentDesignActionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignActions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignActions")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignActionProxy> DocumentDesignActionsProxy
         {
             get
@@ -16439,7 +16461,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentDesignActionsProxy == null))
                 {
-                    this._DocumentDesignActionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignActionProxy>(GetPath("DocumentDesignActions"));
+                    this._DocumentDesignActionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignActionProxy>(GetPath("documentDesignActions"));
                 }
                 return this._DocumentDesignActionsProxy;
             }
@@ -16450,7 +16472,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentDesignRulesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignRules")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignRules")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignRuleProxy> DocumentDesignRulesProxy
         {
             get
@@ -16461,7 +16483,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentDesignRulesProxy == null))
                 {
-                    this._DocumentDesignRulesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignRuleProxy>(GetPath("DocumentDesignRules"));
+                    this._DocumentDesignRulesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignRuleProxy>(GetPath("documentDesignRules"));
                 }
                 return this._DocumentDesignRulesProxy;
             }
@@ -16472,7 +16494,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -16483,7 +16505,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentsProxy == null))
                 {
-                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("Documents"));
+                    this._DocumentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy>(GetPath("documents"));
                 }
                 return this._DocumentsProxy;
             }
@@ -16494,7 +16516,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InverseParentDocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseParentDocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseParentDocumentDesign")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy> InverseParentDocumentDesignProxy
         {
             get
@@ -16505,7 +16527,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InverseParentDocumentDesignProxy == null))
                 {
-                    this._InverseParentDocumentDesignProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy>(GetPath("InverseParentDocumentDesign"));
+                    this._InverseParentDocumentDesignProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy>(GetPath("inverseParentDocumentDesign"));
                 }
                 return this._InverseParentDocumentDesignProxy;
             }
@@ -16519,7 +16541,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentDesignIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentDesignId")]
+    [global::Microsoft.OData.Client.Key("documentDesignId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesign")]
     public partial class DocumentDesignProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -16553,7 +16575,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignId")]
         public global::System.Nullable<global::System.Guid> DocumentDesignIdProxy
         {
             get
@@ -16575,7 +16597,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -16597,7 +16619,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Nullable<global::System.Guid> VendorIdProxy
         {
             get
@@ -16619,7 +16641,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileId")]
         public global::System.Nullable<global::System.Guid> StoredFileIdProxy
         {
             get
@@ -16641,7 +16663,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ParentDocumentDesignIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentDocumentDesignId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentDocumentDesignId")]
         public global::System.Nullable<global::System.Guid> ParentDocumentDesignIdProxy
         {
             get
@@ -16663,7 +16685,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -16685,7 +16707,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonDataProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonData")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonData")]
         public string JsonDataProxy
         {
             get
@@ -16707,7 +16729,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FirstXlineProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FirstXline")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("firstXline")]
         public global::System.Nullable<int> FirstXlineProxy
         {
             get
@@ -16729,7 +16751,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FirstYlineProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FirstYline")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("firstYline")]
         public global::System.Nullable<int> FirstYlineProxy
         {
             get
@@ -16751,7 +16773,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FirstTextProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FirstText")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("firstText")]
         public string FirstTextProxy
         {
             get
@@ -16773,7 +16795,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SecondTextProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SecondText")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("secondText")]
         public string SecondTextProxy
         {
             get
@@ -16795,7 +16817,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FirstXfeatureProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FirstXfeature")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("firstXfeature")]
         public global::System.Nullable<int> FirstXfeatureProxy
         {
             get
@@ -16817,7 +16839,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FirstYfeatureProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FirstYfeature")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("firstYfeature")]
         public global::System.Nullable<int> FirstYfeatureProxy
         {
             get
@@ -16839,7 +16861,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VersionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Version")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("version")]
         public short VersionProxy
         {
             get
@@ -16861,7 +16883,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -16883,7 +16905,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -16905,7 +16927,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -16927,7 +16949,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -16949,7 +16971,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -16971,7 +16993,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxNumber")]
         public string TaxNumberProxy
         {
             get
@@ -16993,7 +17015,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PhoneNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PhoneNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("phoneNumber")]
         public string PhoneNumberProxy
         {
             get
@@ -17015,7 +17037,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DomainNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DomainName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("domainName")]
         public string DomainNameProxy
         {
             get
@@ -17037,7 +17059,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -17059,7 +17081,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ParentDocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentDocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("parentDocumentDesign")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy ParentDocumentDesignProxy
         {
             get
@@ -17081,7 +17103,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy StoredFileProxy
         {
             get
@@ -17103,7 +17125,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy VendorProxy
         {
             get
@@ -17125,7 +17147,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignActionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignActions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignActions")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignActionProxy> DocumentDesignActionsProxy
         {
             get
@@ -17147,7 +17169,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignRulesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignRules")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignRules")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignRuleProxy> DocumentDesignRulesProxy
         {
             get
@@ -17169,7 +17191,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Documents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documents")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy> DocumentsProxy
         {
             get
@@ -17191,7 +17213,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InverseParentDocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InverseParentDocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("inverseParentDocumentDesign")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy> InverseParentDocumentDesignProxy
         {
             get
@@ -17238,7 +17260,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PurchaseOrderHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderProxySingle PurchaseOrderHeaderProxy
         {
             get
@@ -17249,7 +17271,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PurchaseOrderHeaderProxy == null))
                 {
-                    this._PurchaseOrderHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderProxySingle(this.Context, GetPath("PurchaseOrderHeader"));
+                    this._PurchaseOrderHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderProxySingle(this.Context, GetPath("purchaseOrderHeader"));
                 }
                 return this._PurchaseOrderHeaderProxy;
             }
@@ -17260,7 +17282,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle TaxRateProxy
         {
             get
@@ -17271,7 +17293,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TaxRateProxy == null))
                 {
-                    this._TaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("TaxRate"));
+                    this._TaxRateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(this.Context, GetPath("taxRate"));
                 }
                 return this._TaxRateProxy;
             }
@@ -17285,7 +17307,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PurchaseOrderLineIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PurchaseOrderLineId")]
+    [global::Microsoft.OData.Client.Key("purchaseOrderLineId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderLine")]
     public partial class PurchaseOrderLineProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -17304,7 +17326,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderLineIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderLineId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderLineId")]
         public global::System.Guid PurchaseOrderLineIdProxy
         {
             get
@@ -17326,7 +17348,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeaderId")]
         public global::System.Nullable<global::System.Guid> PurchaseOrderHeaderIdProxy
         {
             get
@@ -17348,7 +17370,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRateId")]
         public global::System.Nullable<global::System.Guid> TaxRateIdProxy
         {
             get
@@ -17370,7 +17392,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -17392,7 +17414,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -17414,7 +17436,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Rate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("rate")]
         public global::System.Nullable<decimal> RateProxy
         {
             get
@@ -17436,7 +17458,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property QuantityProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Quantity")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("quantity")]
         public global::System.Nullable<decimal> QuantityProxy
         {
             get
@@ -17458,7 +17480,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CostProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Cost")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("cost")]
         public global::System.Nullable<decimal> CostProxy
         {
             get
@@ -17480,7 +17502,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OutstandingQuantityProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OutstandingQuantity")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("outstandingQuantity")]
         public global::System.Nullable<decimal> OutstandingQuantityProxy
         {
             get
@@ -17502,7 +17524,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OutstandingCostProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OutstandingCost")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("outstandingCost")]
         public global::System.Nullable<decimal> OutstandingCostProxy
         {
             get
@@ -17524,7 +17546,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExternalIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExternalId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("externalId")]
         public string ExternalIdProxy
         {
             get
@@ -17546,7 +17568,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherPurchaseOrderLinesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherPurchaseOrderLines")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherPurchaseOrderLines")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherPurchaseOrderLineProxy> VoucherPurchaseOrderLinesProxy
         {
             get
@@ -17568,7 +17590,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderProxy PurchaseOrderHeaderProxy
         {
             get
@@ -17590,7 +17612,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TaxRateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxRate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxRate")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxy TaxRateProxy
         {
             get
@@ -17634,7 +17656,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ValueId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("valueId")]
         public global::System.Guid ValueIdProxy
         {
             get
@@ -17656,7 +17678,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AttributeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AttributeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attributeId")]
         public global::System.Guid AttributeIdProxy
         {
             get
@@ -17678,7 +17700,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeaderId")]
         public global::System.Guid PurchaseOrderHeaderIdProxy
         {
             get
@@ -17700,7 +17722,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueStrProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ValueStr")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("valueStr")]
         public string ValueStrProxy
         {
             get
@@ -17722,7 +17744,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueIntProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ValueInt")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("valueInt")]
         public global::System.Nullable<int> ValueIntProxy
         {
             get
@@ -17744,7 +17766,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueDecProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ValueDec")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("valueDec")]
         public global::System.Nullable<decimal> ValueDecProxy
         {
             get
@@ -17766,7 +17788,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ValueDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("valueDate")]
         public global::System.Nullable<global::System.DateTimeOffset> ValueDateProxy
         {
             get
@@ -17788,7 +17810,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueBoolProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ValueBool")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("valueBool")]
         public global::System.Nullable<bool> ValueBoolProxy
         {
             get
@@ -17810,7 +17832,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AttributeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Attribute")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attribute")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderAttributeProxy AttributeProxy
         {
             get
@@ -17832,7 +17854,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderProxy PurchaseOrderHeaderProxy
         {
             get
@@ -17876,7 +17898,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AttributeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AttributeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attributeId")]
         public global::System.Guid AttributeIdProxy
         {
             get
@@ -17898,7 +17920,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AttributeTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AttributeTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attributeTypeId")]
         public global::System.Nullable<short> AttributeTypeIdProxy
         {
             get
@@ -17920,7 +17942,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Guid ClientIdProxy
         {
             get
@@ -17942,7 +17964,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -17964,7 +17986,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -17986,7 +18008,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -18008,7 +18030,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultValueStrProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultValueStr")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultValueStr")]
         public string DefaultValueStrProxy
         {
             get
@@ -18030,7 +18052,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultValueIntProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultValueInt")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultValueInt")]
         public global::System.Nullable<int> DefaultValueIntProxy
         {
             get
@@ -18052,7 +18074,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultValueDecProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultValueDec")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultValueDec")]
         public global::System.Nullable<decimal> DefaultValueDecProxy
         {
             get
@@ -18074,7 +18096,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultValueDeateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultValueDeate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultValueDeate")]
         public global::System.Nullable<global::System.DateTimeOffset> DefaultValueDeateProxy
         {
             get
@@ -18096,7 +18118,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DefaultValueBoolProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DefaultValueBool")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("defaultValueBool")]
         public global::System.Nullable<bool> DefaultValueBoolProxy
         {
             get
@@ -18118,7 +18140,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValidateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Validate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("validate")]
         public string ValidateProxy
         {
             get
@@ -18140,7 +18162,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsRequiredProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsRequired")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isRequired")]
         public bool IsRequiredProxy
         {
             get
@@ -18162,7 +18184,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeaderValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeaderValues")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderValueProxy> PurchaseOrderHeaderValuesProxy
         {
             get
@@ -18184,7 +18206,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AttributeTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AttributeType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attributeType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.AttributeTypeProxy AttributeTypeProxy
         {
             get
@@ -18206,7 +18228,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -18256,7 +18278,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// AttributeTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("AttributeTypeId")]
+    [global::Microsoft.OData.Client.Key("attributeTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("AttributeType")]
     public partial class AttributeTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -18275,7 +18297,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AttributeTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AttributeTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attributeTypeId")]
         public short AttributeTypeIdProxy
         {
             get
@@ -18297,7 +18319,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -18319,7 +18341,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -18341,7 +18363,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -18363,7 +18385,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderHeaderAttributesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderHeaderAttributes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderHeaderAttributes")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderAttributeProxy> PurchaseOrderHeaderAttributesProxy
         {
             get
@@ -18409,7 +18431,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherPurchaseOrderLine1Proxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherPurchaseOrderLine1")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherPurchaseOrderLine1")]
         public global::System.Guid VoucherPurchaseOrderLine1Proxy
         {
             get
@@ -18431,7 +18453,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLineIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLineId")]
         public global::System.Guid VoucherLineIdProxy
         {
             get
@@ -18453,7 +18475,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderLineIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderLineId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderLineId")]
         public global::System.Guid PurchaseOrderLineIdProxy
         {
             get
@@ -18475,7 +18497,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsFullyMatchedProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsFullyMatched")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isFullyMatched")]
         public bool IsFullyMatchedProxy
         {
             get
@@ -18497,7 +18519,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PurchaseOrderLineProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PurchaseOrderLine")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderLine")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderLineProxy PurchaseOrderLineProxy
         {
             get
@@ -18519,7 +18541,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLineProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLine")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLine")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxy VoucherLineProxy
         {
             get
@@ -18566,7 +18588,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherLineProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLine")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLine")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxySingle VoucherLineProxy
         {
             get
@@ -18577,7 +18599,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherLineProxy == null))
                 {
-                    this._VoucherLineProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxySingle(this.Context, GetPath("VoucherLine"));
+                    this._VoucherLineProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxySingle(this.Context, GetPath("voucherLine"));
                 }
                 return this._VoucherLineProxy;
             }
@@ -18591,7 +18613,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherLineDetailIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherLineDetailId")]
+    [global::Microsoft.OData.Client.Key("voucherLineDetailId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineDetail")]
     public partial class VoucherLineDetailProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -18610,7 +18632,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLineDetailIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineDetailId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLineDetailId")]
         public global::System.Guid VoucherLineDetailIdProxy
         {
             get
@@ -18632,7 +18654,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLineIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLineId")]
         public global::System.Nullable<global::System.Guid> VoucherLineIdProxy
         {
             get
@@ -18654,7 +18676,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -18676,7 +18698,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Value")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("value")]
         public string ValueProxy
         {
             get
@@ -18698,7 +18720,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherLineProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLine")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherLine")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxy VoucherLineProxy
         {
             get
@@ -18745,7 +18767,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for InterClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxySingle InterClientProxy
         {
             get
@@ -18756,7 +18778,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._InterClientProxy == null))
                 {
-                    this._InterClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxySingle(this.Context, GetPath("InterClient"));
+                    this._InterClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxySingle(this.Context, GetPath("interClient"));
                 }
                 return this._InterClientProxy;
             }
@@ -18767,7 +18789,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for OtherVendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherVendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherVendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle OtherVendorProxy
         {
             get
@@ -18778,7 +18800,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._OtherVendorProxy == null))
                 {
-                    this._OtherVendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("OtherVendor"));
+                    this._OtherVendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("otherVendor"));
                 }
                 return this._OtherVendorProxy;
             }
@@ -18789,7 +18811,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle VendorProxy
         {
             get
@@ -18800,7 +18822,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorProxy == null))
                 {
-                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("Vendor"));
+                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("vendor"));
                 }
                 return this._VendorProxy;
             }
@@ -18814,7 +18836,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// InterVendorIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("InterVendorId")]
+    [global::Microsoft.OData.Client.Key("interVendorId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendor")]
     public partial class InterVendorProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -18835,7 +18857,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterVendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterVendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interVendorId")]
         public global::System.Guid InterVendorIdProxy
         {
             get
@@ -18857,7 +18879,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClientId")]
         public global::System.Nullable<global::System.Guid> InterClientIdProxy
         {
             get
@@ -18879,7 +18901,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Nullable<global::System.Guid> VendorIdProxy
         {
             get
@@ -18901,7 +18923,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherVendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherVendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherVendorId")]
         public global::System.Guid OtherVendorIdProxy
         {
             get
@@ -18923,7 +18945,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property InterClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("InterClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("interClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxy InterClientProxy
         {
             get
@@ -18945,7 +18967,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property OtherVendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("OtherVendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("otherVendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy OtherVendorProxy
         {
             get
@@ -18967,7 +18989,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy VendorProxy
         {
             get
@@ -19014,7 +19036,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendors")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy> VendorsProxy
         {
             get
@@ -19025,7 +19047,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorsProxy == null))
                 {
-                    this._VendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy>(GetPath("Vendors"));
+                    this._VendorsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy>(GetPath("vendors"));
                 }
                 return this._VendorsProxy;
             }
@@ -19039,7 +19061,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PaymentTermTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PaymentTermTypeId")]
+    [global::Microsoft.OData.Client.Key("paymentTermTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("PaymentTermType")]
     public partial class PaymentTermTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -19058,7 +19080,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PaymentTermTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PaymentTermTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("paymentTermTypeId")]
         public short PaymentTermTypeIdProxy
         {
             get
@@ -19080,7 +19102,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -19102,7 +19124,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -19124,7 +19146,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -19146,7 +19168,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property XeroTermTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("XeroTermType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("xeroTermType")]
         public global::System.Nullable<short> XeroTermTypeProxy
         {
             get
@@ -19168,7 +19190,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendors")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendors")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy> VendorsProxy
         {
             get
@@ -19215,7 +19237,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle ClientProxy
         {
             get
@@ -19226,7 +19248,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ClientProxy == null))
                 {
-                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("Client"));
+                    this._ClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(this.Context, GetPath("client"));
                 }
                 return this._ClientProxy;
             }
@@ -19237,7 +19259,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle PersonProxy
         {
             get
@@ -19248,7 +19270,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PersonProxy == null))
                 {
-                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("Person"));
+                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("person"));
                 }
                 return this._PersonProxy;
             }
@@ -19259,7 +19281,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for SettingFlagProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingFlag")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingFlag")]
         public global::OcerraConsoleApp.ODataClient.Proxies.SettingFlagProxySingle SettingFlagProxy
         {
             get
@@ -19270,7 +19292,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._SettingFlagProxy == null))
                 {
-                    this._SettingFlagProxy = new global::OcerraConsoleApp.ODataClient.Proxies.SettingFlagProxySingle(this.Context, GetPath("SettingFlag"));
+                    this._SettingFlagProxy = new global::OcerraConsoleApp.ODataClient.Proxies.SettingFlagProxySingle(this.Context, GetPath("settingFlag"));
                 }
                 return this._SettingFlagProxy;
             }
@@ -19281,7 +19303,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle VendorProxy
         {
             get
@@ -19292,7 +19314,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VendorProxy == null))
                 {
-                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("Vendor"));
+                    this._VendorProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(this.Context, GetPath("vendor"));
                 }
                 return this._VendorProxy;
             }
@@ -19306,7 +19328,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// SettingValueIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("SettingValueId")]
+    [global::Microsoft.OData.Client.Key("settingValueId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValue")]
     public partial class SettingValueProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -19333,7 +19355,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingValueIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValueId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValueId")]
         public global::System.Guid SettingValueIdProxy
         {
             get
@@ -19355,7 +19377,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingFlagIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingFlagId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingFlagId")]
         public global::System.Nullable<short> SettingFlagIdProxy
         {
             get
@@ -19377,7 +19399,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
         public global::System.Nullable<global::System.Guid> PersonIdProxy
         {
             get
@@ -19399,7 +19421,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Nullable<global::System.Guid> ClientIdProxy
         {
             get
@@ -19421,7 +19443,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Nullable<global::System.Guid> VendorIdProxy
         {
             get
@@ -19443,7 +19465,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StringValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StringValue")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("stringValue")]
         public string StringValueProxy
         {
             get
@@ -19465,7 +19487,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IntValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IntValue")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("intValue")]
         public global::System.Nullable<int> IntValueProxy
         {
             get
@@ -19487,7 +19509,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NumValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("NumValue")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("numValue")]
         public global::System.Nullable<decimal> NumValueProxy
         {
             get
@@ -19509,7 +19531,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DateValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DateValue")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("dateValue")]
         public global::System.Nullable<global::System.DateTimeOffset> DateValueProxy
         {
             get
@@ -19531,7 +19553,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property BoolValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("BoolValue")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("boolValue")]
         public global::System.Nullable<bool> BoolValueProxy
         {
             get
@@ -19553,7 +19575,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -19575,7 +19597,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -19597,7 +19619,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -19619,7 +19641,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -19641,7 +19663,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Client")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("client")]
         public global::OcerraConsoleApp.ODataClient.Proxies.ClientProxy ClientProxy
         {
             get
@@ -19663,7 +19685,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxy PersonProxy
         {
             get
@@ -19685,7 +19707,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingFlagProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingFlag")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingFlag")]
         public global::OcerraConsoleApp.ODataClient.Proxies.SettingFlagProxy SettingFlagProxy
         {
             get
@@ -19707,7 +19729,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Vendor")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VendorProxy VendorProxy
         {
             get
@@ -19754,7 +19776,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -19765,7 +19787,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._SettingValuesProxy == null))
                 {
-                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("SettingValues"));
+                    this._SettingValuesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy>(GetPath("settingValues"));
                 }
                 return this._SettingValuesProxy;
             }
@@ -19779,7 +19801,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// SettingFlagIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("SettingFlagId")]
+    [global::Microsoft.OData.Client.Key("settingFlagId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("SettingFlag")]
     public partial class SettingFlagProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -19798,7 +19820,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingFlagIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingFlagId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingFlagId")]
         public short SettingFlagIdProxy
         {
             get
@@ -19820,7 +19842,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -19842,7 +19864,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -19864,7 +19886,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -19886,7 +19908,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SettingValuesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("SettingValues")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("settingValues")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxy> SettingValuesProxy
         {
             get
@@ -19933,7 +19955,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowSchemasProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemas")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemas")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy> WorkflowSchemasProxy
         {
             get
@@ -19944,7 +19966,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowSchemasProxy == null))
                 {
-                    this._WorkflowSchemasProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy>(GetPath("WorkflowSchemas"));
+                    this._WorkflowSchemasProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy>(GetPath("workflowSchemas"));
                 }
                 return this._WorkflowSchemasProxy;
             }
@@ -19958,7 +19980,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowTypeId")]
+    [global::Microsoft.OData.Client.Key("workflowTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowType")]
     public partial class WorkflowTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -19977,7 +19999,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTypeId")]
         public short WorkflowTypeIdProxy
         {
             get
@@ -19999,7 +20021,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -20021,7 +20043,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -20043,7 +20065,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -20065,7 +20087,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemasProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemas")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemas")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy> WorkflowSchemasProxy
         {
             get
@@ -20112,7 +20134,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesign")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle DocumentDesignProxy
         {
             get
@@ -20123,7 +20145,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentDesignProxy == null))
                 {
-                    this._DocumentDesignProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle(this.Context, GetPath("DocumentDesign"));
+                    this._DocumentDesignProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle(this.Context, GetPath("documentDesign"));
                 }
                 return this._DocumentDesignProxy;
             }
@@ -20137,7 +20159,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentDesignActionIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentDesignActionId")]
+    [global::Microsoft.OData.Client.Key("documentDesignActionId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignAction")]
     public partial class DocumentDesignActionProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -20174,7 +20196,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignActionIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignActionId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignActionId")]
         public global::System.Guid DocumentDesignActionIdProxy
         {
             get
@@ -20196,7 +20218,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignId")]
         public global::System.Nullable<global::System.Guid> DocumentDesignIdProxy
         {
             get
@@ -20218,7 +20240,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -20240,7 +20262,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonDataProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonData")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonData")]
         public string JsonDataProxy
         {
             get
@@ -20262,7 +20284,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PriorityProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Priority")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("priority")]
         public short PriorityProxy
         {
             get
@@ -20284,7 +20306,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -20306,7 +20328,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -20328,7 +20350,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -20350,7 +20372,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -20372,7 +20394,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -20394,7 +20416,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesign")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy DocumentDesignProxy
         {
             get
@@ -20441,7 +20463,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesign")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle DocumentDesignProxy
         {
             get
@@ -20452,7 +20474,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentDesignProxy == null))
                 {
-                    this._DocumentDesignProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle(this.Context, GetPath("DocumentDesign"));
+                    this._DocumentDesignProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle(this.Context, GetPath("documentDesign"));
                 }
                 return this._DocumentDesignProxy;
             }
@@ -20466,7 +20488,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentDesignRuleIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentDesignRuleId")]
+    [global::Microsoft.OData.Client.Key("documentDesignRuleId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignRule")]
     public partial class DocumentDesignRuleProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -20500,7 +20522,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignRuleIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignRuleId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignRuleId")]
         public global::System.Guid DocumentDesignRuleIdProxy
         {
             get
@@ -20522,7 +20544,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesignId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesignId")]
         public global::System.Nullable<global::System.Guid> DocumentDesignIdProxy
         {
             get
@@ -20544,7 +20566,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -20566,7 +20588,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonDataProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonData")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonData")]
         public string JsonDataProxy
         {
             get
@@ -20588,7 +20610,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EndDateUtcProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("EndDateUtc")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("endDateUtc")]
         public global::System.DateTimeOffset EndDateUtcProxy
         {
             get
@@ -20610,7 +20632,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -20632,7 +20654,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -20654,7 +20676,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -20676,7 +20698,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -20698,7 +20720,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentDesignProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentDesign")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentDesign")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxy DocumentDesignProxy
         {
             get
@@ -20745,7 +20767,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle StoredFileProxy
         {
             get
@@ -20756,7 +20778,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._StoredFileProxy == null))
                 {
-                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("StoredFile"));
+                    this._StoredFileProxy = new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(this.Context, GetPath("storedFile"));
                 }
                 return this._StoredFileProxy;
             }
@@ -20767,7 +20789,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TensorModelTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModelType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModelType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TensorModelTypeProxySingle TensorModelTypeProxy
         {
             get
@@ -20778,7 +20800,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TensorModelTypeProxy == null))
                 {
-                    this._TensorModelTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TensorModelTypeProxySingle(this.Context, GetPath("TensorModelType"));
+                    this._TensorModelTypeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.TensorModelTypeProxySingle(this.Context, GetPath("tensorModelType"));
                 }
                 return this._TensorModelTypeProxy;
             }
@@ -20792,7 +20814,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// TensorModelIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("TensorModelId")]
+    [global::Microsoft.OData.Client.Key("tensorModelId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModel")]
     public partial class TensorModelProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -20815,7 +20837,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TensorModelIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModelId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModelId")]
         public int TensorModelIdProxy
         {
             get
@@ -20837,7 +20859,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TensorModelTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModelTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModelTypeId")]
         public global::System.Nullable<short> TensorModelTypeIdProxy
         {
             get
@@ -20859,7 +20881,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFileId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFileId")]
         public global::System.Nullable<global::System.Guid> StoredFileIdProxy
         {
             get
@@ -20881,7 +20903,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -20903,7 +20925,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -20925,7 +20947,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -20947,7 +20969,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StoredFileProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StoredFile")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("storedFile")]
         public global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxy StoredFileProxy
         {
             get
@@ -20969,7 +20991,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TensorModelTypeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModelType")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModelType")]
         public global::OcerraConsoleApp.ODataClient.Proxies.TensorModelTypeProxy TensorModelTypeProxy
         {
             get
@@ -21016,7 +21038,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TensorModelsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModels")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModels")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy> TensorModelsProxy
         {
             get
@@ -21027,7 +21049,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TensorModelsProxy == null))
                 {
-                    this._TensorModelsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy>(GetPath("TensorModels"));
+                    this._TensorModelsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy>(GetPath("tensorModels"));
                 }
                 return this._TensorModelsProxy;
             }
@@ -21041,7 +21063,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// TensorModelTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("TensorModelTypeId")]
+    [global::Microsoft.OData.Client.Key("tensorModelTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModelType")]
     public partial class TensorModelTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -21060,7 +21082,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TensorModelTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModelTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModelTypeId")]
         public short TensorModelTypeIdProxy
         {
             get
@@ -21082,7 +21104,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -21104,7 +21126,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -21126,7 +21148,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TensorModelsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TensorModels")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("tensorModels")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxy> TensorModelsProxy
         {
             get
@@ -21173,7 +21195,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for TrainFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFiles")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy> TrainFilesProxy
         {
             get
@@ -21184,7 +21206,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._TrainFilesProxy == null))
                 {
-                    this._TrainFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy>(GetPath("TrainFiles"));
+                    this._TrainFilesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy>(GetPath("trainFiles"));
                 }
                 return this._TrainFilesProxy;
             }
@@ -21198,7 +21220,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// TrainFileTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("TrainFileTypeId")]
+    [global::Microsoft.OData.Client.Key("trainFileTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFileType")]
     public partial class TrainFileTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -21217,7 +21239,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TrainFileTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFileTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFileTypeId")]
         public short TrainFileTypeIdProxy
         {
             get
@@ -21239,7 +21261,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -21261,7 +21283,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -21283,7 +21305,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TrainFilesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TrainFiles")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("trainFiles")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxy> TrainFilesProxy
         {
             get
@@ -21330,7 +21352,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for DocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Document")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("document")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle DocumentProxy
         {
             get
@@ -21341,7 +21363,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._DocumentProxy == null))
                 {
-                    this._DocumentProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle(this.Context, GetPath("Document"));
+                    this._DocumentProxy = new global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle(this.Context, GetPath("document"));
                 }
                 return this._DocumentProxy;
             }
@@ -21355,7 +21377,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// DocumentMatchIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("DocumentMatchId")]
+    [global::Microsoft.OData.Client.Key("documentMatchId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentMatch")]
     public partial class DocumentMatchProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -21392,7 +21414,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentMatchIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentMatchId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentMatchId")]
         public global::System.Guid DocumentMatchIdProxy
         {
             get
@@ -21414,7 +21436,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("DocumentId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentId")]
         public global::System.Nullable<global::System.Guid> DocumentIdProxy
         {
             get
@@ -21436,7 +21458,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExtractMatchesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExtractMatches")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("extractMatches")]
         public string ExtractMatchesProxy
         {
             get
@@ -21458,7 +21480,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EndDateUtcProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("EndDateUtc")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("endDateUtc")]
         public global::System.DateTimeOffset EndDateUtcProxy
         {
             get
@@ -21480,7 +21502,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property HasManuallyCheckedProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("HasManuallyChecked")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasManuallyChecked")]
         public bool HasManuallyCheckedProxy
         {
             get
@@ -21502,7 +21524,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -21524,7 +21546,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -21546,7 +21568,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -21568,7 +21590,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -21590,7 +21612,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DocumentProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Document")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("document")]
         public global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxy DocumentProxy
         {
             get
@@ -21637,7 +21659,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowSchemaProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchema")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchema")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxySingle WorkflowSchemaProxy
         {
             get
@@ -21648,7 +21670,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowSchemaProxy == null))
                 {
-                    this._WorkflowSchemaProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxySingle(this.Context, GetPath("WorkflowSchema"));
+                    this._WorkflowSchemaProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxySingle(this.Context, GetPath("workflowSchema"));
                 }
                 return this._WorkflowSchemaProxy;
             }
@@ -21659,7 +21681,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle WorkflowStateProxy
         {
             get
@@ -21670,7 +21692,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowStateProxy == null))
                 {
-                    this._WorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("WorkflowState"));
+                    this._WorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("workflowState"));
                 }
                 return this._WorkflowStateProxy;
             }
@@ -21681,7 +21703,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherHeadersProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaders")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaders")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy> VoucherHeadersProxy
         {
             get
@@ -21692,7 +21714,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherHeadersProxy == null))
                 {
-                    this._VoucherHeadersProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy>(GetPath("VoucherHeaders"));
+                    this._VoucherHeadersProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy>(GetPath("voucherHeaders"));
                 }
                 return this._VoucherHeadersProxy;
             }
@@ -21703,7 +21725,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowLogs")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy> WorkflowLogsProxy
         {
             get
@@ -21714,7 +21736,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowLogsProxy == null))
                 {
-                    this._WorkflowLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy>(GetPath("WorkflowLogs"));
+                    this._WorkflowLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy>(GetPath("workflowLogs"));
                 }
                 return this._WorkflowLogsProxy;
             }
@@ -21728,7 +21750,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowId")]
+    [global::Microsoft.OData.Client.Key("workflowId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("Workflow")]
     public partial class WorkflowProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -21755,7 +21777,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowId")]
         public global::System.Guid WorkflowIdProxy
         {
             get
@@ -21777,7 +21799,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemaIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemaId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaId")]
         public global::System.Nullable<global::System.Guid> WorkflowSchemaIdProxy
         {
             get
@@ -21799,7 +21821,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowStateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStateId")]
         public global::System.Nullable<global::System.Guid> WorkflowStateIdProxy
         {
             get
@@ -21821,7 +21843,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -21843,7 +21865,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -21865,7 +21887,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -21887,7 +21909,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -21909,7 +21931,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemaProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchema")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchema")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy WorkflowSchemaProxy
         {
             get
@@ -21931,7 +21953,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy WorkflowStateProxy
         {
             get
@@ -21953,7 +21975,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeadersProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaders")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaders")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy> VoucherHeadersProxy
         {
             get
@@ -21975,7 +21997,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowLogs")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy> WorkflowLogsProxy
         {
             get
@@ -22022,7 +22044,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowStatesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStates")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStates")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy> WorkflowStatesProxy
         {
             get
@@ -22033,7 +22055,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowStatesProxy == null))
                 {
-                    this._WorkflowStatesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy>(GetPath("WorkflowStates"));
+                    this._WorkflowStatesProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy>(GetPath("workflowStates"));
                 }
                 return this._WorkflowStatesProxy;
             }
@@ -22047,7 +22069,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowStateTypeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowStateTypeId")]
+    [global::Microsoft.OData.Client.Key("workflowStateTypeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateType")]
     public partial class WorkflowStateTypeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -22066,7 +22088,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowStateTypeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateTypeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStateTypeId")]
         public short WorkflowStateTypeIdProxy
         {
             get
@@ -22088,7 +22110,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -22110,7 +22132,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -22132,7 +22154,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -22154,7 +22176,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowStatesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStates")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStates")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy> WorkflowStatesProxy
         {
             get
@@ -22201,7 +22223,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for CreatedByNavigationProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedByNavigation")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdByNavigation")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle CreatedByNavigationProxy
         {
             get
@@ -22212,7 +22234,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._CreatedByNavigationProxy == null))
                 {
-                    this._CreatedByNavigationProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("CreatedByNavigation"));
+                    this._CreatedByNavigationProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("createdByNavigation"));
                 }
                 return this._CreatedByNavigationProxy;
             }
@@ -22223,7 +22245,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for FromWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FromWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fromWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle FromWorkflowStateProxy
         {
             get
@@ -22234,7 +22256,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._FromWorkflowStateProxy == null))
                 {
-                    this._FromWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("FromWorkflowState"));
+                    this._FromWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("fromWorkflowState"));
                 }
                 return this._FromWorkflowStateProxy;
             }
@@ -22245,7 +22267,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ToWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ToWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("toWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle ToWorkflowStateProxy
         {
             get
@@ -22256,7 +22278,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ToWorkflowStateProxy == null))
                 {
-                    this._ToWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("ToWorkflowState"));
+                    this._ToWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("toWorkflowState"));
                 }
                 return this._ToWorkflowStateProxy;
             }
@@ -22267,7 +22289,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Workflow")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflow")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxySingle WorkflowProxy
         {
             get
@@ -22278,7 +22300,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowProxy == null))
                 {
-                    this._WorkflowProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxySingle(this.Context, GetPath("Workflow"));
+                    this._WorkflowProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxySingle(this.Context, GetPath("workflow"));
                 }
                 return this._WorkflowProxy;
             }
@@ -22289,7 +22311,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowTransitionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransition")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransition")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxySingle WorkflowTransitionProxy
         {
             get
@@ -22300,7 +22322,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowTransitionProxy == null))
                 {
-                    this._WorkflowTransitionProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxySingle(this.Context, GetPath("WorkflowTransition"));
+                    this._WorkflowTransitionProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxySingle(this.Context, GetPath("workflowTransition"));
                 }
                 return this._WorkflowTransitionProxy;
             }
@@ -22314,7 +22336,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowLogIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowLogId")]
+    [global::Microsoft.OData.Client.Key("workflowLogId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLog")]
     public partial class WorkflowLogProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -22339,7 +22361,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowLogIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLogId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowLogId")]
         public global::System.Guid WorkflowLogIdProxy
         {
             get
@@ -22361,7 +22383,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowId")]
         public global::System.Nullable<global::System.Guid> WorkflowIdProxy
         {
             get
@@ -22383,7 +22405,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FromWorkflowStateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FromWorkflowStateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fromWorkflowStateId")]
         public global::System.Nullable<global::System.Guid> FromWorkflowStateIdProxy
         {
             get
@@ -22405,7 +22427,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ToWorkflowStateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ToWorkflowStateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("toWorkflowStateId")]
         public global::System.Guid ToWorkflowStateIdProxy
         {
             get
@@ -22427,7 +22449,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionId")]
         public global::System.Nullable<global::System.Guid> WorkflowTransitionIdProxy
         {
             get
@@ -22449,7 +22471,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -22471,7 +22493,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -22493,7 +22515,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NotesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Notes")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("notes")]
         public string NotesProxy
         {
             get
@@ -22515,7 +22537,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByNavigationProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedByNavigation")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdByNavigation")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxy CreatedByNavigationProxy
         {
             get
@@ -22537,7 +22559,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FromWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FromWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fromWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy FromWorkflowStateProxy
         {
             get
@@ -22559,7 +22581,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ToWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ToWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("toWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy ToWorkflowStateProxy
         {
             get
@@ -22581,7 +22603,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Workflow")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflow")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxy WorkflowProxy
         {
             get
@@ -22603,7 +22625,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransition")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransition")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy WorkflowTransitionProxy
         {
             get
@@ -22650,7 +22672,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for FromWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FromWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fromWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle FromWorkflowStateProxy
         {
             get
@@ -22661,7 +22683,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._FromWorkflowStateProxy == null))
                 {
-                    this._FromWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("FromWorkflowState"));
+                    this._FromWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("fromWorkflowState"));
                 }
                 return this._FromWorkflowStateProxy;
             }
@@ -22672,7 +22694,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle PersonProxy
         {
             get
@@ -22683,7 +22705,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PersonProxy == null))
                 {
-                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("Person"));
+                    this._PersonProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(this.Context, GetPath("person"));
                 }
                 return this._PersonProxy;
             }
@@ -22694,7 +22716,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for ToWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ToWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("toWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle ToWorkflowStateProxy
         {
             get
@@ -22705,7 +22727,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._ToWorkflowStateProxy == null))
                 {
-                    this._ToWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("ToWorkflowState"));
+                    this._ToWorkflowStateProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(this.Context, GetPath("toWorkflowState"));
                 }
                 return this._ToWorkflowStateProxy;
             }
@@ -22716,7 +22738,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowAutoCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowAutoCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowAutoCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowAutoCodeProxySingle WorkflowAutoCodeProxy
         {
             get
@@ -22727,7 +22749,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowAutoCodeProxy == null))
                 {
-                    this._WorkflowAutoCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowAutoCodeProxySingle(this.Context, GetPath("WorkflowAutoCode"));
+                    this._WorkflowAutoCodeProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowAutoCodeProxySingle(this.Context, GetPath("workflowAutoCode"));
                 }
                 return this._WorkflowAutoCodeProxy;
             }
@@ -22738,7 +22760,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowSchemaProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchema")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchema")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxySingle WorkflowSchemaProxy
         {
             get
@@ -22749,7 +22771,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowSchemaProxy == null))
                 {
-                    this._WorkflowSchemaProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxySingle(this.Context, GetPath("WorkflowSchema"));
+                    this._WorkflowSchemaProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxySingle(this.Context, GetPath("workflowSchema"));
                 }
                 return this._WorkflowSchemaProxy;
             }
@@ -22760,7 +22782,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowTransitionRoleProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionRole")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionRole")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionRoleProxySingle WorkflowTransitionRoleProxy
         {
             get
@@ -22771,7 +22793,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowTransitionRoleProxy == null))
                 {
-                    this._WorkflowTransitionRoleProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionRoleProxySingle(this.Context, GetPath("WorkflowTransitionRole"));
+                    this._WorkflowTransitionRoleProxy = new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionRoleProxySingle(this.Context, GetPath("workflowTransitionRole"));
                 }
                 return this._WorkflowTransitionRoleProxy;
             }
@@ -22782,7 +22804,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowLogs")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy> WorkflowLogsProxy
         {
             get
@@ -22793,7 +22815,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowLogsProxy == null))
                 {
-                    this._WorkflowLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy>(GetPath("WorkflowLogs"));
+                    this._WorkflowLogsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy>(GetPath("workflowLogs"));
                 }
                 return this._WorkflowLogsProxy;
             }
@@ -22807,7 +22829,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowTransitionIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowTransitionId")]
+    [global::Microsoft.OData.Client.Key("workflowTransitionId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransition")]
     public partial class WorkflowTransitionProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -22834,7 +22856,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionId")]
         public global::System.Guid WorkflowTransitionIdProxy
         {
             get
@@ -22856,7 +22878,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemaIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemaId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaId")]
         public global::System.Nullable<global::System.Guid> WorkflowSchemaIdProxy
         {
             get
@@ -22878,7 +22900,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FromWorkflowStateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FromWorkflowStateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fromWorkflowStateId")]
         public global::System.Guid FromWorkflowStateIdProxy
         {
             get
@@ -22900,7 +22922,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ToWorkflowStateIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ToWorkflowStateId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("toWorkflowStateId")]
         public global::System.Guid ToWorkflowStateIdProxy
         {
             get
@@ -22922,7 +22944,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionRoleIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionRoleId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionRoleId")]
         public global::System.Nullable<short> WorkflowTransitionRoleIdProxy
         {
             get
@@ -22944,7 +22966,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
         public global::System.Nullable<global::System.Guid> PersonIdProxy
         {
             get
@@ -22966,7 +22988,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowAutoCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowAutoCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowAutoCodeId")]
         public global::System.Nullable<short> WorkflowAutoCodeIdProxy
         {
             get
@@ -22988,7 +23010,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -23010,7 +23032,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -23032,7 +23054,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ConditionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Conditions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("conditions")]
         public string ConditionsProxy
         {
             get
@@ -23054,7 +23076,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LimitProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Limit")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("limit")]
         public global::System.Nullable<decimal> LimitProxy
         {
             get
@@ -23076,7 +23098,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property SequenceProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Sequence")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("sequence")]
         public short SequenceProxy
         {
             get
@@ -23098,7 +23120,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RequestCommentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("RequestComments")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("requestComments")]
         public bool RequestCommentsProxy
         {
             get
@@ -23120,7 +23142,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ThresholdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Threshold")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("threshold")]
         public global::System.Nullable<decimal> ThresholdProxy
         {
             get
@@ -23142,7 +23164,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property FromWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("FromWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fromWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy FromWorkflowStateProxy
         {
             get
@@ -23164,7 +23186,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Person")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PersonProxy PersonProxy
         {
             get
@@ -23186,7 +23208,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ToWorkflowStateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ToWorkflowState")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("toWorkflowState")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxy ToWorkflowStateProxy
         {
             get
@@ -23208,7 +23230,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowAutoCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowAutoCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowAutoCode")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowAutoCodeProxy WorkflowAutoCodeProxy
         {
             get
@@ -23230,7 +23252,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowSchemaProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchema")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchema")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxy WorkflowSchemaProxy
         {
             get
@@ -23252,7 +23274,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionRoleProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionRole")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionRole")]
         public global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionRoleProxy WorkflowTransitionRoleProxy
         {
             get
@@ -23274,7 +23296,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowLogsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowLogs")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowLogs")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxy> WorkflowLogsProxy
         {
             get
@@ -23321,7 +23343,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowTransitionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitions")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy> WorkflowTransitionsProxy
         {
             get
@@ -23332,7 +23354,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowTransitionsProxy == null))
                 {
-                    this._WorkflowTransitionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy>(GetPath("WorkflowTransitions"));
+                    this._WorkflowTransitionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy>(GetPath("workflowTransitions"));
                 }
                 return this._WorkflowTransitionsProxy;
             }
@@ -23346,7 +23368,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowAutoCodeIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowAutoCodeId")]
+    [global::Microsoft.OData.Client.Key("workflowAutoCodeId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowAutoCode")]
     public partial class WorkflowAutoCodeProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -23365,7 +23387,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowAutoCodeIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowAutoCodeId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowAutoCodeId")]
         public short WorkflowAutoCodeIdProxy
         {
             get
@@ -23387,7 +23409,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -23409,7 +23431,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -23431,7 +23453,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -23453,7 +23475,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitions")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy> WorkflowTransitionsProxy
         {
             get
@@ -23500,7 +23522,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for WorkflowTransitionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitions")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy> WorkflowTransitionsProxy
         {
             get
@@ -23511,7 +23533,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._WorkflowTransitionsProxy == null))
                 {
-                    this._WorkflowTransitionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy>(GetPath("WorkflowTransitions"));
+                    this._WorkflowTransitionsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy>(GetPath("workflowTransitions"));
                 }
                 return this._WorkflowTransitionsProxy;
             }
@@ -23525,7 +23547,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// WorkflowTransitionRoleIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("WorkflowTransitionRoleId")]
+    [global::Microsoft.OData.Client.Key("workflowTransitionRoleId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionRole")]
     public partial class WorkflowTransitionRoleProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -23544,7 +23566,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionRoleIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionRoleId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionRoleId")]
         public short WorkflowTransitionRoleIdProxy
         {
             get
@@ -23566,7 +23588,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -23588,7 +23610,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -23610,7 +23632,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -23632,7 +23654,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property WorkflowTransitionsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitions")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitions")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxy> WorkflowTransitionsProxy
         {
             get
@@ -23679,7 +23701,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for VoucherHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle VoucherHeaderProxy
         {
             get
@@ -23690,7 +23712,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._VoucherHeaderProxy == null))
                 {
-                    this._VoucherHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle(this.Context, GetPath("VoucherHeader"));
+                    this._VoucherHeaderProxy = new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle(this.Context, GetPath("voucherHeader"));
                 }
                 return this._VoucherHeaderProxy;
             }
@@ -23704,7 +23726,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherHeaderDetailIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherHeaderDetailId")]
+    [global::Microsoft.OData.Client.Key("voucherHeaderDetailId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderDetail")]
     public partial class VoucherHeaderDetailProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -23723,7 +23745,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderDetailIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderDetailId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderDetailId")]
         public global::System.Guid VoucherHeaderDetailIdProxy
         {
             get
@@ -23745,7 +23767,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Nullable<global::System.Guid> VoucherHeaderIdProxy
         {
             get
@@ -23767,7 +23789,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -23789,7 +23811,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ValueProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Value")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("value")]
         public string ValueProxy
         {
             get
@@ -23811,7 +23833,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeader")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeader")]
         public global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxy VoucherHeaderProxy
         {
             get
@@ -23861,7 +23883,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherHeaderIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherHeaderId")]
+    [global::Microsoft.OData.Client.Key("voucherHeaderId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherDuplicateView")]
     public partial class VoucherDuplicateViewProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -23882,7 +23904,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
         public global::System.Guid ClientIdProxy
         {
             get
@@ -23904,7 +23926,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
         public global::System.Nullable<global::System.Guid> VendorIdProxy
         {
             get
@@ -23926,7 +23948,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Number")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("number")]
         public string NumberProxy
         {
             get
@@ -23948,7 +23970,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.Nullable<global::System.DateTimeOffset> CreatedDateProxy
         {
             get
@@ -23970,7 +23992,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Guid VoucherHeaderIdProxy
         {
             get
@@ -24020,7 +24042,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// VoucherHeaderIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("VoucherHeaderId")]
+    [global::Microsoft.OData.Client.Key("voucherHeaderId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidationView")]
     public partial class VoucherValidationViewProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -24039,7 +24061,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VendorTaxNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VendorTaxNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorTaxNumber")]
         public string VendorTaxNumberProxy
         {
             get
@@ -24061,7 +24083,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherTaxNumberProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherTaxNumber")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherTaxNumber")]
         public string VoucherTaxNumberProxy
         {
             get
@@ -24083,7 +24105,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property HasTotalMatchesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("HasTotalMatches")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasTotalMatches")]
         public string HasTotalMatchesProxy
         {
             get
@@ -24105,7 +24127,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property HasGstMatchesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("HasGstMatches")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasGstMatches")]
         public string HasGstMatchesProxy
         {
             get
@@ -24127,7 +24149,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property HasPoMatchesProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("HasPoMatches")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasPoMatches")]
         public string HasPoMatchesProxy
         {
             get
@@ -24149,7 +24171,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Guid VoucherHeaderIdProxy
         {
             get
@@ -24196,7 +24218,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for PeopleClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxySingle PeopleClientProxy
         {
             get
@@ -24207,7 +24229,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._PeopleClientProxy == null))
                 {
-                    this._PeopleClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxySingle(this.Context, GetPath("PeopleClient"));
+                    this._PeopleClientProxy = new global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxySingle(this.Context, GetPath("peopleClient"));
                 }
                 return this._PeopleClientProxy;
             }
@@ -24221,7 +24243,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// PeopleClientNotificationIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("PeopleClientNotificationId")]
+    [global::Microsoft.OData.Client.Key("peopleClientNotificationId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientNotification")]
     public partial class PeopleClientNotificationProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -24255,7 +24277,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientNotificationIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientNotificationId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientNotificationId")]
         public global::System.Guid PeopleClientNotificationIdProxy
         {
             get
@@ -24277,7 +24299,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClientId")]
         public global::System.Nullable<global::System.Guid> PeopleClientIdProxy
         {
             get
@@ -24299,7 +24321,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleNotificationCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleNotificationCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleNotificationCode")]
         public string PeopleNotificationCodeProxy
         {
             get
@@ -24321,7 +24343,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CronCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CronCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("cronCode")]
         public string CronCodeProxy
         {
             get
@@ -24343,7 +24365,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CronJsonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CronJson")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("cronJson")]
         public string CronJsonProxy
         {
             get
@@ -24365,7 +24387,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property LastNotifyDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("LastNotifyDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("lastNotifyDate")]
         public global::System.Nullable<global::System.DateTimeOffset> LastNotifyDateProxy
         {
             get
@@ -24387,7 +24409,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IsActiveProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("IsActive")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
         public bool IsActiveProxy
         {
             get
@@ -24409,7 +24431,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdBy")]
         public global::System.Guid CreatedByProxy
         {
             get
@@ -24431,7 +24453,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CreatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("CreatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
         public global::System.DateTimeOffset CreatedDateProxy
         {
             get
@@ -24453,7 +24475,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedByProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedBy")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedBy")]
         public global::System.Guid UpdatedByProxy
         {
             get
@@ -24475,7 +24497,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UpdatedDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UpdatedDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
         public global::System.DateTimeOffset UpdatedDateProxy
         {
             get
@@ -24497,7 +24519,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PeopleClientProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClient")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("peopleClient")]
         public global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxy PeopleClientProxy
         {
             get
@@ -24544,7 +24566,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for AgentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Agents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("agents")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraConsoleApp.ODataClient.Proxies.AgentProxy> AgentsProxy
         {
             get
@@ -24555,7 +24577,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
                 }
                 if ((this._AgentsProxy == null))
                 {
-                    this._AgentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.AgentProxy>(GetPath("Agents"));
+                    this._AgentsProxy = Context.CreateQuery<global::OcerraConsoleApp.ODataClient.Proxies.AgentProxy>(GetPath("agents"));
                 }
                 return this._AgentsProxy;
             }
@@ -24569,7 +24591,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     /// <KeyProperties>
     /// AgentPoolIdProxy
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("AgentPoolId")]
+    [global::Microsoft.OData.Client.Key("agentPoolId")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("AgentPool")]
     public partial class AgentPoolProxy : global::Microsoft.OData.Client.BaseEntityType
     {
@@ -24588,7 +24610,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AgentPoolIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AgentPoolId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("agentPoolId")]
         public global::System.Guid AgentPoolIdProxy
         {
             get
@@ -24610,7 +24632,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property NameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Name")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("name")]
         public string NameProxy
         {
             get
@@ -24632,7 +24654,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonDataProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("JsonData")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("jsonData")]
         public string JsonDataProxy
         {
             get
@@ -24654,7 +24676,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AgentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Agents")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("agents")]
         public global::System.Collections.ObjectModel.Collection<global::OcerraConsoleApp.ODataClient.Proxies.AgentProxy> AgentsProxy
         {
             get
@@ -24697,7 +24719,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PersonId", personId }
+                { "personId", personId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PersonProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24720,7 +24742,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "Id", id }
+                { "id", id }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24743,7 +24765,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "ClientId", clientId }
+                { "clientId", clientId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.ClientProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24766,7 +24788,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "InterClientId", interClientId }
+                { "interClientId", interClientId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.InterClientProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24789,7 +24811,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "Id", id }
+                { "id", id }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.AspNetRoleProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24812,7 +24834,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PeopleClientId", peopleClientId }
+                { "peopleClientId", peopleClientId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24835,7 +24857,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VendorId", vendorId }
+                { "vendorId", vendorId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VendorProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24858,7 +24880,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "AgentId", agentId }
+                { "agentId", agentId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.AgentProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24881,7 +24903,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentSourceTypeId", documentSourceTypeId }
+                { "documentSourceTypeId", documentSourceTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24904,7 +24926,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentId", documentId }
+                { "documentId", documentId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24927,7 +24949,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentEmailId", documentEmailId }
+                { "documentEmailId", documentEmailId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24950,7 +24972,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "ClientExtractRuleId", clientExtractRuleId }
+                { "clientExtractRuleId", clientExtractRuleId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.ClientExtractRuleProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24973,7 +24995,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherHeaderId", voucherHeaderId }
+                { "voucherHeaderId", voucherHeaderId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -24996,7 +25018,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherLineId", voucherLineId }
+                { "voucherLineId", voucherLineId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25019,7 +25041,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowSchemaId", workflowSchemaId }
+                { "workflowSchemaId", workflowSchemaId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowSchemaProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25042,7 +25064,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowStateId", workflowStateId }
+                { "workflowStateId", workflowStateId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25065,7 +25087,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "CurrencyCodeId", currencyCodeId }
+                { "currencyCodeId", currencyCodeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.CurrencyCodeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25088,7 +25110,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PurchaseOrderHeaderId", purchaseOrderHeaderId }
+                { "purchaseOrderHeaderId", purchaseOrderHeaderId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderHeaderProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25111,7 +25133,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherHeaderPaymentId", voucherHeaderPaymentId }
+                { "voucherHeaderPaymentId", voucherHeaderPaymentId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderPaymentProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25134,7 +25156,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "TaxAccountId", taxAccountId }
+                { "taxAccountId", taxAccountId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.TaxAccountProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25157,7 +25179,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "TaxRateId", taxRateId }
+                { "taxRateId", taxRateId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.TaxRateProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25180,7 +25202,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "TrainFileId", trainFileId }
+                { "trainFileId", trainFileId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.TrainFileProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25203,7 +25225,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "ItemCodeId", itemCodeId }
+                { "itemCodeId", itemCodeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.ItemCodeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25226,7 +25248,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherAuditLineId", voucherAuditLineId }
+                { "voucherAuditLineId", voucherAuditLineId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherAuditLineProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25249,7 +25271,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "AuditCodeId", auditCodeId }
+                { "auditCodeId", auditCodeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.AuditCodeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25272,7 +25294,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "Id", id }
+                { "id", id }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.AspNetUserClaimProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25295,7 +25317,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PeopleClientRoleId", peopleClientRoleId }
+                { "peopleClientRoleId", peopleClientRoleId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientRoleProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25318,7 +25340,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PricePlanId", pricePlanId }
+                { "pricePlanId", pricePlanId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PricePlanProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25341,7 +25363,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "ApplicationTokenId", applicationTokenId }
+                { "applicationTokenId", applicationTokenId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25364,7 +25386,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "ApplicationTokenTypeId", applicationTokenTypeId }
+                { "applicationTokenTypeId", applicationTokenTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.ApplicationTokenTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25387,7 +25409,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentTypeId", documentTypeId }
+                { "documentTypeId", documentTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25410,7 +25432,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentEmailLogId", documentEmailLogId }
+                { "documentEmailLogId", documentEmailLogId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentEmailLogProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25433,7 +25455,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentSourceId", documentSourceId }
+                { "documentSourceId", documentSourceId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25456,7 +25478,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentSourceLineId", documentSourceLineId }
+                { "documentSourceLineId", documentSourceLineId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentSourceLineProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25479,7 +25501,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "StoredFileId", storedFileId }
+                { "storedFileId", storedFileId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25502,7 +25524,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "StoredFileTypeId", storedFileTypeId }
+                { "storedFileTypeId", storedFileTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.StoredFileTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25525,7 +25547,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentDesignId", documentDesignId }
+                { "documentDesignId", documentDesignId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25548,7 +25570,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PurchaseOrderLineId", purchaseOrderLineId }
+                { "purchaseOrderLineId", purchaseOrderLineId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PurchaseOrderLineProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25571,7 +25593,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "AttributeTypeId", attributeTypeId }
+                { "attributeTypeId", attributeTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.AttributeTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25594,7 +25616,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherLineDetailId", voucherLineDetailId }
+                { "voucherLineDetailId", voucherLineDetailId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherLineDetailProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25617,7 +25639,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "InterVendorId", interVendorId }
+                { "interVendorId", interVendorId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.InterVendorProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25640,7 +25662,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PaymentTermTypeId", paymentTermTypeId }
+                { "paymentTermTypeId", paymentTermTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PaymentTermTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25663,7 +25685,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "SettingValueId", settingValueId }
+                { "settingValueId", settingValueId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.SettingValueProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25686,7 +25708,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "SettingFlagId", settingFlagId }
+                { "settingFlagId", settingFlagId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.SettingFlagProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25709,7 +25731,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowTypeId", workflowTypeId }
+                { "workflowTypeId", workflowTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25732,7 +25754,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentDesignActionId", documentDesignActionId }
+                { "documentDesignActionId", documentDesignActionId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignActionProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25755,7 +25777,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentDesignRuleId", documentDesignRuleId }
+                { "documentDesignRuleId", documentDesignRuleId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentDesignRuleProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25778,7 +25800,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "TensorModelId", tensorModelId }
+                { "tensorModelId", tensorModelId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.TensorModelProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25801,7 +25823,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "TensorModelTypeId", tensorModelTypeId }
+                { "tensorModelTypeId", tensorModelTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.TensorModelTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25824,7 +25846,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "TrainFileTypeId", trainFileTypeId }
+                { "trainFileTypeId", trainFileTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.TrainFileTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25847,7 +25869,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "DocumentMatchId", documentMatchId }
+                { "documentMatchId", documentMatchId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.DocumentMatchProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25870,7 +25892,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowId", workflowId }
+                { "workflowId", workflowId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25893,7 +25915,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowStateTypeId", workflowStateTypeId }
+                { "workflowStateTypeId", workflowStateTypeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowStateTypeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25916,7 +25938,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowLogId", workflowLogId }
+                { "workflowLogId", workflowLogId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowLogProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25939,7 +25961,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowTransitionId", workflowTransitionId }
+                { "workflowTransitionId", workflowTransitionId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25962,7 +25984,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowAutoCodeId", workflowAutoCodeId }
+                { "workflowAutoCodeId", workflowAutoCodeId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowAutoCodeProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -25985,7 +26007,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "WorkflowTransitionRoleId", workflowTransitionRoleId }
+                { "workflowTransitionRoleId", workflowTransitionRoleId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.WorkflowTransitionRoleProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -26008,7 +26030,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherHeaderDetailId", voucherHeaderDetailId }
+                { "voucherHeaderDetailId", voucherHeaderDetailId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherHeaderDetailProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -26031,7 +26053,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherHeaderId", voucherHeaderId }
+                { "voucherHeaderId", voucherHeaderId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherDuplicateViewProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -26054,7 +26076,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "VoucherHeaderId", voucherHeaderId }
+                { "voucherHeaderId", voucherHeaderId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.VoucherValidationViewProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -26077,7 +26099,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "PeopleClientNotificationId", peopleClientNotificationId }
+                { "peopleClientNotificationId", peopleClientNotificationId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.PeopleClientNotificationProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -26100,7 +26122,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "AgentPoolId", agentPoolId }
+                { "agentPoolId", agentPoolId }
             };
             return new global::OcerraConsoleApp.ODataClient.Proxies.AgentPoolProxySingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -26879,1314 +26901,1315 @@ namespace OcerraConsoleApp.ODataClient.Proxies
     <Schema Namespace=""Ocerra.Repository.Entities"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
       <EntityType Name=""Person"">
         <Key>
-          <PropertyRef Name=""PersonId"" />
+          <PropertyRef Name=""personId"" />
         </Key>
-        <Property Name=""EmailAndName"" Type=""Edm.String"" />
-        <Property Name=""PersonId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""FullName"" Type=""Edm.String"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""AspNetUserId"" Type=""Edm.String"" />
-        <Property Name=""HasUserPic"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <NavigationProperty Name=""AspNetUser"" Type=""Ocerra.Repository.Entities.AspNetUser"">
-          <ReferentialConstraint Property=""AspNetUserId"" ReferencedProperty=""Id"" />
+        <Property Name=""emailAndName"" Type=""Edm.String"" />
+        <Property Name=""personId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""fullName"" Type=""Edm.String"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""aspNetUserId"" Type=""Edm.String"" />
+        <Property Name=""hasUserPic"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <NavigationProperty Name=""aspNetUser"" Type=""Ocerra.Repository.Entities.AspNetUser"">
+          <ReferentialConstraint Property=""aspNetUserId"" ReferencedProperty=""id"" />
         </NavigationProperty>
-        <NavigationProperty Name=""PeopleClients"" Type=""Collection(Ocerra.Repository.Entities.PeopleClient)"" />
-        <NavigationProperty Name=""SettingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
-        <NavigationProperty Name=""WorkflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
-        <NavigationProperty Name=""WorkflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
+        <NavigationProperty Name=""peopleClients"" Type=""Collection(Ocerra.Repository.Entities.PeopleClient)"" />
+        <NavigationProperty Name=""settingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
+        <NavigationProperty Name=""workflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
+        <NavigationProperty Name=""workflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
       </EntityType>
       <EntityType Name=""AspNetUser"">
         <Key>
-          <PropertyRef Name=""Id"" />
+          <PropertyRef Name=""id"" />
         </Key>
-        <Property Name=""Id"" Type=""Edm.String"" Nullable=""false"" />
-        <Property Name=""AccessFailedCount"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""ConcurrencyStamp"" Type=""Edm.String"" />
-        <Property Name=""Email"" Type=""Edm.String"" />
-        <Property Name=""EmailConfirmed"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""LockoutEnabled"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""LockoutEnd"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""NormalizedEmail"" Type=""Edm.String"" />
-        <Property Name=""NormalizedUserName"" Type=""Edm.String"" />
-        <Property Name=""PhoneNumber"" Type=""Edm.String"" />
-        <Property Name=""PhoneNumberConfirmed"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""SecurityStamp"" Type=""Edm.String"" />
-        <Property Name=""TwoFactorEnabled"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""UserName"" Type=""Edm.String"" />
-        <Property Name=""FirstName"" Type=""Edm.String"" />
-        <Property Name=""LastName"" Type=""Edm.String"" />
-        <Property Name=""AzureId"" Type=""Edm.String"" />
-        <Property Name=""TimeZone"" Type=""Edm.String"" />
-        <Property Name=""AspNetUserLogins"" Type=""Collection(Ocerra.Repository.Entities.AspNetUserLogin)"" />
-        <Property Name=""AspNetUserRoles"" Type=""Collection(Ocerra.Repository.Entities.AspNetUserRole)"" />
-        <NavigationProperty Name=""Person"" Type=""Ocerra.Repository.Entities.Person"" />
-        <NavigationProperty Name=""AspNetUserClaims"" Type=""Collection(Ocerra.Repository.Entities.AspNetUserClaim)"" />
+        <Property Name=""id"" Type=""Edm.String"" Nullable=""false"" />
+        <Property Name=""accessFailedCount"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""concurrencyStamp"" Type=""Edm.String"" />
+        <Property Name=""email"" Type=""Edm.String"" />
+        <Property Name=""emailConfirmed"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""lockoutEnabled"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""lockoutEnd"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""normalizedEmail"" Type=""Edm.String"" />
+        <Property Name=""normalizedUserName"" Type=""Edm.String"" />
+        <Property Name=""phoneNumber"" Type=""Edm.String"" />
+        <Property Name=""phoneNumberConfirmed"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""securityStamp"" Type=""Edm.String"" />
+        <Property Name=""twoFactorEnabled"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""userName"" Type=""Edm.String"" />
+        <Property Name=""firstName"" Type=""Edm.String"" />
+        <Property Name=""lastName"" Type=""Edm.String"" />
+        <Property Name=""azureId"" Type=""Edm.String"" />
+        <Property Name=""timeZone"" Type=""Edm.String"" />
+        <Property Name=""aspNetUserLogins"" Type=""Collection(Ocerra.Repository.Entities.AspNetUserLogin)"" />
+        <Property Name=""aspNetUserRoles"" Type=""Collection(Ocerra.Repository.Entities.AspNetUserRole)"" />
+        <NavigationProperty Name=""person"" Type=""Ocerra.Repository.Entities.Person"" />
+        <NavigationProperty Name=""aspNetUserClaims"" Type=""Collection(Ocerra.Repository.Entities.AspNetUserClaim)"" />
       </EntityType>
       <EntityType Name=""Client"">
         <Key>
-          <PropertyRef Name=""ClientId"" />
+          <PropertyRef Name=""clientId"" />
         </Key>
-        <Property Name=""ClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PricePlanId"" Type=""Edm.Int16"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""DomainName"" Type=""Edm.String"" />
-        <Property Name=""TaxNumber"" Type=""Edm.String"" />
-        <Property Name=""PeriodStartDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""PeriodEndDay"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""ImportCodes"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""ImportGstCodes"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""ImportAccounts"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""BillingDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""CustomerId"" Type=""Edm.String"" />
-        <Property Name=""LastPaymentDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""Inbox"" Type=""Edm.String"" />
-        <Property Name=""Colour"" Type=""Edm.String"" />
-        <Property Name=""TimeZoneInfo"" Type=""Edm.String"" />
-        <NavigationProperty Name=""PricePlan"" Type=""Ocerra.Repository.Entities.PricePlan"">
-          <ReferentialConstraint Property=""PricePlanId"" ReferencedProperty=""PricePlanId"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""pricePlanId"" Type=""Edm.Int16"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""domainName"" Type=""Edm.String"" />
+        <Property Name=""taxNumber"" Type=""Edm.String"" />
+        <Property Name=""periodStartDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""periodEndDay"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""importCodes"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""importGstCodes"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""importAccounts"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""billingDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""customerId"" Type=""Edm.String"" />
+        <Property Name=""lastPaymentDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""inbox"" Type=""Edm.String"" />
+        <Property Name=""colour"" Type=""Edm.String"" />
+        <Property Name=""timeZoneInfo"" Type=""Edm.String"" />
+        <NavigationProperty Name=""pricePlan"" Type=""Ocerra.Repository.Entities.PricePlan"">
+          <ReferentialConstraint Property=""pricePlanId"" ReferencedProperty=""pricePlanId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""ApplicationTokens"" Type=""Collection(Ocerra.Repository.Entities.ApplicationToken)"" />
-        <NavigationProperty Name=""ClientExtractRules"" Type=""Collection(Ocerra.Repository.Entities.ClientExtractRule)"" />
-        <NavigationProperty Name=""CurrencyCodes"" Type=""Collection(Ocerra.Repository.Entities.CurrencyCode)"" />
-        <NavigationProperty Name=""DocumentEmails"" Type=""Collection(Ocerra.Repository.Entities.DocumentEmail)"" />
-        <NavigationProperty Name=""DocumentSources"" Type=""Collection(Ocerra.Repository.Entities.DocumentSource)"" />
-        <NavigationProperty Name=""Documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
-        <NavigationProperty Name=""InterClientClients"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
-        <NavigationProperty Name=""InterClientOtherClients"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
-        <NavigationProperty Name=""ItemCodes"" Type=""Collection(Ocerra.Repository.Entities.ItemCode)"" />
-        <NavigationProperty Name=""SettingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
-        <NavigationProperty Name=""StoredFiles"" Type=""Collection(Ocerra.Repository.Entities.StoredFile)"" />
-        <NavigationProperty Name=""TaxAccounts"" Type=""Collection(Ocerra.Repository.Entities.TaxAccount)"" />
-        <NavigationProperty Name=""TaxRates"" Type=""Collection(Ocerra.Repository.Entities.TaxRate)"" />
-        <NavigationProperty Name=""WorkflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
+        <NavigationProperty Name=""applicationTokens"" Type=""Collection(Ocerra.Repository.Entities.ApplicationToken)"" />
+        <NavigationProperty Name=""clientExtractRules"" Type=""Collection(Ocerra.Repository.Entities.ClientExtractRule)"" />
+        <NavigationProperty Name=""currencyCodes"" Type=""Collection(Ocerra.Repository.Entities.CurrencyCode)"" />
+        <NavigationProperty Name=""documentEmails"" Type=""Collection(Ocerra.Repository.Entities.DocumentEmail)"" />
+        <NavigationProperty Name=""documentSources"" Type=""Collection(Ocerra.Repository.Entities.DocumentSource)"" />
+        <NavigationProperty Name=""documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
+        <NavigationProperty Name=""interClientClients"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
+        <NavigationProperty Name=""interClientOtherClients"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
+        <NavigationProperty Name=""itemCodes"" Type=""Collection(Ocerra.Repository.Entities.ItemCode)"" />
+        <NavigationProperty Name=""settingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
+        <NavigationProperty Name=""storedFiles"" Type=""Collection(Ocerra.Repository.Entities.StoredFile)"" />
+        <NavigationProperty Name=""taxAccounts"" Type=""Collection(Ocerra.Repository.Entities.TaxAccount)"" />
+        <NavigationProperty Name=""taxRates"" Type=""Collection(Ocerra.Repository.Entities.TaxRate)"" />
+        <NavigationProperty Name=""workflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
       </EntityType>
       <EntityType Name=""InterClient"">
         <Key>
-          <PropertyRef Name=""InterClientId"" />
+          <PropertyRef Name=""interClientId"" />
         </Key>
-        <Property Name=""InterClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""OtherClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""TaxAccountId"" Type=""Edm.Guid"" />
-        <Property Name=""OtherTaxAccountId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""interClientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""otherClientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""taxAccountId"" Type=""Edm.Guid"" />
+        <Property Name=""otherTaxAccountId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""OtherClient"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <NavigationProperty Name=""otherClient"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""OtherTaxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"">
-          <ReferentialConstraint Property=""TaxAccountId"" ReferencedProperty=""TaxAccountId"" />
+        <NavigationProperty Name=""otherTaxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"">
+          <ReferentialConstraint Property=""taxAccountId"" ReferencedProperty=""taxAccountId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""TaxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"">
-          <ReferentialConstraint Property=""TaxAccountId"" ReferencedProperty=""TaxAccountId"" />
+        <NavigationProperty Name=""taxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"">
+          <ReferentialConstraint Property=""taxAccountId"" ReferencedProperty=""taxAccountId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""InterVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
+        <NavigationProperty Name=""interVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
       </EntityType>
       <EntityType Name=""AspNetRole"">
         <Key>
-          <PropertyRef Name=""Id"" />
+          <PropertyRef Name=""id"" />
         </Key>
-        <Property Name=""Id"" Type=""Edm.String"" Nullable=""false"" />
-        <Property Name=""ConcurrencyStamp"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""NormalizedName"" Type=""Edm.String"" />
-        <NavigationProperty Name=""PeopleClientRoles"" Type=""Collection(Ocerra.Repository.Entities.PeopleClientRole)"" />
+        <Property Name=""id"" Type=""Edm.String"" Nullable=""false"" />
+        <Property Name=""concurrencyStamp"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""normalizedName"" Type=""Edm.String"" />
+        <NavigationProperty Name=""peopleClientRoles"" Type=""Collection(Ocerra.Repository.Entities.PeopleClientRole)"" />
       </EntityType>
       <EntityType Name=""PeopleClient"">
         <Key>
-          <PropertyRef Name=""PeopleClientId"" />
+          <PropertyRef Name=""peopleClientId"" />
         </Key>
-        <Property Name=""PeopleClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PersonId"" Type=""Edm.Guid"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""PreviousLoginDate"" Type=""Edm.DateTimeOffset"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""peopleClientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""personId"" Type=""Edm.Guid"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""previousLoginDate"" Type=""Edm.DateTimeOffset"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Person"" Type=""Ocerra.Repository.Entities.Person"">
-          <ReferentialConstraint Property=""PersonId"" ReferencedProperty=""PersonId"" />
+        <NavigationProperty Name=""person"" Type=""Ocerra.Repository.Entities.Person"">
+          <ReferentialConstraint Property=""personId"" ReferencedProperty=""personId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""PeopleClientNotifications"" Type=""Collection(Ocerra.Repository.Entities.PeopleClientNotification)"" />
-        <NavigationProperty Name=""PeopleClientRoles"" Type=""Collection(Ocerra.Repository.Entities.PeopleClientRole)"" />
+        <NavigationProperty Name=""peopleClientNotifications"" Type=""Collection(Ocerra.Repository.Entities.PeopleClientNotification)"" />
+        <NavigationProperty Name=""peopleClientRoles"" Type=""Collection(Ocerra.Repository.Entities.PeopleClientRole)"" />
       </EntityType>
       <EntityType Name=""Vendor"">
         <Key>
-          <PropertyRef Name=""VendorId"" />
+          <PropertyRef Name=""vendorId"" />
         </Key>
-        <Property Name=""VendorId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PaymentTermTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""CurrencyCodeId"" Type=""Edm.Guid"" />
-        <Property Name=""DefaultTaxAccountId"" Type=""Edm.Guid"" />
-        <Property Name=""DefaultTaxRateId"" Type=""Edm.Guid"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""TaxType"" Type=""Edm.String"" />
-        <Property Name=""TaxNumber"" Type=""Edm.String"" />
-        <Property Name=""TaxNumberDigits"" Type=""Edm.String"" />
-        <Property Name=""DomainName"" Type=""Edm.String"" />
-        <Property Name=""PostalAddress"" Type=""Edm.String"" />
-        <Property Name=""PhysicalAddress"" Type=""Edm.String"" />
-        <Property Name=""CountryCode"" Type=""Edm.String"" />
-        <Property Name=""Notes"" Type=""Edm.String"" />
-        <Property Name=""OnHold"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""ExternalId"" Type=""Edm.String"" />
-        <Property Name=""FirstName"" Type=""Edm.String"" />
-        <Property Name=""LastName"" Type=""Edm.String"" />
-        <Property Name=""Email"" Type=""Edm.String"" />
-        <Property Name=""BusinessNumber"" Type=""Edm.String"" />
-        <Property Name=""Discount"" Type=""Edm.Decimal"" />
-        <Property Name=""BankAccountNumber"" Type=""Edm.String"" />
-        <Property Name=""BankAccountName"" Type=""Edm.String"" />
-        <Property Name=""BankAccountOurRef"" Type=""Edm.String"" />
-        <Property Name=""BankAccountCode"" Type=""Edm.String"" />
-        <Property Name=""BankAccountRef"" Type=""Edm.String"" />
-        <Property Name=""PaymentTermsDays"" Type=""Edm.Int16"" />
-        <Property Name=""LineTaxInclusive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""PhoneNumber"" Type=""Edm.String"" />
-        <Property Name=""PhoneNumberDigits"" Type=""Edm.String"" />
-        <NavigationProperty Name=""CurrencyCode"" Type=""Ocerra.Repository.Entities.CurrencyCode"">
-          <ReferentialConstraint Property=""CurrencyCodeId"" ReferencedProperty=""CurrencyCodeId"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""paymentTermTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""currencyCodeId"" Type=""Edm.Guid"" />
+        <Property Name=""defaultTaxAccountId"" Type=""Edm.Guid"" />
+        <Property Name=""defaultTaxRateId"" Type=""Edm.Guid"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""taxType"" Type=""Edm.String"" />
+        <Property Name=""taxNumber"" Type=""Edm.String"" />
+        <Property Name=""taxNumberDigits"" Type=""Edm.String"" />
+        <Property Name=""domainName"" Type=""Edm.String"" />
+        <Property Name=""postalAddress"" Type=""Edm.String"" />
+        <Property Name=""physicalAddress"" Type=""Edm.String"" />
+        <Property Name=""countryCode"" Type=""Edm.String"" />
+        <Property Name=""notes"" Type=""Edm.String"" />
+        <Property Name=""onHold"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""externalId"" Type=""Edm.String"" />
+        <Property Name=""firstName"" Type=""Edm.String"" />
+        <Property Name=""lastName"" Type=""Edm.String"" />
+        <Property Name=""email"" Type=""Edm.String"" />
+        <Property Name=""businessNumber"" Type=""Edm.String"" />
+        <Property Name=""discount"" Type=""Edm.Decimal"" />
+        <Property Name=""bankAccountNumber"" Type=""Edm.String"" />
+        <Property Name=""bankAccountName"" Type=""Edm.String"" />
+        <Property Name=""bankAccountOurRef"" Type=""Edm.String"" />
+        <Property Name=""bankAccountCode"" Type=""Edm.String"" />
+        <Property Name=""bankAccountRef"" Type=""Edm.String"" />
+        <Property Name=""paymentTermsDays"" Type=""Edm.Int16"" />
+        <Property Name=""lineTaxInclusive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""phoneNumber"" Type=""Edm.String"" />
+        <Property Name=""phoneNumberDigits"" Type=""Edm.String"" />
+        <NavigationProperty Name=""currencyCode"" Type=""Ocerra.Repository.Entities.CurrencyCode"">
+          <ReferentialConstraint Property=""currencyCodeId"" ReferencedProperty=""currencyCodeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DefaultTaxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"" />
-        <NavigationProperty Name=""DefaultTaxRate"" Type=""Ocerra.Repository.Entities.TaxRate"" />
-        <NavigationProperty Name=""PaymentTermType"" Type=""Ocerra.Repository.Entities.PaymentTermType"">
-          <ReferentialConstraint Property=""PaymentTermTypeId"" ReferencedProperty=""PaymentTermTypeId"" />
+        <NavigationProperty Name=""defaultTaxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"" />
+        <NavigationProperty Name=""defaultTaxRate"" Type=""Ocerra.Repository.Entities.TaxRate"" />
+        <NavigationProperty Name=""paymentTermType"" Type=""Ocerra.Repository.Entities.PaymentTermType"">
+          <ReferentialConstraint Property=""paymentTermTypeId"" ReferencedProperty=""paymentTermTypeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentDesigns"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesign)"" />
-        <NavigationProperty Name=""InterVendorOtherVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
-        <NavigationProperty Name=""InterVendorVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
-        <NavigationProperty Name=""SettingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
-        <NavigationProperty Name=""WorkflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
+        <NavigationProperty Name=""documentDesigns"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesign)"" />
+        <NavigationProperty Name=""interVendorOtherVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
+        <NavigationProperty Name=""interVendorVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
+        <NavigationProperty Name=""settingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
+        <NavigationProperty Name=""workflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
       </EntityType>
       <ComplexType Name=""AuditInfo"">
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Action"" Type=""Edm.String"" />
-        <Property Name=""PersonName"" Type=""Edm.String"" />
-        <Property Name=""LastDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""Times"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""action"" Type=""Edm.String"" />
+        <Property Name=""personName"" Type=""Edm.String"" />
+        <Property Name=""lastDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""times"" Type=""Edm.Int32"" Nullable=""false"" />
       </ComplexType>
       <EntityType Name=""Agent"">
         <Key>
-          <PropertyRef Name=""AgentId"" />
+          <PropertyRef Name=""agentId"" />
         </Key>
-        <Property Name=""AgentId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""AgentPoolId"" Type=""Edm.Guid"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""MachineName"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""ConnectionId"" Type=""Edm.String"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""LastPing"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""AgentPool"" Type=""Ocerra.Repository.Entities.AgentPool"">
-          <ReferentialConstraint Property=""AgentPoolId"" ReferencedProperty=""AgentPoolId"" />
+        <Property Name=""agentId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""agentPoolId"" Type=""Edm.Guid"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""machineName"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""connectionId"" Type=""Edm.String"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""lastPing"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""agentPool"" Type=""Ocerra.Repository.Entities.AgentPool"">
+          <ReferentialConstraint Property=""agentPoolId"" ReferencedProperty=""agentPoolId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""DocumentSourceType"">
         <Key>
-          <PropertyRef Name=""DocumentSourceTypeId"" />
+          <PropertyRef Name=""documentSourceTypeId"" />
         </Key>
-        <Property Name=""DocumentSourceTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
+        <Property Name=""documentSourceTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
       </EntityType>
       <EntityType Name=""Document"">
         <Key>
-          <PropertyRef Name=""DocumentId"" />
+          <PropertyRef Name=""documentId"" />
         </Key>
-        <Property Name=""DocumentId"" Type=""Edm.Guid"" />
-        <Property Name=""DocumentDesignId"" Type=""Edm.Guid"" />
-        <Property Name=""DocumentTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""ParentDocumentId"" Type=""Edm.Guid"" />
-        <Property Name=""DocumentSourceId"" Type=""Edm.Guid"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""StoredFileId"" Type=""Edm.Guid"" />
-        <Property Name=""DocumentEmailId"" Type=""Edm.Guid"" />
-        <Property Name=""Reference"" Type=""Edm.String"" />
-        <Property Name=""DocumentClassifier"" Type=""Edm.String"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""IsSupervised"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""HasNewDesign"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""documentId"" Type=""Edm.Guid"" />
+        <Property Name=""documentDesignId"" Type=""Edm.Guid"" />
+        <Property Name=""documentTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""parentDocumentId"" Type=""Edm.Guid"" />
+        <Property Name=""documentSourceId"" Type=""Edm.Guid"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""storedFileId"" Type=""Edm.Guid"" />
+        <Property Name=""documentEmailId"" Type=""Edm.Guid"" />
+        <Property Name=""reference"" Type=""Edm.String"" />
+        <Property Name=""documentClassifier"" Type=""Edm.String"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""isSupervised"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""hasNewDesign"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""emotion"" Type=""Edm.Int16"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentEmail"" Type=""Ocerra.Repository.Entities.DocumentEmail"">
-          <ReferentialConstraint Property=""DocumentEmailId"" ReferencedProperty=""DocumentEmailId"" />
+        <NavigationProperty Name=""documentEmail"" Type=""Ocerra.Repository.Entities.DocumentEmail"">
+          <ReferentialConstraint Property=""documentEmailId"" ReferencedProperty=""documentEmailId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentSource"" Type=""Ocerra.Repository.Entities.DocumentSource"">
-          <ReferentialConstraint Property=""DocumentSourceId"" ReferencedProperty=""DocumentSourceId"" />
+        <NavigationProperty Name=""documentSource"" Type=""Ocerra.Repository.Entities.DocumentSource"">
+          <ReferentialConstraint Property=""documentSourceId"" ReferencedProperty=""documentSourceId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentType"" Type=""Ocerra.Repository.Entities.DocumentType"">
-          <ReferentialConstraint Property=""DocumentTypeId"" ReferencedProperty=""DocumentTypeId"" />
+        <NavigationProperty Name=""documentType"" Type=""Ocerra.Repository.Entities.DocumentType"">
+          <ReferentialConstraint Property=""documentTypeId"" ReferencedProperty=""documentTypeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""ParentDocument"" Type=""Ocerra.Repository.Entities.Document"">
-          <ReferentialConstraint Property=""DocumentId"" ReferencedProperty=""DocumentId"" />
+        <NavigationProperty Name=""parentDocument"" Type=""Ocerra.Repository.Entities.Document"">
+          <ReferentialConstraint Property=""documentId"" ReferencedProperty=""documentId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""StoredFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
-          <ReferentialConstraint Property=""StoredFileId"" ReferencedProperty=""StoredFileId"" />
+        <NavigationProperty Name=""storedFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
+          <ReferentialConstraint Property=""storedFileId"" ReferencedProperty=""storedFileId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentMatches"" Type=""Collection(Ocerra.Repository.Entities.DocumentMatch)"" />
-        <NavigationProperty Name=""InverseParentDocument"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
-        <NavigationProperty Name=""VoucherHeaders"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeader)"" />
+        <NavigationProperty Name=""documentMatches"" Type=""Collection(Ocerra.Repository.Entities.DocumentMatch)"" />
+        <NavigationProperty Name=""inverseParentDocument"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
+        <NavigationProperty Name=""voucherHeaders"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeader)"" />
       </EntityType>
       <EntityType Name=""DocumentEmail"">
         <Key>
-          <PropertyRef Name=""DocumentEmailId"" />
+          <PropertyRef Name=""documentEmailId"" />
         </Key>
-        <Property Name=""DocumentEmailId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""From"" Type=""Edm.String"" />
-        <Property Name=""To"" Type=""Edm.String"" />
-        <Property Name=""Subject"" Type=""Edm.String"" />
-        <Property Name=""IsContentHtml"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""IsOpen"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""JsonData"" Type=""Edm.String"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""documentEmailId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""from"" Type=""Edm.String"" />
+        <Property Name=""to"" Type=""Edm.String"" />
+        <Property Name=""subject"" Type=""Edm.String"" />
+        <Property Name=""isContentHtml"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""isOpen"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""jsonData"" Type=""Edm.String"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentEmailLogs"" Type=""Collection(Ocerra.Repository.Entities.DocumentEmailLog)"" />
-        <NavigationProperty Name=""Documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
+        <NavigationProperty Name=""documentEmailLogs"" Type=""Collection(Ocerra.Repository.Entities.DocumentEmailLog)"" />
+        <NavigationProperty Name=""documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
       </EntityType>
       <EntityType Name=""ClientExtractRule"">
         <Key>
-          <PropertyRef Name=""ClientExtractRuleId"" />
+          <PropertyRef Name=""clientExtractRuleId"" />
         </Key>
-        <Property Name=""ClientExtractRuleId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""DocumentTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""JsonData"" Type=""Edm.String"" />
-        <Property Name=""EndDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""clientExtractRuleId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""documentTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""jsonData"" Type=""Edm.String"" />
+        <Property Name=""endDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentType"" Type=""Ocerra.Repository.Entities.DocumentType"">
-          <ReferentialConstraint Property=""DocumentTypeId"" ReferencedProperty=""DocumentTypeId"" />
+        <NavigationProperty Name=""documentType"" Type=""Ocerra.Repository.Entities.DocumentType"">
+          <ReferentialConstraint Property=""documentTypeId"" ReferencedProperty=""documentTypeId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""VoucherHeader"">
         <Key>
-          <PropertyRef Name=""VoucherHeaderId"" />
+          <PropertyRef Name=""voucherHeaderId"" />
         </Key>
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" />
-        <Property Name=""DocumentId"" Type=""Edm.Guid"" />
-        <Property Name=""CurrencyCodeId"" Type=""Edm.Guid"" />
-        <Property Name=""VendorId"" Type=""Edm.Guid"" />
-        <Property Name=""WorkflowId"" Type=""Edm.Guid"" />
-        <Property Name=""CreditHeaderId"" Type=""Edm.Guid"" />
-        <Property Name=""Number"" Type=""Edm.String"" />
-        <Property Name=""PurchaseOrderNumber"" Type=""Edm.String"" />
-        <Property Name=""TaxNumber"" Type=""Edm.String"" />
-        <Property Name=""Account"" Type=""Edm.String"" />
-        <Property Name=""Date"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""Net"" Type=""Edm.Decimal"" />
-        <Property Name=""Other"" Type=""Edm.Decimal"" />
-        <Property Name=""Tax"" Type=""Edm.Decimal"" />
-        <Property Name=""Gross"" Type=""Edm.Decimal"" />
-        <Property Name=""Discount"" Type=""Edm.Decimal"" />
-        <Property Name=""FcNet"" Type=""Edm.Decimal"" />
-        <Property Name=""FcOther"" Type=""Edm.Decimal"" />
-        <Property Name=""FcTax"" Type=""Edm.Decimal"" />
-        <Property Name=""FcGross"" Type=""Edm.Decimal"" />
-        <Property Name=""FcDiscount"" Type=""Edm.Decimal"" />
-        <Property Name=""DueDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""SubmitDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""SubmitBy"" Type=""Edm.Guid"" />
-        <Property Name=""ApproveDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""ApproveBy"" Type=""Edm.Guid"" />
-        <Property Name=""ExportDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""ExportBy"" Type=""Edm.Guid"" />
-        <Property Name=""ExternalId"" Type=""Edm.String"" />
-        <Property Name=""ExportNotes"" Type=""Edm.String"" />
-        <Property Name=""ExportStatusId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""IsArchived"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""IsPaid"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""InterVoucherHeaderId"" Type=""Edm.Guid"" />
-        <NavigationProperty Name=""CreditHeader"" Type=""Ocerra.Repository.Entities.VoucherHeader"">
-          <ReferentialConstraint Property=""VoucherHeaderId"" ReferencedProperty=""VoucherHeaderId"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" />
+        <Property Name=""documentId"" Type=""Edm.Guid"" />
+        <Property Name=""currencyCodeId"" Type=""Edm.Guid"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""workflowId"" Type=""Edm.Guid"" />
+        <Property Name=""creditHeaderId"" Type=""Edm.Guid"" />
+        <Property Name=""number"" Type=""Edm.String"" />
+        <Property Name=""purchaseOrderNumber"" Type=""Edm.String"" />
+        <Property Name=""taxNumber"" Type=""Edm.String"" />
+        <Property Name=""account"" Type=""Edm.String"" />
+        <Property Name=""date"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""net"" Type=""Edm.Decimal"" />
+        <Property Name=""other"" Type=""Edm.Decimal"" />
+        <Property Name=""tax"" Type=""Edm.Decimal"" />
+        <Property Name=""gross"" Type=""Edm.Decimal"" />
+        <Property Name=""discount"" Type=""Edm.Decimal"" />
+        <Property Name=""fcNet"" Type=""Edm.Decimal"" />
+        <Property Name=""fcOther"" Type=""Edm.Decimal"" />
+        <Property Name=""fcTax"" Type=""Edm.Decimal"" />
+        <Property Name=""fcGross"" Type=""Edm.Decimal"" />
+        <Property Name=""fcDiscount"" Type=""Edm.Decimal"" />
+        <Property Name=""dueDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""submitDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""submitBy"" Type=""Edm.Guid"" />
+        <Property Name=""approveDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""approveBy"" Type=""Edm.Guid"" />
+        <Property Name=""exportDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""exportBy"" Type=""Edm.Guid"" />
+        <Property Name=""externalId"" Type=""Edm.String"" />
+        <Property Name=""exportNotes"" Type=""Edm.String"" />
+        <Property Name=""exportStatusId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""isArchived"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""isPaid"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""interVoucherHeaderId"" Type=""Edm.Guid"" />
+        <NavigationProperty Name=""creditHeader"" Type=""Ocerra.Repository.Entities.VoucherHeader"">
+          <ReferentialConstraint Property=""voucherHeaderId"" ReferencedProperty=""voucherHeaderId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""CurrencyCode"" Type=""Ocerra.Repository.Entities.CurrencyCode"">
-          <ReferentialConstraint Property=""CurrencyCodeId"" ReferencedProperty=""CurrencyCodeId"" />
+        <NavigationProperty Name=""currencyCode"" Type=""Ocerra.Repository.Entities.CurrencyCode"">
+          <ReferentialConstraint Property=""currencyCodeId"" ReferencedProperty=""currencyCodeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Document"" Type=""Ocerra.Repository.Entities.Document"">
-          <ReferentialConstraint Property=""DocumentId"" ReferencedProperty=""DocumentId"" />
+        <NavigationProperty Name=""document"" Type=""Ocerra.Repository.Entities.Document"">
+          <ReferentialConstraint Property=""documentId"" ReferencedProperty=""documentId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
-          <ReferentialConstraint Property=""VendorId"" ReferencedProperty=""VendorId"" />
+        <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Workflow"" Type=""Ocerra.Repository.Entities.Workflow"">
-          <ReferentialConstraint Property=""WorkflowId"" ReferencedProperty=""WorkflowId"" />
+        <NavigationProperty Name=""workflow"" Type=""Ocerra.Repository.Entities.Workflow"">
+          <ReferentialConstraint Property=""workflowId"" ReferencedProperty=""workflowId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""InverseCreditHeader"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeader)"" />
-        <NavigationProperty Name=""VoucherAuditLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherAuditLine)"" />
-        <NavigationProperty Name=""VoucherHeaderDetails"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeaderDetail)"" />
-        <NavigationProperty Name=""VoucherHeaderPayments"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeaderPayment)"" />
-        <NavigationProperty Name=""VoucherLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherLine)"" />
-        <NavigationProperty Name=""VoucherDuplicate"" Type=""Ocerra.Repository.Entities.VoucherDuplicateView"" />
-        <NavigationProperty Name=""VoucherValidation"" Type=""Ocerra.Repository.Entities.VoucherValidationView"" />
+        <NavigationProperty Name=""inverseCreditHeader"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeader)"" />
+        <NavigationProperty Name=""voucherAuditLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherAuditLine)"" />
+        <NavigationProperty Name=""voucherHeaderDetails"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeaderDetail)"" />
+        <NavigationProperty Name=""voucherHeaderPayments"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeaderPayment)"" />
+        <NavigationProperty Name=""voucherLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherLine)"" />
+        <NavigationProperty Name=""voucherDuplicate"" Type=""Ocerra.Repository.Entities.VoucherDuplicateView"" />
+        <NavigationProperty Name=""voucherValidation"" Type=""Ocerra.Repository.Entities.VoucherValidationView"" />
       </EntityType>
       <EntityType Name=""VoucherLine"">
         <Key>
-          <PropertyRef Name=""VoucherLineId"" />
+          <PropertyRef Name=""voucherLineId"" />
         </Key>
-        <Property Name=""VoucherLineId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""TaxRateId"" Type=""Edm.Guid"" />
-        <Property Name=""TaxAccountId"" Type=""Edm.Guid"" />
-        <Property Name=""ItemCodeId"" Type=""Edm.Guid"" />
-        <Property Name=""Sequence"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""Quantity"" Type=""Edm.Decimal"" />
-        <Property Name=""Net"" Type=""Edm.Decimal"" />
-        <Property Name=""Tax"" Type=""Edm.Decimal"" />
-        <Property Name=""Gross"" Type=""Edm.Decimal"" />
-        <Property Name=""DiscountRate"" Type=""Edm.Decimal"" />
-        <Property Name=""Discount"" Type=""Edm.Decimal"" />
-        <Property Name=""FcNet"" Type=""Edm.Decimal"" />
-        <Property Name=""FcTax"" Type=""Edm.Decimal"" />
-        <Property Name=""FcGross"" Type=""Edm.Decimal"" />
-        <Property Name=""FcDicount"" Type=""Edm.Decimal"" />
-        <Property Name=""OtherClientId"" Type=""Edm.Guid"" />
-        <NavigationProperty Name=""ItemCode"" Type=""Ocerra.Repository.Entities.ItemCode"">
-          <ReferentialConstraint Property=""ItemCodeId"" ReferencedProperty=""ItemCodeId"" />
+        <Property Name=""voucherLineId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""taxRateId"" Type=""Edm.Guid"" />
+        <Property Name=""taxAccountId"" Type=""Edm.Guid"" />
+        <Property Name=""itemCodeId"" Type=""Edm.Guid"" />
+        <Property Name=""sequence"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""quantity"" Type=""Edm.Decimal"" />
+        <Property Name=""net"" Type=""Edm.Decimal"" />
+        <Property Name=""tax"" Type=""Edm.Decimal"" />
+        <Property Name=""gross"" Type=""Edm.Decimal"" />
+        <Property Name=""discountRate"" Type=""Edm.Decimal"" />
+        <Property Name=""discount"" Type=""Edm.Decimal"" />
+        <Property Name=""fcNet"" Type=""Edm.Decimal"" />
+        <Property Name=""fcTax"" Type=""Edm.Decimal"" />
+        <Property Name=""fcGross"" Type=""Edm.Decimal"" />
+        <Property Name=""fcDicount"" Type=""Edm.Decimal"" />
+        <Property Name=""otherClientId"" Type=""Edm.Guid"" />
+        <NavigationProperty Name=""itemCode"" Type=""Ocerra.Repository.Entities.ItemCode"">
+          <ReferentialConstraint Property=""itemCodeId"" ReferencedProperty=""itemCodeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""TaxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"">
-          <ReferentialConstraint Property=""TaxAccountId"" ReferencedProperty=""TaxAccountId"" />
+        <NavigationProperty Name=""taxAccount"" Type=""Ocerra.Repository.Entities.TaxAccount"">
+          <ReferentialConstraint Property=""taxAccountId"" ReferencedProperty=""taxAccountId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""TaxRate"" Type=""Ocerra.Repository.Entities.TaxRate"">
-          <ReferentialConstraint Property=""TaxRateId"" ReferencedProperty=""TaxRateId"" />
+        <NavigationProperty Name=""taxRate"" Type=""Ocerra.Repository.Entities.TaxRate"">
+          <ReferentialConstraint Property=""taxRateId"" ReferencedProperty=""taxRateId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""VoucherLineDetails"" Type=""Collection(Ocerra.Repository.Entities.VoucherLineDetail)"" />
+        <NavigationProperty Name=""voucherLineDetails"" Type=""Collection(Ocerra.Repository.Entities.VoucherLineDetail)"" />
       </EntityType>
       <EntityType Name=""WorkflowSchema"">
         <Key>
-          <PropertyRef Name=""WorkflowSchemaId"" />
+          <PropertyRef Name=""workflowSchemaId"" />
         </Key>
-        <Property Name=""WorkflowSchemaId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VendorId"" Type=""Edm.Guid"" />
-        <Property Name=""WorkflowTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <NavigationProperty Name=""Vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
-          <ReferentialConstraint Property=""VendorId"" ReferencedProperty=""VendorId"" />
+        <Property Name=""workflowSchemaId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""workflowTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""WorkflowType"" Type=""Ocerra.Repository.Entities.WorkflowType"">
-          <ReferentialConstraint Property=""WorkflowTypeId"" ReferencedProperty=""WorkflowTypeId"" />
+        <NavigationProperty Name=""workflowType"" Type=""Ocerra.Repository.Entities.WorkflowType"">
+          <ReferentialConstraint Property=""workflowTypeId"" ReferencedProperty=""workflowTypeId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""WorkflowState"">
         <Key>
-          <PropertyRef Name=""WorkflowStateId"" />
+          <PropertyRef Name=""workflowStateId"" />
         </Key>
-        <Property Name=""WorkflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""WorkflowStateTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""WorkflowSchemaId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Sequence"" Type=""Edm.Int16"" Nullable=""false"" />
-        <NavigationProperty Name=""WorkflowStateType"" Type=""Ocerra.Repository.Entities.WorkflowStateType"">
-          <ReferentialConstraint Property=""WorkflowStateTypeId"" ReferencedProperty=""WorkflowStateTypeId"" />
+        <Property Name=""workflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowStateTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""workflowSchemaId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""sequence"" Type=""Edm.Int16"" Nullable=""false"" />
+        <NavigationProperty Name=""workflowStateType"" Type=""Ocerra.Repository.Entities.WorkflowStateType"">
+          <ReferentialConstraint Property=""workflowStateTypeId"" ReferencedProperty=""workflowStateTypeId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""CurrencyCode"">
         <Key>
-          <PropertyRef Name=""CurrencyCodeId"" />
+          <PropertyRef Name=""currencyCodeId"" />
         </Key>
-        <Property Name=""CurrencyCodeId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Country"" Type=""Edm.String"" />
-        <Property Name=""CountryCode"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""IsDefault"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""Sequence"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""currencyCodeId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""country"" Type=""Edm.String"" />
+        <Property Name=""countryCode"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""isDefault"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""sequence"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""PurchaseOrderHeader"">
         <Key>
-          <PropertyRef Name=""PurchaseOrderHeaderId"" />
+          <PropertyRef Name=""purchaseOrderHeaderId"" />
         </Key>
-        <Property Name=""PurchaseOrderHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VendorId"" Type=""Edm.Guid"" />
-        <Property Name=""CurrencyCodeId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Number"" Type=""Edm.String"" />
-        <Property Name=""DocDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""PurchaserId"" Type=""Edm.String"" />
-        <Property Name=""PurchaserName"" Type=""Edm.String"" />
-        <Property Name=""PurchaserEmail"" Type=""Edm.String"" />
-        <Property Name=""ApprovedBy"" Type=""Edm.String"" />
-        <Property Name=""ApprovedDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""IsComplete"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""Total"" Type=""Edm.Decimal"" Nullable=""false"" />
-        <Property Name=""OutstandingCost"" Type=""Edm.Decimal"" />
-        <Property Name=""OutstandingQuantity"" Type=""Edm.Decimal"" />
-        <Property Name=""Reference"" Type=""Edm.String"" />
-        <Property Name=""IsTaxInclusive"" Type=""Edm.Boolean"" />
-        <Property Name=""ExternalId"" Type=""Edm.String"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""PurchaseOrderHeaderValues"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderHeaderValue)"" />
-        <NavigationProperty Name=""Vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
-          <ReferentialConstraint Property=""VendorId"" ReferencedProperty=""VendorId"" />
+        <Property Name=""purchaseOrderHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""currencyCodeId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""number"" Type=""Edm.String"" />
+        <Property Name=""docDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""purchaserId"" Type=""Edm.String"" />
+        <Property Name=""purchaserName"" Type=""Edm.String"" />
+        <Property Name=""purchaserEmail"" Type=""Edm.String"" />
+        <Property Name=""approvedBy"" Type=""Edm.String"" />
+        <Property Name=""approvedDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""isComplete"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""total"" Type=""Edm.Decimal"" Nullable=""false"" />
+        <Property Name=""outstandingCost"" Type=""Edm.Decimal"" />
+        <Property Name=""outstandingQuantity"" Type=""Edm.Decimal"" />
+        <Property Name=""reference"" Type=""Edm.String"" />
+        <Property Name=""isTaxInclusive"" Type=""Edm.Boolean"" />
+        <Property Name=""externalId"" Type=""Edm.String"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""purchaseOrderHeaderValues"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderHeaderValue)"" />
+        <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""VoucherHeaderPayment"">
         <Key>
-          <PropertyRef Name=""VoucherHeaderPaymentId"" />
+          <PropertyRef Name=""voucherHeaderPaymentId"" />
         </Key>
-        <Property Name=""VoucherHeaderPaymentId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" />
-        <Property Name=""PaymentDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""Reference"" Type=""Edm.String"" />
-        <Property Name=""Amount"" Type=""Edm.Decimal"" Nullable=""false"" />
-        <Property Name=""FcAmount"" Type=""Edm.Decimal"" Nullable=""false"" />
-        <Property Name=""ExternalId"" Type=""Edm.String"" />
-        <NavigationProperty Name=""VoucherHeader"" Type=""Ocerra.Repository.Entities.VoucherHeader"">
-          <ReferentialConstraint Property=""VoucherHeaderId"" ReferencedProperty=""VoucherHeaderId"" />
+        <Property Name=""voucherHeaderPaymentId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" />
+        <Property Name=""paymentDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""reference"" Type=""Edm.String"" />
+        <Property Name=""amount"" Type=""Edm.Decimal"" Nullable=""false"" />
+        <Property Name=""fcAmount"" Type=""Edm.Decimal"" Nullable=""false"" />
+        <Property Name=""externalId"" Type=""Edm.String"" />
+        <NavigationProperty Name=""voucherHeader"" Type=""Ocerra.Repository.Entities.VoucherHeader"">
+          <ReferentialConstraint Property=""voucherHeaderId"" ReferencedProperty=""voucherHeaderId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""TaxAccount"">
         <Key>
-          <PropertyRef Name=""TaxAccountId"" />
+          <PropertyRef Name=""taxAccountId"" />
         </Key>
-        <Property Name=""CodeName"" Type=""Edm.String"" />
-        <Property Name=""TaxAccountId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""TaxRateId"" Type=""Edm.Guid"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""TaxType"" Type=""Edm.String"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""ExternalId"" Type=""Edm.String"" />
-        <NavigationProperty Name=""TaxRate"" Type=""Ocerra.Repository.Entities.TaxRate"">
-          <ReferentialConstraint Property=""TaxRateId"" ReferencedProperty=""TaxRateId"" />
+        <Property Name=""codeName"" Type=""Edm.String"" />
+        <Property Name=""taxAccountId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""taxRateId"" Type=""Edm.Guid"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""taxType"" Type=""Edm.String"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""externalId"" Type=""Edm.String"" />
+        <NavigationProperty Name=""taxRate"" Type=""Ocerra.Repository.Entities.TaxRate"">
+          <ReferentialConstraint Property=""taxRateId"" ReferencedProperty=""taxRateId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""InterClientOtherTaxAccounts"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
-        <NavigationProperty Name=""InterClientTaxAccounts"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
-        <NavigationProperty Name=""Vendors"" Type=""Collection(Ocerra.Repository.Entities.Vendor)"" />
+        <NavigationProperty Name=""interClientOtherTaxAccounts"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
+        <NavigationProperty Name=""interClientTaxAccounts"" Type=""Collection(Ocerra.Repository.Entities.InterClient)"" />
+        <NavigationProperty Name=""vendors"" Type=""Collection(Ocerra.Repository.Entities.Vendor)"" />
       </EntityType>
       <EntityType Name=""TaxRate"">
         <Key>
-          <PropertyRef Name=""TaxRateId"" />
+          <PropertyRef Name=""taxRateId"" />
         </Key>
-        <Property Name=""CodeName"" Type=""Edm.String"" />
-        <Property Name=""TaxRateId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""TaxType"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""Rate"" Type=""Edm.Decimal"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""ExternalId"" Type=""Edm.String"" />
-        <NavigationProperty Name=""PurchaseOrderLines"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderLine)"" />
-        <NavigationProperty Name=""TaxAccounts"" Type=""Collection(Ocerra.Repository.Entities.TaxAccount)"" />
-        <NavigationProperty Name=""Vendors"" Type=""Collection(Ocerra.Repository.Entities.Vendor)"" />
+        <Property Name=""codeName"" Type=""Edm.String"" />
+        <Property Name=""taxRateId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""taxType"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""rate"" Type=""Edm.Decimal"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""externalId"" Type=""Edm.String"" />
+        <NavigationProperty Name=""purchaseOrderLines"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderLine)"" />
+        <NavigationProperty Name=""taxAccounts"" Type=""Collection(Ocerra.Repository.Entities.TaxAccount)"" />
+        <NavigationProperty Name=""vendors"" Type=""Collection(Ocerra.Repository.Entities.Vendor)"" />
       </EntityType>
       <EntityType Name=""TrainFile"">
         <Key>
-          <PropertyRef Name=""TrainFileId"" />
+          <PropertyRef Name=""trainFileId"" />
         </Key>
-        <Property Name=""TrainFileId"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""TrainFileTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""StoredFileId"" Type=""Edm.Guid"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""RectLeft"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""RectTop"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""RectWidth"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""RectHeight"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""Width"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""Height"" Type=""Edm.Int32"" Nullable=""false"" />
-        <NavigationProperty Name=""StoredFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
-          <ReferentialConstraint Property=""StoredFileId"" ReferencedProperty=""StoredFileId"" />
+        <Property Name=""trainFileId"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""trainFileTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""storedFileId"" Type=""Edm.Guid"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""rectLeft"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""rectTop"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""rectWidth"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""rectHeight"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""width"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""height"" Type=""Edm.Int32"" Nullable=""false"" />
+        <NavigationProperty Name=""storedFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
+          <ReferentialConstraint Property=""storedFileId"" ReferencedProperty=""storedFileId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""TrainFileType"" Type=""Ocerra.Repository.Entities.TrainFileType"">
-          <ReferentialConstraint Property=""TrainFileTypeId"" ReferencedProperty=""TrainFileTypeId"" />
+        <NavigationProperty Name=""trainFileType"" Type=""Ocerra.Repository.Entities.TrainFileType"">
+          <ReferentialConstraint Property=""trainFileTypeId"" ReferencedProperty=""trainFileTypeId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""ItemCode"">
         <Key>
-          <PropertyRef Name=""ItemCodeId"" />
+          <PropertyRef Name=""itemCodeId"" />
         </Key>
-        <Property Name=""ItemCodeId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
+        <Property Name=""itemCodeId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
       </EntityType>
       <EntityType Name=""VoucherAuditLine"">
         <Key>
-          <PropertyRef Name=""VoucherAuditLineId"" />
+          <PropertyRef Name=""voucherAuditLineId"" />
         </Key>
-        <Property Name=""VoucherAuditLineId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""AuditCodeId"" Type=""Edm.Int16"" />
-        <Property Name=""PersonId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PersonName"" Type=""Edm.String"" />
-        <Property Name=""JsonBefore"" Type=""Edm.String"" />
-        <Property Name=""JsonAfter"" Type=""Edm.String"" />
-        <Property Name=""AuditDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""AuditCode"" Type=""Ocerra.Repository.Entities.AuditCode"">
-          <ReferentialConstraint Property=""AuditCodeId"" ReferencedProperty=""AuditCodeId"" />
+        <Property Name=""voucherAuditLineId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""auditCodeId"" Type=""Edm.Int16"" />
+        <Property Name=""personId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""personName"" Type=""Edm.String"" />
+        <Property Name=""jsonBefore"" Type=""Edm.String"" />
+        <Property Name=""jsonAfter"" Type=""Edm.String"" />
+        <Property Name=""auditDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""auditCode"" Type=""Ocerra.Repository.Entities.AuditCode"">
+          <ReferentialConstraint Property=""auditCodeId"" ReferencedProperty=""auditCodeId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""AuditCode"">
         <Key>
-          <PropertyRef Name=""AuditCodeId"" />
+          <PropertyRef Name=""auditCodeId"" />
         </Key>
-        <Property Name=""AuditCodeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
+        <Property Name=""auditCodeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
       </EntityType>
       <EntityType Name=""AspNetUserClaim"">
         <Key>
-          <PropertyRef Name=""Id"" />
+          <PropertyRef Name=""id"" />
         </Key>
-        <Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""ClaimType"" Type=""Edm.String"" />
-        <Property Name=""ClaimValue"" Type=""Edm.String"" />
-        <Property Name=""UserId"" Type=""Edm.String"" />
-        <NavigationProperty Name=""User"" Type=""Ocerra.Repository.Entities.AspNetUser"" />
+        <Property Name=""id"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""claimType"" Type=""Edm.String"" />
+        <Property Name=""claimValue"" Type=""Edm.String"" />
+        <Property Name=""userId"" Type=""Edm.String"" />
+        <NavigationProperty Name=""user"" Type=""Ocerra.Repository.Entities.AspNetUser"" />
       </EntityType>
       <ComplexType Name=""AspNetUserLogin"">
-        <Property Name=""LoginProvider"" Type=""Edm.String"" />
-        <Property Name=""ProviderKey"" Type=""Edm.String"" />
-        <Property Name=""ProviderDisplayName"" Type=""Edm.String"" />
-        <Property Name=""UserId"" Type=""Edm.String"" />
-        <NavigationProperty Name=""User"" Type=""Ocerra.Repository.Entities.AspNetUser"" />
+        <Property Name=""loginProvider"" Type=""Edm.String"" />
+        <Property Name=""providerKey"" Type=""Edm.String"" />
+        <Property Name=""providerDisplayName"" Type=""Edm.String"" />
+        <Property Name=""userId"" Type=""Edm.String"" />
+        <NavigationProperty Name=""user"" Type=""Ocerra.Repository.Entities.AspNetUser"" />
       </ComplexType>
       <ComplexType Name=""AspNetUserRole"">
-        <Property Name=""UserId"" Type=""Edm.String"" />
-        <Property Name=""RoleId"" Type=""Edm.String"" />
-        <NavigationProperty Name=""Role"" Type=""Ocerra.Repository.Entities.AspNetRole"" />
-        <NavigationProperty Name=""User"" Type=""Ocerra.Repository.Entities.AspNetUser"" />
+        <Property Name=""userId"" Type=""Edm.String"" />
+        <Property Name=""roleId"" Type=""Edm.String"" />
+        <NavigationProperty Name=""role"" Type=""Ocerra.Repository.Entities.AspNetRole"" />
+        <NavigationProperty Name=""user"" Type=""Ocerra.Repository.Entities.AspNetUser"" />
       </ComplexType>
       <EntityType Name=""PeopleClientRole"">
         <Key>
-          <PropertyRef Name=""PeopleClientRoleId"" />
+          <PropertyRef Name=""peopleClientRoleId"" />
         </Key>
-        <Property Name=""PeopleClientRoleId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PeopleClientId"" Type=""Edm.Guid"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""AspNetRoleId"" Type=""Edm.String"" />
-        <NavigationProperty Name=""AspNetRole"" Type=""Ocerra.Repository.Entities.AspNetRole"">
-          <ReferentialConstraint Property=""AspNetRoleId"" ReferencedProperty=""Id"" />
+        <Property Name=""peopleClientRoleId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""peopleClientId"" Type=""Edm.Guid"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""aspNetRoleId"" Type=""Edm.String"" />
+        <NavigationProperty Name=""aspNetRole"" Type=""Ocerra.Repository.Entities.AspNetRole"">
+          <ReferentialConstraint Property=""aspNetRoleId"" ReferencedProperty=""id"" />
         </NavigationProperty>
-        <NavigationProperty Name=""PeopleClient"" Type=""Ocerra.Repository.Entities.PeopleClient"">
-          <ReferentialConstraint Property=""PeopleClientId"" ReferencedProperty=""PeopleClientId"" />
+        <NavigationProperty Name=""peopleClient"" Type=""Ocerra.Repository.Entities.PeopleClient"">
+          <ReferentialConstraint Property=""peopleClientId"" ReferencedProperty=""peopleClientId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""PricePlan"">
         <Key>
-          <PropertyRef Name=""PricePlanId"" />
+          <PropertyRef Name=""pricePlanId"" />
         </Key>
-        <Property Name=""PricePlanId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""VouchersPerMonth"" Type=""Edm.Int32"" />
-        <NavigationProperty Name=""Clients"" Type=""Collection(Ocerra.Repository.Entities.Client)"" />
+        <Property Name=""pricePlanId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""vouchersPerMonth"" Type=""Edm.Int32"" />
+        <NavigationProperty Name=""clients"" Type=""Collection(Ocerra.Repository.Entities.Client)"" />
       </EntityType>
       <EntityType Name=""ApplicationToken"">
         <Key>
-          <PropertyRef Name=""ApplicationTokenId"" />
+          <PropertyRef Name=""applicationTokenId"" />
         </Key>
-        <Property Name=""ApplicationTokenId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""ApplicationTokenTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""UserId"" Type=""Edm.String"" />
-        <Property Name=""Tag"" Type=""Edm.String"" />
-        <Property Name=""Token"" Type=""Edm.String"" />
-        <NavigationProperty Name=""ApplicationTokenType"" Type=""Ocerra.Repository.Entities.ApplicationTokenType"">
-          <ReferentialConstraint Property=""ApplicationTokenTypeId"" ReferencedProperty=""ApplicationTokenTypeId"" />
+        <Property Name=""applicationTokenId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""applicationTokenTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""userId"" Type=""Edm.String"" />
+        <Property Name=""tag"" Type=""Edm.String"" />
+        <Property Name=""token"" Type=""Edm.String"" />
+        <NavigationProperty Name=""applicationTokenType"" Type=""Ocerra.Repository.Entities.ApplicationTokenType"">
+          <ReferentialConstraint Property=""applicationTokenTypeId"" ReferencedProperty=""applicationTokenTypeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""ApplicationTokenType"">
         <Key>
-          <PropertyRef Name=""ApplicationTokenTypeId"" />
+          <PropertyRef Name=""applicationTokenTypeId"" />
         </Key>
-        <Property Name=""ApplicationTokenTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""ApplicationTokens"" Type=""Collection(Ocerra.Repository.Entities.ApplicationToken)"" />
+        <Property Name=""applicationTokenTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""applicationTokens"" Type=""Collection(Ocerra.Repository.Entities.ApplicationToken)"" />
       </EntityType>
       <EntityType Name=""DocumentType"">
         <Key>
-          <PropertyRef Name=""DocumentTypeId"" />
+          <PropertyRef Name=""documentTypeId"" />
         </Key>
-        <Property Name=""DocumentTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""ClientExtractRules"" Type=""Collection(Ocerra.Repository.Entities.ClientExtractRule)"" />
-        <NavigationProperty Name=""Documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
+        <Property Name=""documentTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""clientExtractRules"" Type=""Collection(Ocerra.Repository.Entities.ClientExtractRule)"" />
+        <NavigationProperty Name=""documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
       </EntityType>
       <EntityType Name=""DocumentEmailLog"">
         <Key>
-          <PropertyRef Name=""DocumentEmailLogId"" />
+          <PropertyRef Name=""documentEmailLogId"" />
         </Key>
-        <Property Name=""DocumentEmailLogId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""DocumentEmailId"" Type=""Edm.Guid"" />
-        <Property Name=""Message"" Type=""Edm.String"" />
-        <Property Name=""Content"" Type=""Edm.String"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""DocumentEmail"" Type=""Ocerra.Repository.Entities.DocumentEmail"">
-          <ReferentialConstraint Property=""DocumentEmailId"" ReferencedProperty=""DocumentEmailId"" />
+        <Property Name=""documentEmailLogId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentEmailId"" Type=""Edm.Guid"" />
+        <Property Name=""message"" Type=""Edm.String"" />
+        <Property Name=""content"" Type=""Edm.String"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""documentEmail"" Type=""Ocerra.Repository.Entities.DocumentEmail"">
+          <ReferentialConstraint Property=""documentEmailId"" ReferencedProperty=""documentEmailId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""DocumentSource"">
         <Key>
-          <PropertyRef Name=""DocumentSourceId"" />
+          <PropertyRef Name=""documentSourceId"" />
         </Key>
-        <Property Name=""DocumentSourceId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""DocumentSourceTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""Credentials"" Type=""Edm.String"" />
-        <Property Name=""Salt"" Type=""Edm.String"" />
-        <Property Name=""Path"" Type=""Edm.String"" />
-        <Property Name=""Address"" Type=""Edm.String"" />
-        <Property Name=""Port"" Type=""Edm.Int32"" />
-        <Property Name=""UseTls"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""documentSourceId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentSourceTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""credentials"" Type=""Edm.String"" />
+        <Property Name=""salt"" Type=""Edm.String"" />
+        <Property Name=""path"" Type=""Edm.String"" />
+        <Property Name=""address"" Type=""Edm.String"" />
+        <Property Name=""port"" Type=""Edm.Int32"" />
+        <Property Name=""useTls"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentSourceType"" Type=""Ocerra.Repository.Entities.DocumentSourceType"">
-          <ReferentialConstraint Property=""DocumentSourceTypeId"" ReferencedProperty=""DocumentSourceTypeId"" />
+        <NavigationProperty Name=""documentSourceType"" Type=""Ocerra.Repository.Entities.DocumentSourceType"">
+          <ReferentialConstraint Property=""documentSourceTypeId"" ReferencedProperty=""documentSourceTypeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentSourceLines"" Type=""Collection(Ocerra.Repository.Entities.DocumentSourceLine)"" />
-        <NavigationProperty Name=""Documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
+        <NavigationProperty Name=""documentSourceLines"" Type=""Collection(Ocerra.Repository.Entities.DocumentSourceLine)"" />
+        <NavigationProperty Name=""documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
       </EntityType>
       <EntityType Name=""DocumentSourceLine"">
         <Key>
-          <PropertyRef Name=""DocumentSourceLineId"" />
+          <PropertyRef Name=""documentSourceLineId"" />
         </Key>
-        <Property Name=""DocumentSourceLineId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""DocumentSourceId"" Type=""Edm.Guid"" />
-        <Property Name=""Status"" Type=""Edm.String"" />
-        <Property Name=""CreatedDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""Message"" Type=""Edm.String"" />
-        <Property Name=""StackTrace"" Type=""Edm.String"" />
-        <NavigationProperty Name=""DocumentSource"" Type=""Ocerra.Repository.Entities.DocumentSource"">
-          <ReferentialConstraint Property=""DocumentSourceId"" ReferencedProperty=""DocumentSourceId"" />
+        <Property Name=""documentSourceLineId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentSourceId"" Type=""Edm.Guid"" />
+        <Property Name=""status"" Type=""Edm.String"" />
+        <Property Name=""createdDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""message"" Type=""Edm.String"" />
+        <Property Name=""stackTrace"" Type=""Edm.String"" />
+        <NavigationProperty Name=""documentSource"" Type=""Ocerra.Repository.Entities.DocumentSource"">
+          <ReferentialConstraint Property=""documentSourceId"" ReferencedProperty=""documentSourceId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""StoredFile"">
         <Key>
-          <PropertyRef Name=""StoredFileId"" />
+          <PropertyRef Name=""storedFileId"" />
         </Key>
-        <Property Name=""StoredFileId"" Type=""Edm.Guid"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""ParentStoredFileId"" Type=""Edm.Guid"" />
-        <Property Name=""StoredFileTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""MediaType"" Type=""Edm.String"" />
-        <Property Name=""Area"" Type=""Edm.String"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""Length"" Type=""Edm.Int64"" Nullable=""false"" />
-        <Property Name=""Descriptor"" Type=""Edm.String"" />
-        <Property Name=""Sequence"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""Token"" Type=""Edm.String"" />
-        <Property Name=""OriginalName"" Type=""Edm.String"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""storedFileId"" Type=""Edm.Guid"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""parentStoredFileId"" Type=""Edm.Guid"" />
+        <Property Name=""storedFileTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""mediaType"" Type=""Edm.String"" />
+        <Property Name=""area"" Type=""Edm.String"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""length"" Type=""Edm.Int64"" Nullable=""false"" />
+        <Property Name=""descriptor"" Type=""Edm.String"" />
+        <Property Name=""sequence"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""token"" Type=""Edm.String"" />
+        <Property Name=""originalName"" Type=""Edm.String"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""ParentStoredFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
-          <ReferentialConstraint Property=""StoredFileId"" ReferencedProperty=""StoredFileId"" />
+        <NavigationProperty Name=""parentStoredFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
+          <ReferentialConstraint Property=""storedFileId"" ReferencedProperty=""storedFileId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""StoredFileType"" Type=""Ocerra.Repository.Entities.StoredFileType"">
-          <ReferentialConstraint Property=""StoredFileTypeId"" ReferencedProperty=""StoredFileTypeId"" />
+        <NavigationProperty Name=""storedFileType"" Type=""Ocerra.Repository.Entities.StoredFileType"">
+          <ReferentialConstraint Property=""storedFileTypeId"" ReferencedProperty=""storedFileTypeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentDesigns"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesign)"" />
-        <NavigationProperty Name=""Documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
-        <NavigationProperty Name=""InverseParentStoredFile"" Type=""Collection(Ocerra.Repository.Entities.StoredFile)"" />
-        <NavigationProperty Name=""TensorModels"" Type=""Collection(Ocerra.Repository.Entities.TensorModel)"" />
-        <NavigationProperty Name=""TrainFiles"" Type=""Collection(Ocerra.Repository.Entities.TrainFile)"" />
+        <NavigationProperty Name=""documentDesigns"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesign)"" />
+        <NavigationProperty Name=""documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
+        <NavigationProperty Name=""inverseParentStoredFile"" Type=""Collection(Ocerra.Repository.Entities.StoredFile)"" />
+        <NavigationProperty Name=""tensorModels"" Type=""Collection(Ocerra.Repository.Entities.TensorModel)"" />
+        <NavigationProperty Name=""trainFiles"" Type=""Collection(Ocerra.Repository.Entities.TrainFile)"" />
       </EntityType>
       <EntityType Name=""StoredFileType"">
         <Key>
-          <PropertyRef Name=""StoredFileTypeId"" />
+          <PropertyRef Name=""storedFileTypeId"" />
         </Key>
-        <Property Name=""StoredFileTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""StoredFiles"" Type=""Collection(Ocerra.Repository.Entities.StoredFile)"" />
+        <Property Name=""storedFileTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""storedFiles"" Type=""Collection(Ocerra.Repository.Entities.StoredFile)"" />
       </EntityType>
       <EntityType Name=""DocumentDesign"">
         <Key>
-          <PropertyRef Name=""DocumentDesignId"" />
+          <PropertyRef Name=""documentDesignId"" />
         </Key>
-        <Property Name=""DocumentDesignId"" Type=""Edm.Guid"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""VendorId"" Type=""Edm.Guid"" />
-        <Property Name=""StoredFileId"" Type=""Edm.Guid"" />
-        <Property Name=""ParentDocumentDesignId"" Type=""Edm.Guid"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""JsonData"" Type=""Edm.String"" />
-        <Property Name=""FirstXline"" Type=""Edm.Int32"" />
-        <Property Name=""FirstYline"" Type=""Edm.Int32"" />
-        <Property Name=""FirstText"" Type=""Edm.String"" />
-        <Property Name=""SecondText"" Type=""Edm.String"" />
-        <Property Name=""FirstXfeature"" Type=""Edm.Int32"" />
-        <Property Name=""FirstYfeature"" Type=""Edm.Int32"" />
-        <Property Name=""Version"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""TaxNumber"" Type=""Edm.String"" />
-        <Property Name=""PhoneNumber"" Type=""Edm.String"" />
-        <Property Name=""DomainName"" Type=""Edm.String"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""documentDesignId"" Type=""Edm.Guid"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""storedFileId"" Type=""Edm.Guid"" />
+        <Property Name=""parentDocumentDesignId"" Type=""Edm.Guid"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""jsonData"" Type=""Edm.String"" />
+        <Property Name=""firstXline"" Type=""Edm.Int32"" />
+        <Property Name=""firstYline"" Type=""Edm.Int32"" />
+        <Property Name=""firstText"" Type=""Edm.String"" />
+        <Property Name=""secondText"" Type=""Edm.String"" />
+        <Property Name=""firstXfeature"" Type=""Edm.Int32"" />
+        <Property Name=""firstYfeature"" Type=""Edm.Int32"" />
+        <Property Name=""version"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""taxNumber"" Type=""Edm.String"" />
+        <Property Name=""phoneNumber"" Type=""Edm.String"" />
+        <Property Name=""domainName"" Type=""Edm.String"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""ParentDocumentDesign"" Type=""Ocerra.Repository.Entities.DocumentDesign"">
-          <ReferentialConstraint Property=""DocumentDesignId"" ReferencedProperty=""DocumentDesignId"" />
+        <NavigationProperty Name=""parentDocumentDesign"" Type=""Ocerra.Repository.Entities.DocumentDesign"">
+          <ReferentialConstraint Property=""documentDesignId"" ReferencedProperty=""documentDesignId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""StoredFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
-          <ReferentialConstraint Property=""StoredFileId"" ReferencedProperty=""StoredFileId"" />
+        <NavigationProperty Name=""storedFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
+          <ReferentialConstraint Property=""storedFileId"" ReferencedProperty=""storedFileId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
-          <ReferentialConstraint Property=""VendorId"" ReferencedProperty=""VendorId"" />
+        <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""DocumentDesignActions"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesignAction)"" />
-        <NavigationProperty Name=""DocumentDesignRules"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesignRule)"" />
-        <NavigationProperty Name=""Documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
-        <NavigationProperty Name=""InverseParentDocumentDesign"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesign)"" />
+        <NavigationProperty Name=""documentDesignActions"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesignAction)"" />
+        <NavigationProperty Name=""documentDesignRules"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesignRule)"" />
+        <NavigationProperty Name=""documents"" Type=""Collection(Ocerra.Repository.Entities.Document)"" />
+        <NavigationProperty Name=""inverseParentDocumentDesign"" Type=""Collection(Ocerra.Repository.Entities.DocumentDesign)"" />
       </EntityType>
       <EntityType Name=""PurchaseOrderLine"">
         <Key>
-          <PropertyRef Name=""PurchaseOrderLineId"" />
+          <PropertyRef Name=""purchaseOrderLineId"" />
         </Key>
-        <Property Name=""PurchaseOrderLineId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PurchaseOrderHeaderId"" Type=""Edm.Guid"" />
-        <Property Name=""TaxRateId"" Type=""Edm.Guid"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""Rate"" Type=""Edm.Decimal"" />
-        <Property Name=""Quantity"" Type=""Edm.Decimal"" />
-        <Property Name=""Cost"" Type=""Edm.Decimal"" />
-        <Property Name=""OutstandingQuantity"" Type=""Edm.Decimal"" />
-        <Property Name=""OutstandingCost"" Type=""Edm.Decimal"" />
-        <Property Name=""ExternalId"" Type=""Edm.String"" />
-        <Property Name=""VoucherPurchaseOrderLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherPurchaseOrderLine)"" />
-        <NavigationProperty Name=""PurchaseOrderHeader"" Type=""Ocerra.Repository.Entities.PurchaseOrderHeader"">
-          <ReferentialConstraint Property=""PurchaseOrderHeaderId"" ReferencedProperty=""PurchaseOrderHeaderId"" />
+        <Property Name=""purchaseOrderLineId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""purchaseOrderHeaderId"" Type=""Edm.Guid"" />
+        <Property Name=""taxRateId"" Type=""Edm.Guid"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""rate"" Type=""Edm.Decimal"" />
+        <Property Name=""quantity"" Type=""Edm.Decimal"" />
+        <Property Name=""cost"" Type=""Edm.Decimal"" />
+        <Property Name=""outstandingQuantity"" Type=""Edm.Decimal"" />
+        <Property Name=""outstandingCost"" Type=""Edm.Decimal"" />
+        <Property Name=""externalId"" Type=""Edm.String"" />
+        <Property Name=""voucherPurchaseOrderLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherPurchaseOrderLine)"" />
+        <NavigationProperty Name=""purchaseOrderHeader"" Type=""Ocerra.Repository.Entities.PurchaseOrderHeader"">
+          <ReferentialConstraint Property=""purchaseOrderHeaderId"" ReferencedProperty=""purchaseOrderHeaderId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""TaxRate"" Type=""Ocerra.Repository.Entities.TaxRate"">
-          <ReferentialConstraint Property=""TaxRateId"" ReferencedProperty=""TaxRateId"" />
+        <NavigationProperty Name=""taxRate"" Type=""Ocerra.Repository.Entities.TaxRate"">
+          <ReferentialConstraint Property=""taxRateId"" ReferencedProperty=""taxRateId"" />
         </NavigationProperty>
       </EntityType>
       <ComplexType Name=""PurchaseOrderHeaderValue"">
-        <Property Name=""ValueId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""AttributeId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PurchaseOrderHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ValueStr"" Type=""Edm.String"" />
-        <Property Name=""ValueInt"" Type=""Edm.Int32"" />
-        <Property Name=""ValueDec"" Type=""Edm.Decimal"" />
-        <Property Name=""ValueDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""ValueBool"" Type=""Edm.Boolean"" />
-        <Property Name=""Attribute"" Type=""Ocerra.Repository.Entities.PurchaseOrderHeaderAttribute"" />
-        <NavigationProperty Name=""PurchaseOrderHeader"" Type=""Ocerra.Repository.Entities.PurchaseOrderHeader"" />
+        <Property Name=""valueId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""attributeId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""purchaseOrderHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""valueStr"" Type=""Edm.String"" />
+        <Property Name=""valueInt"" Type=""Edm.Int32"" />
+        <Property Name=""valueDec"" Type=""Edm.Decimal"" />
+        <Property Name=""valueDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""valueBool"" Type=""Edm.Boolean"" />
+        <Property Name=""attribute"" Type=""Ocerra.Repository.Entities.PurchaseOrderHeaderAttribute"" />
+        <NavigationProperty Name=""purchaseOrderHeader"" Type=""Ocerra.Repository.Entities.PurchaseOrderHeader"" />
       </ComplexType>
       <ComplexType Name=""PurchaseOrderHeaderAttribute"">
-        <Property Name=""AttributeId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""AttributeTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""DefaultValueStr"" Type=""Edm.String"" />
-        <Property Name=""DefaultValueInt"" Type=""Edm.Int32"" />
-        <Property Name=""DefaultValueDec"" Type=""Edm.Decimal"" />
-        <Property Name=""DefaultValueDeate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""DefaultValueBool"" Type=""Edm.Boolean"" />
-        <Property Name=""Validate"" Type=""Edm.String"" />
-        <Property Name=""IsRequired"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""PurchaseOrderHeaderValues"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderHeaderValue)"" />
-        <NavigationProperty Name=""AttributeType"" Type=""Ocerra.Repository.Entities.AttributeType"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"" />
+        <Property Name=""attributeId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""attributeTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""defaultValueStr"" Type=""Edm.String"" />
+        <Property Name=""defaultValueInt"" Type=""Edm.Int32"" />
+        <Property Name=""defaultValueDec"" Type=""Edm.Decimal"" />
+        <Property Name=""defaultValueDeate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""defaultValueBool"" Type=""Edm.Boolean"" />
+        <Property Name=""validate"" Type=""Edm.String"" />
+        <Property Name=""isRequired"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""purchaseOrderHeaderValues"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderHeaderValue)"" />
+        <NavigationProperty Name=""attributeType"" Type=""Ocerra.Repository.Entities.AttributeType"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"" />
       </ComplexType>
       <EntityType Name=""AttributeType"">
         <Key>
-          <PropertyRef Name=""AttributeTypeId"" />
+          <PropertyRef Name=""attributeTypeId"" />
         </Key>
-        <Property Name=""AttributeTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""PurchaseOrderHeaderAttributes"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderHeaderAttribute)"" />
+        <Property Name=""attributeTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""purchaseOrderHeaderAttributes"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderHeaderAttribute)"" />
       </EntityType>
       <ComplexType Name=""VoucherPurchaseOrderLine"">
-        <Property Name=""VoucherPurchaseOrderLine1"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VoucherLineId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PurchaseOrderLineId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""IsFullyMatched"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <NavigationProperty Name=""PurchaseOrderLine"" Type=""Ocerra.Repository.Entities.PurchaseOrderLine"" />
-        <NavigationProperty Name=""VoucherLine"" Type=""Ocerra.Repository.Entities.VoucherLine"" />
+        <Property Name=""voucherPurchaseOrderLine1"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""voucherLineId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""purchaseOrderLineId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""isFullyMatched"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <NavigationProperty Name=""purchaseOrderLine"" Type=""Ocerra.Repository.Entities.PurchaseOrderLine"" />
+        <NavigationProperty Name=""voucherLine"" Type=""Ocerra.Repository.Entities.VoucherLine"" />
       </ComplexType>
       <EntityType Name=""VoucherLineDetail"">
         <Key>
-          <PropertyRef Name=""VoucherLineDetailId"" />
+          <PropertyRef Name=""voucherLineDetailId"" />
         </Key>
-        <Property Name=""VoucherLineDetailId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VoucherLineId"" Type=""Edm.Guid"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Value"" Type=""Edm.String"" />
-        <NavigationProperty Name=""VoucherLine"" Type=""Ocerra.Repository.Entities.VoucherLine"">
-          <ReferentialConstraint Property=""VoucherLineId"" ReferencedProperty=""VoucherLineId"" />
+        <Property Name=""voucherLineDetailId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""voucherLineId"" Type=""Edm.Guid"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""value"" Type=""Edm.String"" />
+        <NavigationProperty Name=""voucherLine"" Type=""Ocerra.Repository.Entities.VoucherLine"">
+          <ReferentialConstraint Property=""voucherLineId"" ReferencedProperty=""voucherLineId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""InterVendor"">
         <Key>
-          <PropertyRef Name=""InterVendorId"" />
+          <PropertyRef Name=""interVendorId"" />
         </Key>
-        <Property Name=""InterVendorId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""InterClientId"" Type=""Edm.Guid"" />
-        <Property Name=""VendorId"" Type=""Edm.Guid"" />
-        <Property Name=""OtherVendorId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <NavigationProperty Name=""InterClient"" Type=""Ocerra.Repository.Entities.InterClient"">
-          <ReferentialConstraint Property=""InterClientId"" ReferencedProperty=""InterClientId"" />
+        <Property Name=""interVendorId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""interClientId"" Type=""Edm.Guid"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""otherVendorId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <NavigationProperty Name=""interClient"" Type=""Ocerra.Repository.Entities.InterClient"">
+          <ReferentialConstraint Property=""interClientId"" ReferencedProperty=""interClientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""OtherVendor"" Type=""Ocerra.Repository.Entities.Vendor"">
-          <ReferentialConstraint Property=""VendorId"" ReferencedProperty=""VendorId"" />
+        <NavigationProperty Name=""otherVendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
-          <ReferentialConstraint Property=""VendorId"" ReferencedProperty=""VendorId"" />
+        <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""PaymentTermType"">
         <Key>
-          <PropertyRef Name=""PaymentTermTypeId"" />
+          <PropertyRef Name=""paymentTermTypeId"" />
         </Key>
-        <Property Name=""PaymentTermTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""XeroTermType"" Type=""Edm.Int16"" />
-        <NavigationProperty Name=""Vendors"" Type=""Collection(Ocerra.Repository.Entities.Vendor)"" />
+        <Property Name=""paymentTermTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""xeroTermType"" Type=""Edm.Int16"" />
+        <NavigationProperty Name=""vendors"" Type=""Collection(Ocerra.Repository.Entities.Vendor)"" />
       </EntityType>
       <EntityType Name=""SettingValue"">
         <Key>
-          <PropertyRef Name=""SettingValueId"" />
+          <PropertyRef Name=""settingValueId"" />
         </Key>
-        <Property Name=""SettingValueId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""SettingFlagId"" Type=""Edm.Int16"" />
-        <Property Name=""PersonId"" Type=""Edm.Guid"" />
-        <Property Name=""ClientId"" Type=""Edm.Guid"" />
-        <Property Name=""VendorId"" Type=""Edm.Guid"" />
-        <Property Name=""StringValue"" Type=""Edm.String"" />
-        <Property Name=""IntValue"" Type=""Edm.Int32"" />
-        <Property Name=""NumValue"" Type=""Edm.Decimal"" />
-        <Property Name=""DateValue"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""BoolValue"" Type=""Edm.Boolean"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""Client"" Type=""Ocerra.Repository.Entities.Client"">
-          <ReferentialConstraint Property=""ClientId"" ReferencedProperty=""ClientId"" />
+        <Property Name=""settingValueId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""settingFlagId"" Type=""Edm.Int16"" />
+        <Property Name=""personId"" Type=""Edm.Guid"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""stringValue"" Type=""Edm.String"" />
+        <Property Name=""intValue"" Type=""Edm.Int32"" />
+        <Property Name=""numValue"" Type=""Edm.Decimal"" />
+        <Property Name=""dateValue"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""boolValue"" Type=""Edm.Boolean"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""client"" Type=""Ocerra.Repository.Entities.Client"">
+          <ReferentialConstraint Property=""clientId"" ReferencedProperty=""clientId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Person"" Type=""Ocerra.Repository.Entities.Person"">
-          <ReferentialConstraint Property=""PersonId"" ReferencedProperty=""PersonId"" />
+        <NavigationProperty Name=""person"" Type=""Ocerra.Repository.Entities.Person"">
+          <ReferentialConstraint Property=""personId"" ReferencedProperty=""personId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""SettingFlag"" Type=""Ocerra.Repository.Entities.SettingFlag"">
-          <ReferentialConstraint Property=""SettingFlagId"" ReferencedProperty=""SettingFlagId"" />
+        <NavigationProperty Name=""settingFlag"" Type=""Ocerra.Repository.Entities.SettingFlag"">
+          <ReferentialConstraint Property=""settingFlagId"" ReferencedProperty=""settingFlagId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""Vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
-          <ReferentialConstraint Property=""VendorId"" ReferencedProperty=""VendorId"" />
+        <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""SettingFlag"">
         <Key>
-          <PropertyRef Name=""SettingFlagId"" />
+          <PropertyRef Name=""settingFlagId"" />
         </Key>
-        <Property Name=""SettingFlagId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""SettingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
+        <Property Name=""settingFlagId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""settingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
       </EntityType>
       <EntityType Name=""WorkflowType"">
         <Key>
-          <PropertyRef Name=""WorkflowTypeId"" />
+          <PropertyRef Name=""workflowTypeId"" />
         </Key>
-        <Property Name=""WorkflowTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""WorkflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
+        <Property Name=""workflowTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""workflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
       </EntityType>
       <EntityType Name=""DocumentDesignAction"">
         <Key>
-          <PropertyRef Name=""DocumentDesignActionId"" />
+          <PropertyRef Name=""documentDesignActionId"" />
         </Key>
-        <Property Name=""DocumentDesignActionId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""DocumentDesignId"" Type=""Edm.Guid"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""JsonData"" Type=""Edm.String"" />
-        <Property Name=""Priority"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <NavigationProperty Name=""DocumentDesign"" Type=""Ocerra.Repository.Entities.DocumentDesign"">
-          <ReferentialConstraint Property=""DocumentDesignId"" ReferencedProperty=""DocumentDesignId"" />
+        <Property Name=""documentDesignActionId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentDesignId"" Type=""Edm.Guid"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""jsonData"" Type=""Edm.String"" />
+        <Property Name=""priority"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <NavigationProperty Name=""documentDesign"" Type=""Ocerra.Repository.Entities.DocumentDesign"">
+          <ReferentialConstraint Property=""documentDesignId"" ReferencedProperty=""documentDesignId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""DocumentDesignRule"">
         <Key>
-          <PropertyRef Name=""DocumentDesignRuleId"" />
+          <PropertyRef Name=""documentDesignRuleId"" />
         </Key>
-        <Property Name=""DocumentDesignRuleId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""DocumentDesignId"" Type=""Edm.Guid"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""JsonData"" Type=""Edm.String"" />
-        <Property Name=""EndDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""DocumentDesign"" Type=""Ocerra.Repository.Entities.DocumentDesign"">
-          <ReferentialConstraint Property=""DocumentDesignId"" ReferencedProperty=""DocumentDesignId"" />
+        <Property Name=""documentDesignRuleId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentDesignId"" Type=""Edm.Guid"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""jsonData"" Type=""Edm.String"" />
+        <Property Name=""endDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""documentDesign"" Type=""Ocerra.Repository.Entities.DocumentDesign"">
+          <ReferentialConstraint Property=""documentDesignId"" ReferencedProperty=""documentDesignId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""TensorModel"">
         <Key>
-          <PropertyRef Name=""TensorModelId"" />
+          <PropertyRef Name=""tensorModelId"" />
         </Key>
-        <Property Name=""TensorModelId"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""TensorModelTypeId"" Type=""Edm.Int16"" />
-        <Property Name=""StoredFileId"" Type=""Edm.Guid"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <NavigationProperty Name=""StoredFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
-          <ReferentialConstraint Property=""StoredFileId"" ReferencedProperty=""StoredFileId"" />
+        <Property Name=""tensorModelId"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""tensorModelTypeId"" Type=""Edm.Int16"" />
+        <Property Name=""storedFileId"" Type=""Edm.Guid"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <NavigationProperty Name=""storedFile"" Type=""Ocerra.Repository.Entities.StoredFile"">
+          <ReferentialConstraint Property=""storedFileId"" ReferencedProperty=""storedFileId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""TensorModelType"" Type=""Ocerra.Repository.Entities.TensorModelType"">
-          <ReferentialConstraint Property=""TensorModelTypeId"" ReferencedProperty=""TensorModelTypeId"" />
+        <NavigationProperty Name=""tensorModelType"" Type=""Ocerra.Repository.Entities.TensorModelType"">
+          <ReferentialConstraint Property=""tensorModelTypeId"" ReferencedProperty=""tensorModelTypeId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""TensorModelType"">
         <Key>
-          <PropertyRef Name=""TensorModelTypeId"" />
+          <PropertyRef Name=""tensorModelTypeId"" />
         </Key>
-        <Property Name=""TensorModelTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""TensorModels"" Type=""Collection(Ocerra.Repository.Entities.TensorModel)"" />
+        <Property Name=""tensorModelTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""tensorModels"" Type=""Collection(Ocerra.Repository.Entities.TensorModel)"" />
       </EntityType>
       <EntityType Name=""TrainFileType"">
         <Key>
-          <PropertyRef Name=""TrainFileTypeId"" />
+          <PropertyRef Name=""trainFileTypeId"" />
         </Key>
-        <Property Name=""TrainFileTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""TrainFiles"" Type=""Collection(Ocerra.Repository.Entities.TrainFile)"" />
+        <Property Name=""trainFileTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""trainFiles"" Type=""Collection(Ocerra.Repository.Entities.TrainFile)"" />
       </EntityType>
       <EntityType Name=""DocumentMatch"">
         <Key>
-          <PropertyRef Name=""DocumentMatchId"" />
+          <PropertyRef Name=""documentMatchId"" />
         </Key>
-        <Property Name=""DocumentMatchId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""DocumentId"" Type=""Edm.Guid"" />
-        <Property Name=""ExtractMatches"" Type=""Edm.String"" />
-        <Property Name=""EndDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""HasManuallyChecked"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""Document"" Type=""Ocerra.Repository.Entities.Document"">
-          <ReferentialConstraint Property=""DocumentId"" ReferencedProperty=""DocumentId"" />
+        <Property Name=""documentMatchId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentId"" Type=""Edm.Guid"" />
+        <Property Name=""extractMatches"" Type=""Edm.String"" />
+        <Property Name=""endDateUtc"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""hasManuallyChecked"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""document"" Type=""Ocerra.Repository.Entities.Document"">
+          <ReferentialConstraint Property=""documentId"" ReferencedProperty=""documentId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""Workflow"">
         <Key>
-          <PropertyRef Name=""WorkflowId"" />
+          <PropertyRef Name=""workflowId"" />
         </Key>
-        <Property Name=""WorkflowId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""WorkflowSchemaId"" Type=""Edm.Guid"" />
-        <Property Name=""WorkflowStateId"" Type=""Edm.Guid"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <NavigationProperty Name=""WorkflowSchema"" Type=""Ocerra.Repository.Entities.WorkflowSchema"">
-          <ReferentialConstraint Property=""WorkflowSchemaId"" ReferencedProperty=""WorkflowSchemaId"" />
+        <Property Name=""workflowId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowSchemaId"" Type=""Edm.Guid"" />
+        <Property Name=""workflowStateId"" Type=""Edm.Guid"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <NavigationProperty Name=""workflowSchema"" Type=""Ocerra.Repository.Entities.WorkflowSchema"">
+          <ReferentialConstraint Property=""workflowSchemaId"" ReferencedProperty=""workflowSchemaId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""WorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"">
-          <ReferentialConstraint Property=""WorkflowStateId"" ReferencedProperty=""WorkflowStateId"" />
+        <NavigationProperty Name=""workflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"">
+          <ReferentialConstraint Property=""workflowStateId"" ReferencedProperty=""workflowStateId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""VoucherHeaders"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeader)"" />
-        <NavigationProperty Name=""WorkflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
+        <NavigationProperty Name=""voucherHeaders"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeader)"" />
+        <NavigationProperty Name=""workflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
       </EntityType>
       <EntityType Name=""WorkflowStateType"">
         <Key>
-          <PropertyRef Name=""WorkflowStateTypeId"" />
+          <PropertyRef Name=""workflowStateTypeId"" />
         </Key>
-        <Property Name=""WorkflowStateTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""WorkflowStates"" Type=""Collection(Ocerra.Repository.Entities.WorkflowState)"" />
+        <Property Name=""workflowStateTypeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""workflowStates"" Type=""Collection(Ocerra.Repository.Entities.WorkflowState)"" />
       </EntityType>
       <EntityType Name=""WorkflowLog"">
         <Key>
-          <PropertyRef Name=""WorkflowLogId"" />
+          <PropertyRef Name=""workflowLogId"" />
         </Key>
-        <Property Name=""WorkflowLogId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""WorkflowId"" Type=""Edm.Guid"" />
-        <Property Name=""FromWorkflowStateId"" Type=""Edm.Guid"" />
-        <Property Name=""ToWorkflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""WorkflowTransitionId"" Type=""Edm.Guid"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""Notes"" Type=""Edm.String"" />
-        <NavigationProperty Name=""CreatedByNavigation"" Type=""Ocerra.Repository.Entities.Person"" />
-        <NavigationProperty Name=""FromWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
-        <NavigationProperty Name=""ToWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
-        <NavigationProperty Name=""Workflow"" Type=""Ocerra.Repository.Entities.Workflow"">
-          <ReferentialConstraint Property=""WorkflowId"" ReferencedProperty=""WorkflowId"" />
+        <Property Name=""workflowLogId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowId"" Type=""Edm.Guid"" />
+        <Property Name=""fromWorkflowStateId"" Type=""Edm.Guid"" />
+        <Property Name=""toWorkflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowTransitionId"" Type=""Edm.Guid"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""notes"" Type=""Edm.String"" />
+        <NavigationProperty Name=""createdByNavigation"" Type=""Ocerra.Repository.Entities.Person"" />
+        <NavigationProperty Name=""fromWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
+        <NavigationProperty Name=""toWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
+        <NavigationProperty Name=""workflow"" Type=""Ocerra.Repository.Entities.Workflow"">
+          <ReferentialConstraint Property=""workflowId"" ReferencedProperty=""workflowId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""WorkflowTransition"" Type=""Ocerra.Repository.Entities.WorkflowTransition"">
-          <ReferentialConstraint Property=""WorkflowTransitionId"" ReferencedProperty=""WorkflowTransitionId"" />
+        <NavigationProperty Name=""workflowTransition"" Type=""Ocerra.Repository.Entities.WorkflowTransition"">
+          <ReferentialConstraint Property=""workflowTransitionId"" ReferencedProperty=""workflowTransitionId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""WorkflowTransition"">
         <Key>
-          <PropertyRef Name=""WorkflowTransitionId"" />
+          <PropertyRef Name=""workflowTransitionId"" />
         </Key>
-        <Property Name=""WorkflowTransitionId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""WorkflowSchemaId"" Type=""Edm.Guid"" />
-        <Property Name=""FromWorkflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""ToWorkflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""WorkflowTransitionRoleId"" Type=""Edm.Int16"" />
-        <Property Name=""PersonId"" Type=""Edm.Guid"" />
-        <Property Name=""WorkflowAutoCodeId"" Type=""Edm.Int16"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <Property Name=""Conditions"" Type=""Edm.String"" />
-        <Property Name=""Limit"" Type=""Edm.Decimal"" />
-        <Property Name=""Sequence"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""RequestComments"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""Threshold"" Type=""Edm.Decimal"" />
-        <NavigationProperty Name=""FromWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
-        <NavigationProperty Name=""Person"" Type=""Ocerra.Repository.Entities.Person"">
-          <ReferentialConstraint Property=""PersonId"" ReferencedProperty=""PersonId"" />
+        <Property Name=""workflowTransitionId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowSchemaId"" Type=""Edm.Guid"" />
+        <Property Name=""fromWorkflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""toWorkflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowTransitionRoleId"" Type=""Edm.Int16"" />
+        <Property Name=""personId"" Type=""Edm.Guid"" />
+        <Property Name=""workflowAutoCodeId"" Type=""Edm.Int16"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <Property Name=""conditions"" Type=""Edm.String"" />
+        <Property Name=""limit"" Type=""Edm.Decimal"" />
+        <Property Name=""sequence"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""requestComments"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""threshold"" Type=""Edm.Decimal"" />
+        <NavigationProperty Name=""fromWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
+        <NavigationProperty Name=""person"" Type=""Ocerra.Repository.Entities.Person"">
+          <ReferentialConstraint Property=""personId"" ReferencedProperty=""personId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""ToWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
-        <NavigationProperty Name=""WorkflowAutoCode"" Type=""Ocerra.Repository.Entities.WorkflowAutoCode"">
-          <ReferentialConstraint Property=""WorkflowAutoCodeId"" ReferencedProperty=""WorkflowAutoCodeId"" />
+        <NavigationProperty Name=""toWorkflowState"" Type=""Ocerra.Repository.Entities.WorkflowState"" />
+        <NavigationProperty Name=""workflowAutoCode"" Type=""Ocerra.Repository.Entities.WorkflowAutoCode"">
+          <ReferentialConstraint Property=""workflowAutoCodeId"" ReferencedProperty=""workflowAutoCodeId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""WorkflowSchema"" Type=""Ocerra.Repository.Entities.WorkflowSchema"">
-          <ReferentialConstraint Property=""WorkflowSchemaId"" ReferencedProperty=""WorkflowSchemaId"" />
+        <NavigationProperty Name=""workflowSchema"" Type=""Ocerra.Repository.Entities.WorkflowSchema"">
+          <ReferentialConstraint Property=""workflowSchemaId"" ReferencedProperty=""workflowSchemaId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""WorkflowTransitionRole"" Type=""Ocerra.Repository.Entities.WorkflowTransitionRole"">
-          <ReferentialConstraint Property=""WorkflowTransitionRoleId"" ReferencedProperty=""WorkflowTransitionRoleId"" />
+        <NavigationProperty Name=""workflowTransitionRole"" Type=""Ocerra.Repository.Entities.WorkflowTransitionRole"">
+          <ReferentialConstraint Property=""workflowTransitionRoleId"" ReferencedProperty=""workflowTransitionRoleId"" />
         </NavigationProperty>
-        <NavigationProperty Name=""WorkflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
+        <NavigationProperty Name=""workflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
       </EntityType>
       <EntityType Name=""WorkflowAutoCode"">
         <Key>
-          <PropertyRef Name=""WorkflowAutoCodeId"" />
+          <PropertyRef Name=""workflowAutoCodeId"" />
         </Key>
-        <Property Name=""WorkflowAutoCodeId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""WorkflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
+        <Property Name=""workflowAutoCodeId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""workflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
       </EntityType>
       <EntityType Name=""WorkflowTransitionRole"">
         <Key>
-          <PropertyRef Name=""WorkflowTransitionRoleId"" />
+          <PropertyRef Name=""workflowTransitionRoleId"" />
         </Key>
-        <Property Name=""WorkflowTransitionRoleId"" Type=""Edm.Int16"" Nullable=""false"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
-        <NavigationProperty Name=""WorkflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
+        <Property Name=""workflowTransitionRoleId"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
+        <NavigationProperty Name=""workflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
       </EntityType>
       <EntityType Name=""VoucherHeaderDetail"">
         <Key>
-          <PropertyRef Name=""VoucherHeaderDetailId"" />
+          <PropertyRef Name=""voucherHeaderDetailId"" />
         </Key>
-        <Property Name=""VoucherHeaderDetailId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
-        <Property Name=""Value"" Type=""Edm.String"" />
-        <NavigationProperty Name=""VoucherHeader"" Type=""Ocerra.Repository.Entities.VoucherHeader"">
-          <ReferentialConstraint Property=""VoucherHeaderId"" ReferencedProperty=""VoucherHeaderId"" />
+        <Property Name=""voucherHeaderDetailId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" />
+        <Property Name=""code"" Type=""Edm.String"" />
+        <Property Name=""value"" Type=""Edm.String"" />
+        <NavigationProperty Name=""voucherHeader"" Type=""Ocerra.Repository.Entities.VoucherHeader"">
+          <ReferentialConstraint Property=""voucherHeaderId"" ReferencedProperty=""voucherHeaderId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""VoucherDuplicateView"">
         <Key>
-          <PropertyRef Name=""VoucherHeaderId"" />
+          <PropertyRef Name=""voucherHeaderId"" />
         </Key>
-        <Property Name=""ClientId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""VendorId"" Type=""Edm.Guid"" />
-        <Property Name=""Number"" Type=""Edm.String"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""number"" Type=""Edm.String"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
       </EntityType>
       <EntityType Name=""VoucherValidationView"">
         <Key>
-          <PropertyRef Name=""VoucherHeaderId"" />
+          <PropertyRef Name=""voucherHeaderId"" />
         </Key>
-        <Property Name=""VendorTaxNumber"" Type=""Edm.String"" />
-        <Property Name=""VoucherTaxNumber"" Type=""Edm.String"" />
-        <Property Name=""HasTotalMatches"" Type=""Edm.String"" />
-        <Property Name=""HasGstMatches"" Type=""Edm.String"" />
-        <Property Name=""HasPoMatches"" Type=""Edm.String"" />
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""vendorTaxNumber"" Type=""Edm.String"" />
+        <Property Name=""voucherTaxNumber"" Type=""Edm.String"" />
+        <Property Name=""hasTotalMatches"" Type=""Edm.String"" />
+        <Property Name=""hasGstMatches"" Type=""Edm.String"" />
+        <Property Name=""hasPoMatches"" Type=""Edm.String"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
       </EntityType>
       <EntityType Name=""PeopleClientNotification"">
         <Key>
-          <PropertyRef Name=""PeopleClientNotificationId"" />
+          <PropertyRef Name=""peopleClientNotificationId"" />
         </Key>
-        <Property Name=""PeopleClientNotificationId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PeopleClientId"" Type=""Edm.Guid"" />
-        <Property Name=""PeopleNotificationCode"" Type=""Edm.String"" />
-        <Property Name=""CronCode"" Type=""Edm.String"" />
-        <Property Name=""CronJson"" Type=""Edm.String"" />
-        <Property Name=""LastNotifyDate"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""IsActive"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""CreatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""CreatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""UpdatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""UpdatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <NavigationProperty Name=""PeopleClient"" Type=""Ocerra.Repository.Entities.PeopleClient"">
-          <ReferentialConstraint Property=""PeopleClientId"" ReferencedProperty=""PeopleClientId"" />
+        <Property Name=""peopleClientNotificationId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""peopleClientId"" Type=""Edm.Guid"" />
+        <Property Name=""peopleNotificationCode"" Type=""Edm.String"" />
+        <Property Name=""cronCode"" Type=""Edm.String"" />
+        <Property Name=""cronJson"" Type=""Edm.String"" />
+        <Property Name=""lastNotifyDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <NavigationProperty Name=""peopleClient"" Type=""Ocerra.Repository.Entities.PeopleClient"">
+          <ReferentialConstraint Property=""peopleClientId"" ReferencedProperty=""peopleClientId"" />
         </NavigationProperty>
       </EntityType>
       <EntityType Name=""AgentPool"">
         <Key>
-          <PropertyRef Name=""AgentPoolId"" />
+          <PropertyRef Name=""agentPoolId"" />
         </Key>
-        <Property Name=""AgentPoolId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Name"" Type=""Edm.String"" />
-        <Property Name=""JsonData"" Type=""Edm.String"" />
-        <NavigationProperty Name=""Agents"" Type=""Collection(Ocerra.Repository.Entities.Agent)"" />
+        <Property Name=""agentPoolId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""name"" Type=""Edm.String"" />
+        <Property Name=""jsonData"" Type=""Edm.String"" />
+        <NavigationProperty Name=""agents"" Type=""Collection(Ocerra.Repository.Entities.Agent)"" />
       </EntityType>
     </Schema>
     <Schema Namespace=""Default"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
       <ComplexType Name=""LogEntry"" OpenType=""true"">
-        <Property Name=""Index"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""StartTime"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""ApplicationName"" Type=""Edm.String"" />
-        <Property Name=""MethodName"" Type=""Edm.String"" />
-        <Property Name=""MethodArguments"" Type=""Edm.String"" />
-        <Property Name=""Postfix"" Type=""Edm.String"" />
-        <Property Name=""TypeName"" Type=""Edm.String"" />
-        <Property Name=""UserName"" Type=""Edm.String"" />
-        <Property Name=""ServerName"" Type=""Edm.String"" />
-        <Property Name=""Exception"" Type=""Edm.String"" />
-        <Property Name=""EndTime"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""ExecutionTime"" Type=""Edm.Double"" Nullable=""false"" />
-        <Property Name=""Version"" Type=""Edm.String"" />
-        <Property Name=""Url"" Type=""Edm.String"" />
-        <Property Name=""UrlReferer"" Type=""Edm.String"" />
-        <Property Name=""Json"" Type=""Edm.String"" />
-        <Property Name=""Description"" Type=""Edm.String"" />
+        <Property Name=""index"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""startTime"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""applicationName"" Type=""Edm.String"" />
+        <Property Name=""methodName"" Type=""Edm.String"" />
+        <Property Name=""methodArguments"" Type=""Edm.String"" />
+        <Property Name=""postfix"" Type=""Edm.String"" />
+        <Property Name=""typeName"" Type=""Edm.String"" />
+        <Property Name=""userName"" Type=""Edm.String"" />
+        <Property Name=""serverName"" Type=""Edm.String"" />
+        <Property Name=""exception"" Type=""Edm.String"" />
+        <Property Name=""endTime"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""executionTime"" Type=""Edm.Double"" Nullable=""false"" />
+        <Property Name=""version"" Type=""Edm.String"" />
+        <Property Name=""url"" Type=""Edm.String"" />
+        <Property Name=""urlReferer"" Type=""Edm.String"" />
+        <Property Name=""json"" Type=""Edm.String"" />
+        <Property Name=""description"" Type=""Edm.String"" />
       </ComplexType>
       <ComplexType Name=""SearchEntry"">
-        <Property Name=""Route"" Type=""Edm.String"" />
-        <Property Name=""Group"" Type=""Edm.String"" />
-        <Property Name=""Text"" Type=""Edm.String"" />
-        <Property Name=""Code"" Type=""Edm.String"" />
+        <Property Name=""route"" Type=""Edm.String"" />
+        <Property Name=""group"" Type=""Edm.String"" />
+        <Property Name=""text"" Type=""Edm.String"" />
+        <Property Name=""code"" Type=""Edm.String"" />
       </ComplexType>
       <ComplexType Name=""VoucherAuditLineGroup"">
-        <Property Name=""VoucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""PersonName"" Type=""Edm.String"" />
-        <Property Name=""PersonId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""AuditCode"" Type=""Edm.String"" />
-        <Property Name=""AuditDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""personName"" Type=""Edm.String"" />
+        <Property Name=""personId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""auditCode"" Type=""Edm.String"" />
+        <Property Name=""auditDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
       </ComplexType>
       <Function Name=""OtherClients"">
         <ReturnType Type=""Collection(Ocerra.Repository.Entities.Client)"" />
@@ -28211,107 +28234,107 @@ namespace OcerraConsoleApp.ODataClient.Proxies
       </Function>
       <EntityContainer Name=""Container"">
         <EntitySet Name=""Person"" EntityType=""Ocerra.Repository.Entities.Person"">
-          <NavigationPropertyBinding Path=""AspNetUser"" Target=""AspNetUser"" />
-          <NavigationPropertyBinding Path=""PeopleClients"" Target=""PeopleClient"" />
+          <NavigationPropertyBinding Path=""aspNetUser"" Target=""AspNetUser"" />
+          <NavigationPropertyBinding Path=""peopleClients"" Target=""PeopleClient"" />
         </EntitySet>
         <EntitySet Name=""AspNetUser"" EntityType=""Ocerra.Repository.Entities.AspNetUser"">
-          <NavigationPropertyBinding Path=""AspNetUserLogins/User"" Target=""AspNetUser"" />
-          <NavigationPropertyBinding Path=""AspNetUserRoles/Role"" Target=""AspNetRole"" />
-          <NavigationPropertyBinding Path=""AspNetUserRoles/User"" Target=""AspNetUser"" />
-          <NavigationPropertyBinding Path=""Person"" Target=""Person"" />
+          <NavigationPropertyBinding Path=""aspNetUserLogins/user"" Target=""AspNetUser"" />
+          <NavigationPropertyBinding Path=""aspNetUserRoles/role"" Target=""AspNetRole"" />
+          <NavigationPropertyBinding Path=""aspNetUserRoles/user"" Target=""AspNetUser"" />
+          <NavigationPropertyBinding Path=""person"" Target=""Person"" />
         </EntitySet>
         <EntitySet Name=""Client"" EntityType=""Ocerra.Repository.Entities.Client"">
-          <NavigationPropertyBinding Path=""ClientExtractRules"" Target=""ClientExtractRule"" />
-          <NavigationPropertyBinding Path=""CurrencyCodes"" Target=""CurrencyCode"" />
-          <NavigationPropertyBinding Path=""DocumentEmails"" Target=""DocumentEmail"" />
-          <NavigationPropertyBinding Path=""Documents"" Target=""Document"" />
-          <NavigationPropertyBinding Path=""InterClientClients"" Target=""InterClient"" />
-          <NavigationPropertyBinding Path=""InterClientOtherClients"" Target=""InterClient"" />
-          <NavigationPropertyBinding Path=""ItemCodes"" Target=""ItemCode"" />
-          <NavigationPropertyBinding Path=""TaxAccounts"" Target=""TaxAccount"" />
-          <NavigationPropertyBinding Path=""TaxRates"" Target=""TaxRate"" />
-          <NavigationPropertyBinding Path=""WorkflowSchemas"" Target=""WorkflowSchema"" />
+          <NavigationPropertyBinding Path=""clientExtractRules"" Target=""ClientExtractRule"" />
+          <NavigationPropertyBinding Path=""currencyCodes"" Target=""CurrencyCode"" />
+          <NavigationPropertyBinding Path=""documentEmails"" Target=""DocumentEmail"" />
+          <NavigationPropertyBinding Path=""documents"" Target=""Document"" />
+          <NavigationPropertyBinding Path=""interClientClients"" Target=""InterClient"" />
+          <NavigationPropertyBinding Path=""interClientOtherClients"" Target=""InterClient"" />
+          <NavigationPropertyBinding Path=""itemCodes"" Target=""ItemCode"" />
+          <NavigationPropertyBinding Path=""taxAccounts"" Target=""TaxAccount"" />
+          <NavigationPropertyBinding Path=""taxRates"" Target=""TaxRate"" />
+          <NavigationPropertyBinding Path=""workflowSchemas"" Target=""WorkflowSchema"" />
         </EntitySet>
         <EntitySet Name=""InterClient"" EntityType=""Ocerra.Repository.Entities.InterClient"">
-          <NavigationPropertyBinding Path=""Client"" Target=""Client"" />
-          <NavigationPropertyBinding Path=""OtherClient"" Target=""Client"" />
-          <NavigationPropertyBinding Path=""OtherTaxAccount"" Target=""TaxAccount"" />
-          <NavigationPropertyBinding Path=""TaxAccount"" Target=""TaxAccount"" />
+          <NavigationPropertyBinding Path=""client"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""otherClient"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""otherTaxAccount"" Target=""TaxAccount"" />
+          <NavigationPropertyBinding Path=""taxAccount"" Target=""TaxAccount"" />
         </EntitySet>
         <EntitySet Name=""AspNetRole"" EntityType=""Ocerra.Repository.Entities.AspNetRole"" />
         <EntitySet Name=""PeopleClient"" EntityType=""Ocerra.Repository.Entities.PeopleClient"">
-          <NavigationPropertyBinding Path=""Client"" Target=""Client"" />
-          <NavigationPropertyBinding Path=""Person"" Target=""Person"" />
+          <NavigationPropertyBinding Path=""client"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""person"" Target=""Person"" />
         </EntitySet>
         <EntitySet Name=""Vendor"" EntityType=""Ocerra.Repository.Entities.Vendor"">
-          <NavigationPropertyBinding Path=""CurrencyCode"" Target=""CurrencyCode"" />
-          <NavigationPropertyBinding Path=""DefaultTaxAccount"" Target=""TaxAccount"" />
-          <NavigationPropertyBinding Path=""DefaultTaxRate"" Target=""TaxRate"" />
-          <NavigationPropertyBinding Path=""WorkflowSchemas"" Target=""WorkflowSchema"" />
+          <NavigationPropertyBinding Path=""currencyCode"" Target=""CurrencyCode"" />
+          <NavigationPropertyBinding Path=""defaultTaxAccount"" Target=""TaxAccount"" />
+          <NavigationPropertyBinding Path=""defaultTaxRate"" Target=""TaxRate"" />
+          <NavigationPropertyBinding Path=""workflowSchemas"" Target=""WorkflowSchema"" />
         </EntitySet>
         <EntitySet Name=""Agent"" EntityType=""Ocerra.Repository.Entities.Agent"" />
         <EntitySet Name=""DocumentSourceType"" EntityType=""Ocerra.Repository.Entities.DocumentSourceType"" />
         <EntitySet Name=""Document"" EntityType=""Ocerra.Repository.Entities.Document"">
-          <NavigationPropertyBinding Path=""Client"" Target=""Client"" />
-          <NavigationPropertyBinding Path=""DocumentEmail"" Target=""DocumentEmail"" />
-          <NavigationPropertyBinding Path=""InverseParentDocument"" Target=""Document"" />
-          <NavigationPropertyBinding Path=""ParentDocument"" Target=""Document"" />
+          <NavigationPropertyBinding Path=""client"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""documentEmail"" Target=""DocumentEmail"" />
+          <NavigationPropertyBinding Path=""inverseParentDocument"" Target=""Document"" />
+          <NavigationPropertyBinding Path=""parentDocument"" Target=""Document"" />
         </EntitySet>
         <EntitySet Name=""DocumentEmail"" EntityType=""Ocerra.Repository.Entities.DocumentEmail"">
-          <NavigationPropertyBinding Path=""Client"" Target=""Client"" />
-          <NavigationPropertyBinding Path=""Documents"" Target=""Document"" />
+          <NavigationPropertyBinding Path=""client"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""documents"" Target=""Document"" />
         </EntitySet>
         <EntitySet Name=""ClientExtractRule"" EntityType=""Ocerra.Repository.Entities.ClientExtractRule"">
-          <NavigationPropertyBinding Path=""Client"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""client"" Target=""Client"" />
         </EntitySet>
         <EntitySet Name=""VoucherHeader"" EntityType=""Ocerra.Repository.Entities.VoucherHeader"">
-          <NavigationPropertyBinding Path=""CurrencyCode"" Target=""CurrencyCode"" />
-          <NavigationPropertyBinding Path=""Document"" Target=""Document"" />
-          <NavigationPropertyBinding Path=""Vendor"" Target=""Vendor"" />
-          <NavigationPropertyBinding Path=""VoucherAuditLines"" Target=""VoucherAuditLine"" />
-          <NavigationPropertyBinding Path=""VoucherHeaderPayments"" Target=""VoucherHeaderPayment"" />
-          <NavigationPropertyBinding Path=""VoucherLines"" Target=""VoucherLine"" />
+          <NavigationPropertyBinding Path=""currencyCode"" Target=""CurrencyCode"" />
+          <NavigationPropertyBinding Path=""document"" Target=""Document"" />
+          <NavigationPropertyBinding Path=""vendor"" Target=""Vendor"" />
+          <NavigationPropertyBinding Path=""voucherAuditLines"" Target=""VoucherAuditLine"" />
+          <NavigationPropertyBinding Path=""voucherHeaderPayments"" Target=""VoucherHeaderPayment"" />
+          <NavigationPropertyBinding Path=""voucherLines"" Target=""VoucherLine"" />
         </EntitySet>
         <EntitySet Name=""VoucherLine"" EntityType=""Ocerra.Repository.Entities.VoucherLine"">
-          <NavigationPropertyBinding Path=""ItemCode"" Target=""ItemCode"" />
-          <NavigationPropertyBinding Path=""TaxAccount"" Target=""TaxAccount"" />
-          <NavigationPropertyBinding Path=""TaxRate"" Target=""TaxRate"" />
+          <NavigationPropertyBinding Path=""itemCode"" Target=""ItemCode"" />
+          <NavigationPropertyBinding Path=""taxAccount"" Target=""TaxAccount"" />
+          <NavigationPropertyBinding Path=""taxRate"" Target=""TaxRate"" />
         </EntitySet>
         <EntitySet Name=""VendorVoucher"" EntityType=""Ocerra.Repository.Entities.VoucherHeader"">
-          <NavigationPropertyBinding Path=""CurrencyCode"" Target=""CurrencyCode"" />
-          <NavigationPropertyBinding Path=""Document"" Target=""Document"" />
-          <NavigationPropertyBinding Path=""Vendor"" Target=""Vendor"" />
-          <NavigationPropertyBinding Path=""VoucherAuditLines"" Target=""VoucherAuditLine"" />
-          <NavigationPropertyBinding Path=""VoucherHeaderPayments"" Target=""VoucherHeaderPayment"" />
-          <NavigationPropertyBinding Path=""VoucherLines"" Target=""VoucherLine"" />
+          <NavigationPropertyBinding Path=""currencyCode"" Target=""CurrencyCode"" />
+          <NavigationPropertyBinding Path=""document"" Target=""Document"" />
+          <NavigationPropertyBinding Path=""vendor"" Target=""Vendor"" />
+          <NavigationPropertyBinding Path=""voucherAuditLines"" Target=""VoucherAuditLine"" />
+          <NavigationPropertyBinding Path=""voucherHeaderPayments"" Target=""VoucherHeaderPayment"" />
+          <NavigationPropertyBinding Path=""voucherLines"" Target=""VoucherLine"" />
         </EntitySet>
         <EntitySet Name=""WorkflowSchema"" EntityType=""Ocerra.Repository.Entities.WorkflowSchema"">
-          <NavigationPropertyBinding Path=""Vendor"" Target=""Vendor"" />
+          <NavigationPropertyBinding Path=""vendor"" Target=""Vendor"" />
         </EntitySet>
         <EntitySet Name=""WorkflowState"" EntityType=""Ocerra.Repository.Entities.WorkflowState"" />
         <EntitySet Name=""CurrencyCode"" EntityType=""Ocerra.Repository.Entities.CurrencyCode"">
-          <NavigationPropertyBinding Path=""Client"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""client"" Target=""Client"" />
         </EntitySet>
         <EntitySet Name=""PurchaseOrderHeader"" EntityType=""Ocerra.Repository.Entities.PurchaseOrderHeader"">
-          <NavigationPropertyBinding Path=""PurchaseOrderHeaderValues/Attribute/Client"" Target=""Client"" />
-          <NavigationPropertyBinding Path=""PurchaseOrderHeaderValues/PurchaseOrderHeader"" Target=""PurchaseOrderHeader"" />
-          <NavigationPropertyBinding Path=""Vendor"" Target=""Vendor"" />
+          <NavigationPropertyBinding Path=""purchaseOrderHeaderValues/attribute/client"" Target=""Client"" />
+          <NavigationPropertyBinding Path=""purchaseOrderHeaderValues/purchaseOrderHeader"" Target=""PurchaseOrderHeader"" />
+          <NavigationPropertyBinding Path=""vendor"" Target=""Vendor"" />
         </EntitySet>
         <EntitySet Name=""VoucherHeaderPayment"" EntityType=""Ocerra.Repository.Entities.VoucherHeaderPayment"" />
         <EntitySet Name=""TaxAccount"" EntityType=""Ocerra.Repository.Entities.TaxAccount"">
-          <NavigationPropertyBinding Path=""InterClientOtherTaxAccounts"" Target=""InterClient"" />
-          <NavigationPropertyBinding Path=""InterClientTaxAccounts"" Target=""InterClient"" />
-          <NavigationPropertyBinding Path=""TaxRate"" Target=""TaxRate"" />
-          <NavigationPropertyBinding Path=""Vendors"" Target=""Vendor"" />
+          <NavigationPropertyBinding Path=""interClientOtherTaxAccounts"" Target=""InterClient"" />
+          <NavigationPropertyBinding Path=""interClientTaxAccounts"" Target=""InterClient"" />
+          <NavigationPropertyBinding Path=""taxRate"" Target=""TaxRate"" />
+          <NavigationPropertyBinding Path=""vendors"" Target=""Vendor"" />
         </EntitySet>
         <EntitySet Name=""TaxRate"" EntityType=""Ocerra.Repository.Entities.TaxRate"">
-          <NavigationPropertyBinding Path=""TaxAccounts"" Target=""TaxAccount"" />
-          <NavigationPropertyBinding Path=""Vendors"" Target=""Vendor"" />
+          <NavigationPropertyBinding Path=""taxAccounts"" Target=""TaxAccount"" />
+          <NavigationPropertyBinding Path=""vendors"" Target=""Vendor"" />
         </EntitySet>
         <EntitySet Name=""TrainFile"" EntityType=""Ocerra.Repository.Entities.TrainFile"" />
         <EntitySet Name=""ItemCode"" EntityType=""Ocerra.Repository.Entities.ItemCode"" />
         <EntitySet Name=""VoucherAuditLine"" EntityType=""Ocerra.Repository.Entities.VoucherAuditLine"">
-          <NavigationPropertyBinding Path=""AuditCode"" Target=""AuditCode"" />
+          <NavigationPropertyBinding Path=""auditCode"" Target=""AuditCode"" />
         </EntitySet>
         <EntitySet Name=""AuditCode"" EntityType=""Ocerra.Repository.Entities.AuditCode"" />
         <FunctionImport Name=""OtherClients"" Function=""Default.OtherClients"" IncludeInServiceDocument=""true"" />
@@ -28464,7 +28487,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property IndexProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Index")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("index")]
         public int IndexProxy
         {
             get
@@ -28486,7 +28509,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property StartTimeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("StartTime")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("startTime")]
         public global::System.DateTimeOffset StartTimeProxy
         {
             get
@@ -28508,7 +28531,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ApplicationNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ApplicationName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("applicationName")]
         public string ApplicationNameProxy
         {
             get
@@ -28530,7 +28553,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property MethodNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("MethodName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("methodName")]
         public string MethodNameProxy
         {
             get
@@ -28552,7 +28575,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property MethodArgumentsProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("MethodArguments")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("methodArguments")]
         public string MethodArgumentsProxy
         {
             get
@@ -28574,7 +28597,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PostfixProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Postfix")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("postfix")]
         public string PostfixProxy
         {
             get
@@ -28596,7 +28619,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TypeNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TypeName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("typeName")]
         public string TypeNameProxy
         {
             get
@@ -28618,7 +28641,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UserNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UserName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("userName")]
         public string UserNameProxy
         {
             get
@@ -28640,7 +28663,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ServerNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ServerName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("serverName")]
         public string ServerNameProxy
         {
             get
@@ -28662,7 +28685,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExceptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Exception")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("exception")]
         public string ExceptionProxy
         {
             get
@@ -28684,7 +28707,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property EndTimeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("EndTime")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("endTime")]
         public global::System.DateTimeOffset EndTimeProxy
         {
             get
@@ -28706,7 +28729,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property ExecutionTimeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("ExecutionTime")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("executionTime")]
         public double ExecutionTimeProxy
         {
             get
@@ -28728,7 +28751,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VersionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Version")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("version")]
         public string VersionProxy
         {
             get
@@ -28750,7 +28773,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UrlProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Url")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("url")]
         public string UrlProxy
         {
             get
@@ -28772,7 +28795,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property UrlRefererProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("UrlReferer")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("urlReferer")]
         public string UrlRefererProxy
         {
             get
@@ -28794,7 +28817,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property JsonProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Json")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("json")]
         public string JsonProxy
         {
             get
@@ -28816,7 +28839,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property DescriptionProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Description")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("description")]
         public string DescriptionProxy
         {
             get
@@ -28845,7 +28868,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property RouteProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Route")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("route")]
         public string RouteProxy
         {
             get
@@ -28867,7 +28890,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property GroupProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Group")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("group")]
         public string GroupProxy
         {
             get
@@ -28889,7 +28912,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property TextProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Text")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("text")]
         public string TextProxy
         {
             get
@@ -28911,7 +28934,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property CodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Code")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("code")]
         public string CodeProxy
         {
             get
@@ -28955,7 +28978,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property VoucherHeaderIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherHeaderId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
         public global::System.Guid VoucherHeaderIdProxy
         {
             get
@@ -28977,7 +29000,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonNameProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonName")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personName")]
         public string PersonNameProxy
         {
             get
@@ -28999,7 +29022,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property PersonIdProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("PersonId")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
         public global::System.Guid PersonIdProxy
         {
             get
@@ -29021,7 +29044,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AuditCodeProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AuditCode")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("auditCode")]
         public string AuditCodeProxy
         {
             get
@@ -29043,7 +29066,7 @@ namespace OcerraConsoleApp.ODataClient.Proxies
         /// There are no comments for Property AuditDateProxy in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("AuditDate")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("auditDate")]
         public global::System.DateTimeOffset AuditDateProxy
         {
             get
