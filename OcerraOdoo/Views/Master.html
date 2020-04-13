@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ocerra &mdash; Odoo Agent</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: calc(100vh - 112px)
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function echoTest() {
+            $.ajax({
+                method: "POST",
+                url: "Echo",
+                data: { message: "Hello! date: " + new Date() },
+                success: function (result) {
+                    alert(result.message);
+                },
+                error: function(er) {
+                    console.log(er)
+                    alert("There was an error on import, check console for more details.");
+                }
+            });
+        }
+
+        function syncChartOfAccounts() {
+            $.ajax({
+                method: "POST",
+                url: "SyncChartOfAccounts",
+                data: {},
+                success: function (result) {
+                    alert(result.message);
+                },
+                error: function (er) {
+                    console.log(er)
+                    alert("There was an error on import, check console for more details.");
+                }
+            });
+        }
+
+        function syncVendors() {
+            $.ajax({
+                method: "POST",
+                url: "SyncVendors",
+                data: {},
+                success: function (result) {
+                    alert(result.message);
+                },
+                error: function (er) {
+                    console.log(er)
+                    alert("There was an error on import, check console for more details.");
+                }
+            });
+        }
+        function syncPurchaseOrders() {
+            $.ajax({
+                method: "POST",
+                url: "SyncPurchaseOrders",
+                data: {},
+                success: function (result) {
+                    alert(result.message);
+                },
+                error: function (er) {
+                    console.log(er)
+                    alert("There was an error on import, check console for more details.");
+                }
+            });
+        }
+        function syncBills() {
+            $.ajax({
+                method: "POST",
+                url: "SyncInvoices",
+                data: {},
+                success: function (result) {
+                    alert(result.message);
+                },
+                error: function (er) {
+                    console.log(er)
+                    alert("There was an error on import, check console for more details.");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ocerra</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <!--<li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <!--<p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>-->
+            </div>
+            <div class="col-sm-8 text-left">
+                @Section['Content']
+            </div>
+            <div class="col-sm-2 sidenav">
+                <div class="well">
+                    <ul>
+                        <li>Client Name: @Model.Ocerra.ClientName</li>
+                        <li>Ocerra Connected: @Model.Ocerra.Connected</li>
+                        <li>Last Heart Beat: @Model.Ocerra.LastHeartBeat</li>
+                        <li>Odoo Connected: @Model.Odoo.Connected</li>
+                        <li>Odoo Version: @Model.Odoo.VersionNumber</li>
+                    </ul>
+                    <!--<p>ADS</p>-->
+                </div>
+                <div class="well">
+                    <!--<p>ADS</p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>Ocerra - Odoo Integration</p>
+    </footer>
+
+</body>
+</html>
