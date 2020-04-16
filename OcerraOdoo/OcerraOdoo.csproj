@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{897F967D-DCDB-490D-A616-769E8E7A86DB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>OcerraOdoo</RootNamespace>
     <AssemblyName>OcerraOdoo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -58,20 +58,24 @@
     <Reference Include="Nancy.Authentication.Basic, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Nancy.Authentication.Basic.2.0.0\lib\net452\Nancy.Authentication.Basic.dll</HintPath>
     </Reference>
+    <Reference Include="Nancy.Hosting.Aspnet, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Nancy.Hosting.Aspnet.2.0.0\lib\net452\Nancy.Hosting.Aspnet.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy.Hosting.Self, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Nancy.Hosting.Self.2.0.0\lib\net452\Nancy.Hosting.Self.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OdooRpc.CoreCLR.Client, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\OdooRpc.CoreCLR.Client.V2.2.0.0\lib\netstandard2.0\OdooRpc.CoreCLR.Client.dll</HintPath>
+    <Reference Include="OdooRpc.CoreCLR.Client, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\OdooRpc.CoreCLR.Client.V3.2.0.1\lib\netstandard2.0\OdooRpc.CoreCLR.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -123,6 +127,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -140,6 +145,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)Views" "$(TargetDir)Views" /i /y</PostBuildEvent>
+    <PostBuildEvent>rem xcopy "$(ProjectDir)Views" "$(TargetDir)Views" /i /y /d
+xcopy "$(ProjectDir)Views" "$(TargetDir)..\Web\Views" /i /y /d
+xcopy "$(ProjectDir)bin\Debug" "$(TargetDir)..\Web\bin" /i /y /d
+xcopy "$(ProjectDir)Web.config" "$(TargetDir)..\Web\Web.config" /i /y /d</PostBuildEvent>
   </PropertyGroup>
 </Project>

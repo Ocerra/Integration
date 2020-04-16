@@ -10,7 +10,7 @@ namespace OcerraOdoo.Models
     public class OdooCountry
     {
         public int Id { get; set; }
-        public string Code { get; set; }
+        public OdooString Code { get; set; }
     }
 
     public class OdooCurrency {
@@ -36,11 +36,15 @@ namespace OcerraOdoo.Models
     public class OdooAccount {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Currency_Id { get; set; }
+        public OdooKeyValue Currency_Id { get; set; }
         public string Code { get; set; }
         public bool Deprecated { get; set; }
         public string Internal_Type { get; set; }
         public string Internal_Group { get; set; }
+
+        public OdooKeyValue Parent_Id { get; set; }
+
+        public OdooKeyValue User_Type { get; set; }
     }
 
     public class OdooCompany {
@@ -248,5 +252,13 @@ namespace OcerraOdoo.Models
 
         [JsonProperty("tax_ids")]
         public List<long> TaxIds { get; set; }
+    }
+
+    public class OdooProduct {
+        public long Id { get; set; }
+        
+        [JsonProperty("default_code")]
+        public string DefaultCode { get; set; }
+        public bool Active { get; set; }
     }
 }

@@ -1,10 +1,13 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+using OcerraOdoo.Properties;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +16,13 @@ namespace OcerraOdoo
 {
     public static class Helpers
     {
+        public static string Trim(this string value, int length)
+        {
+            if (value != null && value.Length > length)
+                return value.Substring(0, length);
+            return value;
+        }
+
         public static string FromBase64(this string encoded)
         {
             byte[] data = System.Convert.FromBase64String(encoded);
@@ -48,6 +58,9 @@ namespace OcerraOdoo
             var textMessage = message + " \r\n" ?? "";
             textMessage += ex?.ToString() ?? "";
 
+            if(ex.InnerException != null)
+                textMessage += "\r\n---------------\r\n" + ex.InnerException.ToString();
+
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(textMessage);
             Console.ResetColor();
@@ -57,6 +70,8 @@ namespace OcerraOdoo
                     textMessage,
                     EventLogEntryType.Error,
                     1000);
+
+            File.AppendAllText("LogError.txt", textMessage);
         }
 
         public static bool IsNullOrEmpty<T>(this IEnumerable<T> value)
@@ -146,27 +161,100 @@ namespace OcerraOdoo
 
         }
 
-        static void AddUpdateAppSettings(string key, string value)
+        private static string SettingsName = "Settings.json";
+        public static void AddUpdateAppSettings(string key, string value)
         {
             try
             {
-                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                var settings = configFile.AppSettings.Settings;
-                if (settings[key] == null)
+                var path = Path.Combine(GetDirectory(), SettingsName);
+                var stringContent = File.Exists(path) ? File.ReadAllText(path) : null;
+                var settings = stringContent.FromJson<SettingContainer>() ?? new SettingContainer();
+
+                switch (key)
                 {
-                    settings.Add(key, value);
+                    case "LastVendorSyncDate":
+                        settings.LastVendorSyncDate = value;
+                        break;
+                    case "LastPurchaseSyncDate":
+                        settings.LastPurchaseSyncDate = value;
+                        break;
+                    case "LastInvoiceSyncDate":
+                        settings.LastInvoiceSyncDate = value;
+                        break;
                 }
-                else
-                {
-                    settings[key].Value = value;
-                }
-                configFile.Save(ConfigurationSaveMode.Modified);
-                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+
+                File.WriteAllText(path, settings.ToJson());
+
             }
-            catch (ConfigurationErrorsException ex)
+            catch (Exception ex)
             {
                 LogError(ex, "Error writing app settings");
             }
+        }
+
+        public static string AppSetting(string key)
+        {
+            try
+            {
+                var path = Path.Combine(GetDirectory(), SettingsName);
+                var stringContent = File.Exists(path) ? File.ReadAllText(path) : null;
+                var settings = stringContent.FromJson<SettingContainer>() ?? new SettingContainer();
+
+                if (key == "LastVendorSyncDate")
+                    return settings.LastVendorSyncDate ?? Settings.Default.LastVendorSyncDate;
+                else if (key == "LastPurchaseSyncDate")
+                    return settings.LastPurchaseSyncDate ?? Settings.Default.LastPurchaseSyncDate;
+                else if (key == "LastInvoiceSyncDate")
+                    return settings.LastInvoiceSyncDate ?? Settings.Default.LastInvoiceSyncDate;
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                LogError(ex, "Error writing app settings");
+                return null;
+            }
+        }
+
+        public static string GetDirectory() {
+            return new FileInfo(System.Reflection.Assembly.GetCallingAssembly().CodeBase.Replace("file:///", ""))
+                .Directory.Parent.FullName;
+        }
+
+        public static string ToJson<T>(this T obj)
+        {
+            if (obj == null) return null;
+            try
+            {
+                var microsoftDateFormatSettings = new JsonSerializerSettings
+                {
+                    DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                    DateTimeZoneHandling = DateTimeZoneHandling.Unspecified,
+                    StringEscapeHandling = StringEscapeHandling.EscapeHtml,
+                    NullValueHandling = NullValueHandling.Ignore,
+                    Formatting = Formatting.Indented,
+                    Converters = new JsonConverter[]
+                    {
+                        new Newtonsoft.Json.Converters.StringEnumConverter(),
+                    },
+                    MaxDepth = 10,
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                };
+                return JsonConvert.SerializeObject(obj, microsoftDateFormatSettings);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public static T FromJson<T>(this string value)
+        {
+            if (value.IsNullOrEmpty()) return default(T);
+
+            JsonSerializerSettings settings = new JsonSerializerSettings();
+            var result = (T)JsonConvert.DeserializeObject(value, typeof(T), settings);
+            return result;
         }
     }
 
@@ -237,5 +325,11 @@ namespace OcerraOdoo
         {
             return true;
         }
+    }
+
+    public class SettingContainer {
+        public string LastVendorSyncDate { get; set; }
+        public string LastPurchaseSyncDate { get; set; }
+        public string LastInvoiceSyncDate { get; set; }
     }
 }

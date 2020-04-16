@@ -11,5 +11,7 @@ namespace OcerraOdoo.Models
         public int NewItems { get; set; }
         public int UpdatedItems { get; set; }
         public string Message { get; set; }
+
+        public bool HasErrors { get; set; }
     }
 }

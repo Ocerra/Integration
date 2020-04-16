@@ -25,42 +25,6 @@ namespace OcerraOdoo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("b2Rvb0BvY2VycmEuY28ubno6QWd2R3N2ZG4=")]
-        public string OcerraApiKey {
-            get {
-                return ((string)(this["OcerraApiKey"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ocerra.odoo.com")]
-        public string OdooUrl {
-            get {
-                return ((string)(this["OdooUrl"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("antong@outlook.com")]
-        public string OdooLogin {
-            get {
-                return ((string)(this["OdooLogin"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("OWdLQjYzZSNIUUMjVUhk")]
-        public string OdooBase64Pwd {
-            get {
-                return ((string)(this["OdooBase64Pwd"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:9999/")]
         public string OcerraUrl {
             get {
@@ -115,15 +79,6 @@ namespace OcerraOdoo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ocerra")]
-        public string OdooDatabase {
-            get {
-                return ((string)(this["OdooDatabase"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("443")]
         public int OdooPort {
             get {
@@ -142,7 +97,7 @@ namespace OcerraOdoo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("liability,expense")]
+        [global::System.Configuration.DefaultSettingValueAttribute("liability,expense,Cost of Goods Sold,Cost of Sales,GST Paid,Current Liabilities")]
         public string OdooAccountGroups {
             get {
                 return ((string)(this["OdooAccountGroups"]));
@@ -160,7 +115,7 @@ namespace OcerraOdoo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2019-01-01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2020-01-01")]
         public string LastVendorSyncDate {
             get {
                 return ((string)(this["LastVendorSyncDate"]));
@@ -169,7 +124,7 @@ namespace OcerraOdoo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2019-01-01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2020-01-01")]
         public string LastPurchaseSyncDate {
             get {
                 return ((string)(this["LastPurchaseSyncDate"]));
@@ -205,7 +160,7 @@ namespace OcerraOdoo.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2019-01-01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2020-01-01")]
         public string LastInvoiceSyncDate {
             get {
                 return ((string)(this["LastInvoiceSyncDate"]));
@@ -218,6 +173,60 @@ namespace OcerraOdoo.Properties {
         public string OdooTaxTypes {
             get {
                 return ((string)(this["OdooTaxTypes"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("b2NlYW5pYUBvY2VycmEuY29tOkVKTHlDeTRM")]
+        public string OcerraApiKey {
+            get {
+                return ((string)(this["OcerraApiKey"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("uaterp.ohl.co.nz")]
+        public string OdooUrl {
+            get {
+                return ((string)(this["OdooUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("anton@ocerra.co.nz")]
+        public string OdooLogin {
+            get {
+                return ((string)(this["OdooLogin"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("OXpUNnpFVG1UTTNhQ1BtVA==")]
+        public string OdooBase64Pwd {
+            get {
+                return ((string)(this["OdooBase64Pwd"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("oceania-uat")]
+        public string OdooDatabase {
+            get {
+                return ((string)(this["OdooDatabase"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string OdooPartnerFields {
+            get {
+                return ((string)(this["OdooPartnerFields"]));
             }
         }
     }

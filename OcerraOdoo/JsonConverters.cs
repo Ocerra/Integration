@@ -46,6 +46,8 @@ namespace OcerraOdoo
             return new OdooString(d);
         }
 
+        public string Value => value;
+
         public override string ToString()
         {
             return value != null ? value.ToString() : null;

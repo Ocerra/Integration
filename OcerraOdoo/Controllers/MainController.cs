@@ -31,28 +31,40 @@ namespace OcerraOdoo.Controllers
             });
 
             Post("/SyncVendors", async args => {
-                var vendorResult = await importService.ImportVendors(Settings.Default.LastVendorSyncDate.ToDate(DateTime.Now.AddMonths(-3)));
-                
+                var vendorResult = await importService.ImportVendors(Model.LastVendorSyncDate.ToDate(DateTime.Now.AddDays(-1)));
+                Helpers.AddUpdateAppSettings("LastVendorSyncDate", DateTime.Now.ToString("s"));
                 return Response.AsJson(new { message = $"Vendors: {vendorResult.Message}, New: {vendorResult.NewItems}, Updated: {vendorResult.UpdatedItems}" });
             });
 
             Post("/SyncPurchaseOrders", async args => {
-                var poResult = await importService.ImportPurchaseOrders(Settings.Default.LastPurchaseSyncDate.ToDate(DateTime.Now.AddMonths(-3)));
-
+                var poResult = await importService.ImportPurchaseOrders(Model.LastPurchaseSyncDate.ToDate(DateTime.Now.AddDays(-1)));
+                Helpers.AddUpdateAppSettings("LastPurchaseSyncDate", DateTime.Now.ToString("s"));
                 return Response.AsJson(new { message = $"Purchase Orders: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems}" });
             });
 
             Post("/SyncInvoices", async args => {
-                var poResult = await exportService.ExportInvoices(Settings.Default.LastPurchaseSyncDate.ToDate(DateTime.Now.AddMonths(-3)));
-
+                var poResult = await exportService.ExportInvoices(Model.LastInvoiceSyncDate.ToDate(DateTime.Now.AddDays(-1)));
+                Helpers.AddUpdateAppSettings("LastInvoiceSyncDate", DateTime.Now.ToString("s"));
                 return Response.AsJson(new { message = $"Bills: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems}" });
+            });
+
+            Post("/UpdateTime", args => {
+
+                var updateType = (string)Request.Form.type;
+                var updateVal = (string)Request.Form.val;
+
+                Helpers.AddUpdateAppSettings(updateType, updateVal);
+
+                return Response.AsJson(new { message = $"Setting was updated" });
             });
         }
 
         public override MainModel Init()
         {
             return new MainModel() { 
-                
+                LastVendorSyncDate = Helpers.AppSetting("LastVendorSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
+                LastPurchaseSyncDate = Helpers.AppSetting("LastPurchaseSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
+                LastInvoiceSyncDate = Helpers.AppSetting("LastInvoiceSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s")
             };
         }
     }
