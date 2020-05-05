@@ -10,6 +10,8 @@ namespace OcerraOdoo.Models
     {
         public string LastVendorSyncDate { get; set; }
         public string LastPurchaseSyncDate { get; set; }
+        public string LastProductSyncDate { get; set; }
+
         public string LastInvoiceSyncDate { get; set; }
     }
 }

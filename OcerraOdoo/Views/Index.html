@@ -20,6 +20,12 @@
     <div class="col-xs-3"><input id="LastPurchaseSyncDate" type="datetime-local" title="Last sync date" class="form-control" value='@Model.LastPurchaseSyncDate' /></div>
     <div class="col-xs-2"><button class="btn" onclick="updateTime('LastPurchaseSyncDate')">Update</button></div>
 </div>
+<div class="row mb-15">
+    <div class="col-xs-3">Sync Products:</div>
+    <div class="col-xs-2"><button class="btn" onclick="syncProducts()">Sync</button></div>
+    <div class="col-xs-3"><input id="LastProductSyncDate" type="datetime-local" title="Last sync date" class="form-control" value='@Model.LastProductSyncDate' /></div>
+    <div class="col-xs-2"><button class="btn" onclick="updateTime('LastProductSyncDate')">Update</button></div>
+</div>
 <h3>Export from Ocerra to Odoo</h3>
 <p>Trigger export functions manually.</p>
 <hr>

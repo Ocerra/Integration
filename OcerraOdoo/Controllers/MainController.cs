@@ -37,9 +37,15 @@ namespace OcerraOdoo.Controllers
             });
 
             Post("/SyncPurchaseOrders", async args => {
-                var poResult = await importService.ImportPurchaseOrders(Model.LastPurchaseSyncDate.ToDate(DateTime.Now.AddDays(-1)));
+                var poResult = await importService.ImportPurchaseOrders(Model.LastProductSyncDate.ToDate(DateTime.Now.AddDays(-1)));
                 Helpers.AddUpdateAppSettings("LastPurchaseSyncDate", DateTime.Now.ToString("s"));
                 return Response.AsJson(new { message = $"Purchase Orders: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems}" });
+            });
+
+            Post("/SyncProducts", async args => {
+                var poResult = await importService.ImportProducts(Model.LastProductSyncDate.ToDate(DateTime.Now.AddDays(-1)));
+                Helpers.AddUpdateAppSettings("LastProductSyncDate", DateTime.Now.ToString("s"));
+                return Response.AsJson(new { message = $"Products: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems}" });
             });
 
             Post("/SyncInvoices", async args => {
@@ -64,7 +70,8 @@ namespace OcerraOdoo.Controllers
             return new MainModel() { 
                 LastVendorSyncDate = Helpers.AppSetting("LastVendorSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
                 LastPurchaseSyncDate = Helpers.AppSetting("LastPurchaseSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
-                LastInvoiceSyncDate = Helpers.AppSetting("LastInvoiceSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s")
+                LastInvoiceSyncDate = Helpers.AppSetting("LastInvoiceSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
+                LastProductSyncDate = Helpers.AppSetting("LastProductSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
             };
         }
     }

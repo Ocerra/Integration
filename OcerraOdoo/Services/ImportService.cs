@@ -473,103 +473,82 @@ namespace OcerraOdoo.Services
 
             var result = new ImportResult();
 
-            try
-            {
-                await Init();
+            async Task<bool> SyncItemCodePage(int pageNum) {
 
                 var filter = new OdooDomainFilter().Filter("write_date", ">=", lastSyncDate);
 
-                var odooCountryCodes = await odooClient.GetAll<OdooCountry[]>("product.product", new OdooFieldParameters(new[] { "id", "code" }));
-
-                var odooCompanyIds = await odooClient.Search<long[]>(new OdooSearchParameters("res.partner",
-                    filter), new OdooPaginationParameters(0, 200));
+                var odooProductIds = await odooClient.Search<long[]>(new OdooSearchParameters("product.product",
+                    filter), new OdooPaginationParameters(pageNum * 1000, 1000));
 
                 var fieldNames = new[] {
-                        "id",
-                        "name",
-                        "display_name",
-                        "title",
-                        "vat",
-                        "website",
-                        "comment",
-                        "country_id",
-                        "email",
-                        "phone",
-                        "mobile",
-                        "contact_address",
-                        "company_name",
-                        "currency_id",
-                        "property_account_payable_id"
-                    };
+                    "id",
+                    "name",
+                    "default_code",
+                    "currency_price",
 
-                var odooCompanies = odooCompanyIds.HasItems() ?
-                    await odooClient.Get<OdooCompany[]>(new OdooGetParameters("res.partner", odooCompanyIds), new OdooFieldParameters()) : null;
+                };
 
-                if (odooCompanies.HasItems())
-                    foreach (var odooVendor in odooCompanies)
+                var odooProducts = odooProductIds.HasItems() ?
+                    await odooClient.Get<OdooProduct[]>(new OdooGetParameters("product.product", odooProductIds),
+                        new OdooFieldParameters(fieldNames)) : null;
+
+                if (odooProducts.HasItems())
+                {
+                    foreach (var odooProduct in odooProducts)
                     {
-                        var ocerraVendor = await ocerraClient.ApiVendorsExternalByIdGetAsync(odooVendor.Id.ToString());
+                        var ocerraProduct = await ocerraClient.ApiItemCodeExternalByIdGetAsync(odooProduct.Id.ToString());
 
-                        var email = odooVendor.Email?.ToLower();
-                        var domain = odooVendor.Website != null && odooVendor.Website.ToUri() != null ? odooVendor.Website.ToUri().Host :
-                            email != null && !Settings.Default.SharedEmailProviders.Split(',').Any(ep => email.Contains(ep)) ? email.Split('@').LastOrDefault()?.ToUri()?.Host : null;
-                        var defaultAccount = odooVendor.Property_Account_Payable_Id.HasItems() ? await ocerraClient.ApiTaxAccountExternalByIdGetAsync(odooVendor.Property_Account_Payable_Id[0]) : null;
-
-                        if (ocerraVendor == null)
+                        if (ocerraProduct == null)
                         {
 
-                            var vendor = new VendorModel()
+                            var itemCode = new ItemCodeModel()
                             {
-                                VendorId = Guid.NewGuid(),
+                                ItemCodeId = Guid.NewGuid(),
                                 ClientId = Bootstrapper.OcerraModel.ClientId,
-                                Name = odooVendor.Company_Name ?? odooVendor.Name,
-                                CountryCode = odooCountryCodes.FirstOrDefault(cc => cc.Id == odooVendor.Country_Id?.FirstOrDefault().ToInt(null))?.Code
-                                    ?? Bootstrapper.OcerraModel.CountryCode,
-                                Email = email,
-                                DomainName = domain,
-                                Description = odooVendor.Comment,
-                                IsActive = true,
-                                ExternalId = odooVendor.Id.ToString(),
-                                PhoneNumber = odooVendor.Phone,
-                                DefaultTaxAccountId = defaultAccount?.TaxAccountId,
-                                DefaultTaxRateId = defaultAccount?.TaxRateId
+                                Code = odooProduct.DefaultCode.Trim(255),
+                                Description = odooProduct.Name.Trim(255),
+                                ExternalId = odooProduct.Id.ToString(),
+                                IsActive = odooProduct.Active
                             };
 
-                            //Auto code based on supplier country
-                            vendor.CurrencyCodeId = Bootstrapper.OcerraModel.CurrencyCodes?.FirstOrDefault(cc => cc.CountryCode == vendor.CountryCode)?.CurrencyCodeId;
+                            await ocerraClient.ApiItemCodePostAsync(itemCode);
 
-                            await ocerraClient.ApiVendorsPostAsync(vendor);
                             result.NewItems++;
                         }
                         else
                         {
-                            ocerraVendor.Name = odooVendor.Company_Name ?? odooVendor.Name;
-                            ocerraVendor.CountryCode = odooCountryCodes.FirstOrDefault(cc => cc.Id == odooVendor.Country_Id?.FirstOrDefault().ToInt(null))?.Code
-                                ?? Bootstrapper.OcerraModel.CountryCode;
-                            ocerraVendor.Email = email;
-                            ocerraVendor.DomainName = domain;
-                            ocerraVendor.Description = odooVendor.Comment;
-                            ocerraVendor.IsActive = true;
-                            ocerraVendor.ExternalId = odooVendor.Id.ToString();
-                            ocerraVendor.PhoneNumber = odooVendor.Phone;
-                            //Auto code based on supplier country
-                            ocerraVendor.CurrencyCodeId = Bootstrapper.OcerraModel.CurrencyCodes?
-                                .FirstOrDefault(cc => cc.CountryCode == ocerraVendor.CountryCode)?.CurrencyCodeId;
-                            ocerraVendor.DefaultTaxAccountId = defaultAccount?.TaxAccountId;
-                            ocerraVendor.DefaultTaxRateId = defaultAccount?.TaxRateId;
+                            ocerraProduct.Code = odooProduct.DefaultCode.Trim(255);
+                            ocerraProduct.Description = odooProduct.Name.Trim(255);
+                            ocerraProduct.IsActive = odooProduct.Active;
 
-                            await ocerraClient.ApiVendorsByIdPutAsync(ocerraVendor.VendorId, ocerraVendor);
+                            await ocerraClient.ApiItemCodeByIdPutAsync(ocerraProduct.ItemCodeId, ocerraProduct);
+
                             result.UpdatedItems++;
                         }
                     }
+                    return true;
+                }
+                else return false;
+            }
 
-                result.Message = "Vendors imported succsessfuly.";
+            try
+            {
+                await Init();
+
+                
+                for(int x=0; x < 100; x++)
+                {
+                    var hasItems = await SyncItemCodePage(x);
+                    if (!hasItems) break;
+                }
+                
+                result.Message = "Products imported succsessfuly.";
                 return result;
             }
             catch (Exception ex)
             {
-                ex.LogError("Error on Vendor Import");
-                result.Message = "There was an error on vendor import procedure";
+                ex.LogError("Error on Product Import");
+                result.Message = "There was an error on product import procedure";
                 return result;
             }
         }

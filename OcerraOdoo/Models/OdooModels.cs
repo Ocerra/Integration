@@ -259,6 +259,11 @@ namespace OcerraOdoo.Models
         
         [JsonProperty("default_code")]
         public string DefaultCode { get; set; }
+
+        public string Name { get; set; }
         public bool Active { get; set; }
+
+        [JsonProperty("currency_price")]
+        public OdooDecimal CurrencyPrice { get; set; }
     }
 }

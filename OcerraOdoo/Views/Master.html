@@ -120,6 +120,24 @@
             });
         }
 
+        function syncProducts() {
+            $(".btn").attr('disabled', true);
+            $.ajax({
+                method: "POST",
+                url: window.location.pathname + "/SyncProducts",
+                data: {},
+                success: function (result) {
+                    $(".btn").attr('disabled', null);
+                    alert(result.message);
+                },
+                error: function (er) {
+                    $(".btn").attr('disabled', null);
+                    console.log(er)
+                    alert("There was an error on import, check console for more details.");
+                }
+            });
+        }
+
         function syncBills() {
             $(".btn").attr('disabled', true);
             $.ajax({
