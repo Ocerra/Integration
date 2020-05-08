@@ -84,7 +84,7 @@ namespace OcerraOdoo
         }
         public static implicit operator Decimal?(OdooDecimal d)
         {
-            return d.value;
+            return d != null ? d.value : null;
         }
         public static implicit operator OdooDecimal(Decimal? d)
         {

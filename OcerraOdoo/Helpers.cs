@@ -181,6 +181,9 @@ namespace OcerraOdoo
                     case "LastInvoiceSyncDate":
                         settings.LastInvoiceSyncDate = value;
                         break;
+                    case "LastProductSyncDate":
+                        settings.LastProductSyncDate = value;
+                        break;
                 }
 
                 File.WriteAllText(path, settings.ToJson());
@@ -206,7 +209,8 @@ namespace OcerraOdoo
                     return settings.LastPurchaseSyncDate ?? Settings.Default.LastPurchaseSyncDate;
                 else if (key == "LastInvoiceSyncDate")
                     return settings.LastInvoiceSyncDate ?? Settings.Default.LastInvoiceSyncDate;
-
+                else if (key == "LastProductSyncDate")
+                    return settings.LastProductSyncDate ?? Settings.Default.LastProductSyncDate;
                 return null;
             }
             catch (Exception ex)
@@ -331,5 +335,7 @@ namespace OcerraOdoo
         public string LastVendorSyncDate { get; set; }
         public string LastPurchaseSyncDate { get; set; }
         public string LastInvoiceSyncDate { get; set; }
+
+        public string LastProductSyncDate { get; set; }
     }
 }

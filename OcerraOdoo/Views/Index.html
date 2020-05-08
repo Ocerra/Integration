@@ -1,6 +1,131 @@
 ﻿@Master['Master']
 
 @Section['Content']
+<script type="text/javascript">
+    function echoTest() {
+
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/Echo",
+            data: { message: "Hello! date: " + new Date() },
+            success: function (result) {
+                alert(result.message);
+            },
+            error: function (er) {
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
+    function syncChartOfAccounts() {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/SyncChartOfAccounts",
+            data: {},
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
+    function syncVendors() {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/SyncVendors",
+            data: {},
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
+    function syncPurchaseOrders() {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/SyncPurchaseOrders",
+            data: {},
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
+    function syncProducts() {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/SyncProducts",
+            data: {},
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
+    function syncBills() {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/SyncInvoices",
+            data: {},
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
+    function updateTime(control) {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/UpdateTime",
+            data: { type: control, val: $("#" + control).val() },
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on update, check console for more details.");
+            }
+        });
+    }
+</script>
 <h3>Import from Odoo to Ocerra</h3>
 <p>Trigger import functions manually.</p>
 <hr>

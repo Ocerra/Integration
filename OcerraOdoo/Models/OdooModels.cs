@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -123,6 +124,9 @@ namespace OcerraOdoo.Models
         [JsonProperty("invoice_sequence_number_next")]
         public OdooString InvoiceSequenceNumberNext { get; set; }
 
+        
+
+
         [JsonProperty("date")]
         public OdooDate Date { get; set; }
         [JsonProperty("ref")]
@@ -151,6 +155,25 @@ namespace OcerraOdoo.Models
         public OdooArray<OdooBillLine> InvoiceLineIds { get; set; }
         [JsonProperty("line_ids")]
         public OdooArray<OdooBillLine> LineIds { get; set; }
+
+
+        [JsonProperty("date_invoice")]
+        public OdooDate DateInvoiceV8 { get; set; }
+        [JsonProperty("date_due")]
+        public OdooDate DueDateV8 { get; set; }
+        [JsonProperty("supplier_invoice_number")]
+        public OdooString SupplierInvoiceNumberV8 { get; set; }
+        [JsonProperty("account_id")]
+        public OdooKeyValue AccountIdV8 { get; set; }
+        [JsonProperty("invoice_line")]
+        public OdooArray<OdooBillLineV8> InvoiceLineIdsV8 { get; set; }
+        [JsonProperty("tax_line")]
+        public OdooArray<OdooTaxLine> TaxLinesV8 { get; set; }
+        [JsonProperty("check_total")]
+        public OdooDecimal AmountTotalV8 { get; set; }
+        
+
+
         [JsonProperty("reversed_entry_id")]
         public OdooKeyValue ReversedEntryId { get; set; }
         [JsonProperty("amount_untaxed")]
@@ -181,6 +204,41 @@ namespace OcerraOdoo.Models
         public bool AutoPost { get; set; }
     }
 
+    public class OdooBillLineTax : IOdooLine
+    {
+        public long Id { get; set; }
+    }
+
+    public class OdooBillLineV8 : IOdooLine
+    {
+        [JsonProperty("id")]
+        public long Id { get; set; }        
+        [JsonProperty("company_id")]
+        public OdooKeyValue CompanyId { get; set; }
+        [JsonProperty("account_id")]
+        public OdooKeyValue AccountId { get; set; }
+        [JsonProperty("sequence")]
+        public int? Sequence { get; set; }
+        [JsonProperty("name")]
+        public OdooString Name { get; set; }
+        [JsonProperty("quantity")]
+        public OdooDecimal Quantity { get; set; }
+        [JsonProperty("price_unit")]
+        public OdooDecimal PriceUnit { get; set; }
+        [JsonProperty("discount")]
+        public OdooDecimal Discount { get; set; }
+        [JsonProperty("price_subtotal")]
+        public OdooDecimal PriceSubtotal { get; set; }
+        [JsonProperty("product_id")]
+        public OdooKeyValue ProductId { get; set; }
+        [JsonProperty("invoice_line_tax_id")]
+        public List<List<object>> TaxLineIdsV8 { get; set; }
+        [JsonProperty("amount_total")]
+        public OdooDecimal AmountTotal { get; set; }
+        [JsonProperty("amount_untaxed")]
+        public OdooDecimal AmountUntaxed { get; set; }
+
+    }
     public class OdooBillLine : IOdooLine
     {
         [JsonProperty("id")]
@@ -252,6 +310,32 @@ namespace OcerraOdoo.Models
 
         [JsonProperty("tax_ids")]
         public List<long> TaxIds { get; set; }
+
+        [JsonProperty("invoice_line_tax_id")]
+        public List<long> TaxLineIdsV8 { get; set; }
+        
+    }
+
+    public class OdooTaxLine : IOdooLine
+    {
+        [JsonProperty("id")]
+        public long Id { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("account_id")]
+        public OdooKeyValue AccountId { get; set; }
+
+        [JsonProperty("amount")]
+        public OdooDecimal Amount { get; set; }
+
+        [JsonProperty("base_amount")]
+        public OdooDecimal BaseAmount { get; set; }
+
+        [JsonProperty("tax_amount")]
+        public OdooDecimal TaxAmount { get; set; }
+        
     }
 
     public class OdooProduct {

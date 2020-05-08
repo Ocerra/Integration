@@ -1,0 +1,72 @@
+﻿@Master['Master']
+
+@Section['Content']
+<script type="text/javascript">
+    function exportInvoicesByIds() {
+        var allVals = [];
+        $('.export-invoice:checked').each(function () {
+            allVals.push($(this).val());
+        });
+
+        if (allVals.length > 0) {
+            $(".btn").attr('disabled', true);
+            $.ajax({
+                method: "POST",
+                url: "@Model.ApplicationPath/ExportInvoicesByIds",
+                data: { voucherHeaderIds: allVals },
+                success: function (result) {
+                    alert(result.message);
+                    $(".btn").attr('disabled', null);
+                },
+                error: function (er) {
+                    console.log(er)
+                    alert("There was an error on export, check console for more details.");
+                    $(".btn").attr('disabled', null);
+                }
+            });
+        } else {
+            alert("You have not selected invoices for Export");
+        }
+    }
+</script>
+<h3>Export invoices from Ocerra to Odoo</h3>
+<p>Trigger export invoices manually.</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Number</th>
+            <th scope="col">Supplier</th>
+            <th scope="col">Date</th>
+            <th scope="col">Due Date</th>
+            
+            <th scope="col">Status</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Exported</th>
+            <th scope="col"><input type="checkbox" id="exportAllInvoices" onclick="$('.export-invoice:enabled').prop('checked', $('#exportAllInvoices').prop('checked'))" /></th>
+        </tr>
+    </thead>
+    <tbody>
+        @Each.Invoices
+        <tr>
+            <th scope="row">@Current.Number</th>
+            <td>@Current.Vendor</td>
+            <td>@Current.Date</td>
+            <td>@Current.DueDate</td>
+            
+            <td>@Current.Status</td>
+            <td>@Current.Amount</td>
+            <td>@Current.Exported</td>
+            <td title="@Current.CanExportMessage">
+                <input type="checkbox" class="export-invoice" name="VoucherHeaderId" value="@Current.Id" @Current.CanExport />
+            </td>
+        </tr>
+        @EndEach
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-xs-12">
+        <button id="exportBtn" class="btn btn-danger pull-right" onclick="exportInvoicesByIds()">Export</button>
+    </div>
+</div>
+
+@EndSection

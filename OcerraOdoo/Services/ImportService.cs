@@ -170,11 +170,14 @@ namespace OcerraOdoo.Services
                 var validAccountGroups = Settings.Default.OdooAccountGroups.Split(',');
 
                 if (odooAccounts.HasItems())
-                    foreach (var odooAccount in odooAccounts.Where(a => validAccountGroups.Any(vg=> 
-                        a.Internal_Group == vg || 
-                        (a.Parent_Id?.Value != null && a.Parent_Id.Value.Contains(vg)) ||
-                        (a.User_Type?.Value != null && a.User_Type.Value.Contains(vg))
-                    ) && !a.Deprecated))
+                {
+                    var accountsForImport = odooAccounts.Where(a => validAccountGroups.Any(vg =>
+                        a.Internal_Group == vg ||
+                        (a.Parent_Id?.Value != null && a.Parent_Id.Value.ToLower().Contains(vg.ToLower())) ||
+                        (a.User_Type?.Value != null && a.User_Type.Value.ToLower().Contains(vg.ToLower()))
+                    ) && !a.Deprecated);
+
+                    foreach (var odooAccount in accountsForImport)
                     {
                         var ocerraAccount = ocerraAccounts1000.FirstOrDefault(t => t.ExternalId == odooAccount.Id.ToString());
                         ocerraAccount = ocerraAccount ?? ocerraAccounts2000.FirstOrDefault(t => t.ExternalId == odooAccount.Id.ToString());
@@ -215,6 +218,8 @@ namespace OcerraOdoo.Services
                             result.UpdatedItems++;
                         }
                     }
+                }
+                    
 
                 return new ImportResult
                 {

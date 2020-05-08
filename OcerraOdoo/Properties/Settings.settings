@@ -1,0 +1,84 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OcerraOdoo.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OcerraUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9999/</Value>
+    </Setting>
+    <Setting Name="ServiceName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OcerraOdoo</Value>
+    </Setting>
+    <Setting Name="ManagementConsole" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1234</Value>
+    </Setting>
+    <Setting Name="ManagementLogin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OcerraOdoo</Value>
+    </Setting>
+    <Setting Name="ManagementPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">RGV2ZWxvcGVy</Value>
+    </Setting>
+    <Setting Name="OcerraLastHeartBeat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2019-01-01</Value>
+    </Setting>
+    <Setting Name="OdooPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">443</Value>
+    </Setting>
+    <Setting Name="OdooSsl" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SharedEmailProviders" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">outlook,microsoft,google</Value>
+    </Setting>
+    <Setting Name="LastVendorSyncDate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2020-01-01</Value>
+    </Setting>
+    <Setting Name="LastPurchaseSyncDate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2020-01-01</Value>
+    </Setting>
+    <Setting Name="OdooPayableAccount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">21200,payable</Value>
+    </Setting>
+    <Setting Name="OdooTaxAccount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">21325,other</Value>
+    </Setting>
+    <Setting Name="OdooExpenseAccount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0,other</Value>
+    </Setting>
+    <Setting Name="LastInvoiceSyncDate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2020-01-01</Value>
+    </Setting>
+    <Setting Name="OdooTaxTypes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">purchase</Value>
+    </Setting>
+    <Setting Name="OcerraApiKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">b2NlYW5pYUBvY2VycmEuY29tOkVKTHlDeTRM</Value>
+    </Setting>
+    <Setting Name="OdooUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">uaterp.ohl.co.nz</Value>
+    </Setting>
+    <Setting Name="OdooLogin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">anton@ocerra.co.nz</Value>
+    </Setting>
+    <Setting Name="OdooBase64Pwd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OXpUNnpFVG1UTTNhQ1BtVA==</Value>
+    </Setting>
+    <Setting Name="OdooDatabase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">oceania-uat</Value>
+    </Setting>
+    <Setting Name="OdooPartnerFields" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastProductSyncDate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2020-01-01</Value>
+    </Setting>
+    <Setting Name="OdooAccountGroups" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">liability,expense,Cost of Goods Sold,Cost of Sales,GST Paid,Current Liabilities</Value>
+    </Setting>
+    <Setting Name="OdooPurchasesJournal" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PUR</Value>
+    </Setting>
+    <Setting Name="ApplicationPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/OcerraOdoo</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -86,11 +86,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="JsonConverters.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\ExportResult.cs" />
     <Compile Include="Models\ImportResult.cs" />
+    <Compile Include="Models\ListModel.cs" />
     <Compile Include="Models\MainModel.cs" />
     <Compile Include="Models\OdooModels.cs" />
     <Compile Include="Controllers\Controller.cs" />
@@ -137,6 +139,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ODataClient.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\List.html" />
     <Content Include="Views\Index.html" />
     <Content Include="Views\Master.html" />
   </ItemGroup>

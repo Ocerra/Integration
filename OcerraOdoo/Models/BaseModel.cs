@@ -8,6 +8,7 @@ namespace OcerraOdoo.Models
 {
     public class BaseModel
     {
+        public string ApplicationPath { get; set; }
         public OcerraModel Ocerra { get; set; }
         public OdooModel Odoo { get; set; }
     }

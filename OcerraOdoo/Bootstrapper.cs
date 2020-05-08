@@ -2,6 +2,7 @@
 using Nancy;
 using Nancy.Authentication.Basic;
 using Nancy.Bootstrapper;
+using Nancy.Configuration;
 using Nancy.TinyIoc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -30,6 +31,12 @@ namespace OcerraOdoo
         protected override IRootPathProvider RootPathProvider
         {
             get { return new Nancy.Hosting.Aspnet.AspNetRootPathProvider(); }
+        }
+
+        public override void Configure(INancyEnvironment environment)
+        {
+            base.Configure(environment);
+            environment.Tracing(enabled: false, displayErrorTraces: true);
         }
 
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)

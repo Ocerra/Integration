@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using OcerraOdoo.Properties;
 
 namespace OcerraOdoo.Controllers
 {
@@ -18,6 +19,8 @@ namespace OcerraOdoo.Controllers
         public Controller()
         {
             Model = Init();
+
+            Model.ApplicationPath = Settings.Default.ApplicationPath;
 
             Model.Ocerra = Bootstrapper.OcerraModel;
             Model.Odoo = Bootstrapper.OdooModel;
