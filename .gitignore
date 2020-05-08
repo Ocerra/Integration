@@ -339,3 +339,7 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 *.config
+
+#Project Settings
+Settings.Designer.cs
+*.settings
