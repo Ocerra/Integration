@@ -38,9 +38,11 @@
             <th scope="col">Supplier</th>
             <th scope="col">Date</th>
             <th scope="col">Due Date</th>
-            
+
             <th scope="col">Status</th>
             <th scope="col">Amount</th>
+            <th scope="col">PO Matches</th>
+            <th scope="col">Total Matches</th>
             <th scope="col">Exported</th>
             <th scope="col"><input type="checkbox" id="exportAllInvoices" onclick="$('.export-invoice:enabled').prop('checked', $('#exportAllInvoices').prop('checked'))" /></th>
         </tr>
@@ -52,9 +54,11 @@
             <td>@Current.Vendor</td>
             <td>@Current.Date</td>
             <td>@Current.DueDate</td>
-            
+
             <td>@Current.Status</td>
             <td>@Current.Amount</td>
+            <td>@Current.PoMatches</td>
+            <td>@Current.TotalMatches</td>
             <td>@Current.Exported</td>
             <td title="@Current.CanExportMessage">
                 <input type="checkbox" class="export-invoice" name="VoucherHeaderId" value="@Current.Id" @Current.CanExport />
@@ -63,8 +67,16 @@
         @EndEach
     </tbody>
 </table>
+
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-8">
+        <ul class="pagination">
+            <li><a class="page-link" href="?page=@Model.PrevPage">Previous</a></li>
+            <li class="disabled"><a class="page-link">Total Items: @Model.Count</a></li>
+            <li><a class="page-link" href="?page=@Model.NextPage">Next</a></li>
+        </ul>       
+    </div>
+    <div class="col-xs-4">
         <button id="exportBtn" class="btn btn-danger pull-right" onclick="exportInvoicesByIds()">Export</button>
     </div>
 </div>

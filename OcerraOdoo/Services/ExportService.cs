@@ -1,4 +1,5 @@
-﻿using OcerraOdoo.Models;
+﻿using Microsoft.OData.Client;
+using OcerraOdoo.Models;
 using OcerraOdoo.OcerraOData;
 using OcerraOdoo.Properties;
 using OdooRpc.CoreCLR.Client;
@@ -76,16 +77,16 @@ namespace OcerraOdoo.Services
                 await Init();
 
                 foreach (var voucherHeaderId in voucherHeaderIds) {
-                    
-                    //Export invoices one by one
-                    var ocerraInvoice = odata.VoucherHeader
-                        .Expand("Vendor,VoucherLines($expand=TaxAccount,ItemCode)")
-                        //.Expand(vh => vh.Vendor)
-                        .Where(vh => vh.VoucherHeaderId == voucherHeaderId)
-                        .FirstOrDefault();
 
-                    if(ocerraInvoice != null && ocerraInvoice.VoucherHeaderId == voucherHeaderId)
-                        await ExportInvoicesFromListV8(new List<ODataClient.Proxies.VoucherHeader> { ocerraInvoice }, result);
+                    var query = odata.VoucherHeader
+                        .Expand("Vendor,VoucherLines($expand=TaxAccount,ItemCode)");
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query
+                        .AddQueryOption("$filter", $"VoucherHeaderId eq {voucherHeaderId}"); // .Where(vh => vh.VoucherHeaderId == voucherHeaderId);
+                    //Export invoices one by one
+                    var ocerraInvoices = query.Execute().ToList();
+
+                    if(ocerraInvoices.Any())
+                        await ExportInvoicesFromListV8(ocerraInvoices, result);
                     else
                     {
                         throw new Exception($"This invoice {voucherHeaderId} is not found");
@@ -401,7 +402,8 @@ namespace OcerraOdoo.Services
                     .ToArray();
 
                 var odooBills = odooBillIds.HasItems() ?
-                        await odooClient.Get<OdooBill[]>(new OdooGetParameters("account.invoice", odooBillIds), new OdooFieldParameters()) : new OdooBill[] { };
+                        await odooClient.Get<OdooBill[]>(new OdooGetParameters("account.invoice", odooBillIds),
+                            new OdooFieldParameters()) : new OdooBill[] { };
 
 
                 var defaultOdooExpenseAccountId = expenseAccountIds.HasItems() ? expenseAccountIds[0].ToString() : null;
@@ -455,7 +457,7 @@ namespace OcerraOdoo.Services
                             AccountId = new OdooKeyValue(taxAccount != null ?
                                 taxAccount.ExternalId.ToLong(0) : expenseAccountIds[0]),
                             Quantity = (decimal?)voucherLine.Quantity ?? 1,
-                            PriceUnit = Math.Round((decimal?)voucherLine.FcNet / (decimal?)voucherLine.Quantity ?? 1, 2),
+                            PriceUnit = Math.Round((decimal)((voucherLine.FcNet ?? 0) / (voucherLine.Quantity ?? 1)), 2),
                             Discount = 0,
                             //PriceSubtotal = (decimal?)voucherLine.FcNet,
                             //AmountUntaxed = (decimal?)voucherLine.FcNet,
@@ -507,6 +509,7 @@ namespace OcerraOdoo.Services
                             InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>() { Objects = newBillLines },
                             TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = taxLines },
                             AmountTotalV8 = new OdooDecimal(invoice.FcGross),
+                            Origin = $"https://app.ocerra.com/#/details/vouchers/(document:{invoice.DocumentId})",
 
                             Name = invoice.Number,
                             PartnerId = new OdooKeyValue(invoice.Vendor.ExternalId.ToLong(0)),
@@ -575,8 +578,8 @@ namespace OcerraOdoo.Services
                         //odooBill.InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>();
                         await odooClient.Update("account.invoice", odooBill.Id, new
                         {
-                            invoice_line = odooBill.InvoiceLineIdsV8.Ids.Select(li => new List<object> { 2, li, false }),
-                            tax_line = odooBill.TaxLinesV8.Ids.Select(ti => new List<object> { 2, ti, false }),
+                            invoice_line = odooBill.InvoiceLineIdsV8?.Ids?.Select(li => new List<object> { 2, li, false }),
+                            tax_line = odooBill.TaxLinesV8?.Ids?.Select(ti => new List<object> { 2, ti, false }),
                         });
 
                         odooBill.AccountIdV8 = new OdooKeyValue(payableAccountIds[0]);
@@ -586,6 +589,7 @@ namespace OcerraOdoo.Services
                         odooBill.InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>() { Objects = newBillLines };
                         odooBill.TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = taxLines };
                         odooBill.AmountTotalV8 = new OdooDecimal(invoice.FcGross);
+                        odooBill.Origin = $"https://app.ocerra.com/#/details/vouchers/(document:{invoice.DocumentId})";
 
 
                         //Create new lines

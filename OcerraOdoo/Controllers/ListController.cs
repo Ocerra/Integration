@@ -10,6 +10,7 @@ using Nancy.Extensions;
 using OcerraOdoo.Services;
 using OcerraOdoo.Properties;
 using OcerraOdoo.OcerraOData;
+using Microsoft.OData.Client;
 
 namespace OcerraOdoo.Controllers
 {
@@ -18,20 +19,17 @@ namespace OcerraOdoo.Controllers
         public ListController(OdataProxy odata, ExportService exportService)
         {
             Get("/Invoices", args => {
-                var page = args.page;
-                page = page ?? 0;
+                int page = int.Parse((string)Request.Query.page ?? "1");
+                page = page < 1 ? 1 : page;
 
                 var workflowStates = odata.WorkflowState.ToList();
 
                 var query = odata.VoucherHeader
-                    .Expand("vendor")
-                    .Expand("workflow($expand=workflowState)");
-                query.AddQueryOption("skip", page * 20);
-                query.AddQueryOption("take", 20);
-
+                    .Expand("vendor,workflow($expand=workflowState),voucherValidation");
+                query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived).Skip((page - 1) * 20).Take(20);
+                
                 Model.Invoices = query
-                .Where(vh => vh.IsActive && !vh.IsArchived)
-                .ToList()
+                .Execute()
                 .Select(vh => new InvoiceModel
                 {
                     Id = vh.VoucherHeaderId.ToString(),
@@ -46,10 +44,23 @@ namespace OcerraOdoo.Controllers
                     CanExportMessage =
                         vh.Vendor == null ? "You cannot export Invoice without vendor" :
                         vh.FcGross == null ? "You cannot export Invoice without amount" :
-                        null
+                        null,
+                    PoMatches = 
+                        vh.VoucherValidation.HasPoMatches == "Ignore" ? "" :
+                        vh.VoucherValidation.HasPoMatches == "Success" ? "Yes" 
+                            : "<b class='red'>No</b>",
+                    TotalMatches =
+                        vh.VoucherValidation.HasTotalMatches == "Ignore" ? "" :
+                        vh.VoucherValidation.HasTotalMatches == "Success" ? "Yes"
+                            : "<b class='red'>No</b>",
                     //PurchaseOrder = vh.VoucherPurchaseOrders.FirstOrDefault()?.PurchaseOrderHeader?.Number
                 }).ToList();
-                
+
+                var totalCount = query.Count();
+
+                Model.Page = page;
+                Model.Count = totalCount;
+
                 return View["List.html", Model];
             });
 

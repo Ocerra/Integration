@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 7/05/2020 7:30:46 PM
+// Generation date: 9/05/2020 10:23:30 AM
 namespace OcerraOdoo.ODataClient.Proxies
 {
     /// <summary>
@@ -13582,6 +13582,185 @@ namespace OcerraOdoo.ODataClient.Proxies
         partial void OnWorkflowLogsChanged();
     }
     /// <summary>
+    /// There are no comments for VoucherValidationViewSingle in the schema.
+    /// </summary>
+    [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidationViewSingle")]
+    public partial class VoucherValidationViewSingle : global::Microsoft.OData.Client.DataServiceQuerySingle<VoucherValidationView>
+    {
+        /// <summary>
+        /// Initialize a new VoucherValidationViewSingle object.
+        /// </summary>
+        public VoucherValidationViewSingle(global::Microsoft.OData.Client.DataServiceContext context, string path)
+            : base(context, path) {}
+
+        /// <summary>
+        /// Initialize a new VoucherValidationViewSingle object.
+        /// </summary>
+        public VoucherValidationViewSingle(global::Microsoft.OData.Client.DataServiceContext context, string path, bool isComposable)
+            : base(context, path, isComposable) {}
+
+        /// <summary>
+        /// Initialize a new VoucherValidationViewSingle object.
+        /// </summary>
+        public VoucherValidationViewSingle(global::Microsoft.OData.Client.DataServiceQuerySingle<VoucherValidationView> query)
+            : base(query) {}
+
+    }
+    /// <summary>
+    /// There are no comments for VoucherValidationView in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// VoucherHeaderId
+    /// </KeyProperties>
+    [global::Microsoft.OData.Client.Key("voucherHeaderId")]
+    [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidationView")]
+    public partial class VoucherValidationView : global::Microsoft.OData.Client.BaseEntityType
+    {
+        /// <summary>
+        /// Create a new VoucherValidationView object.
+        /// </summary>
+        /// <param name="voucherHeaderId">Initial value of VoucherHeaderId.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        public static VoucherValidationView CreateVoucherValidationView(global::System.Guid voucherHeaderId)
+        {
+            VoucherValidationView voucherValidationView = new VoucherValidationView();
+            voucherValidationView.VoucherHeaderId = voucherHeaderId;
+            return voucherValidationView;
+        }
+        /// <summary>
+        /// There are no comments for Property VendorTaxNumber in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorTaxNumber")]
+        public string VendorTaxNumber
+        {
+            get
+            {
+                return this._VendorTaxNumber;
+            }
+            set
+            {
+                this.OnVendorTaxNumberChanging(value);
+                this._VendorTaxNumber = value;
+                this.OnVendorTaxNumberChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _VendorTaxNumber;
+        partial void OnVendorTaxNumberChanging(string value);
+        partial void OnVendorTaxNumberChanged();
+        /// <summary>
+        /// There are no comments for Property VoucherTaxNumber in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherTaxNumber")]
+        public string VoucherTaxNumber
+        {
+            get
+            {
+                return this._VoucherTaxNumber;
+            }
+            set
+            {
+                this.OnVoucherTaxNumberChanging(value);
+                this._VoucherTaxNumber = value;
+                this.OnVoucherTaxNumberChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _VoucherTaxNumber;
+        partial void OnVoucherTaxNumberChanging(string value);
+        partial void OnVoucherTaxNumberChanged();
+        /// <summary>
+        /// There are no comments for Property HasTotalMatches in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasTotalMatches")]
+        public string HasTotalMatches
+        {
+            get
+            {
+                return this._HasTotalMatches;
+            }
+            set
+            {
+                this.OnHasTotalMatchesChanging(value);
+                this._HasTotalMatches = value;
+                this.OnHasTotalMatchesChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _HasTotalMatches;
+        partial void OnHasTotalMatchesChanging(string value);
+        partial void OnHasTotalMatchesChanged();
+        /// <summary>
+        /// There are no comments for Property HasGstMatches in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasGstMatches")]
+        public string HasGstMatches
+        {
+            get
+            {
+                return this._HasGstMatches;
+            }
+            set
+            {
+                this.OnHasGstMatchesChanging(value);
+                this._HasGstMatches = value;
+                this.OnHasGstMatchesChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _HasGstMatches;
+        partial void OnHasGstMatchesChanging(string value);
+        partial void OnHasGstMatchesChanged();
+        /// <summary>
+        /// There are no comments for Property HasPoMatches in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasPoMatches")]
+        public string HasPoMatches
+        {
+            get
+            {
+                return this._HasPoMatches;
+            }
+            set
+            {
+                this.OnHasPoMatchesChanging(value);
+                this._HasPoMatches = value;
+                this.OnHasPoMatchesChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _HasPoMatches;
+        partial void OnHasPoMatchesChanging(string value);
+        partial void OnHasPoMatchesChanged();
+        /// <summary>
+        /// There are no comments for Property VoucherHeaderId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
+        public global::System.Guid VoucherHeaderId
+        {
+            get
+            {
+                return this._VoucherHeaderId;
+            }
+            set
+            {
+                this.OnVoucherHeaderIdChanging(value);
+                this._VoucherHeaderId = value;
+                this.OnVoucherHeaderIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _VoucherHeaderId;
+        partial void OnVoucherHeaderIdChanging(global::System.Guid value);
+        partial void OnVoucherHeaderIdChanged();
+    }
+    /// <summary>
     /// There are no comments for AspNetUserClaimSingle in the schema.
     /// </summary>
     [global::Microsoft.OData.Client.OriginalNameAttribute("AspNetUserClaimSingle")]
@@ -24668,185 +24847,6 @@ namespace OcerraOdoo.ODataClient.Proxies
         partial void OnVoucherHeaderIdChanged();
     }
     /// <summary>
-    /// There are no comments for VoucherValidationViewSingle in the schema.
-    /// </summary>
-    [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidationViewSingle")]
-    public partial class VoucherValidationViewSingle : global::Microsoft.OData.Client.DataServiceQuerySingle<VoucherValidationView>
-    {
-        /// <summary>
-        /// Initialize a new VoucherValidationViewSingle object.
-        /// </summary>
-        public VoucherValidationViewSingle(global::Microsoft.OData.Client.DataServiceContext context, string path)
-            : base(context, path) {}
-
-        /// <summary>
-        /// Initialize a new VoucherValidationViewSingle object.
-        /// </summary>
-        public VoucherValidationViewSingle(global::Microsoft.OData.Client.DataServiceContext context, string path, bool isComposable)
-            : base(context, path, isComposable) {}
-
-        /// <summary>
-        /// Initialize a new VoucherValidationViewSingle object.
-        /// </summary>
-        public VoucherValidationViewSingle(global::Microsoft.OData.Client.DataServiceQuerySingle<VoucherValidationView> query)
-            : base(query) {}
-
-    }
-    /// <summary>
-    /// There are no comments for VoucherValidationView in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// VoucherHeaderId
-    /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("voucherHeaderId")]
-    [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidationView")]
-    public partial class VoucherValidationView : global::Microsoft.OData.Client.BaseEntityType
-    {
-        /// <summary>
-        /// Create a new VoucherValidationView object.
-        /// </summary>
-        /// <param name="voucherHeaderId">Initial value of VoucherHeaderId.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        public static VoucherValidationView CreateVoucherValidationView(global::System.Guid voucherHeaderId)
-        {
-            VoucherValidationView voucherValidationView = new VoucherValidationView();
-            voucherValidationView.VoucherHeaderId = voucherHeaderId;
-            return voucherValidationView;
-        }
-        /// <summary>
-        /// There are no comments for Property VendorTaxNumber in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorTaxNumber")]
-        public string VendorTaxNumber
-        {
-            get
-            {
-                return this._VendorTaxNumber;
-            }
-            set
-            {
-                this.OnVendorTaxNumberChanging(value);
-                this._VendorTaxNumber = value;
-                this.OnVendorTaxNumberChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        private string _VendorTaxNumber;
-        partial void OnVendorTaxNumberChanging(string value);
-        partial void OnVendorTaxNumberChanged();
-        /// <summary>
-        /// There are no comments for Property VoucherTaxNumber in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherTaxNumber")]
-        public string VoucherTaxNumber
-        {
-            get
-            {
-                return this._VoucherTaxNumber;
-            }
-            set
-            {
-                this.OnVoucherTaxNumberChanging(value);
-                this._VoucherTaxNumber = value;
-                this.OnVoucherTaxNumberChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        private string _VoucherTaxNumber;
-        partial void OnVoucherTaxNumberChanging(string value);
-        partial void OnVoucherTaxNumberChanged();
-        /// <summary>
-        /// There are no comments for Property HasTotalMatches in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("hasTotalMatches")]
-        public string HasTotalMatches
-        {
-            get
-            {
-                return this._HasTotalMatches;
-            }
-            set
-            {
-                this.OnHasTotalMatchesChanging(value);
-                this._HasTotalMatches = value;
-                this.OnHasTotalMatchesChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        private string _HasTotalMatches;
-        partial void OnHasTotalMatchesChanging(string value);
-        partial void OnHasTotalMatchesChanged();
-        /// <summary>
-        /// There are no comments for Property HasGstMatches in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("hasGstMatches")]
-        public string HasGstMatches
-        {
-            get
-            {
-                return this._HasGstMatches;
-            }
-            set
-            {
-                this.OnHasGstMatchesChanging(value);
-                this._HasGstMatches = value;
-                this.OnHasGstMatchesChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        private string _HasGstMatches;
-        partial void OnHasGstMatchesChanging(string value);
-        partial void OnHasGstMatchesChanged();
-        /// <summary>
-        /// There are no comments for Property HasPoMatches in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("hasPoMatches")]
-        public string HasPoMatches
-        {
-            get
-            {
-                return this._HasPoMatches;
-            }
-            set
-            {
-                this.OnHasPoMatchesChanging(value);
-                this._HasPoMatches = value;
-                this.OnHasPoMatchesChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        private string _HasPoMatches;
-        partial void OnHasPoMatchesChanging(string value);
-        partial void OnHasPoMatchesChanged();
-        /// <summary>
-        /// There are no comments for Property VoucherHeaderId in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
-        public global::System.Guid VoucherHeaderId
-        {
-            get
-            {
-                return this._VoucherHeaderId;
-            }
-            set
-            {
-                this.OnVoucherHeaderIdChanging(value);
-                this._VoucherHeaderId = value;
-                this.OnVoucherHeaderIdChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        private global::System.Guid _VoucherHeaderId;
-        partial void OnVoucherHeaderIdChanging(global::System.Guid value);
-        partial void OnVoucherHeaderIdChanged();
-    }
-    /// <summary>
     /// There are no comments for PeopleClientNotificationSingle in the schema.
     /// </summary>
     [global::Microsoft.OData.Client.OriginalNameAttribute("PeopleClientNotificationSingle")]
@@ -25955,6 +25955,29 @@ namespace OcerraOdoo.ODataClient.Proxies
             return new global::OcerraOdoo.ODataClient.Proxies.WorkflowSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
+        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView as global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="keys">dictionary with the names and values of keys</param>
+        public static global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        {
+            return new global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
+        /// <summary>
+        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView as global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="voucherHeaderId">The value of voucherHeaderId</param>
+        public static global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView> source,
+            global::System.Guid voucherHeaderId)
+        {
+            global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
+            {
+                { "voucherHeaderId", voucherHeaderId }
+            };
+            return new global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
+        /// <summary>
         /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.AspNetUserClaim as global::OcerraOdoo.ODataClient.Proxies.AspNetUserClaimSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
@@ -26737,29 +26760,6 @@ namespace OcerraOdoo.ODataClient.Proxies
             return new global::OcerraOdoo.ODataClient.Proxies.VoucherDuplicateViewSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView as global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle specified by key from an entity set
-        /// </summary>
-        /// <param name="source">source entity set</param>
-        /// <param name="keys">dictionary with the names and values of keys</param>
-        public static global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView> source, global::System.Collections.Generic.Dictionary<string, object> keys)
-        {
-            return new global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
-        }
-        /// <summary>
-        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView as global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle specified by key from an entity set
-        /// </summary>
-        /// <param name="source">source entity set</param>
-        /// <param name="voucherHeaderId">The value of voucherHeaderId</param>
-        public static global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView> source,
-            global::System.Guid voucherHeaderId)
-        {
-            global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
-            {
-                { "voucherHeaderId", voucherHeaderId }
-            };
-            return new global::OcerraOdoo.ODataClient.Proxies.VoucherValidationViewSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
-        }
-        /// <summary>
         /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.PeopleClientNotification as global::OcerraOdoo.ODataClient.Proxies.PeopleClientNotificationSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
@@ -27380,6 +27380,24 @@ namespace OcerraOdoo.ODataClient.Default
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.Workflow> _Workflow;
         /// <summary>
+        /// There are no comments for VoucherValidationView in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherValidationView")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView> VoucherValidationView
+        {
+            get
+            {
+                if ((this._VoucherValidationView == null))
+                {
+                    this._VoucherValidationView = base.CreateQuery<global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView>("VoucherValidationView");
+                }
+                return this._VoucherValidationView;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView> _VoucherValidationView;
+        /// <summary>
         /// There are no comments for Person in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
@@ -27594,6 +27612,14 @@ namespace OcerraOdoo.ODataClient.Default
         public void AddToWorkflow(global::OcerraOdoo.ODataClient.Proxies.Workflow workflow)
         {
             base.AddObject("Workflow", workflow);
+        }
+        /// <summary>
+        /// There are no comments for VoucherValidationView in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        public void AddToVoucherValidationView(global::OcerraOdoo.ODataClient.Proxies.VoucherValidationView voucherValidationView)
+        {
+            base.AddObject("VoucherValidationView", voucherValidationView);
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         private abstract class GeneratedEdmModel
@@ -28268,6 +28294,17 @@ namespace OcerraOdoo.ODataClient.Default
         <NavigationProperty Name=""voucherHeaders"" Type=""Collection(Ocerra.Repository.Entities.VoucherHeader)"" />
         <NavigationProperty Name=""workflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
       </EntityType>
+      <EntityType Name=""VoucherValidationView"">
+        <Key>
+          <PropertyRef Name=""voucherHeaderId"" />
+        </Key>
+        <Property Name=""vendorTaxNumber"" Type=""Edm.String"" />
+        <Property Name=""voucherTaxNumber"" Type=""Edm.String"" />
+        <Property Name=""hasTotalMatches"" Type=""Edm.String"" />
+        <Property Name=""hasGstMatches"" Type=""Edm.String"" />
+        <Property Name=""hasPoMatches"" Type=""Edm.String"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+      </EntityType>
       <EntityType Name=""AspNetUserClaim"">
         <Key>
           <PropertyRef Name=""id"" />
@@ -28877,17 +28914,6 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" />
         <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
       </EntityType>
-      <EntityType Name=""VoucherValidationView"">
-        <Key>
-          <PropertyRef Name=""voucherHeaderId"" />
-        </Key>
-        <Property Name=""vendorTaxNumber"" Type=""Edm.String"" />
-        <Property Name=""voucherTaxNumber"" Type=""Edm.String"" />
-        <Property Name=""hasTotalMatches"" Type=""Edm.String"" />
-        <Property Name=""hasGstMatches"" Type=""Edm.String"" />
-        <Property Name=""hasPoMatches"" Type=""Edm.String"" />
-        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
-      </EntityType>
       <EntityType Name=""PeopleClientNotification"">
         <Key>
           <PropertyRef Name=""peopleClientNotificationId"" />
@@ -29034,6 +29060,7 @@ namespace OcerraOdoo.ODataClient.Default
           <NavigationPropertyBinding Path=""voucherHeaderPayments"" Target=""VoucherHeaderPayment"" />
           <NavigationPropertyBinding Path=""voucherLines"" Target=""VoucherLine"" />
           <NavigationPropertyBinding Path=""voucherPurchaseOrders/purchaseOrderHeader"" Target=""PurchaseOrderHeader"" />
+          <NavigationPropertyBinding Path=""voucherValidation"" Target=""VoucherValidationView"" />
           <NavigationPropertyBinding Path=""workflow"" Target=""Workflow"" />
         </EntitySet>
         <EntitySet Name=""VoucherLine"" EntityType=""Ocerra.Repository.Entities.VoucherLine"">
@@ -29049,6 +29076,7 @@ namespace OcerraOdoo.ODataClient.Default
           <NavigationPropertyBinding Path=""voucherHeaderPayments"" Target=""VoucherHeaderPayment"" />
           <NavigationPropertyBinding Path=""voucherLines"" Target=""VoucherLine"" />
           <NavigationPropertyBinding Path=""voucherPurchaseOrders/purchaseOrderHeader"" Target=""PurchaseOrderHeader"" />
+          <NavigationPropertyBinding Path=""voucherValidation"" Target=""VoucherValidationView"" />
           <NavigationPropertyBinding Path=""workflow"" Target=""Workflow"" />
         </EntitySet>
         <EntitySet Name=""WorkflowSchema"" EntityType=""Ocerra.Repository.Entities.WorkflowSchema"">
@@ -29084,6 +29112,7 @@ namespace OcerraOdoo.ODataClient.Default
           <NavigationPropertyBinding Path=""workflowSchema"" Target=""WorkflowSchema"" />
           <NavigationPropertyBinding Path=""workflowState"" Target=""WorkflowState"" />
         </EntitySet>
+        <EntitySet Name=""VoucherValidationView"" EntityType=""Ocerra.Repository.Entities.VoucherValidationView"" />
         <FunctionImport Name=""OtherClients"" Function=""Default.OtherClients"" IncludeInServiceDocument=""true"" />
         <FunctionImport Name=""GetLogs"" Function=""Default.GetLogs"" IncludeInServiceDocument=""true"" />
         <FunctionImport Name=""GetSystem"" Function=""Default.GetSystem"" IncludeInServiceDocument=""true"" />

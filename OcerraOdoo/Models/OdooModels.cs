@@ -109,9 +109,53 @@ namespace OcerraOdoo.Models
         [JsonConverter(typeof(NullableStringJsonConverter))]
         public string Date_Approve { get; set; }
 
+        [JsonProperty("order_line")]
+        public List<long> OrderLines { get; set; }
+
         public double? Amount_Untaxed{ get; set; }
         public double? Amount_Tax { get; set; }
         public double? Amount_Total { get; set; }
+    }
+
+
+    public class OdooPurchaseOrderLine
+    {
+        /*
+         account_analytic_id: false
+        attribute1: [91, "FL Parts Sales"]
+        attribute2: [26, "FLIGHTLINE"]
+        attribute3: false
+            company_id: [3, "Oceania Aviation Limited"]
+        condition_id: [2, "NE"]
+        date_planned: "2020-05-05"
+        display_uom: [12, "Each"]
+            id: 115813
+            name: "[12345] Test Loading"
+            price_subtotal: 20
+        price_unit: 20
+            product_id: [104865, "[12345] Test Loading"]
+            product_qty: 1
+        product_uom: [12, "Each"]
+        quantity_available: 0
+            state: "confirmed"
+        taxes_id: [3] */
+
+
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public OdooDecimal Price_Subtotal { get; set; }
+        public OdooDecimal Product_Qty { get; set; }
+
+        [JsonProperty("company_id")]
+        public OdooKeyValue CompanyId { get; set; }
+
+        public string State { get; set; }
+
+        [JsonProperty("product_id")]
+        public OdooKeyValue ProductId { get; set; }
+
     }
 
     public class OdooBill
@@ -157,6 +201,8 @@ namespace OcerraOdoo.Models
         public OdooArray<OdooBillLine> LineIds { get; set; }
 
 
+        [JsonProperty("origin")]
+        public OdooString Origin { get; set; }
         [JsonProperty("date_invoice")]
         public OdooDate DateInvoiceV8 { get; set; }
         [JsonProperty("date_due")]

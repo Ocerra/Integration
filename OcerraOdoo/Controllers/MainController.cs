@@ -37,9 +37,10 @@ namespace OcerraOdoo.Controllers
             });
 
             Post("/SyncPurchaseOrders", async args => {
-                var poResult = await importService.ImportPurchaseOrders(Model.LastProductSyncDate.ToDate(DateTime.Now.AddDays(-1)));
+                var lastPoSyncDate = Model.LastPurchaseSyncDate.ToDate(DateTime.Now.AddDays(-1));
+                var poResult = await importService.ImportPurchaseOrders(lastPoSyncDate);
                 Helpers.AddUpdateAppSettings("LastPurchaseSyncDate", DateTime.Now.ToString("s"));
-                return Response.AsJson(new { message = $"Purchase Orders: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems}" });
+                return Response.AsJson(new { message = $"Purchase Orders: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems} from {lastPoSyncDate}" });
             });
 
             Post("/SyncProducts", async args => {
