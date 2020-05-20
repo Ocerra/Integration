@@ -4,6 +4,6 @@ Allows you to pull all required data from Odoo to Ocerra nad push back Invoice a
 
 # Prerequisites
 1)	Install NSawgStudio - https://github.com/RicoSuter/NSwag/wiki/NSwagStudio 
-2)	Free Trial Ocerra account [AP Automation Software](https://www.ocerra.com/start-free-trial) 
+2)	Ocerra account [AP Automation Software](https://www.ocerra.com/) 
 3)	Odoo instance https://www.odoo.com/ 
 
