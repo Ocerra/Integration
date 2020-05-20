@@ -550,7 +550,6 @@ namespace OcerraOdoo.Services
 
         public async Task<ImportResult> ImportProducts(DateTime lastSyncDate)
         {
-
             var result = new ImportResult();
 
             async Task<bool> SyncItemCodePage(int pageNum) {
@@ -595,14 +594,21 @@ namespace OcerraOdoo.Services
 
                             result.NewItems++;
                         }
-                        else
+                        //Update only changed items
+                        else if(ocerraProduct.Code != odooProduct.DefaultCode.Trim(255) || 
+                            ocerraProduct.Description != odooProduct.Name.Trim(255))
                         {
+
                             ocerraProduct.Code = odooProduct.DefaultCode.Trim(255);
                             ocerraProduct.Description = odooProduct.Name.Trim(255);
                             ocerraProduct.IsActive = true;
 
                             await ocerraClient.ApiItemCodeByIdPutAsync(ocerraProduct.ItemCodeId, ocerraProduct);
 
+                            result.UpdatedItems++;
+                        } 
+                        else
+                        {
                             result.UpdatedItems++;
                         }
                     }
@@ -615,7 +621,6 @@ namespace OcerraOdoo.Services
             {
                 await Init();
 
-                
                 for(int x=0; x < 100; x++)
                 {
                     var hasItems = await SyncItemCodePage(x);

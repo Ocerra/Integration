@@ -64,6 +64,10 @@ namespace OcerraOdoo.Controllers
 
                 return Response.AsJson(new { message = $"Setting was updated" });
             });
+
+            Get("/Settings", args => {
+                return View["Settings.html", Model];
+            });
         }
 
         public override MainModel Init()

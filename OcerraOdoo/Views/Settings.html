@@ -1,0 +1,73 @@
+﻿@Master['Master']
+
+@Section['Content']
+<script type="text/javascript">
+    function updateSettings() {
+        $(".btn").attr('disabled', true);
+        var objToPost = $('#frmSettings').serializeObject();
+        $.ajax({
+            method: "POST",
+            url: "@Model.ApplicationPath/UpdateSettings",
+            data: objToPost,
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on update, check console for more details.");
+            }
+        });
+    }
+</script>
+<h3>Settings</h3>
+<p>Configuration for Odoo Import / Export. Import every 30 min, Export every morning at 6am</p>
+<hr>
+<form id="frmSettings">
+    <div class="row mb-15">
+        <div class="col-xs-3 text-right" title="Ocerra uses default expense account when account is not found on the line with Quantity">Expense Account:</div>
+        <div class="col-xs-2"><input class="form-control" name="OdooExpenseAccount" type="text" value="@Model.Settings.OdooExpenseAccount" /></div>
+        <div class="col-xs-3  text-right" title="Default tax account for exportr to Odoo for GST">Tax Account:</div>
+        <div class="col-xs-2"><input class="form-control" name="OdooTaxAccount" type="text" value="@Model.Settings.OdooTaxAccount" /></div>
+    </div>
+    <div class="row mb-15">
+        <div class="col-xs-3 text-right" title="Default payable account in Odoo">Payable Account:</div>
+        <div class="col-xs-2"><input class="form-control" name="OdooPayableAccount" type="text" value="@Model.Settings.OdooPayableAccount" /></div>
+        <div class="col-xs-3  text-right" title="Default journal name in Odoo for GL Ledger 'PUR'">Journal Name:</div>
+        <div class="col-xs-2"><input class="form-control" name="OdooPurchasesJournal" type="text" value="@Model.Settings.OdooPurchasesJournal" /></div>
+    </div>
+    <div class="row mb-15">
+        <div class="col-xs-3 text-right" title="Comma separated list of account groups to sync with Ocerra. Use only Purchase or Expense groups">Account Groups:</div>
+        <div class="col-xs-2"><input class="form-control" name="OdooAccountGroups" type="text" value="@Model.Settings.OdooAccountGroups" /></div>
+        <div class="col-xs-3 text-right" title="Export invoices automatically for this status">Export invoices from Status:</div>
+        <div class="col-xs-2"><input class="form-control" name="ExportStatuses" type="text" value="@Model.Settings.ExportStatuses" /></div>
+    </div>
+    <div class="row mb-15">
+        <div class="col-xs-3 text-right" title="Export all invoices in odoo with this State">Invoice State in Odoo:</div>
+        <div class="col-xs-2"><input class="form-control" name="OdooInvoiceState" type="text" value="@Model.Settings.OdooInvoiceState" /></div>
+        <div class="col-xs-3 text-right" title="When export, override invoice line quantity with PO quantity if PO line is matched">Use PO Quantity on Export:</div>
+        <div class="col-xs-2">
+            <select class="form-control" name="UsePurchaseOrderQuantity">
+                @IfNot.Settings.UsePurchaseOrderQuantityBool
+                <option value="false" selected>No</option>
+                @EndIf
+                @If.Settings.UsePurchaseOrderQuantityBool
+                <option value="false">No</option>
+                @EndIf
+                @If.Settings.UsePurchaseOrderQuantityBool
+                <option value="true" selected>Yes</option>
+                @EndIf
+                @IfNot.Settings.UsePurchaseOrderQuantityBool
+                <option value="true">Yes</option>
+                @EndIf
+            </select>
+        </div>
+    </div>
+    <div class="row mb-15">
+        <div class="col-xs-12">
+            <button id="exportBtn" class="btn btn-success pull-right" onclick="updateSettings()">Update</button>
+        </div>
+    </div>
+</form>
+@EndSection

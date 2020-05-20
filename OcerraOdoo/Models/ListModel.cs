@@ -17,6 +17,8 @@ namespace OcerraOdoo.Models
         public int PrevPage => Page > 1 ? Page - 1 : 1;
 
         public int NextPage => Page > 1 ? Page + 1 : 2;
+
+        public string SearchStr { get; set; }
     }
 
     public class InvoiceModel 

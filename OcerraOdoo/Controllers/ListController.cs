@@ -22,12 +22,20 @@ namespace OcerraOdoo.Controllers
                 int page = int.Parse((string)Request.Query.page ?? "1");
                 page = page < 1 ? 1 : page;
 
+                string search = Request.Query.search;
+
                 var workflowStates = odata.WorkflowState.ToList();
 
                 var query = odata.VoucherHeader
                     .Expand("vendor,workflow($expand=workflowState),voucherValidation");
-                query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived).Skip((page - 1) * 20).Take(20);
-                
+
+                if (!string.IsNullOrEmpty(search))
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived && (vh.Number.Contains(search) || vh.Vendor.Name.Contains(search)));
+                else
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived);
+
+                query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.OrderByDescending(vh => vh.CreatedDate).Skip((page - 1) * 20).Take(20);
+
                 Model.Invoices = query
                 .Execute()
                 .Select(vh => new InvoiceModel
@@ -53,13 +61,14 @@ namespace OcerraOdoo.Controllers
                         vh.VoucherValidation.HasTotalMatches == "Ignore" ? "" :
                         vh.VoucherValidation.HasTotalMatches == "Success" ? "Yes"
                             : "<b class='red'>No</b>",
-                    //PurchaseOrder = vh.VoucherPurchaseOrders.FirstOrDefault()?.PurchaseOrderHeader?.Number
+                    //PurchaseOrder = vh.VoucherPurchaseOrders.FirstOrDefault()?.PurchaseOrderHeader?.Number 
                 }).ToList();
 
                 var totalCount = query.Count();
 
                 Model.Page = page;
                 Model.Count = totalCount;
+                Model.SearchStr = !string.IsNullOrEmpty(search) ? search.Replace("\"", "\\\"") : null;
 
                 return View["List.html", Model];
             });

@@ -9,6 +9,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -161,30 +162,75 @@ namespace OcerraOdoo
 
         }
 
+        public static T GetAs<T>(this object obj, string propName)
+        {
+            if (propName.IsNullOrEmpty()) return default(T);
+
+            var raw = obj;
+            PropertyInfo prop = null;
+            var props = propName.Split('.');
+
+            foreach (var p in props)
+            {
+                var type = raw.GetType();
+                prop = type.GetProperty(p);
+                if (prop == null)
+                {
+                    var message = string.Format("property '{0}' not found in type '{1}'", propName, type.Name);
+                    throw new ArgumentOutOfRangeException(message);
+                }
+                raw = prop.GetValue(raw, null);
+            }
+
+            try
+            {
+                var value = (T)raw;
+                return value;
+            }
+            catch (InvalidCastException ex)
+            {
+                string message = "property name: " + propName;
+                if (prop != null)
+                {
+                    message = string.Format("property '{0}' is type '{1}', but type '{2}' expected", 
+                        props.Last(),
+                        prop.PropertyType.Name,
+                        typeof(T).Name);
+                }
+                throw new InvalidCastException(message, ex);
+            }
+
+        }
+
+        public static void SetAs<T>(this object obj, string propName, T propertyValue)
+        {
+            var raw = obj;
+            var props = propName.Split('.');
+
+            foreach (var p in props)
+            {
+                var type = raw.GetType();
+                var prop = type.GetProperty(p);
+                if (prop == null)
+                {
+                    var message = string.Format("property '{0}' not found in type '{1}'", propName, type.Name);
+                    throw new ArgumentOutOfRangeException(message);
+                }
+
+                prop.SetValue(obj, propertyValue);
+            }
+        }
+
         private static string SettingsName = "Settings.json";
         public static void AddUpdateAppSettings(string key, string value)
         {
             try
             {
                 var path = Path.Combine(GetDirectory(), SettingsName);
-                var stringContent = File.Exists(path) ? File.ReadAllText(path) : null;
-                var settings = stringContent.FromJson<SettingContainer>() ?? new SettingContainer();
+                
+                var settings = AppSetting();
 
-                switch (key)
-                {
-                    case "LastVendorSyncDate":
-                        settings.LastVendorSyncDate = value;
-                        break;
-                    case "LastPurchaseSyncDate":
-                        settings.LastPurchaseSyncDate = value;
-                        break;
-                    case "LastInvoiceSyncDate":
-                        settings.LastInvoiceSyncDate = value;
-                        break;
-                    case "LastProductSyncDate":
-                        settings.LastProductSyncDate = value;
-                        break;
-                }
+                settings.SetAs(key, value);
 
                 File.WriteAllText(path, settings.ToJson());
 
@@ -199,24 +245,42 @@ namespace OcerraOdoo
         {
             try
             {
+                var settings = AppSetting();
+                return settings.GetAs<string>(key);
+            }
+            catch (Exception ex)
+            {
+                LogError(ex, "Error reading app settings");
+                return null;
+            }
+        }
+        public static SettingContainer AppSetting()
+        {
+            try
+            {
                 var path = Path.Combine(GetDirectory(), SettingsName);
                 var stringContent = File.Exists(path) ? File.ReadAllText(path) : null;
                 var settings = stringContent.FromJson<SettingContainer>() ?? new SettingContainer();
-
-                if (key == "LastVendorSyncDate")
-                    return settings.LastVendorSyncDate ?? Settings.Default.LastVendorSyncDate;
-                else if (key == "LastPurchaseSyncDate")
-                    return settings.LastPurchaseSyncDate ?? Settings.Default.LastPurchaseSyncDate;
-                else if (key == "LastInvoiceSyncDate")
-                    return settings.LastInvoiceSyncDate ?? Settings.Default.LastInvoiceSyncDate;
-                else if (key == "LastProductSyncDate")
-                    return settings.LastProductSyncDate ?? Settings.Default.LastProductSyncDate;
+                return settings;
+            }
+            catch (Exception ex)
+            {
+                LogError(ex, "Error reading app settings");
                 return null;
+            }
+        }
+
+        public static void AppSetting(SettingContainer settings)
+        {
+            try
+            {
+                var path = Path.Combine(GetDirectory(), SettingsName);
+
+                File.WriteAllText(path, settings.ToJson());
             }
             catch (Exception ex)
             {
                 LogError(ex, "Error writing app settings");
-                return null;
             }
         }
 
@@ -332,10 +396,37 @@ namespace OcerraOdoo
     }
 
     public class SettingContainer {
+
+        public SettingContainer()
+        {
+            //Set default values from the settings file
+            LastVendorSyncDate = Settings.Default.LastVendorSyncDate;
+            LastPurchaseSyncDate = Settings.Default.LastPurchaseSyncDate;
+            LastInvoiceSyncDate = Settings.Default.LastInvoiceSyncDate;
+            LastProductSyncDate = Settings.Default.LastProductSyncDate;
+            OdooExpenseAccount = Settings.Default.OdooExpenseAccount;
+            OdooPayableAccount = Settings.Default.OdooPayableAccount;
+            OdooTaxAccount = Settings.Default.OdooTaxAccount;
+            OdooAccountGroups = Settings.Default.OdooAccountGroups;
+            OdooPurchasesJournal = Settings.Default.OdooPurchasesJournal;
+            ExportStatuses = Settings.Default.ExportStatuses;
+            OdooInvoiceState = Settings.Default.OdooInvoiceState;
+        }
+
         public string LastVendorSyncDate { get; set; }
         public string LastPurchaseSyncDate { get; set; }
         public string LastInvoiceSyncDate { get; set; }
-
         public string LastProductSyncDate { get; set; }
+        public string OdooExpenseAccount { get; set; }
+        public string OdooPayableAccount { get; set; }
+        public string OdooTaxAccount { get; set; }
+        public string OdooAccountGroups { get; set; }
+        public string OdooPurchasesJournal { get; set; }
+        public string OdooInvoiceState { get; set; }
+        public string ExportStatuses { get; set; }
+        public string UsePurchaseOrderQuantity { get; set; }
+
+        [JsonIgnore]
+        public bool UsePurchaseOrderQuantityBool => UsePurchaseOrderQuantity == "true";
     }
 }

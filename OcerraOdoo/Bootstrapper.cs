@@ -9,6 +9,7 @@ using Newtonsoft.Json.Linq;
 using OcerraOdoo.Models;
 using OcerraOdoo.OcerraOData;
 using OcerraOdoo.Properties;
+using OcerraOdoo.Services;
 using OdooRpc.CoreCLR.Client;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace OcerraOdoo
         public static OcerraModel OcerraModel = null;
         public static OdooModel OdooModel = null;
         public static TinyIoCContainer Container = null;
+        public static SchedulerService Scheduler = null;
 
         protected override IRootPathProvider RootPathProvider
         {
@@ -94,7 +96,12 @@ namespace OcerraOdoo
 
                 container.Register<OdataProxy>();
 
-                var initTask = Task.Run(async () => await InitModels(container));
+                var initTask = Task.Run(async () => {
+                    Scheduler = new SchedulerService();
+                    //await Scheduler.Init(); -- start scheduler here
+                    await InitModels(container);
+                });
+
                 initTask.Wait(TimeSpan.FromSeconds(15));
 
                 if (!initTask.IsCompleted)

@@ -42,16 +42,22 @@ namespace OcerraOdoo.Services
             {
                 await Init();
 
-                var ocerraInvoices = odata.VoucherHeader
-                    .Expand("VoucherLines($expand=TaxAccount,ItemCode)")
-                    .Expand(vh => vh.Vendor)
-                    .Where(vh => !vh.IsArchived && vh.UpdatedDate > lastSyncDate)
-                    .OrderByDescending(vh => vh.CreatedDate)
-                    .Take(1) //Should take 100
-                    .ToList();
+                var settings = Helpers.AppSetting();
 
-                await ExportInvoicesFromListV8(ocerraInvoices, result);
+                var invoiceStatuses = settings.ExportStatuses.Split(',');
 
+                foreach (var invoiceStatus in invoiceStatuses) {
+                    var ocerraInvoices = odata.VoucherHeader
+                        .Expand("VoucherLines($expand=TaxAccount,ItemCode,PurchaseOrderLine)")
+                        .Expand(vh => vh.Vendor)
+                        .Where(vh => !vh.IsArchived && vh.UpdatedDate > lastSyncDate && vh.Workflow.WorkflowState.Name == invoiceStatus)
+                        .OrderByDescending(vh => vh.CreatedDate)
+                        .Take(1) //Should take 100
+                        .ToList();
+                    
+                    await ExportInvoicesFromListV8(ocerraInvoices, result);
+                }
+                
                 result.Message = $"Invoices exported successfully: created {result.NewItems}, updated: {result.UpdatedItems}";
 
                 return result;
@@ -79,7 +85,7 @@ namespace OcerraOdoo.Services
                 foreach (var voucherHeaderId in voucherHeaderIds) {
 
                     var query = odata.VoucherHeader
-                        .Expand("Vendor,VoucherLines($expand=TaxAccount,ItemCode)");
+                        .Expand("Vendor,VoucherLines($expand=TaxAccount,ItemCode,PurchaseOrderLine)");
                     query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query
                         .AddQueryOption("$filter", $"VoucherHeaderId eq {voucherHeaderId}"); // .Where(vh => vh.VoucherHeaderId == voucherHeaderId);
                     //Export invoices one by one
@@ -364,8 +370,10 @@ namespace OcerraOdoo.Services
             if (ocerraInvoices.HasItems())
             {
 
+                var settings = Helpers.AppSetting();
+
                 var odooJournalIds = await odooClient.Search<long[]>(new OdooSearchParameters("account.journal",
-                    new OdooDomainFilter().Filter("code", "=", Settings.Default.OdooPurchasesJournal)),
+                    new OdooDomainFilter().Filter("code", "=", settings.OdooPurchasesJournal)),
                     new OdooPaginationParameters(0, 5));
 
                 if (!odooJournalIds.HasItems())
@@ -379,9 +387,9 @@ namespace OcerraOdoo.Services
                     await odooClient.Get<OdooCurrency[]>(new OdooGetParameters("res.currency", odooCurrencyIds),
                         new OdooFieldParameters(new[] { "id", "name" })) : null;
 
-                var payableAccountCodes = Settings.Default.OdooPayableAccount.Split(',');
-                var taxAccountCodes = Settings.Default.OdooTaxAccount.Split(',');
-                var expenseAccountCodes = Settings.Default.OdooExpenseAccount.Split(',');
+                var payableAccountCodes = settings.OdooPayableAccount.Split(',');
+                var taxAccountCodes = settings.OdooTaxAccount.Split(',');
+                var expenseAccountCodes = settings.OdooExpenseAccount.Split(',');
 
                 var payableAccountIds = await odooClient.Search<long[]>(new OdooSearchParameters("account.account",
                     new OdooDomainFilter().Filter("code", "=", payableAccountCodes[0])),
@@ -447,6 +455,12 @@ namespace OcerraOdoo.Services
                         if (taxRate == null && expenseAccountIds == null) continue;
 
                         var sequence = 1000 + voucherLine.Sequence;
+
+                        var lineQuantity = (decimal?)voucherLine.Quantity ?? 1;
+                        if (settings.UsePurchaseOrderQuantityBool) {
+                            lineQuantity = voucherLine.PurchaseOrderLine?.Quantity ?? lineQuantity;
+                        }
+                        
                         //Net Amount Line
                         newBillLines.Add(new OdooBillLineV8
                         {
@@ -456,7 +470,7 @@ namespace OcerraOdoo.Services
                             Name = voucherLine.Description,
                             AccountId = new OdooKeyValue(taxAccount != null ?
                                 taxAccount.ExternalId.ToLong(0) : expenseAccountIds[0]),
-                            Quantity = (decimal?)voucherLine.Quantity ?? 1,
+                            Quantity = lineQuantity,
                             PriceUnit = Math.Round((decimal)((voucherLine.FcNet ?? 0) / (voucherLine.Quantity ?? 1)), 2),
                             Discount = 0,
                             //PriceSubtotal = (decimal?)voucherLine.FcNet,
@@ -532,7 +546,7 @@ namespace OcerraOdoo.Services
                             Ref = invoice.Number,
                             Date = DateTime.Now.Date,
                             AutoPost = false,
-                            State = "draft",
+                            State = settings.OdooInvoiceState,
                             InvoiceOrigin = invoice.PurchaseOrderNumber,
                             JournalId = new OdooKeyValue(odooJournalIds.First()),
                             InvoicePaymentState = "not_paid",
