@@ -19,11 +19,15 @@ namespace OcerraOdoo.Models
         public int NextPage => Page > 1 ? Page + 1 : 2;
 
         public string SearchStr { get; set; }
+        public string ExportState { get; set; }
     }
 
     public class InvoiceModel 
     {
         public string Id { get; set; }
+
+        public string DocumentId { get; set; }
+
         public string Number { get; set; }
 
         public string Vendor { get; set; }

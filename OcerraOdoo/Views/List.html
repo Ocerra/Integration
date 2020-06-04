@@ -30,13 +30,28 @@
     }
 
     function searchInvoice() {
-        window.location = "?search=" + encodeURI($("#searchBox").val());
+        window.location = "?search=" + encodeURI($("#searchBox").val()) + "&exportState=" + $("#exportState").val();
     }
+
+    $(document).ready(function () {
+        $("#exportState").val($("#exportStateVal").val());
+    });
 </script>
 <h3>Export invoices from Ocerra to Odoo</h3>
-<div class="row">
+<div class="form-group row">
     <div class="col-xs-3">
         <input id="searchBox" type="text" class="form-control" placeholder="Search by invoice number or vendor name" value="@Model.SearchStr">
+    </div>
+    <div class="col-xs-2">
+        <label for="exportState" class="col-xs-5 form-label">Exported</label>
+        <input type="hidden" id="exportStateVal" value="@Model.ExportState" />
+        <div class="col-xs-7">
+            <select id="exportState" class="form-control">
+                <option></option>
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+            </select>
+        </div>
     </div>
     <div class="col-xs-2">
         <button class="btn btn-secondary" type="button" onclick="searchInvoice()">
@@ -45,7 +60,7 @@
     </div>
 </div>
 
-<table class="table">
+<table class="table" style="zoom:80%;">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Number</th>
@@ -64,11 +79,14 @@
     <tbody>
         @Each.Invoices
         <tr>
-            <th scope="row">@Current.Number</th>
+            <th scope="row">
+                <a href="https://app.ocerra.com/#/details/vouchers/(document:@Current.DocumentId)">
+                    @Current.Number
+                </a>
+            </th>
             <td>@Current.Vendor</td>
             <td>@Current.Date</td>
             <td>@Current.DueDate</td>
-
             <td>@Current.Status</td>
             <td>@Current.Amount</td>
             <td>@Current.PoMatches</td>

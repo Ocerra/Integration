@@ -467,7 +467,7 @@ namespace OcerraOdoo.Services
                                         Quantity = (double?)(decimal?)odooLine.Product_Qty ?? 1,
                                         Description = odooLine.Name.Trim(250),
                                         ItemCodeId = odooLine.ProductId?.Key != null ? 
-                                            (await ocerraClient.ApiItemCodeExternalByIdGetAsync(odooLine.ProductId?.Key.ToString()))?.ItemCodeId : null,
+                                            (await ocerraClient.ApiItemCodeByExternalGetAsync(odooLine.ProductId?.Key.ToString()))?.FirstOrDefault()?.ItemCodeId : null,
                                         Sequence = counter
                                     };
                                     
@@ -513,7 +513,7 @@ namespace OcerraOdoo.Services
                                     poLine.Quantity = (double?)(decimal?)odooLine.Product_Qty ?? 1;
                                     poLine.Description = odooLine.Name.Trim(250);
                                     poLine.ItemCodeId = odooLine.ProductId?.Key != null ? 
-                                        (await ocerraClient.ApiItemCodeExternalByIdGetAsync(odooLine.ProductId.Key.ToString()))?.ItemCodeId : null;
+                                        (await ocerraClient.ApiItemCodeByExternalGetAsync(odooLine.ProductId.Key.ToString()))?.FirstOrDefault()?.ItemCodeId : null;
                                     poLine.Sequence = counter;
 
                                     if (poLine.PurchaseOrderLineId == Guid.Empty) {
@@ -573,45 +573,55 @@ namespace OcerraOdoo.Services
 
                 if (odooProducts.HasItems())
                 {
-                    foreach (var odooProduct in odooProducts)
-                    {
-                        var ocerraProduct = await ocerraClient.ApiItemCodeExternalByIdGetAsync(odooProduct.Id.ToString());
+                    var odooProductBatches = odooProducts.ToBatches(100);
 
-                        if (ocerraProduct == null)
+                    foreach (var odooProductBatch in odooProductBatches) {
+
+                        var odooProductPage = odooProductBatch.ToList();
+                        var extrnalIds = string.Join(",", odooProductPage.Select(b => b.Id));
+                        var ocerraProducts = await ocerraClient.ApiItemCodeByExternalGetAsync(extrnalIds);
+
+                        foreach (var odooProduct in odooProductPage)
                         {
+                            var ocerraProduct = ocerraProducts.FirstOrDefault(p => p.ExternalId == odooProduct.Id.ToString());
 
-                            var itemCode = new ItemCodeModel()
+                            if (ocerraProduct == null)
                             {
-                                ItemCodeId = Guid.NewGuid(),
-                                ClientId = Bootstrapper.OcerraModel.ClientId,
-                                Code = odooProduct.DefaultCode.Trim(255),
-                                Description = odooProduct.Name.Trim(255),
-                                ExternalId = odooProduct.Id.ToString(),
-                                IsActive = true
-                            };
 
-                            await ocerraClient.ApiItemCodePostAsync(itemCode);
+                                var itemCode = new ItemCodeModel()
+                                {
+                                    ItemCodeId = Guid.NewGuid(),
+                                    ClientId = Bootstrapper.OcerraModel.ClientId,
+                                    Code = odooProduct.DefaultCode.Trim(255),
+                                    Description = odooProduct.Name.Trim(255),
+                                    ExternalId = odooProduct.Id.ToString(),
+                                    IsActive = true
+                                };
 
-                            result.NewItems++;
-                        }
-                        //Update only changed items
-                        else if(ocerraProduct.Code != odooProduct.DefaultCode.Trim(255) || 
-                            ocerraProduct.Description != odooProduct.Name.Trim(255))
-                        {
+                                await ocerraClient.ApiItemCodePostAsync(itemCode);
 
-                            ocerraProduct.Code = odooProduct.DefaultCode.Trim(255);
-                            ocerraProduct.Description = odooProduct.Name.Trim(255);
-                            ocerraProduct.IsActive = true;
+                                result.NewItems++;
+                            }
+                            //Update only changed items
+                            else if (ocerraProduct.Code != odooProduct.DefaultCode.Trim(255) ||
+                                ocerraProduct.Description != odooProduct.Name.Trim(255))
+                            {
 
-                            await ocerraClient.ApiItemCodeByIdPutAsync(ocerraProduct.ItemCodeId, ocerraProduct);
+                                ocerraProduct.Code = odooProduct.DefaultCode.Trim(255);
+                                ocerraProduct.Description = odooProduct.Name.Trim(255);
+                                ocerraProduct.IsActive = true;
 
-                            result.UpdatedItems++;
-                        } 
-                        else
-                        {
-                            result.UpdatedItems++;
+                                await ocerraClient.ApiItemCodeByIdPutAsync(ocerraProduct.ItemCodeId, ocerraProduct);
+
+                                result.UpdatedItems++;
+                            }
+                            else
+                            {
+                                result.UpdatedItems++;
+                            }
                         }
                     }
+                    
                     return true;
                 }
                 else return false;

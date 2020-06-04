@@ -2496,19 +2496,96 @@ namespace OcerraOdoo
     
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public System.Threading.Tasks.Task<ItemCodeModel> ApiItemCodeExternalByIdGetAsync(string id)
+        public System.Threading.Tasks.Task<ResultMessage> ApiImportByIdPostAsync(System.Guid? storedFileId)
         {
-            return ApiItemCodeExternalByIdGetAsync(id, System.Threading.CancellationToken.None);
+            return ApiImportByIdPostAsync(storedFileId, System.Threading.CancellationToken.None);
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<ItemCodeModel> ApiItemCodeExternalByIdGetAsync(string id, System.Threading.CancellationToken cancellationToken)
+        public async System.Threading.Tasks.Task<ResultMessage> ApiImportByIdPostAsync(System.Guid? storedFileId, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append("api/ItemCode/External/{id}");
-            urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
+            urlBuilder_.Append("api/Import/ById?");
+            if (storedFileId != null) 
+            {
+                urlBuilder_.Append(System.Uri.EscapeDataString("storedFileId") + "=").Append(System.Uri.EscapeDataString(ConvertToString(storedFileId, System.Globalization.CultureInfo.InvariantCulture))).Append("&");
+            }
+            urlBuilder_.Length--;
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    request_.Content = new System.Net.Http.StringContent(string.Empty, System.Text.Encoding.UTF8, "application/json");
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ResultMessage>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(ResultMessage);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <returns>Success</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public System.Threading.Tasks.Task<System.Collections.Generic.ICollection<ItemCodeModel>> ApiItemCodeByExternalGetAsync(string ids)
+        {
+            return ApiItemCodeByExternalGetAsync(ids, System.Threading.CancellationToken.None);
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<ItemCodeModel>> ApiItemCodeByExternalGetAsync(string ids, System.Threading.CancellationToken cancellationToken)
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append("api/ItemCode/ByExternal?");
+            if (ids != null) 
+            {
+                urlBuilder_.Append(System.Uri.EscapeDataString("ids") + "=").Append(System.Uri.EscapeDataString(ConvertToString(ids, System.Globalization.CultureInfo.InvariantCulture))).Append("&");
+            }
+            urlBuilder_.Length--;
     
             var client_ = _httpClient;
             try
@@ -2538,7 +2615,7 @@ namespace OcerraOdoo
                         var status_ = ((int)response_.StatusCode).ToString();
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<ItemCodeModel>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<System.Collections.Generic.ICollection<ItemCodeModel>>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -2548,7 +2625,7 @@ namespace OcerraOdoo
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(ItemCodeModel);
+                        return default(System.Collections.Generic.ICollection<ItemCodeModel>);
                     }
                     finally
                     {
@@ -6420,6 +6497,9 @@ namespace OcerraOdoo
         [System.Runtime.Serialization.EnumMember(Value = @"Acumatica")]
         Acumatica = 3,
     
+        [System.Runtime.Serialization.EnumMember(Value = @"Other")]
+        Other = 4,
+    
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
@@ -9523,6 +9603,9 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         public FinancialSystemTypes FinancialSystemType { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("financialSystemUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string FinancialSystemUrl { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("replyBack", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool ReplyBack { get; set; }
     
@@ -10888,38 +10971,44 @@ namespace OcerraOdoo
         [System.Runtime.Serialization.EnumMember(Value = @"TextLeftBottom")]
         TextLeftBottom = 9,
     
+        [System.Runtime.Serialization.EnumMember(Value = @"TextLine")]
+        TextLine = 10,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"TextLineMatches")]
+        TextLineMatches = 11,
+    
         [System.Runtime.Serialization.EnumMember(Value = @"ValueType")]
-        ValueType = 10,
+        ValueType = 12,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ValueLocation")]
-        ValueLocation = 11,
+        ValueLocation = 13,
     
         [System.Runtime.Serialization.EnumMember(Value = @"Pattern")]
-        Pattern = 12,
+        Pattern = 14,
     
         [System.Runtime.Serialization.EnumMember(Value = @"Point")]
-        Point = 13,
+        Point = 15,
     
         [System.Runtime.Serialization.EnumMember(Value = @"Rect")]
-        Rect = 14,
+        Rect = 16,
     
         [System.Runtime.Serialization.EnumMember(Value = @"Page")]
-        Page = 15,
+        Page = 17,
     
         [System.Runtime.Serialization.EnumMember(Value = @"Width")]
-        Width = 16,
+        Width = 18,
     
         [System.Runtime.Serialization.EnumMember(Value = @"Height")]
-        Height = 17,
+        Height = 19,
     
         [System.Runtime.Serialization.EnumMember(Value = @"Index")]
-        Index = 18,
+        Index = 20,
     
         [System.Runtime.Serialization.EnumMember(Value = @"IsOneOf")]
-        IsOneOf = 19,
+        IsOneOf = 21,
     
         [System.Runtime.Serialization.EnumMember(Value = @"All")]
-        All = 20,
+        All = 22,
     
     }
     
@@ -11468,6 +11557,9 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonProperty("forDelete", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool ForDelete { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("generated", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool Generated { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("externalId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Guid? ExternalId { get; set; }
     
@@ -11486,6 +11578,9 @@ namespace OcerraOdoo
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
     public partial class PdfTable 
     {
+        [Newtonsoft.Json.JsonProperty("gstInclusive", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool GstInclusive { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("isNew", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? IsNew { get; set; }
     
@@ -11914,6 +12009,9 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonProperty("countryCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string CountryCode { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("summaryLine", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SummaryLine { get; set; }
+    
     
     }
     
@@ -11934,6 +12032,165 @@ namespace OcerraOdoo
     
         [Newtonsoft.Json.JsonProperty("requestComments", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool RequestComments { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
+    public partial class WorkflowStateTypeModel 
+    {
+        [Newtonsoft.Json.JsonProperty("workflowStateTypeId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int WorkflowStateTypeId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Code { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Description { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
+    public partial class WorkflowAutoCodeModel 
+    {
+        [Newtonsoft.Json.JsonProperty("workflowAutoCodeId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int WorkflowAutoCodeId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Code { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Description { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
+    public partial class WorkflowTransitionRoleModel 
+    {
+        [Newtonsoft.Json.JsonProperty("workflowTransitionRoleId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int WorkflowTransitionRoleId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Code { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Description { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
+    public partial class WorkflowTransitionModel 
+    {
+        [Newtonsoft.Json.JsonProperty("isNew", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool IsNew { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("delete", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool Delete { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowTransitionId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid WorkflowTransitionId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowSchemaId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid WorkflowSchemaId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("fromWorkflowStateId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid FromWorkflowStateId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("toWorkflowStateId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid ToWorkflowStateId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowTransitionRoleId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? WorkflowTransitionRoleId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("personId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid? PersonId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowAutoCodeId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? WorkflowAutoCodeId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Description { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("conditions", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Conditions { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("limit", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public double? Limit { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("sequence", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int Sequence { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("requestComments", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool RequestComments { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("threshold", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public double? Threshold { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("fromWorkflowState", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public WorkflowStateModel FromWorkflowState { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("person", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PersonModel Person { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("toWorkflowState", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public WorkflowStateModel ToWorkflowState { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowAutoCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public WorkflowAutoCodeModel WorkflowAutoCode { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowTransitionRole", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public WorkflowTransitionRoleModel WorkflowTransitionRole { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
+    public partial class WorkflowStateModel 
+    {
+        [Newtonsoft.Json.JsonProperty("delete", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool Delete { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("isNew", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool IsNew { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowStateId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid WorkflowStateId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowStateTypeId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int WorkflowStateTypeId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowSchemaId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid WorkflowSchemaId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("sequence", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int Sequence { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowStateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public WorkflowStateTypeModel WorkflowStateType { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowTransitionFromWorkflowStates", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<WorkflowTransitionModel> WorkflowTransitionFromWorkflowStates { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowTransitionToWorkflowStates", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<WorkflowTransitionModel> WorkflowTransitionToWorkflowStates { get; set; }
     
     
     }
@@ -11961,6 +12218,9 @@ namespace OcerraOdoo
     
         [Newtonsoft.Json.JsonProperty("transitions", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<DocumentWorkflowTransition> Transitions { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("workflowState", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public WorkflowStateModel WorkflowState { get; set; }
     
         [Newtonsoft.Json.JsonProperty("transitionId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Guid? TransitionId { get; set; }
@@ -12186,6 +12446,9 @@ namespace OcerraOdoo
         [System.Runtime.Serialization.EnumMember(Value = @"TextractAnalysis")]
         TextractAnalysis = 11,
     
+        [System.Runtime.Serialization.EnumMember(Value = @"ImportFile")]
+        ImportFile = 12,
+    
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
@@ -12313,6 +12576,9 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonProperty("number", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int Number { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("summaryLine", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PdfTextLine SummaryLine { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("textRect", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public RectangleF TextRect { get; set; }
     
@@ -12413,165 +12679,6 @@ namespace OcerraOdoo
     
         [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Description { get; set; }
-    
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class WorkflowStateTypeModel 
-    {
-        [Newtonsoft.Json.JsonProperty("workflowStateTypeId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int WorkflowStateTypeId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Code { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Name { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Description { get; set; }
-    
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class WorkflowAutoCodeModel 
-    {
-        [Newtonsoft.Json.JsonProperty("workflowAutoCodeId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int WorkflowAutoCodeId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Code { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Name { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Description { get; set; }
-    
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class WorkflowTransitionRoleModel 
-    {
-        [Newtonsoft.Json.JsonProperty("workflowTransitionRoleId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int WorkflowTransitionRoleId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Code { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Name { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Description { get; set; }
-    
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class WorkflowTransitionModel 
-    {
-        [Newtonsoft.Json.JsonProperty("isNew", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool IsNew { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("delete", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool Delete { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowTransitionId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Guid WorkflowTransitionId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowSchemaId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Guid WorkflowSchemaId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("fromWorkflowStateId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Guid FromWorkflowStateId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("toWorkflowStateId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Guid ToWorkflowStateId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowTransitionRoleId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? WorkflowTransitionRoleId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("personId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Guid? PersonId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowAutoCodeId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? WorkflowAutoCodeId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Name { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Description { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("conditions", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Conditions { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("limit", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Limit { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("sequence", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Sequence { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("requestComments", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool RequestComments { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("threshold", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Threshold { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("fromWorkflowState", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public WorkflowStateModel FromWorkflowState { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("person", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PersonModel Person { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("toWorkflowState", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public WorkflowStateModel ToWorkflowState { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowAutoCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public WorkflowAutoCodeModel WorkflowAutoCode { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowTransitionRole", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public WorkflowTransitionRoleModel WorkflowTransitionRole { get; set; }
-    
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.5.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class WorkflowStateModel 
-    {
-        [Newtonsoft.Json.JsonProperty("delete", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool Delete { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("isNew", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool IsNew { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowStateId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Guid WorkflowStateId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowStateTypeId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int WorkflowStateTypeId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowSchemaId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Guid WorkflowSchemaId { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Name { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("sequence", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Sequence { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowStateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public WorkflowStateTypeModel WorkflowStateType { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowTransitionFromWorkflowStates", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<WorkflowTransitionModel> WorkflowTransitionFromWorkflowStates { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("workflowTransitionToWorkflowStates", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<WorkflowTransitionModel> WorkflowTransitionToWorkflowStates { get; set; }
     
     
     }

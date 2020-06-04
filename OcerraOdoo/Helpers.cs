@@ -324,6 +324,23 @@ namespace OcerraOdoo
             var result = (T)JsonConvert.DeserializeObject(value, typeof(T), settings);
             return result;
         }
+
+        
+        public static IEnumerable<IEnumerable<T>> ToBatches<T>(
+            this IEnumerable<T> source, int batchSize)
+        {
+            using (var enumerator = source.GetEnumerator())
+                while (enumerator.MoveNext())
+                    yield return YieldBatchElements(enumerator, batchSize - 1);
+        }
+
+        private static IEnumerable<T> YieldBatchElements<T>(
+            IEnumerator<T> source, int batchSize)
+        {
+            yield return source.Current;
+            for (int i = 0; i < batchSize && source.MoveNext(); i++)
+                yield return source.Current;
+        }
     }
 
     public class NullableArrayJsonConverter : JsonConverter
@@ -425,8 +442,12 @@ namespace OcerraOdoo
         public string OdooInvoiceState { get; set; }
         public string ExportStatuses { get; set; }
         public string UsePurchaseOrderQuantity { get; set; }
-
         [JsonIgnore]
         public bool UsePurchaseOrderQuantityBool => UsePurchaseOrderQuantity == "true";
+        
+        public string UseDraftInvoicesByPo { get; set; }
+        [JsonIgnore]
+        public bool UseDraftInvoicesByPoBool => UseDraftInvoicesByPo == "true";
+
     }
 }

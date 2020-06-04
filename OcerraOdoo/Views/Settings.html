@@ -65,6 +65,25 @@
         </div>
     </div>
     <div class="row mb-15">
+        <div class="col-xs-3 text-right" title="When export, search for Draft invoices by PO number to avaid duplicates">Search for Invoice by PO on Export:</div>
+        <div class="col-xs-2">
+            <select class="form-control" name="UseDraftInvoicesByPo">
+                @IfNot.Settings.UseDraftInvoicesByPoBool
+                <option value="false" selected>No</option>
+                @EndIf
+                @If.Settings.UseDraftInvoicesByPoBool
+                <option value="false">No</option>
+                @EndIf
+                @If.Settings.UseDraftInvoicesByPoBool
+                <option value="true" selected>Yes</option>
+                @EndIf
+                @IfNot.Settings.UseDraftInvoicesByPoBool
+                <option value="true">Yes</option>
+                @EndIf
+            </select>
+        </div>
+    </div>
+    <div class="row mb-15">
         <div class="col-xs-12">
             <button id="exportBtn" class="btn btn-success pull-right" onclick="updateSettings()">Update</button>
         </div>

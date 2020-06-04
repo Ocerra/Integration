@@ -23,16 +23,24 @@ namespace OcerraOdoo.Controllers
                 page = page < 1 ? 1 : page;
 
                 string search = Request.Query.search;
+                string exportState = Request.Query.exportState;
 
                 var workflowStates = odata.WorkflowState.ToList();
 
                 var query = odata.VoucherHeader
                     .Expand("vendor,workflow($expand=workflowState),voucherValidation");
 
+                query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived);
+
                 if (!string.IsNullOrEmpty(search))
-                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived && (vh.Number.Contains(search) || vh.Vendor.Name.Contains(search)));
-                else
-                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived);
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Number.Contains(search) || vh.Vendor.Name.Contains(search));
+
+                if (exportState == "True")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.ExternalId != null);
+
+                if (exportState == "False")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.ExternalId == null);
+
 
                 query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.OrderByDescending(vh => vh.CreatedDate).Skip((page - 1) * 20).Take(20);
 
@@ -41,6 +49,7 @@ namespace OcerraOdoo.Controllers
                 .Select(vh => new InvoiceModel
                 {
                     Id = vh.VoucherHeaderId.ToString(),
+                    DocumentId = vh.DocumentId.ToString(),
                     Vendor = vh.Vendor != null ? vh.Vendor.Name : "Unknown",
                     Status = vh.Workflow?.WorkflowState?.Name ?? "",
                     Number = vh.Number,
@@ -48,10 +57,12 @@ namespace OcerraOdoo.Controllers
                     DueDate = vh.DueDate != null ? vh.DueDate.Value.ToString("dd-MMM-yy") : "",
                     Amount = vh.FcGross != null ? vh.FcGross.Value.ToString("C") : "$0.00",
                     Exported = vh.ExternalId != null ? "Yes" : "",
-                    CanExport = vh.Vendor != null && vh.FcGross != null && vh.FcNet != null ? "" : "disabled='disabled'",
+                    CanExport = vh.Vendor != null && vh.FcGross != null && vh.FcNet != null 
+                        && vh.VoucherValidation.HasTotalMatches != "Fail" ? "" : "disabled='disabled'",
                     CanExportMessage =
                         vh.Vendor == null ? "You cannot export Invoice without vendor" :
                         vh.FcGross == null ? "You cannot export Invoice without amount" :
+                        vh.VoucherValidation.HasTotalMatches == "Fail" ? "You cannot export Invoice without matching amounts" :
                         null,
                     PoMatches = 
                         vh.VoucherValidation.HasPoMatches == "Ignore" ? "" :
@@ -69,6 +80,7 @@ namespace OcerraOdoo.Controllers
                 Model.Page = page;
                 Model.Count = totalCount;
                 Model.SearchStr = !string.IsNullOrEmpty(search) ? search.Replace("\"", "\\\"") : null;
+                Model.ExportState = exportState;
 
                 return View["List.html", Model];
             });

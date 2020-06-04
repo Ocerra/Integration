@@ -85,7 +85,7 @@ namespace OcerraOdoo.Services
                 foreach (var voucherHeaderId in voucherHeaderIds) {
 
                     var query = odata.VoucherHeader
-                        .Expand("Vendor,VoucherLines($expand=TaxAccount,ItemCode,PurchaseOrderLine)");
+                        .Expand("Vendor,PurchaseOrderHeader,VoucherLines($expand=TaxAccount,ItemCode,PurchaseOrderLine)");
                     query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query
                         .AddQueryOption("$filter", $"VoucherHeaderId eq {voucherHeaderId}"); // .Where(vh => vh.VoucherHeaderId == voucherHeaderId);
                     //Export invoices one by one
@@ -407,13 +407,39 @@ namespace OcerraOdoo.Services
                     .Where(i => i.ExternalId != null)
                     .Select(i => i.ExternalId.ToLong(0))
                     .Where(i => i > 0)
-                    .ToArray();
+                    .ToList();
 
-                var odooBills = odooBillIds.HasItems() ?
+                if (settings.UseDraftInvoicesByPoBool)
+                {
+                    var odooPoNumbers = ocerraInvoices.Where(oi => oi.PurchaseOrderHeader != null)
+                        .Select(oi => new { SupplierId = oi.Vendor.ExternalId, oi.PurchaseOrderHeader.Number })
+                        .ToList();
+
+                    var odooBillsByPoNo = new List<OdooBill>();
+                    foreach (var odooPoNumber in odooPoNumbers)
+                    {
+                        var odooBillByPoNo = await odooClient.Search<long[]>(new OdooSearchParameters("account.invoice",
+                            new OdooDomainFilter()
+                                .Filter("type", "=", "in_invoice")
+                                .Filter("origin", "=", odooPoNumber.Number)
+                                .Filter("partner_id", "=", odooPoNumber.SupplierId.ToLong(0))
+                                ), new OdooPaginationParameters(0, 5));
+                        
+                        if (odooBillByPoNo.HasItems())
+                            odooBillIds.Add(odooBillByPoNo[0]);
+                    }
+                }
+
+                var odooBills = new List<OdooBill>();
+                
+                var odooBillsById = odooBillIds.HasItems() ?
                         await odooClient.Get<OdooBill[]>(new OdooGetParameters("account.invoice", odooBillIds),
                             new OdooFieldParameters()) : new OdooBill[] { };
+                
+                if(odooBillsById.HasItems())
+                    odooBills.AddRange(odooBillsById);
 
-
+                
                 var defaultOdooExpenseAccountId = expenseAccountIds.HasItems() ? expenseAccountIds[0].ToString() : null;
                 var defaultExpenseAccount = defaultOdooExpenseAccountId != null ? odata.TaxAccount.Where(ta => ta.ExternalId == defaultOdooExpenseAccountId).FirstOrDefault() : null;
                 var ocerraTaxRates = odata.TaxRate.ToList();
@@ -425,7 +451,9 @@ namespace OcerraOdoo.Services
                     //Skip invoices without the vendor
                     if (invoice.VendorId == null) continue;
 
-                    var odooBill = invoice.ExternalId != null ? odooBills.FirstOrDefault(b => b.Id == invoice.ExternalId.ToLong(0)) : null;
+                    //Find bill by ExternalId or by Origin and supplier for automatically created invoices.
+                    var odooBill = odooBills.FirstOrDefault(b => b.Id == invoice.ExternalId.ToLong(0) || 
+                        (b.Origin?.Value == invoice.PurchaseOrderHeader.Number && b.PartnerId?.Key == invoice.Vendor.ExternalId.ToLong(0)));
 
                     /*ar existingBillLines = odooBill != null && odooBill.InvoiceLineIdsV8.Ids != null ? 
                         await odooClient.Get<OdooBillLineV8[]>(new OdooGetParameters("account.invoice.line", odooBill.InvoiceLineIdsV8.Ids), new OdooFieldParameters()) : null;*/
