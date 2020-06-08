@@ -70,9 +70,9 @@ function ExportFiles {
     $odataRequest = 'https://app.ocerra.com/odata/VoucherHeader?' + 
 		'$skip=0&' + 
 		'$top=500&' + 
-		'$orderby=CreatedDate%20desc&' + 
+		'$orderby=CreatedDate desc&' + 
 		'$count=true&' + 
-		'$filter=IsActive%20eq%20true&UpdatedDate%20ge%20' + $timeStamp.ToString("yyyy-MM-ddTHH:mm:ss") + '&' + 
+		'$filter=IsActive eq true and UpdatedDate ge ' + $timeStamp.ToString("yyyy-MM-ddTHH:mm:ss.000Z") + ' and (Workflow/WorkflowState/Name eq ''Approved'')&' + 
 		'$expand=Vendor,VoucherLines,Workflow($expand=WorkflowState),Document($expand=DocumentType,StoredFile)'
 
     #retrieve invoices using OData qery
