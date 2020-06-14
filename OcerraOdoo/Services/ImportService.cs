@@ -264,8 +264,10 @@ namespace OcerraOdoo.Services
                         "contact_address",
                         "company_name",
                         "currency_id",
-                        "property_account_payable_id"
-                    };
+                        "property_account_payable_id",
+                        "property_account_expense_categ",
+                        "property_stock_account_input_categ"
+                };
 
                 var odooCompanies = new List<OdooCompany>();
                 for (int x = 0; x < 100; x = x + 2) {
@@ -287,16 +289,21 @@ namespace OcerraOdoo.Services
                         var ocerraVendor = await ocerraClient.ApiVendorsExternalByIdGetAsync(odooVendor.Id.ToString());
 
                         var email = odooVendor.Email?.ToLower();
+                        
                         var domain = odooVendor.Website != null && odooVendor.Website.ToUri() != null ? odooVendor.Website.ToUri().Host :  
                             email != null && !Settings.Default.SharedEmailProviders.Split(',').Any(ep => email.Contains(ep)) ? email.Split('@').LastOrDefault()?.ToUri()?.Host : null;
-                        var defaultAccount = odooVendor.Property_Account_Payable_Id.HasItems() ? await ocerraClient.ApiTaxAccountExternalByIdGetAsync(odooVendor.Property_Account_Payable_Id[0]) : null;
+                        
+                        var defaultAccount = 
+                            odooVendor.Property_Account_Payable_Id?.Key != null ? await GetTaxAccountByExternalId(odooVendor.Property_Account_Payable_Id.Key.ToString()) :
+                            odooVendor.PropertyAccountExpenseCateg?.Key != null ? await GetTaxAccountByExternalId(odooVendor.PropertyAccountExpenseCateg.Key.ToString()) :
+                            odooVendor.PropertyStockAccountInputCateg?.Key != null ? await GetTaxAccountByExternalId(odooVendor.PropertyStockAccountInputCateg.Key.ToString()) :
+                            null;
 
                         var countryCode = odooCountryCodes.FirstOrDefault(cc => cc.Id == odooVendor.Country_Id?.FirstOrDefault().ToInt(null))?.Code?.Value
                                     ?? Bootstrapper.OcerraModel.CountryCode;
 
                         if (ocerraVendor == null)
                         {
-                            
                             vendor = new VendorModel()
                             {
                                 VendorId = Guid.NewGuid(),
@@ -548,11 +555,32 @@ namespace OcerraOdoo.Services
             }
         }
 
+
+        Dictionary<string, TaxAccountModel> glAccountsCache = new Dictionary<string, TaxAccountModel>();
+        private async Task<TaxAccountModel> GetTaxAccountByExternalId(string externalId) {
+
+            if (!string.IsNullOrEmpty(externalId)) {
+                if (glAccountsCache.ContainsKey(externalId))
+                    return glAccountsCache[externalId];
+
+                var defaultAccount = await ocerraClient.ApiTaxAccountExternalByIdGetAsync(externalId);
+                glAccountsCache[externalId] = defaultAccount;
+                return defaultAccount;
+            }
+
+            return null;
+        }
+
         public async Task<ImportResult> ImportProducts(DateTime lastSyncDate)
         {
             var result = new ImportResult();
 
+            OdooProductCategory[] odooProductCategories = null;
+
             async Task<bool> SyncItemCodePage(int pageNum) {
+
+                odooProductCategories = odooProductCategories ?? await odooClient.GetAll<OdooProductCategory[]>("product.category", new OdooFieldParameters(new[] {
+                    "id", "name", "property_account_expense_categ", "property_stock_account_input_categ" }));
 
                 var filter = new OdooDomainFilter().Filter("write_date", ">=", lastSyncDate);
 
@@ -564,7 +592,8 @@ namespace OcerraOdoo.Services
                     "name",
                     "default_code",
                     "currency_price",
-                    "active"
+                    "active",
+                    "categ_id"
                 };
 
                 var odooProducts = odooProductIds.HasItems() ?
@@ -574,16 +603,23 @@ namespace OcerraOdoo.Services
                 if (odooProducts.HasItems())
                 {
                     var odooProductBatches = odooProducts.ToBatches(100);
-
+                    
                     foreach (var odooProductBatch in odooProductBatches) {
 
                         var odooProductPage = odooProductBatch.ToList();
                         var extrnalIds = string.Join(",", odooProductPage.Select(b => b.Id));
                         var ocerraProducts = await ocerraClient.ApiItemCodeByExternalGetAsync(extrnalIds);
+                        
+                        var itemsToPut = new List<ItemCodeModel>();
+                        var itemsToPost = new List<ItemCodeModel>();
 
                         foreach (var odooProduct in odooProductPage)
                         {
                             var ocerraProduct = ocerraProducts.FirstOrDefault(p => p.ExternalId == odooProduct.Id.ToString());
+                            var glAccount = await GetTaxAccountByExternalId(odooProduct.PropertyAccountExpense?.Key?.ToString()); //Using Expense or stock account?
+                            var productCategory = odooProductCategories.FirstOrDefault(c => c.Id == odooProduct.ProductCategory?.Key);
+                            var glAccountByCat = await GetTaxAccountByExternalId(productCategory?.PropertyAccountExpense?.Key?.ToString()); //Using Expense or stock account?
+                            var glAccountId = glAccount?.TaxAccountId ?? glAccountByCat?.TaxAccountId;
 
                             if (ocerraProduct == null)
                             {
@@ -595,24 +631,28 @@ namespace OcerraOdoo.Services
                                     Code = odooProduct.DefaultCode.Trim(255),
                                     Description = odooProduct.Name.Trim(255),
                                     ExternalId = odooProduct.Id.ToString(),
+                                    TaxAccountId = glAccountId,
                                     IsActive = true
                                 };
 
-                                await ocerraClient.ApiItemCodePostAsync(itemCode);
+                                //await ocerraClient.ApiItemCodePostAsync(itemCode); - using Bulk insert instead
+                                itemsToPost.Add(itemCode);
 
                                 result.NewItems++;
                             }
                             //Update only changed items
                             else if (ocerraProduct.Code != odooProduct.DefaultCode.Trim(255) ||
-                                ocerraProduct.Description != odooProduct.Name.Trim(255))
+                                ocerraProduct.Description != odooProduct.Name.Trim(255) || 
+                                ocerraProduct.TaxAccountId != glAccountId)
                             {
-
                                 ocerraProduct.Code = odooProduct.DefaultCode.Trim(255);
                                 ocerraProduct.Description = odooProduct.Name.Trim(255);
+                                ocerraProduct.TaxAccountId = glAccountId;
                                 ocerraProduct.IsActive = true;
 
-                                await ocerraClient.ApiItemCodeByIdPutAsync(ocerraProduct.ItemCodeId, ocerraProduct);
-
+                                //await ocerraClient.ApiItemCodeByIdPutAsync(ocerraProduct.ItemCodeId, ocerraProduct); - using Bulk update instead
+                                itemsToPut.Add(ocerraProduct);
+                                
                                 result.UpdatedItems++;
                             }
                             else
@@ -620,10 +660,17 @@ namespace OcerraOdoo.Services
                                 result.UpdatedItems++;
                             }
                         }
+
+                        if (itemsToPost.HasItems())
+                            await ocerraClient.ApiItemCodeBulkPostAsync(itemsToPost);
+                        if (itemsToPut.HasItems())
+                            await ocerraClient.ApiItemCodeBulkPutAsync(itemsToPut);
+
                     }
                     
                     return true;
                 }
+
                 else return false;
             }
 
@@ -631,7 +678,7 @@ namespace OcerraOdoo.Services
             {
                 await Init();
 
-                for(int x=0; x < 100; x++)
+                for(int x = 0; x < 100; x++)
                 {
                     var hasItems = await SyncItemCodePage(x);
                     if (!hasItems) break;

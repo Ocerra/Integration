@@ -82,8 +82,14 @@ namespace OcerraOdoo.Models
         [JsonConverter(typeof(NullableArrayJsonConverter))]
         public string[] Currency_Id { get; set; }
 
-        [JsonConverter(typeof(NullableArrayJsonConverter))]
-        public string[] Property_Account_Payable_Id { get; set; }
+        [JsonProperty("property_account_payable_id")]
+        public OdooKeyValue Property_Account_Payable_Id { get; set; }
+
+        [JsonProperty("property_account_expense_categ")]
+        public OdooKeyValue PropertyAccountExpenseCateg { get; set; }
+
+        [JsonProperty("property_stock_account_input_categ")]
+        public OdooKeyValue PropertyStockAccountInputCateg { get; set; }
     }
 
     public class OdooPurchaseOrder {
@@ -209,6 +215,13 @@ namespace OcerraOdoo.Models
         public OdooDate DueDateV8 { get; set; }
         [JsonProperty("supplier_invoice_number")]
         public OdooString SupplierInvoiceNumberV8 { get; set; }
+
+        /// <summary>
+        /// Using number field instead of origin
+        /// </summary>
+        [JsonProperty("number")]
+        public OdooString Number { get; set; }
+
         [JsonProperty("account_id")]
         public OdooKeyValue AccountIdV8 { get; set; }
         [JsonProperty("invoice_line")]
@@ -384,6 +397,19 @@ namespace OcerraOdoo.Models
         
     }
 
+    public class OdooProductCategory
+    {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        
+        [JsonProperty("property_account_expense_categ")]
+        public OdooKeyValue PropertyAccountExpense { get; set; }
+
+        [JsonProperty("property_stock_account_input_categ")]
+        public OdooKeyValue PropertyStockAccountInput { get; set; }
+
+    }
+
     public class OdooProduct {
         public long Id { get; set; }
         
@@ -395,5 +421,15 @@ namespace OcerraOdoo.Models
 
         [JsonProperty("currency_price")]
         public OdooDecimal CurrencyPrice { get; set; }
+
+        [JsonProperty("property_account_expense")]
+        public OdooKeyValue PropertyAccountExpense { get; set; }
+
+        [JsonProperty("property_stock_account_input")]
+        public OdooKeyValue PropertyStockAccountInput { get; set; }
+
+        [JsonProperty("categ_id")]
+        public OdooKeyValue ProductCategory { get; set; }
+
     }
 }

@@ -551,7 +551,8 @@ namespace OcerraOdoo.Services
                             InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>() { Objects = newBillLines },
                             TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = taxLines },
                             AmountTotalV8 = new OdooDecimal(invoice.FcGross),
-                            Origin = $"https://app.ocerra.com/#/details/vouchers/(document:{invoice.DocumentId})",
+                            //Number = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}", //shorten number
+                            Origin = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}",
 
                             Name = invoice.Number,
                             PartnerId = new OdooKeyValue(invoice.Vendor.ExternalId.ToLong(0)),
@@ -600,6 +601,7 @@ namespace OcerraOdoo.Services
                         odooBill.CurrencyId = new OdooKeyValue { Key = currencyCode.ExternalId.ToLong(0) };
                         odooBill.CompanyCurrencyId = new OdooKeyValue { Key = currencyCode.ExternalId.ToLong(0) };
 
+                        
                         odooBill.AmountUntaxed = (decimal?)invoice.FcNet ?? 0;
                         odooBill.AmountTax = (decimal?)invoice.FcTax ?? 0;
                         odooBill.AmountTotal = (decimal?)invoice.FcGross ?? 0;
@@ -631,7 +633,9 @@ namespace OcerraOdoo.Services
                         odooBill.InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>() { Objects = newBillLines };
                         odooBill.TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = taxLines };
                         odooBill.AmountTotalV8 = new OdooDecimal(invoice.FcGross);
-                        odooBill.Origin = $"https://app.ocerra.com/#/details/vouchers/(document:{invoice.DocumentId})";
+                        //odooBill.Origin = $"https://app.ocerra.com/#/details/vouchers/(document:{invoice.DocumentId})";
+                        //odooBill.Number = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}"; //shorten number
+                        odooBill.Origin = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}"; //shorten number
 
 
                         //Create new lines
