@@ -21,6 +21,13 @@ namespace OcerraOdoo
         {
             if (value != null && value.Length > length)
                 return value.Substring(0, length);
+
+            if (value != null) {
+                value = value.Replace("\r\n", " ");
+                value = value.Replace("\n", " ");
+                value = value.Trim();
+            }
+
             return value;
         }
 
@@ -450,4 +457,6 @@ namespace OcerraOdoo
         public bool UseDraftInvoicesByPoBool => UseDraftInvoicesByPo == "true";
 
     }
+
+    
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 20/05/2020 7:12:47 PM
+// Generation date: 2/07/2020 9:09:20 PM
 namespace OcerraOdoo.ODataClient.Proxies
 {
     /// <summary>
@@ -123,6 +123,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog> _WorkflowLogs;
+        /// <summary>
+        /// There are no comments for WorkflowTransitionPersons in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionPersons")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> WorkflowTransitionPersons
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._WorkflowTransitionPersons == null))
+                {
+                    this._WorkflowTransitionPersons = Context.CreateQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson>(GetPath("workflowTransitionPersons"));
+                }
+                return this._WorkflowTransitionPersons;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> _WorkflowTransitionPersons;
         /// <summary>
         /// There are no comments for WorkflowTransitions in the schema.
         /// </summary>
@@ -493,6 +515,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         private global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog> _WorkflowLogs = new global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog>();
         partial void OnWorkflowLogsChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog> value);
         partial void OnWorkflowLogsChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowTransitionPersons in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionPersons")]
+        public global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> WorkflowTransitionPersons
+        {
+            get
+            {
+                return this._WorkflowTransitionPersons;
+            }
+            set
+            {
+                this.OnWorkflowTransitionPersonsChanging(value);
+                this._WorkflowTransitionPersons = value;
+                this.OnWorkflowTransitionPersonsChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> _WorkflowTransitionPersons = new global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson>();
+        partial void OnWorkflowTransitionPersonsChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> value);
+        partial void OnWorkflowTransitionPersonsChanged();
         /// <summary>
         /// There are no comments for Property WorkflowTransitions in the schema.
         /// </summary>
@@ -3594,6 +3638,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.SettingValue> _SettingValues;
         /// <summary>
+        /// There are no comments for WorkflowSchemaVendors in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaVendors")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> WorkflowSchemaVendors
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._WorkflowSchemaVendors == null))
+                {
+                    this._WorkflowSchemaVendors = Context.CreateQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor>(GetPath("workflowSchemaVendors"));
+                }
+                return this._WorkflowSchemaVendors;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> _WorkflowSchemaVendors;
+        /// <summary>
         /// There are no comments for WorkflowSchemas in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
@@ -4652,6 +4718,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         partial void OnSettingValuesChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.SettingValue> value);
         partial void OnSettingValuesChanged();
         /// <summary>
+        /// There are no comments for Property WorkflowSchemaVendors in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaVendors")]
+        public global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> WorkflowSchemaVendors
+        {
+            get
+            {
+                return this._WorkflowSchemaVendors;
+            }
+            set
+            {
+                this.OnWorkflowSchemaVendorsChanging(value);
+                this._WorkflowSchemaVendors = value;
+                this.OnWorkflowSchemaVendorsChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> _WorkflowSchemaVendors = new global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor>();
+        partial void OnWorkflowSchemaVendorsChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> value);
+        partial void OnWorkflowSchemaVendorsChanged();
+        /// <summary>
         /// There are no comments for Property WorkflowSchemas in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
@@ -4805,6 +4893,116 @@ namespace OcerraOdoo.ODataClient.Proxies
         private int _Times;
         partial void OnTimesChanging(int value);
         partial void OnTimesChanged();
+    }
+    /// <summary>
+    /// There are no comments for ClientPeople in the schema.
+    /// </summary>
+    [global::Microsoft.OData.Client.OriginalNameAttribute("ClientPeople")]
+    public partial class ClientPeople
+    {
+        /// <summary>
+        /// Create a new ClientPeople object.
+        /// </summary>
+        /// <param name="personId">Initial value of PersonId.</param>
+        /// <param name="isActive">Initial value of IsActive.</param>
+        /// <param name="clientId">Initial value of ClientId.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        public static ClientPeople CreateClientPeople(global::System.Guid personId, bool isActive, global::System.Guid clientId)
+        {
+            ClientPeople clientPeople = new ClientPeople();
+            clientPeople.PersonId = personId;
+            clientPeople.IsActive = isActive;
+            clientPeople.ClientId = clientId;
+            return clientPeople;
+        }
+        /// <summary>
+        /// There are no comments for Property PersonId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
+        public global::System.Guid PersonId
+        {
+            get
+            {
+                return this._PersonId;
+            }
+            set
+            {
+                this.OnPersonIdChanging(value);
+                this._PersonId = value;
+                this.OnPersonIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _PersonId;
+        partial void OnPersonIdChanging(global::System.Guid value);
+        partial void OnPersonIdChanged();
+        /// <summary>
+        /// There are no comments for Property FullName in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fullName")]
+        public string FullName
+        {
+            get
+            {
+                return this._FullName;
+            }
+            set
+            {
+                this.OnFullNameChanging(value);
+                this._FullName = value;
+                this.OnFullNameChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _FullName;
+        partial void OnFullNameChanging(string value);
+        partial void OnFullNameChanged();
+        /// <summary>
+        /// There are no comments for Property IsActive in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
+        public bool IsActive
+        {
+            get
+            {
+                return this._IsActive;
+            }
+            set
+            {
+                this.OnIsActiveChanging(value);
+                this._IsActive = value;
+                this.OnIsActiveChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private bool _IsActive;
+        partial void OnIsActiveChanging(bool value);
+        partial void OnIsActiveChanged();
+        /// <summary>
+        /// There are no comments for Property ClientId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
+        public global::System.Guid ClientId
+        {
+            get
+            {
+                return this._ClientId;
+            }
+            set
+            {
+                this.OnClientIdChanging(value);
+                this._ClientId = value;
+                this.OnClientIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _ClientId;
+        partial void OnClientIdChanging(global::System.Guid value);
+        partial void OnClientIdChanged();
     }
     /// <summary>
     /// There are no comments for AgentSingle in the schema.
@@ -8487,6 +8685,829 @@ namespace OcerraOdoo.ODataClient.Proxies
         partial void OnVoucherValidationChanged();
     }
     /// <summary>
+    /// There are no comments for ArchivedVoucher in the schema.
+    /// </summary>
+    [global::Microsoft.OData.Client.OriginalNameAttribute("ArchivedVoucher")]
+    public partial class ArchivedVoucher
+    {
+        /// <summary>
+        /// Create a new ArchivedVoucher object.
+        /// </summary>
+        /// <param name="voucherHeaderId">Initial value of VoucherHeaderId.</param>
+        /// <param name="documentId">Initial value of DocumentId.</param>
+        /// <param name="createdDate">Initial value of CreatedDate.</param>
+        /// <param name="updatedDate">Initial value of UpdatedDate.</param>
+        /// <param name="isArchived">Initial value of IsArchived.</param>
+        /// <param name="isActive">Initial value of IsActive.</param>
+        /// <param name="clientId">Initial value of ClientId.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        public static ArchivedVoucher CreateArchivedVoucher(global::System.Guid voucherHeaderId, 
+                    global::System.Guid documentId, 
+                    global::System.DateTimeOffset createdDate, 
+                    global::System.DateTimeOffset updatedDate, 
+                    bool isArchived, 
+                    bool isActive, 
+                    global::System.Guid clientId)
+        {
+            ArchivedVoucher archivedVoucher = new ArchivedVoucher();
+            archivedVoucher.VoucherHeaderId = voucherHeaderId;
+            archivedVoucher.DocumentId = documentId;
+            archivedVoucher.CreatedDate = createdDate;
+            archivedVoucher.UpdatedDate = updatedDate;
+            archivedVoucher.IsArchived = isArchived;
+            archivedVoucher.IsActive = isActive;
+            archivedVoucher.ClientId = clientId;
+            return archivedVoucher;
+        }
+        /// <summary>
+        /// There are no comments for Property VoucherHeaderId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
+        public global::System.Guid VoucherHeaderId
+        {
+            get
+            {
+                return this._VoucherHeaderId;
+            }
+            set
+            {
+                this.OnVoucherHeaderIdChanging(value);
+                this._VoucherHeaderId = value;
+                this.OnVoucherHeaderIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _VoucherHeaderId;
+        partial void OnVoucherHeaderIdChanging(global::System.Guid value);
+        partial void OnVoucherHeaderIdChanged();
+        /// <summary>
+        /// There are no comments for Property DocumentId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentId")]
+        public global::System.Guid DocumentId
+        {
+            get
+            {
+                return this._DocumentId;
+            }
+            set
+            {
+                this.OnDocumentIdChanging(value);
+                this._DocumentId = value;
+                this.OnDocumentIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _DocumentId;
+        partial void OnDocumentIdChanging(global::System.Guid value);
+        partial void OnDocumentIdChanged();
+        /// <summary>
+        /// There are no comments for Property Number in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("number")]
+        public string Number
+        {
+            get
+            {
+                return this._Number;
+            }
+            set
+            {
+                this.OnNumberChanging(value);
+                this._Number = value;
+                this.OnNumberChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Number;
+        partial void OnNumberChanging(string value);
+        partial void OnNumberChanged();
+        /// <summary>
+        /// There are no comments for Property PurchaseOrderNumber in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderNumber")]
+        public string PurchaseOrderNumber
+        {
+            get
+            {
+                return this._PurchaseOrderNumber;
+            }
+            set
+            {
+                this.OnPurchaseOrderNumberChanging(value);
+                this._PurchaseOrderNumber = value;
+                this.OnPurchaseOrderNumberChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _PurchaseOrderNumber;
+        partial void OnPurchaseOrderNumberChanging(string value);
+        partial void OnPurchaseOrderNumberChanged();
+        /// <summary>
+        /// There are no comments for Property Date in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("date")]
+        public global::System.Nullable<global::System.DateTimeOffset> Date
+        {
+            get
+            {
+                return this._Date;
+            }
+            set
+            {
+                this.OnDateChanging(value);
+                this._Date = value;
+                this.OnDateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.DateTimeOffset> _Date;
+        partial void OnDateChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnDateChanged();
+        /// <summary>
+        /// There are no comments for Property FcNet in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcNet")]
+        public global::System.Nullable<decimal> FcNet
+        {
+            get
+            {
+                return this._FcNet;
+            }
+            set
+            {
+                this.OnFcNetChanging(value);
+                this._FcNet = value;
+                this.OnFcNetChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<decimal> _FcNet;
+        partial void OnFcNetChanging(global::System.Nullable<decimal> value);
+        partial void OnFcNetChanged();
+        /// <summary>
+        /// There are no comments for Property FcTax in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcTax")]
+        public global::System.Nullable<decimal> FcTax
+        {
+            get
+            {
+                return this._FcTax;
+            }
+            set
+            {
+                this.OnFcTaxChanging(value);
+                this._FcTax = value;
+                this.OnFcTaxChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<decimal> _FcTax;
+        partial void OnFcTaxChanging(global::System.Nullable<decimal> value);
+        partial void OnFcTaxChanged();
+        /// <summary>
+        /// There are no comments for Property FcGross in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcGross")]
+        public global::System.Nullable<decimal> FcGross
+        {
+            get
+            {
+                return this._FcGross;
+            }
+            set
+            {
+                this.OnFcGrossChanging(value);
+                this._FcGross = value;
+                this.OnFcGrossChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<decimal> _FcGross;
+        partial void OnFcGrossChanging(global::System.Nullable<decimal> value);
+        partial void OnFcGrossChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
+        public global::System.DateTimeOffset CreatedDate
+        {
+            get
+            {
+                return this._CreatedDate;
+            }
+            set
+            {
+                this.OnCreatedDateChanging(value);
+                this._CreatedDate = value;
+                this.OnCreatedDateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.DateTimeOffset _CreatedDate;
+        partial void OnCreatedDateChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedDateChanged();
+        /// <summary>
+        /// There are no comments for Property UpdatedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("updatedDate")]
+        public global::System.DateTimeOffset UpdatedDate
+        {
+            get
+            {
+                return this._UpdatedDate;
+            }
+            set
+            {
+                this.OnUpdatedDateChanging(value);
+                this._UpdatedDate = value;
+                this.OnUpdatedDateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.DateTimeOffset _UpdatedDate;
+        partial void OnUpdatedDateChanging(global::System.DateTimeOffset value);
+        partial void OnUpdatedDateChanged();
+        /// <summary>
+        /// There are no comments for Property IsArchived in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isArchived")]
+        public bool IsArchived
+        {
+            get
+            {
+                return this._IsArchived;
+            }
+            set
+            {
+                this.OnIsArchivedChanging(value);
+                this._IsArchived = value;
+                this.OnIsArchivedChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private bool _IsArchived;
+        partial void OnIsArchivedChanging(bool value);
+        partial void OnIsArchivedChanged();
+        /// <summary>
+        /// There are no comments for Property IsActive in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("isActive")]
+        public bool IsActive
+        {
+            get
+            {
+                return this._IsActive;
+            }
+            set
+            {
+                this.OnIsActiveChanging(value);
+                this._IsActive = value;
+                this.OnIsActiveChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private bool _IsActive;
+        partial void OnIsActiveChanging(bool value);
+        partial void OnIsActiveChanged();
+        /// <summary>
+        /// There are no comments for Property ExportDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("exportDate")]
+        public global::System.Nullable<global::System.DateTimeOffset> ExportDate
+        {
+            get
+            {
+                return this._ExportDate;
+            }
+            set
+            {
+                this.OnExportDateChanging(value);
+                this._ExportDate = value;
+                this.OnExportDateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.DateTimeOffset> _ExportDate;
+        partial void OnExportDateChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnExportDateChanged();
+        /// <summary>
+        /// There are no comments for Property VendorName in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorName")]
+        public string VendorName
+        {
+            get
+            {
+                return this._VendorName;
+            }
+            set
+            {
+                this.OnVendorNameChanging(value);
+                this._VendorName = value;
+                this.OnVendorNameChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _VendorName;
+        partial void OnVendorNameChanging(string value);
+        partial void OnVendorNameChanged();
+        /// <summary>
+        /// There are no comments for Property StateName in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("stateName")]
+        public string StateName
+        {
+            get
+            {
+                return this._StateName;
+            }
+            set
+            {
+                this.OnStateNameChanging(value);
+                this._StateName = value;
+                this.OnStateNameChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _StateName;
+        partial void OnStateNameChanging(string value);
+        partial void OnStateNameChanged();
+        /// <summary>
+        /// There are no comments for Property ClientId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
+        public global::System.Guid ClientId
+        {
+            get
+            {
+                return this._ClientId;
+            }
+            set
+            {
+                this.OnClientIdChanging(value);
+                this._ClientId = value;
+                this.OnClientIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _ClientId;
+        partial void OnClientIdChanging(global::System.Guid value);
+        partial void OnClientIdChanged();
+    }
+    /// <summary>
+    /// There are no comments for ApprovalVoucher in the schema.
+    /// </summary>
+    [global::Microsoft.OData.Client.OriginalNameAttribute("ApprovalVoucher")]
+    public partial class ApprovalVoucher
+    {
+        /// <summary>
+        /// Create a new ApprovalVoucher object.
+        /// </summary>
+        /// <param name="clientId">Initial value of ClientId.</param>
+        /// <param name="documentId">Initial value of DocumentId.</param>
+        /// <param name="voucherHeaderId">Initial value of VoucherHeaderId.</param>
+        /// <param name="createdDate">Initial value of CreatedDate.</param>
+        /// <param name="date">Initial value of Date.</param>
+        /// <param name="hasDuplicates">Initial value of HasDuplicates.</param>
+        /// <param name="workflowId">Initial value of WorkflowId.</param>
+        /// <param name="workflowStateId">Initial value of WorkflowStateId.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        public static ApprovalVoucher CreateApprovalVoucher(global::System.Guid clientId, 
+                    global::System.Guid documentId, 
+                    global::System.Guid voucherHeaderId, 
+                    global::System.DateTimeOffset createdDate, 
+                    global::System.DateTimeOffset date, 
+                    bool hasDuplicates, 
+                    global::System.Guid workflowId, 
+                    global::System.Guid workflowStateId)
+        {
+            ApprovalVoucher approvalVoucher = new ApprovalVoucher();
+            approvalVoucher.ClientId = clientId;
+            approvalVoucher.DocumentId = documentId;
+            approvalVoucher.VoucherHeaderId = voucherHeaderId;
+            approvalVoucher.CreatedDate = createdDate;
+            approvalVoucher.Date = date;
+            approvalVoucher.HasDuplicates = hasDuplicates;
+            approvalVoucher.WorkflowId = workflowId;
+            approvalVoucher.WorkflowStateId = workflowStateId;
+            return approvalVoucher;
+        }
+        /// <summary>
+        /// There are no comments for Property ClientId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
+        public global::System.Guid ClientId
+        {
+            get
+            {
+                return this._ClientId;
+            }
+            set
+            {
+                this.OnClientIdChanging(value);
+                this._ClientId = value;
+                this.OnClientIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _ClientId;
+        partial void OnClientIdChanging(global::System.Guid value);
+        partial void OnClientIdChanged();
+        /// <summary>
+        /// There are no comments for Property DocumentId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("documentId")]
+        public global::System.Guid DocumentId
+        {
+            get
+            {
+                return this._DocumentId;
+            }
+            set
+            {
+                this.OnDocumentIdChanging(value);
+                this._DocumentId = value;
+                this.OnDocumentIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _DocumentId;
+        partial void OnDocumentIdChanging(global::System.Guid value);
+        partial void OnDocumentIdChanged();
+        /// <summary>
+        /// There are no comments for Property VoucherHeaderId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherHeaderId")]
+        public global::System.Guid VoucherHeaderId
+        {
+            get
+            {
+                return this._VoucherHeaderId;
+            }
+            set
+            {
+                this.OnVoucherHeaderIdChanging(value);
+                this._VoucherHeaderId = value;
+                this.OnVoucherHeaderIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _VoucherHeaderId;
+        partial void OnVoucherHeaderIdChanging(global::System.Guid value);
+        partial void OnVoucherHeaderIdChanged();
+        /// <summary>
+        /// There are no comments for Property VendorId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
+        public global::System.Nullable<global::System.Guid> VendorId
+        {
+            get
+            {
+                return this._VendorId;
+            }
+            set
+            {
+                this.OnVendorIdChanging(value);
+                this._VendorId = value;
+                this.OnVendorIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.Guid> _VendorId;
+        partial void OnVendorIdChanging(global::System.Nullable<global::System.Guid> value);
+        partial void OnVendorIdChanged();
+        /// <summary>
+        /// There are no comments for Property VoucherNumber in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("voucherNumber")]
+        public string VoucherNumber
+        {
+            get
+            {
+                return this._VoucherNumber;
+            }
+            set
+            {
+                this.OnVoucherNumberChanging(value);
+                this._VoucherNumber = value;
+                this.OnVoucherNumberChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _VoucherNumber;
+        partial void OnVoucherNumberChanging(string value);
+        partial void OnVoucherNumberChanged();
+        /// <summary>
+        /// There are no comments for Property VendorName in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorName")]
+        public string VendorName
+        {
+            get
+            {
+                return this._VendorName;
+            }
+            set
+            {
+                this.OnVendorNameChanging(value);
+                this._VendorName = value;
+                this.OnVendorNameChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _VendorName;
+        partial void OnVendorNameChanging(string value);
+        partial void OnVendorNameChanged();
+        /// <summary>
+        /// There are no comments for Property PurchaseOrderNumber in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("purchaseOrderNumber")]
+        public string PurchaseOrderNumber
+        {
+            get
+            {
+                return this._PurchaseOrderNumber;
+            }
+            set
+            {
+                this.OnPurchaseOrderNumberChanging(value);
+                this._PurchaseOrderNumber = value;
+                this.OnPurchaseOrderNumberChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _PurchaseOrderNumber;
+        partial void OnPurchaseOrderNumberChanging(string value);
+        partial void OnPurchaseOrderNumberChanged();
+        /// <summary>
+        /// There are no comments for Property FcNet in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcNet")]
+        public global::System.Nullable<decimal> FcNet
+        {
+            get
+            {
+                return this._FcNet;
+            }
+            set
+            {
+                this.OnFcNetChanging(value);
+                this._FcNet = value;
+                this.OnFcNetChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<decimal> _FcNet;
+        partial void OnFcNetChanging(global::System.Nullable<decimal> value);
+        partial void OnFcNetChanged();
+        /// <summary>
+        /// There are no comments for Property FcTax in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcTax")]
+        public global::System.Nullable<decimal> FcTax
+        {
+            get
+            {
+                return this._FcTax;
+            }
+            set
+            {
+                this.OnFcTaxChanging(value);
+                this._FcTax = value;
+                this.OnFcTaxChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<decimal> _FcTax;
+        partial void OnFcTaxChanging(global::System.Nullable<decimal> value);
+        partial void OnFcTaxChanged();
+        /// <summary>
+        /// There are no comments for Property FcGross in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("fcGross")]
+        public global::System.Nullable<decimal> FcGross
+        {
+            get
+            {
+                return this._FcGross;
+            }
+            set
+            {
+                this.OnFcGrossChanging(value);
+                this._FcGross = value;
+                this.OnFcGrossChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<decimal> _FcGross;
+        partial void OnFcGrossChanging(global::System.Nullable<decimal> value);
+        partial void OnFcGrossChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("createdDate")]
+        public global::System.DateTimeOffset CreatedDate
+        {
+            get
+            {
+                return this._CreatedDate;
+            }
+            set
+            {
+                this.OnCreatedDateChanging(value);
+                this._CreatedDate = value;
+                this.OnCreatedDateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.DateTimeOffset _CreatedDate;
+        partial void OnCreatedDateChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedDateChanged();
+        /// <summary>
+        /// There are no comments for Property Date in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("date")]
+        public global::System.DateTimeOffset Date
+        {
+            get
+            {
+                return this._Date;
+            }
+            set
+            {
+                this.OnDateChanging(value);
+                this._Date = value;
+                this.OnDateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.DateTimeOffset _Date;
+        partial void OnDateChanging(global::System.DateTimeOffset value);
+        partial void OnDateChanged();
+        /// <summary>
+        /// There are no comments for Property DueDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("dueDate")]
+        public global::System.Nullable<global::System.DateTimeOffset> DueDate
+        {
+            get
+            {
+                return this._DueDate;
+            }
+            set
+            {
+                this.OnDueDateChanging(value);
+                this._DueDate = value;
+                this.OnDueDateChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.DateTimeOffset> _DueDate;
+        partial void OnDueDateChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnDueDateChanged();
+        /// <summary>
+        /// There are no comments for Property HasTotalMatches in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasTotalMatches")]
+        public global::System.Nullable<bool> HasTotalMatches
+        {
+            get
+            {
+                return this._HasTotalMatches;
+            }
+            set
+            {
+                this.OnHasTotalMatchesChanging(value);
+                this._HasTotalMatches = value;
+                this.OnHasTotalMatchesChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<bool> _HasTotalMatches;
+        partial void OnHasTotalMatchesChanging(global::System.Nullable<bool> value);
+        partial void OnHasTotalMatchesChanged();
+        /// <summary>
+        /// There are no comments for Property HasDuplicates in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("hasDuplicates")]
+        public bool HasDuplicates
+        {
+            get
+            {
+                return this._HasDuplicates;
+            }
+            set
+            {
+                this.OnHasDuplicatesChanging(value);
+                this._HasDuplicates = value;
+                this.OnHasDuplicatesChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private bool _HasDuplicates;
+        partial void OnHasDuplicatesChanging(bool value);
+        partial void OnHasDuplicatesChanged();
+        /// <summary>
+        /// There are no comments for Property StateName in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("stateName")]
+        public string StateName
+        {
+            get
+            {
+                return this._StateName;
+            }
+            set
+            {
+                this.OnStateNameChanging(value);
+                this._StateName = value;
+                this.OnStateNameChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _StateName;
+        partial void OnStateNameChanging(string value);
+        partial void OnStateNameChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowId")]
+        public global::System.Guid WorkflowId
+        {
+            get
+            {
+                return this._WorkflowId;
+            }
+            set
+            {
+                this.OnWorkflowIdChanging(value);
+                this._WorkflowId = value;
+                this.OnWorkflowIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _WorkflowId;
+        partial void OnWorkflowIdChanging(global::System.Guid value);
+        partial void OnWorkflowIdChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowStateId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowStateId")]
+        public global::System.Guid WorkflowStateId
+        {
+            get
+            {
+                return this._WorkflowStateId;
+            }
+            set
+            {
+                this.OnWorkflowStateIdChanging(value);
+                this._WorkflowStateId = value;
+                this.OnWorkflowStateIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _WorkflowStateId;
+        partial void OnWorkflowStateIdChanging(global::System.Guid value);
+        partial void OnWorkflowStateIdChanged();
+    }
+    /// <summary>
     /// There are no comments for VoucherLineSingle in the schema.
     /// </summary>
     [global::Microsoft.OData.Client.OriginalNameAttribute("VoucherLineSingle")]
@@ -9309,6 +10330,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         private global::OcerraOdoo.ODataClient.Proxies.WorkflowTypeSingle _WorkflowType;
+        /// <summary>
+        /// There are no comments for WorkflowSchemaVendors in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaVendors")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> WorkflowSchemaVendors
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._WorkflowSchemaVendors == null))
+                {
+                    this._WorkflowSchemaVendors = Context.CreateQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor>(GetPath("workflowSchemaVendors"));
+                }
+                return this._WorkflowSchemaVendors;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> _WorkflowSchemaVendors;
     }
     /// <summary>
     /// There are no comments for WorkflowSchema in the schema.
@@ -9635,6 +10678,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         private global::OcerraOdoo.ODataClient.Proxies.WorkflowType _WorkflowType;
         partial void OnWorkflowTypeChanging(global::OcerraOdoo.ODataClient.Proxies.WorkflowType value);
         partial void OnWorkflowTypeChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowSchemaVendors in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaVendors")]
+        public global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> WorkflowSchemaVendors
+        {
+            get
+            {
+                return this._WorkflowSchemaVendors;
+            }
+            set
+            {
+                this.OnWorkflowSchemaVendorsChanging(value);
+                this._WorkflowSchemaVendors = value;
+                this.OnWorkflowSchemaVendorsChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> _WorkflowSchemaVendors = new global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor>();
+        partial void OnWorkflowSchemaVendorsChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> value);
+        partial void OnWorkflowSchemaVendorsChanged();
     }
     /// <summary>
     /// There are no comments for WorkflowStateSingle in the schema.
@@ -10857,6 +11922,50 @@ namespace OcerraOdoo.ODataClient.Proxies
         partial void OnUpdatedDateChanging(global::System.DateTimeOffset value);
         partial void OnUpdatedDateChanged();
         /// <summary>
+        /// There are no comments for Property Status in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("status")]
+        public string Status
+        {
+            get
+            {
+                return this._Status;
+            }
+            set
+            {
+                this.OnStatusChanging(value);
+                this._Status = value;
+                this.OnStatusChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Status;
+        partial void OnStatusChanging(string value);
+        partial void OnStatusChanged();
+        /// <summary>
+        /// There are no comments for Property Attributes in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attributes")]
+        public string Attributes
+        {
+            get
+            {
+                return this._Attributes;
+            }
+            set
+            {
+                this.OnAttributesChanging(value);
+                this._Attributes = value;
+                this.OnAttributesChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Attributes;
+        partial void OnAttributesChanging(string value);
+        partial void OnAttributesChanged();
+        /// <summary>
         /// There are no comments for Property PurchaseOrderHeaderValues in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
@@ -11389,6 +12498,50 @@ namespace OcerraOdoo.ODataClient.Proxies
         private short _Sequence;
         partial void OnSequenceChanging(short value);
         partial void OnSequenceChanged();
+        /// <summary>
+        /// There are no comments for Property Attributes in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("attributes")]
+        public string Attributes
+        {
+            get
+            {
+                return this._Attributes;
+            }
+            set
+            {
+                this.OnAttributesChanging(value);
+                this._Attributes = value;
+                this.OnAttributesChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Attributes;
+        partial void OnAttributesChanging(string value);
+        partial void OnAttributesChanged();
+        /// <summary>
+        /// There are no comments for Property Status in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("status")]
+        public string Status
+        {
+            get
+            {
+                return this._Status;
+            }
+            set
+            {
+                this.OnStatusChanging(value);
+                this._Status = value;
+                this.OnStatusChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Status;
+        partial void OnStatusChanging(string value);
+        partial void OnStatusChanged();
         /// <summary>
         /// There are no comments for Property VoucherPurchaseOrderLines in the schema.
         /// </summary>
@@ -13342,6 +14495,7 @@ namespace OcerraOdoo.ODataClient.Proxies
         /// Create a new ItemCode object.
         /// </summary>
         /// <param name="itemCodeId">Initial value of ItemCodeId.</param>
+        /// <param name="clientId">Initial value of ClientId.</param>
         /// <param name="createdBy">Initial value of CreatedBy.</param>
         /// <param name="createdDate">Initial value of CreatedDate.</param>
         /// <param name="updatedBy">Initial value of UpdatedBy.</param>
@@ -13349,6 +14503,7 @@ namespace OcerraOdoo.ODataClient.Proxies
         /// <param name="isActive">Initial value of IsActive.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         public static ItemCode CreateItemCode(global::System.Guid itemCodeId, 
+                    global::System.Guid clientId, 
                     global::System.Guid createdBy, 
                     global::System.DateTimeOffset createdDate, 
                     global::System.Guid updatedBy, 
@@ -13357,6 +14512,7 @@ namespace OcerraOdoo.ODataClient.Proxies
         {
             ItemCode itemCode = new ItemCode();
             itemCode.ItemCodeId = itemCodeId;
+            itemCode.ClientId = clientId;
             itemCode.CreatedBy = createdBy;
             itemCode.CreatedDate = createdDate;
             itemCode.UpdatedBy = updatedBy;
@@ -13413,7 +14569,7 @@ namespace OcerraOdoo.ODataClient.Proxies
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("clientId")]
-        public global::System.Nullable<global::System.Guid> ClientId
+        public global::System.Guid ClientId
         {
             get
             {
@@ -13427,8 +14583,8 @@ namespace OcerraOdoo.ODataClient.Proxies
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
-        private global::System.Nullable<global::System.Guid> _ClientId;
-        partial void OnClientIdChanging(global::System.Nullable<global::System.Guid> value);
+        private global::System.Guid _ClientId;
+        partial void OnClientIdChanging(global::System.Guid value);
         partial void OnClientIdChanged();
         /// <summary>
         /// There are no comments for Property Code in the schema.
@@ -19746,6 +20902,207 @@ namespace OcerraOdoo.ODataClient.Proxies
         partial void OnWorkflowSchemasChanged();
     }
     /// <summary>
+    /// There are no comments for WorkflowSchemaVendorSingle in the schema.
+    /// </summary>
+    [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemaVendorSingle")]
+    public partial class WorkflowSchemaVendorSingle : global::Microsoft.OData.Client.DataServiceQuerySingle<WorkflowSchemaVendor>
+    {
+        /// <summary>
+        /// Initialize a new WorkflowSchemaVendorSingle object.
+        /// </summary>
+        public WorkflowSchemaVendorSingle(global::Microsoft.OData.Client.DataServiceContext context, string path)
+            : base(context, path) {}
+
+        /// <summary>
+        /// Initialize a new WorkflowSchemaVendorSingle object.
+        /// </summary>
+        public WorkflowSchemaVendorSingle(global::Microsoft.OData.Client.DataServiceContext context, string path, bool isComposable)
+            : base(context, path, isComposable) {}
+
+        /// <summary>
+        /// Initialize a new WorkflowSchemaVendorSingle object.
+        /// </summary>
+        public WorkflowSchemaVendorSingle(global::Microsoft.OData.Client.DataServiceQuerySingle<WorkflowSchemaVendor> query)
+            : base(query) {}
+
+        /// <summary>
+        /// There are no comments for Vendor in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
+        public global::OcerraOdoo.ODataClient.Proxies.VendorSingle Vendor
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._Vendor == null))
+                {
+                    this._Vendor = new global::OcerraOdoo.ODataClient.Proxies.VendorSingle(this.Context, GetPath("vendor"));
+                }
+                return this._Vendor;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.VendorSingle _Vendor;
+        /// <summary>
+        /// There are no comments for WorkflowSchema in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchema")]
+        public global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaSingle WorkflowSchema
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._WorkflowSchema == null))
+                {
+                    this._WorkflowSchema = new global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaSingle(this.Context, GetPath("workflowSchema"));
+                }
+                return this._WorkflowSchema;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaSingle _WorkflowSchema;
+    }
+    /// <summary>
+    /// There are no comments for WorkflowSchemaVendor in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// WorkflowSchemaVendorId
+    /// </KeyProperties>
+    [global::Microsoft.OData.Client.Key("workflowSchemaVendorId")]
+    [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowSchemaVendor")]
+    public partial class WorkflowSchemaVendor : global::Microsoft.OData.Client.BaseEntityType
+    {
+        /// <summary>
+        /// Create a new WorkflowSchemaVendor object.
+        /// </summary>
+        /// <param name="workflowSchemaVendorId">Initial value of WorkflowSchemaVendorId.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        public static WorkflowSchemaVendor CreateWorkflowSchemaVendor(global::System.Guid workflowSchemaVendorId)
+        {
+            WorkflowSchemaVendor workflowSchemaVendor = new WorkflowSchemaVendor();
+            workflowSchemaVendor.WorkflowSchemaVendorId = workflowSchemaVendorId;
+            return workflowSchemaVendor;
+        }
+        /// <summary>
+        /// There are no comments for Property WorkflowSchemaVendorId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaVendorId")]
+        public global::System.Guid WorkflowSchemaVendorId
+        {
+            get
+            {
+                return this._WorkflowSchemaVendorId;
+            }
+            set
+            {
+                this.OnWorkflowSchemaVendorIdChanging(value);
+                this._WorkflowSchemaVendorId = value;
+                this.OnWorkflowSchemaVendorIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _WorkflowSchemaVendorId;
+        partial void OnWorkflowSchemaVendorIdChanging(global::System.Guid value);
+        partial void OnWorkflowSchemaVendorIdChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowSchemaId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchemaId")]
+        public global::System.Nullable<global::System.Guid> WorkflowSchemaId
+        {
+            get
+            {
+                return this._WorkflowSchemaId;
+            }
+            set
+            {
+                this.OnWorkflowSchemaIdChanging(value);
+                this._WorkflowSchemaId = value;
+                this.OnWorkflowSchemaIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.Guid> _WorkflowSchemaId;
+        partial void OnWorkflowSchemaIdChanging(global::System.Nullable<global::System.Guid> value);
+        partial void OnWorkflowSchemaIdChanged();
+        /// <summary>
+        /// There are no comments for Property VendorId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendorId")]
+        public global::System.Nullable<global::System.Guid> VendorId
+        {
+            get
+            {
+                return this._VendorId;
+            }
+            set
+            {
+                this.OnVendorIdChanging(value);
+                this._VendorId = value;
+                this.OnVendorIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.Guid> _VendorId;
+        partial void OnVendorIdChanging(global::System.Nullable<global::System.Guid> value);
+        partial void OnVendorIdChanged();
+        /// <summary>
+        /// There are no comments for Property Vendor in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("vendor")]
+        public global::OcerraOdoo.ODataClient.Proxies.Vendor Vendor
+        {
+            get
+            {
+                return this._Vendor;
+            }
+            set
+            {
+                this.OnVendorChanging(value);
+                this._Vendor = value;
+                this.OnVendorChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.Vendor _Vendor;
+        partial void OnVendorChanging(global::OcerraOdoo.ODataClient.Proxies.Vendor value);
+        partial void OnVendorChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowSchema in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowSchema")]
+        public global::OcerraOdoo.ODataClient.Proxies.WorkflowSchema WorkflowSchema
+        {
+            get
+            {
+                return this._WorkflowSchema;
+            }
+            set
+            {
+                this.OnWorkflowSchemaChanging(value);
+                this._WorkflowSchema = value;
+                this.OnWorkflowSchemaChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.WorkflowSchema _WorkflowSchema;
+        partial void OnWorkflowSchemaChanging(global::OcerraOdoo.ODataClient.Proxies.WorkflowSchema value);
+        partial void OnWorkflowSchemaChanged();
+    }
+    /// <summary>
     /// There are no comments for WorkflowStateTypeSingle in the schema.
     /// </summary>
     [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateTypeSingle")]
@@ -20551,6 +21908,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
         private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog> _WorkflowLogs;
+        /// <summary>
+        /// There are no comments for WorkflowTransitionPersons in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionPersons")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> WorkflowTransitionPersons
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._WorkflowTransitionPersons == null))
+                {
+                    this._WorkflowTransitionPersons = Context.CreateQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson>(GetPath("workflowTransitionPersons"));
+                }
+                return this._WorkflowTransitionPersons;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> _WorkflowTransitionPersons;
     }
     /// <summary>
     /// There are no comments for WorkflowTransition in the schema.
@@ -21043,6 +22422,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         private global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog> _WorkflowLogs = new global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog>();
         partial void OnWorkflowLogsChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowLog> value);
         partial void OnWorkflowLogsChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowTransitionPersons in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionPersons")]
+        public global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> WorkflowTransitionPersons
+        {
+            get
+            {
+                return this._WorkflowTransitionPersons;
+            }
+            set
+            {
+                this.OnWorkflowTransitionPersonsChanging(value);
+                this._WorkflowTransitionPersons = value;
+                this.OnWorkflowTransitionPersonsChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> _WorkflowTransitionPersons = new global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson>();
+        partial void OnWorkflowTransitionPersonsChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> value);
+        partial void OnWorkflowTransitionPersonsChanged();
     }
     /// <summary>
     /// There are no comments for WorkflowAutoCodeSingle in the schema.
@@ -21401,6 +22802,207 @@ namespace OcerraOdoo.ODataClient.Proxies
         private global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransition> _WorkflowTransitions = new global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransition>();
         partial void OnWorkflowTransitionsChanging(global::System.Collections.ObjectModel.Collection<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransition> value);
         partial void OnWorkflowTransitionsChanged();
+    }
+    /// <summary>
+    /// There are no comments for WorkflowTransitionPersonSingle in the schema.
+    /// </summary>
+    [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionPersonSingle")]
+    public partial class WorkflowTransitionPersonSingle : global::Microsoft.OData.Client.DataServiceQuerySingle<WorkflowTransitionPerson>
+    {
+        /// <summary>
+        /// Initialize a new WorkflowTransitionPersonSingle object.
+        /// </summary>
+        public WorkflowTransitionPersonSingle(global::Microsoft.OData.Client.DataServiceContext context, string path)
+            : base(context, path) {}
+
+        /// <summary>
+        /// Initialize a new WorkflowTransitionPersonSingle object.
+        /// </summary>
+        public WorkflowTransitionPersonSingle(global::Microsoft.OData.Client.DataServiceContext context, string path, bool isComposable)
+            : base(context, path, isComposable) {}
+
+        /// <summary>
+        /// Initialize a new WorkflowTransitionPersonSingle object.
+        /// </summary>
+        public WorkflowTransitionPersonSingle(global::Microsoft.OData.Client.DataServiceQuerySingle<WorkflowTransitionPerson> query)
+            : base(query) {}
+
+        /// <summary>
+        /// There are no comments for Person in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
+        public global::OcerraOdoo.ODataClient.Proxies.PersonSingle Person
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._Person == null))
+                {
+                    this._Person = new global::OcerraOdoo.ODataClient.Proxies.PersonSingle(this.Context, GetPath("person"));
+                }
+                return this._Person;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.PersonSingle _Person;
+        /// <summary>
+        /// There are no comments for WorkflowTransition in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransition")]
+        public global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionSingle WorkflowTransition
+        {
+            get
+            {
+                if (!this.IsComposable)
+                {
+                    throw new global::System.NotSupportedException("The previous function is not composable.");
+                }
+                if ((this._WorkflowTransition == null))
+                {
+                    this._WorkflowTransition = new global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionSingle(this.Context, GetPath("workflowTransition"));
+                }
+                return this._WorkflowTransition;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionSingle _WorkflowTransition;
+    }
+    /// <summary>
+    /// There are no comments for WorkflowTransitionPerson in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// WorkflowTransitionPersonId
+    /// </KeyProperties>
+    [global::Microsoft.OData.Client.Key("workflowTransitionPersonId")]
+    [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowTransitionPerson")]
+    public partial class WorkflowTransitionPerson : global::Microsoft.OData.Client.BaseEntityType
+    {
+        /// <summary>
+        /// Create a new WorkflowTransitionPerson object.
+        /// </summary>
+        /// <param name="workflowTransitionPersonId">Initial value of WorkflowTransitionPersonId.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        public static WorkflowTransitionPerson CreateWorkflowTransitionPerson(global::System.Guid workflowTransitionPersonId)
+        {
+            WorkflowTransitionPerson workflowTransitionPerson = new WorkflowTransitionPerson();
+            workflowTransitionPerson.WorkflowTransitionPersonId = workflowTransitionPersonId;
+            return workflowTransitionPerson;
+        }
+        /// <summary>
+        /// There are no comments for Property WorkflowTransitionPersonId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionPersonId")]
+        public global::System.Guid WorkflowTransitionPersonId
+        {
+            get
+            {
+                return this._WorkflowTransitionPersonId;
+            }
+            set
+            {
+                this.OnWorkflowTransitionPersonIdChanging(value);
+                this._WorkflowTransitionPersonId = value;
+                this.OnWorkflowTransitionPersonIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Guid _WorkflowTransitionPersonId;
+        partial void OnWorkflowTransitionPersonIdChanging(global::System.Guid value);
+        partial void OnWorkflowTransitionPersonIdChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowTransitionId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransitionId")]
+        public global::System.Nullable<global::System.Guid> WorkflowTransitionId
+        {
+            get
+            {
+                return this._WorkflowTransitionId;
+            }
+            set
+            {
+                this.OnWorkflowTransitionIdChanging(value);
+                this._WorkflowTransitionId = value;
+                this.OnWorkflowTransitionIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.Guid> _WorkflowTransitionId;
+        partial void OnWorkflowTransitionIdChanging(global::System.Nullable<global::System.Guid> value);
+        partial void OnWorkflowTransitionIdChanged();
+        /// <summary>
+        /// There are no comments for Property PersonId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("personId")]
+        public global::System.Nullable<global::System.Guid> PersonId
+        {
+            get
+            {
+                return this._PersonId;
+            }
+            set
+            {
+                this.OnPersonIdChanging(value);
+                this._PersonId = value;
+                this.OnPersonIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.Guid> _PersonId;
+        partial void OnPersonIdChanging(global::System.Nullable<global::System.Guid> value);
+        partial void OnPersonIdChanged();
+        /// <summary>
+        /// There are no comments for Property Person in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("person")]
+        public global::OcerraOdoo.ODataClient.Proxies.Person Person
+        {
+            get
+            {
+                return this._Person;
+            }
+            set
+            {
+                this.OnPersonChanging(value);
+                this._Person = value;
+                this.OnPersonChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.Person _Person;
+        partial void OnPersonChanging(global::OcerraOdoo.ODataClient.Proxies.Person value);
+        partial void OnPersonChanged();
+        /// <summary>
+        /// There are no comments for Property WorkflowTransition in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("workflowTransition")]
+        public global::OcerraOdoo.ODataClient.Proxies.WorkflowTransition WorkflowTransition
+        {
+            get
+            {
+                return this._WorkflowTransition;
+            }
+            set
+            {
+                this.OnWorkflowTransitionChanging(value);
+                this._WorkflowTransition = value;
+                this.OnWorkflowTransitionChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::OcerraOdoo.ODataClient.Proxies.WorkflowTransition _WorkflowTransition;
+        partial void OnWorkflowTransitionChanging(global::OcerraOdoo.ODataClient.Proxies.WorkflowTransition value);
+        partial void OnWorkflowTransitionChanged();
     }
     /// <summary>
     /// There are no comments for VoucherHeaderDetailSingle in the schema.
@@ -26832,6 +28434,29 @@ namespace OcerraOdoo.ODataClient.Proxies
             return new global::OcerraOdoo.ODataClient.Proxies.WorkflowTypeSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
+        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor as global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendorSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="keys">dictionary with the names and values of keys</param>
+        public static global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendorSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        {
+            return new global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendorSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
+        /// <summary>
+        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor as global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendorSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="workflowSchemaVendorId">The value of workflowSchemaVendorId</param>
+        public static global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendorSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendor> source,
+            global::System.Guid workflowSchemaVendorId)
+        {
+            global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
+            {
+                { "workflowSchemaVendorId", workflowSchemaVendorId }
+            };
+            return new global::OcerraOdoo.ODataClient.Proxies.WorkflowSchemaVendorSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
+        /// <summary>
         /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.WorkflowStateType as global::OcerraOdoo.ODataClient.Proxies.WorkflowStateTypeSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
@@ -26945,6 +28570,29 @@ namespace OcerraOdoo.ODataClient.Proxies
                 { "workflowTransitionRoleId", workflowTransitionRoleId }
             };
             return new global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionRoleSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
+        /// <summary>
+        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson as global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPersonSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="keys">dictionary with the names and values of keys</param>
+        public static global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPersonSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        {
+            return new global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPersonSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+        }
+        /// <summary>
+        /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson as global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPersonSingle specified by key from an entity set
+        /// </summary>
+        /// <param name="source">source entity set</param>
+        /// <param name="workflowTransitionPersonId">The value of workflowTransitionPersonId</param>
+        public static global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPersonSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPerson> source,
+            global::System.Guid workflowTransitionPersonId)
+        {
+            global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
+            {
+                { "workflowTransitionPersonId", workflowTransitionPersonId }
+            };
+            return new global::OcerraOdoo.ODataClient.Proxies.WorkflowTransitionPersonSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
         /// Get an entity of type global::OcerraOdoo.ODataClient.Proxies.VoucherHeaderDetail as global::OcerraOdoo.ODataClient.Proxies.VoucherHeaderDetailSingle specified by key from an entity set
@@ -28162,6 +29810,7 @@ namespace OcerraOdoo.ODataClient.Default
         <NavigationProperty Name=""peopleClients"" Type=""Collection(Ocerra.Repository.Entities.PeopleClient)"" />
         <NavigationProperty Name=""settingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
         <NavigationProperty Name=""workflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
+        <NavigationProperty Name=""workflowTransitionPersons"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransitionPerson)"" />
         <NavigationProperty Name=""workflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
       </EntityType>
       <EntityType Name=""AspNetUser"">
@@ -28346,6 +29995,7 @@ namespace OcerraOdoo.ODataClient.Default
         <NavigationProperty Name=""interVendorOtherVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
         <NavigationProperty Name=""interVendorVendors"" Type=""Collection(Ocerra.Repository.Entities.InterVendor)"" />
         <NavigationProperty Name=""settingValues"" Type=""Collection(Ocerra.Repository.Entities.SettingValue)"" />
+        <NavigationProperty Name=""workflowSchemaVendors"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchemaVendor)"" />
         <NavigationProperty Name=""workflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
       </EntityType>
       <ComplexType Name=""AuditInfo"">
@@ -28354,6 +30004,12 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""personName"" Type=""Edm.String"" />
         <Property Name=""lastDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
         <Property Name=""times"" Type=""Edm.Int32"" Nullable=""false"" />
+      </ComplexType>
+      <ComplexType Name=""ClientPeople"">
+        <Property Name=""personId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""fullName"" Type=""Edm.String"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
       </ComplexType>
       <EntityType Name=""Agent"">
         <Key>
@@ -28541,6 +30197,44 @@ namespace OcerraOdoo.ODataClient.Default
         <NavigationProperty Name=""voucherDuplicate"" Type=""Ocerra.Repository.Entities.VoucherDuplicateView"" />
         <NavigationProperty Name=""voucherValidation"" Type=""Ocerra.Repository.Entities.VoucherValidationView"" />
       </EntityType>
+      <ComplexType Name=""ArchivedVoucher"">
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""number"" Type=""Edm.String"" />
+        <Property Name=""purchaseOrderNumber"" Type=""Edm.String"" />
+        <Property Name=""date"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""fcNet"" Type=""Edm.Decimal"" />
+        <Property Name=""fcTax"" Type=""Edm.Decimal"" />
+        <Property Name=""fcGross"" Type=""Edm.Decimal"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""isArchived"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""isActive"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""exportDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""vendorName"" Type=""Edm.String"" />
+        <Property Name=""stateName"" Type=""Edm.String"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+      </ComplexType>
+      <ComplexType Name=""ApprovalVoucher"">
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""documentId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""voucherHeaderId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <Property Name=""voucherNumber"" Type=""Edm.String"" />
+        <Property Name=""vendorName"" Type=""Edm.String"" />
+        <Property Name=""purchaseOrderNumber"" Type=""Edm.String"" />
+        <Property Name=""fcNet"" Type=""Edm.Decimal"" />
+        <Property Name=""fcTax"" Type=""Edm.Decimal"" />
+        <Property Name=""fcGross"" Type=""Edm.Decimal"" />
+        <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""date"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""dueDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""hasTotalMatches"" Type=""Edm.Boolean"" />
+        <Property Name=""hasDuplicates"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""stateName"" Type=""Edm.String"" />
+        <Property Name=""workflowId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowStateId"" Type=""Edm.Guid"" Nullable=""false"" />
+      </ComplexType>
       <EntityType Name=""VoucherLine"">
         <Key>
           <PropertyRef Name=""voucherLineId"" />
@@ -28602,6 +30296,7 @@ namespace OcerraOdoo.ODataClient.Default
         <NavigationProperty Name=""workflowType"" Type=""Ocerra.Repository.Entities.WorkflowType"">
           <ReferentialConstraint Property=""workflowTypeId"" ReferencedProperty=""workflowTypeId"" />
         </NavigationProperty>
+        <NavigationProperty Name=""workflowSchemaVendors"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchemaVendor)"" />
       </EntityType>
       <EntityType Name=""WorkflowState"">
         <Key>
@@ -28663,6 +30358,8 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""createdDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
         <Property Name=""updatedBy"" Type=""Edm.Guid"" Nullable=""false"" />
         <Property Name=""updatedDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""status"" Type=""Edm.String"" />
+        <Property Name=""attributes"" Type=""Edm.String"" />
         <Property Name=""purchaseOrderHeaderValues"" Type=""Collection(Ocerra.Repository.Entities.PurchaseOrderHeaderValue)"" />
         <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
           <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
@@ -28688,6 +30385,8 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""outstandingCost"" Type=""Edm.Decimal"" />
         <Property Name=""externalId"" Type=""Edm.String"" />
         <Property Name=""sequence"" Type=""Edm.Int16"" Nullable=""false"" />
+        <Property Name=""attributes"" Type=""Edm.String"" />
+        <Property Name=""status"" Type=""Edm.String"" />
         <Property Name=""voucherPurchaseOrderLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherPurchaseOrderLine)"" />
         <NavigationProperty Name=""itemCode"" Type=""Ocerra.Repository.Entities.ItemCode"">
           <ReferentialConstraint Property=""itemCodeId"" ReferencedProperty=""itemCodeId"" />
@@ -28792,7 +30491,7 @@ namespace OcerraOdoo.ODataClient.Default
         </Key>
         <Property Name=""codeName"" Type=""Edm.String"" />
         <Property Name=""itemCodeId"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""clientId"" Type=""Edm.Guid"" />
+        <Property Name=""clientId"" Type=""Edm.Guid"" Nullable=""false"" />
         <Property Name=""code"" Type=""Edm.String"" />
         <Property Name=""description"" Type=""Edm.String"" />
         <Property Name=""createdBy"" Type=""Edm.Guid"" Nullable=""false"" />
@@ -29135,6 +30834,20 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""description"" Type=""Edm.String"" />
         <NavigationProperty Name=""workflowSchemas"" Type=""Collection(Ocerra.Repository.Entities.WorkflowSchema)"" />
       </EntityType>
+      <EntityType Name=""WorkflowSchemaVendor"">
+        <Key>
+          <PropertyRef Name=""workflowSchemaVendorId"" />
+        </Key>
+        <Property Name=""workflowSchemaVendorId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowSchemaId"" Type=""Edm.Guid"" />
+        <Property Name=""vendorId"" Type=""Edm.Guid"" />
+        <NavigationProperty Name=""vendor"" Type=""Ocerra.Repository.Entities.Vendor"">
+          <ReferentialConstraint Property=""vendorId"" ReferencedProperty=""vendorId"" />
+        </NavigationProperty>
+        <NavigationProperty Name=""workflowSchema"" Type=""Ocerra.Repository.Entities.WorkflowSchema"">
+          <ReferentialConstraint Property=""workflowSchemaId"" ReferencedProperty=""workflowSchemaId"" />
+        </NavigationProperty>
+      </EntityType>
       <EntityType Name=""WorkflowStateType"">
         <Key>
           <PropertyRef Name=""workflowStateTypeId"" />
@@ -29200,6 +30913,7 @@ namespace OcerraOdoo.ODataClient.Default
           <ReferentialConstraint Property=""workflowTransitionRoleId"" ReferencedProperty=""workflowTransitionRoleId"" />
         </NavigationProperty>
         <NavigationProperty Name=""workflowLogs"" Type=""Collection(Ocerra.Repository.Entities.WorkflowLog)"" />
+        <NavigationProperty Name=""workflowTransitionPersons"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransitionPerson)"" />
       </EntityType>
       <EntityType Name=""WorkflowAutoCode"">
         <Key>
@@ -29220,6 +30934,20 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""name"" Type=""Edm.String"" />
         <Property Name=""description"" Type=""Edm.String"" />
         <NavigationProperty Name=""workflowTransitions"" Type=""Collection(Ocerra.Repository.Entities.WorkflowTransition)"" />
+      </EntityType>
+      <EntityType Name=""WorkflowTransitionPerson"">
+        <Key>
+          <PropertyRef Name=""workflowTransitionPersonId"" />
+        </Key>
+        <Property Name=""workflowTransitionPersonId"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""workflowTransitionId"" Type=""Edm.Guid"" />
+        <Property Name=""personId"" Type=""Edm.Guid"" />
+        <NavigationProperty Name=""person"" Type=""Ocerra.Repository.Entities.Person"">
+          <ReferentialConstraint Property=""personId"" ReferencedProperty=""personId"" />
+        </NavigationProperty>
+        <NavigationProperty Name=""workflowTransition"" Type=""Ocerra.Repository.Entities.WorkflowTransition"">
+          <ReferentialConstraint Property=""workflowTransitionId"" ReferencedProperty=""workflowTransitionId"" />
+        </NavigationProperty>
       </EntityType>
       <EntityType Name=""VoucherHeaderDetail"">
         <Key>
@@ -29524,7 +31252,22 @@ namespace OcerraOdoo.ODataClient.Default
       <Function Name=""AuditInfo"">
         <ReturnType Type=""Collection(Ocerra.Repository.Entities.AuditInfo)"" />
       </Function>
+      <Function Name=""ClientPeople"">
+        <ReturnType Type=""Collection(Ocerra.Repository.Entities.ClientPeople)"" />
+      </Function>
+      <Function Name=""ArchivedVoucher"">
+        <ReturnType Type=""Collection(Ocerra.Repository.Entities.ArchivedVoucher)"" />
+      </Function>
+      <Function Name=""ApprovalVoucher"">
+        <ReturnType Type=""Collection(Ocerra.Repository.Entities.ApprovalVoucher)"" />
+      </Function>
+      <Function Name=""WorkflowStateNames"">
+        <ReturnType Type=""Collection(Ocerra.Repository.Entities.WorkflowState)"" />
+      </Function>
       <Function Name=""OtherTaxAccounts"">
+        <ReturnType Type=""Collection(Ocerra.Repository.Entities.TaxAccount)"" />
+      </Function>
+      <Function Name=""TaxAccountLines"">
         <ReturnType Type=""Collection(Ocerra.Repository.Entities.TaxAccount)"" />
       </Function>
       <Function Name=""VoucherAuditGroup"">
@@ -29668,7 +31411,12 @@ namespace OcerraOdoo.ODataClient.Default
         <FunctionImport Name=""GetSystem"" Function=""Default.GetSystem"" IncludeInServiceDocument=""true"" />
         <FunctionImport Name=""SearchResults"" Function=""Default.SearchResults"" IncludeInServiceDocument=""true"" />
         <FunctionImport Name=""AuditInfo"" Function=""Default.AuditInfo"" IncludeInServiceDocument=""true"" />
+        <FunctionImport Name=""ClientPeople"" Function=""Default.ClientPeople"" IncludeInServiceDocument=""true"" />
+        <FunctionImport Name=""ArchivedVoucher"" Function=""Default.ArchivedVoucher"" IncludeInServiceDocument=""true"" />
+        <FunctionImport Name=""ApprovalVoucher"" Function=""Default.ApprovalVoucher"" IncludeInServiceDocument=""true"" />
+        <FunctionImport Name=""WorkflowStateNames"" Function=""Default.WorkflowStateNames"" IncludeInServiceDocument=""true"" />
         <FunctionImport Name=""OtherTaxAccounts"" Function=""Default.OtherTaxAccounts"" IncludeInServiceDocument=""true"" />
+        <FunctionImport Name=""TaxAccountLines"" Function=""Default.TaxAccountLines"" IncludeInServiceDocument=""true"" />
         <FunctionImport Name=""VoucherAuditGroup"" Function=""Default.VoucherAuditGroup"" IncludeInServiceDocument=""true"" />
       </EntityContainer>
     </Schema>
@@ -29687,6 +31435,7 @@ namespace OcerraOdoo.ODataClient.Default
         <Member Name=""Xero"" Value=""1"" />
         <Member Name=""MyObAccountRight"" Value=""2"" />
         <Member Name=""Acumatica"" Value=""3"" />
+        <Member Name=""Other"" Value=""4"" />
       </EnumType>
     </Schema>
   </edmx:DataServices>
@@ -29770,12 +31519,52 @@ namespace OcerraOdoo.ODataClient.Default
             return this.CreateFunctionQuery<global::OcerraOdoo.ODataClient.Proxies.AuditInfo>("", "AuditInfo", false);
         }
         /// <summary>
+        /// There are no comments for ClientPeople in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ClientPeople")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.ClientPeople> ClientPeople()
+        {
+            return this.CreateFunctionQuery<global::OcerraOdoo.ODataClient.Proxies.ClientPeople>("", "ClientPeople", false);
+        }
+        /// <summary>
+        /// There are no comments for ArchivedVoucher in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ArchivedVoucher")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.ArchivedVoucher> ArchivedVoucher()
+        {
+            return this.CreateFunctionQuery<global::OcerraOdoo.ODataClient.Proxies.ArchivedVoucher>("", "ArchivedVoucher", false);
+        }
+        /// <summary>
+        /// There are no comments for ApprovalVoucher in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ApprovalVoucher")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.ApprovalVoucher> ApprovalVoucher()
+        {
+            return this.CreateFunctionQuery<global::OcerraOdoo.ODataClient.Proxies.ApprovalVoucher>("", "ApprovalVoucher", false);
+        }
+        /// <summary>
+        /// There are no comments for WorkflowStateNames in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkflowStateNames")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowState> WorkflowStateNames()
+        {
+            return this.CreateFunctionQuery<global::OcerraOdoo.ODataClient.Proxies.WorkflowState>("", "WorkflowStateNames", false);
+        }
+        /// <summary>
         /// There are no comments for OtherTaxAccounts in the schema.
         /// </summary>
         [global::Microsoft.OData.Client.OriginalNameAttribute("OtherTaxAccounts")]
         public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.TaxAccount> OtherTaxAccounts()
         {
             return this.CreateFunctionQuery<global::OcerraOdoo.ODataClient.Proxies.TaxAccount>("", "OtherTaxAccounts", false);
+        }
+        /// <summary>
+        /// There are no comments for TaxAccountLines in the schema.
+        /// </summary>
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TaxAccountLines")]
+        public global::Microsoft.OData.Client.DataServiceQuery<global::OcerraOdoo.ODataClient.Proxies.TaxAccount> TaxAccountLines()
+        {
+            return this.CreateFunctionQuery<global::OcerraOdoo.ODataClient.Proxies.TaxAccount>("", "TaxAccountLines", false);
         }
         /// <summary>
         /// There are no comments for VoucherAuditGroup in the schema.
@@ -30448,6 +32237,8 @@ namespace OcerraOdoo.ODataClient.Ocerra.Domain.Enums
         [global::Microsoft.OData.Client.OriginalNameAttribute("MyObAccountRight")]
         MyObAccountRight = 2,
         [global::Microsoft.OData.Client.OriginalNameAttribute("Acumatica")]
-        Acumatica = 3
+        Acumatica = 3,
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Other")]
+        Other = 4
     }
 }

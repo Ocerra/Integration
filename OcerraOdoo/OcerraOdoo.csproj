@@ -37,6 +37,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>packages\AWSSDK.Core.3.3.107.13\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleEmail, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>packages\AWSSDK.SimpleEmail.3.3.101.167\lib\net45\AWSSDK.SimpleEmail.dll</HintPath>
+    </Reference>
     <Reference Include="JsonRpc.CoreCLR.Client, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\JsonRpc.CoreCLR.Client.1.0.1\lib\netstandard1.1\JsonRpc.CoreCLR.Client.dll</HintPath>
     </Reference>
@@ -90,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controllers\NotifyController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Helpers.cs" />
@@ -97,6 +104,7 @@
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\ExportResult.cs" />
     <Compile Include="Models\ImportResult.cs" />
+    <Compile Include="Models\NotifyModel.cs" />
     <Compile Include="Models\SettingsModel.cs" />
     <Compile Include="Models\ListModel.cs" />
     <Compile Include="Models\MainModel.cs" />
@@ -123,8 +131,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmailSender.cs" />
     <Compile Include="Services\ExportService.cs" />
     <Compile Include="Services\ImportService.cs" />
+    <Compile Include="Services\ReminderService.cs" />
     <Compile Include="Services\SchedulerService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +156,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ODataClient.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Reminders.html" />
     <Content Include="Views\Settings.html" />
     <Content Include="Views\List.html" />
     <Content Include="Views\Index.html" />
@@ -153,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\AWSSDK.SimpleEmail.3.3.101.167\analyzers\dotnet\cs\AWSSDK.SimpleEmail.CodeAnalysis.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

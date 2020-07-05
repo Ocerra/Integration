@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace OcerraOdoo.Services
@@ -19,7 +20,7 @@ namespace OcerraOdoo.Services
         private readonly OdooRpcClient odooClient;
         private OdataProxy odata;
         public bool Initialized { get; set; }
-
+        private Regex searchForPo = new Regex(@"PO\d+");
         public ExportService(OcerraClient ocerraClient, OdooRpcClient odooClient, OdataProxy odata)
         {
             this.ocerraClient = ocerraClient;
@@ -58,7 +59,7 @@ namespace OcerraOdoo.Services
                     await ExportInvoicesFromListV8(ocerraInvoices, result);
                 }
                 
-                result.Message = $"Invoices exported successfully: created {result.NewItems}, updated: {result.UpdatedItems}";
+                result.Message = $"Invoices exported successfully: created {result.NewItems}, updated: {result.UpdatedItems}, skipped: {result.SkippedItems}";
 
                 return result;
             }
@@ -100,7 +101,7 @@ namespace OcerraOdoo.Services
                 }
                 
 
-                result.Message = $"Invoices exported successfully: created {result.NewItems}, updated: {result.UpdatedItems}";
+                result.Message = $"Invoices exported successfully: created {result.NewItems}, updated: {result.UpdatedItems}, skipped: {result.SkippedItems}";
 
                 return result;
             }
@@ -421,7 +422,7 @@ namespace OcerraOdoo.Services
                         var odooBillByPoNo = await odooClient.Search<long[]>(new OdooSearchParameters("account.invoice",
                             new OdooDomainFilter()
                                 .Filter("type", "=", "in_invoice")
-                                .Filter("origin", "=", odooPoNumber.Number)
+                                .Filter("origin", "ilike", odooPoNumber.Number)
                                 .Filter("partner_id", "=", odooPoNumber.SupplierId.ToLong(0))
                                 ), new OdooPaginationParameters(0, 5));
                         
@@ -453,7 +454,8 @@ namespace OcerraOdoo.Services
 
                     //Find bill by ExternalId or by Origin and supplier for automatically created invoices.
                     var odooBill = odooBills.FirstOrDefault(b => b.Id == invoice.ExternalId.ToLong(0) || 
-                        (b.Origin?.Value == invoice.PurchaseOrderHeader.Number && b.PartnerId?.Key == invoice.Vendor.ExternalId.ToLong(0)));
+                        ((b.Origin?.Value?.Contains(invoice.PurchaseOrderHeader.Number) ?? false) 
+                            && b.PartnerId?.Key == invoice.Vendor.ExternalId.ToLong(0)));
 
                     /*ar existingBillLines = odooBill != null && odooBill.InvoiceLineIdsV8.Ids != null ? 
                         await odooClient.Get<OdooBillLineV8[]>(new OdooGetParameters("account.invoice.line", odooBill.InvoiceLineIdsV8.Ids), new OdooFieldParameters()) : null;*/
@@ -466,8 +468,9 @@ namespace OcerraOdoo.Services
 
                     ODataClient.Proxies.TaxRate taxRate = null;
                     ODataClient.Proxies.TaxAccount firstTaxAccount = null;
+                    long? currentTaxRateId = null;
 
-                    
+
                     foreach (var voucherLine in invoice.VoucherLines.OrderBy(vl => vl.Sequence))
                     {
 
@@ -475,8 +478,14 @@ namespace OcerraOdoo.Services
 
                         var taxAccount = voucherLine.TaxAccount;
                         taxAccount = taxAccount ?? defaultExpenseAccount;
-                        taxRate = taxRate ?? ocerraTaxRates.FirstOrDefault(ta => ta.TaxRateId == (voucherLine.TaxRateId ?? taxAccount?.TaxRateId));
                         firstTaxAccount = firstTaxAccount ?? taxAccount;
+
+                        taxRate = taxRate ?? ocerraTaxRates.FirstOrDefault(ta => ta.TaxRateId == (voucherLine.TaxRateId ?? taxAccount?.TaxRateId));
+
+                        var lineAttributes = voucherLine.PurchaseOrderLine?.Attributes?.FromJson<OdooPurchaseOrderLineAttributes>();
+                        
+                        var odooTaxRateId = lineAttributes?.TaxId ?? taxRate.ExternalId.ToLong(0);
+                        currentTaxRateId = currentTaxRateId ?? odooTaxRateId;
 
                         //Skip non coded lines
                         if (taxAccount == null && expenseAccountIds == null) continue;
@@ -495,21 +504,23 @@ namespace OcerraOdoo.Services
                             //Id = existingBillLines?.FirstOrDefault(el => el.Sequence == sequence)?.Id ?? 0,
                             ProductId = voucherLine.ItemCode != null ? 
                                 new OdooKeyValue(voucherLine.ItemCode.ExternalId.ToLong(0)) : null,
-                            Name = voucherLine.Description,
+                            Name = voucherLine.PurchaseOrderLine?.Description ?? voucherLine.Description,
                             AccountId = new OdooKeyValue(taxAccount != null ?
                                 taxAccount.ExternalId.ToLong(0) : expenseAccountIds[0]),
                             Quantity = lineQuantity,
                             PriceUnit = Math.Round((decimal)((voucherLine.FcNet ?? 0) / (voucherLine.Quantity ?? 1)), 2),
                             Discount = 0,
-                            //PriceSubtotal = (decimal?)voucherLine.FcNet,
-                            //AmountUntaxed = (decimal?)voucherLine.FcNet,
+                            PriceSubtotal = (decimal?)voucherLine.FcNet,
+                            AmountUntaxed = (decimal?)voucherLine.FcNet,
                             //AmountTotal = (decimal?)voucherLine.FcNet,
                             Sequence = sequence,
-                            TaxLineIdsV8 = invoice.FcTax > 0 ? new List<List<object>> { new List<object> { 6, false, new[] { taxRate.ExternalId.ToLong(0) } } } : null
+                            TaxLineIdsV8 = invoice.FcTax > 0 ? new List<List<object>> { new List<object> { 6, false, new[] { odooTaxRateId } } } : null,
+                            DevisionId = lineAttributes?.DivisionId != null ? new OdooKeyValue(lineAttributes.DivisionId.Value) : null,
+                            BrandId = lineAttributes?.BrandId != null ? new OdooKeyValue(lineAttributes.BrandId.Value) : null,
                         });
                     }
 
-                    //Add other tax
+                    //Add other line
                     if (invoice.FcOther > 0 && (firstTaxAccount != null || expenseAccountIds != null)) 
                     {
                         newBillLines.Add(new OdooBillLineV8
@@ -522,7 +533,7 @@ namespace OcerraOdoo.Services
                             PriceUnit = invoice.FcOther,
                             Discount = 0,
                             Sequence = 9999,
-                            TaxLineIdsV8 = invoice.FcTax > 0 ? new List<List<object>> { new List<object> { 6, false, new[] { taxRate.ExternalId.ToLong(0) } } } : null
+                            TaxLineIdsV8 = invoice.FcTax > 0 ? new List<List<object>> { new List<object> { 6, false, new[] { currentTaxRateId } } } : null
                         });
                     }
 
@@ -534,11 +545,16 @@ namespace OcerraOdoo.Services
                             //Id = odooBill?.TaxLinesV8?.Ids?.FirstOrDefault() ?? 0,
                             Name = "Purchase Tax",
                             AccountId = new OdooKeyValue(taxAccountIds[0]),
-                            Amount = invoice.FcTax,
                             BaseAmount = invoice.FcNet,
-                            TaxAmount = invoice.FcTax
+                            Base = invoice.FcNet,
+                            TaxAmount = invoice.FcTax,
+                            Amount = invoice.FcTax,
+                            FactorBase = 1,
+                            FactorTax = 1
                         });
                     }
+
+                    var invoiceUrl = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}";
 
                     if (odooBill == null)
                     {
@@ -549,10 +565,10 @@ namespace OcerraOdoo.Services
                             DateInvoiceV8 = (invoice.Date ?? invoice.CreatedDate).DateTime,
                             DueDateV8 = (invoice.DueDate ?? invoice.CreatedDate.AddDays(30)).DateTime,
                             InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>() { Objects = newBillLines },
-                            TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = taxLines },
+                            //Calculate Taxes in Odoo
+                            TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = new List<OdooTaxLine>() }, // new OdooArray<OdooTaxLine> { Objects = taxLines },
                             AmountTotalV8 = new OdooDecimal(invoice.FcGross),
-                            //Number = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}", //shorten number
-                            Origin = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}",
+                            Origin = invoice.PurchaseOrderHeader != null ? string.Join(" | ", invoice.PurchaseOrderHeader?.Number, invoiceUrl) : invoiceUrl,
 
                             Name = invoice.Number,
                             PartnerId = new OdooKeyValue(invoice.Vendor.ExternalId.ToLong(0)),
@@ -563,6 +579,7 @@ namespace OcerraOdoo.Services
                             AmountTax = (decimal?)invoice.FcTax ?? 0,
                             AmountTotal = (decimal?)invoice.FcGross ?? 0,
                             AmountResidual = (decimal?)invoice.FcGross ?? 0,
+                            Residual = (decimal?)invoice.FcGross ?? 0,
 
                             AmountUntaxedSigned = (decimal?)invoice.FcNet ?? 0,
                             AmountTaxSigned = (decimal?)invoice.FcTax ?? 0,
@@ -579,19 +596,27 @@ namespace OcerraOdoo.Services
                             InvoiceOrigin = invoice.PurchaseOrderNumber,
                             JournalId = new OdooKeyValue(odooJournalIds.First()),
                             InvoicePaymentState = "not_paid",
-                            
+
                         };
 
                         odooBill.Id = await odooClient.Create("account.invoice", odooBill);
 
-                        var voucherHeader = await ocerraClient.ApiVoucherHeaderByIdGetAsync(invoice.VoucherHeaderId.Value);
-                        voucherHeader.ExternalId = odooBill.Id.ToString();
-                        await ocerraClient.ApiVoucherHeaderByIdPutAsync(voucherHeader.VoucherHeaderId, voucherHeader);
+                        await UpdateExternalId(invoice, odooBill);
+
+                        if (invoice.FcTax > 0)
+                            await odooClient.CreateDynamic<long>("account.invoice", "button_reset_taxes", odooBill.Id);
 
                         result.NewItems++;
                     }
                     else
                     {
+                        //You cannot update Open invoices
+                        if (odooBill.State != "draft") {
+                            result.SkippedItems++;
+                            continue;
+                        }
+
+
                         odooBill.Ref = invoice.Number;
                         odooBill.Date = DateTime.Now.Date;
 
@@ -606,6 +631,8 @@ namespace OcerraOdoo.Services
                         odooBill.AmountTax = (decimal?)invoice.FcTax ?? 0;
                         odooBill.AmountTotal = (decimal?)invoice.FcGross ?? 0;
                         odooBill.AmountResidual = (decimal?)invoice.FcGross ?? 0;
+                        odooBill.Residual = (decimal?)invoice.FcGross ?? 0;
+                        
 
                         odooBill.AmountUntaxedSigned = (decimal?)invoice.FcNet ?? 0;
                         odooBill.AmountTaxSigned = (decimal?)invoice.FcTax ?? 0;
@@ -631,21 +658,56 @@ namespace OcerraOdoo.Services
                         odooBill.DateInvoiceV8 = (invoice.Date ?? invoice.CreatedDate).DateTime;
                         odooBill.DueDateV8 = (invoice.DueDate ?? invoice.CreatedDate.AddDays(30)).DateTime;
                         odooBill.InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>() { Objects = newBillLines };
-                        odooBill.TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = taxLines };
+                        
+                        //calculate taxes in Odoo
+                        odooBill.TaxLinesV8 = new OdooArray<OdooTaxLine> { Objects = new List<OdooTaxLine>() }; // new OdooArray<OdooTaxLine> { Objects = taxLines }; - calculate taxes in Odoo
+
                         odooBill.AmountTotalV8 = new OdooDecimal(invoice.FcGross);
+                        odooBill.AmountTotal = new OdooDecimal(invoice.FcGross);
+
                         //odooBill.Origin = $"https://app.ocerra.com/#/details/vouchers/(document:{invoice.DocumentId})";
                         //odooBill.Number = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}"; //shorten number
-                        odooBill.Origin = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}"; //shorten number
 
+                        //var purchaseNumber = odooBill.Origin?.Value != null ? searchForPo.Match(odooBill.Origin.Value) : null;
+                        //var url = $"https://app.ocerra.com/#/v/{invoice.DocumentId.Value.ToString("N")}";
+
+                        odooBill.Origin = invoice.PurchaseOrderHeader != null ? string.Join(" | ", invoice.PurchaseOrderHeader?.Number, invoiceUrl) : invoiceUrl;
 
                         //Create new lines
                         //odooBill.InvoiceLineIdsV8 = new OdooArray<OdooBillLineV8>() { Objects = newBillLines };
                         await odooClient.Update("account.invoice", odooBill.Id, odooBill);
 
+                        if(invoice.ExternalId != odooBill.Id.ToString())
+                            await UpdateExternalId(invoice, odooBill);
+
+                        if (invoice.FcTax > 0)
+                            await odooClient.CreateDynamic<long>("account.invoice", "button_reset_taxes", odooBill.Id);
+
                         result.UpdatedItems++;
                     }
                 }
             }
+        }
+
+        private async Task UpdateExternalId(ODataClient.Proxies.VoucherHeader invoice, OdooBill odooBill)
+        {
+            var voucherHeader = await ocerraClient.ApiVoucherHeaderByIdGetAsync(invoice.VoucherHeaderId.Value);
+            voucherHeader.ExternalId = odooBill.Id.ToString();
+
+            //Trim edges, this is an issue on Ocerra side
+            voucherHeader.CurrencyCode = null;
+            voucherHeader.PurchaseOrderHeader = null;
+
+            if (voucherHeader.VoucherLines.HasItems())
+                foreach (var voucherLine in voucherHeader.VoucherLines)
+                {
+                    voucherLine.TaxRate = null;
+                    voucherLine.TaxAccount = null;
+                    voucherLine.ItemCode = null;
+                    voucherLine.PurchaseOrderLine = null;
+                }
+
+            await ocerraClient.ApiVoucherHeaderByIdPutAsync(voucherHeader.VoucherHeaderId, voucherHeader);
         }
     }
 }

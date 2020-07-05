@@ -103,8 +103,9 @@ namespace OcerraOdoo.Models
         [JsonConverter(typeof(NullableArrayJsonConverter))]
         public string[] Currency_Id { get; set; }
 
-        [JsonConverter(typeof(NullableArrayJsonConverter))]
-        public string[] User_Id { get; set; }
+
+        [JsonProperty("user_id")]
+        public OdooKeyValue User_Id { get; set; }
 
         [JsonConverter(typeof(NullableStringJsonConverter))]
         public string State { get; set; }
@@ -121,6 +122,14 @@ namespace OcerraOdoo.Models
         public double? Amount_Untaxed{ get; set; }
         public double? Amount_Tax { get; set; }
         public double? Amount_Total { get; set; }
+        
+        [JsonConverter(typeof(NullableArrayJsonConverter))]
+        public string[] invoice_ids { get; set; }
+
+        [JsonProperty("validator")]
+        public OdooKeyValue Validator { get; set; }
+
+        public List<long> Message_Ids { get; set; }
     }
 
 
@@ -162,6 +171,37 @@ namespace OcerraOdoo.Models
         [JsonProperty("product_id")]
         public OdooKeyValue ProductId { get; set; }
 
+        //?
+        [JsonProperty("attribute1")]
+        public OdooKeyValue Attribute1 { get; set; }
+
+        //Brand
+        [JsonProperty("attribute2")]
+        public OdooKeyValue Attribute2 { get; set; }
+
+        //Division?
+        [JsonProperty("attribute3")]
+        public OdooKeyValue Attribute3 { get; set; }
+
+        [JsonProperty("taxes_id")]
+        public OdooKeyValue Taxes {get; set;}
+    }
+
+    public class OdooPurchaseOrderDetails {
+        public long DraftInvoiceId { get; set; }
+        public string Reference { get; set; }
+    }
+
+    public class OdooPurchaseOrderLineAttributes
+    {
+        public long? DivisionId { get; set; }
+        public string DivisionCode { get; set; }
+        
+        public long? BrandId { get; set; }
+        public string BrandCode { get; set; }
+
+        public long? TaxId { get; set; }
+        public string TaxCode { get; set; }
     }
 
     public class OdooBill
@@ -243,6 +283,10 @@ namespace OcerraOdoo.Models
         public OdooDecimal AmountTotal { get; set; }
         [JsonProperty("amount_residual")]
         public OdooDecimal AmountResidual { get; set; }
+        
+        [JsonProperty("residual")]
+        public OdooDecimal Residual { get; set; }
+
         [JsonProperty("amount_untaxed_signed")]
         public OdooDecimal AmountUntaxedSigned { get; set; }
         [JsonProperty("amount_tax_signed")]
@@ -261,6 +305,7 @@ namespace OcerraOdoo.Models
         public OdooString InvoiceOrigin { get; set; }
         [JsonProperty("auto_post")]
         public bool AutoPost { get; set; }
+
     }
 
     public class OdooBillLineTax : IOdooLine
@@ -296,6 +341,12 @@ namespace OcerraOdoo.Models
         public OdooDecimal AmountTotal { get; set; }
         [JsonProperty("amount_untaxed")]
         public OdooDecimal AmountUntaxed { get; set; }
+
+        [JsonProperty("attribute1")]
+        public OdooKeyValue DevisionId { get; set; }
+
+        [JsonProperty("attribute2")]
+        public OdooKeyValue BrandId { get; set; }
 
     }
     public class OdooBillLine : IOdooLine
@@ -377,6 +428,18 @@ namespace OcerraOdoo.Models
 
     public class OdooTaxLine : IOdooLine
     {
+        /*
+        account_analytic_id: false
+        account_id: [1721, "21325 GST Paid"]
+        amount: 1.04
+        base: 6.96
+        base_amount: 6.96
+        factor_base: 1
+        factor_tax: 1
+        id: 359155
+        name: "Standard Rate Purchases (15.0%)"
+        tax_amount: 1.04 */
+
         [JsonProperty("id")]
         public long Id { get; set; }
 
@@ -389,11 +452,24 @@ namespace OcerraOdoo.Models
         [JsonProperty("amount")]
         public OdooDecimal Amount { get; set; }
 
+        [JsonProperty("tax_amount")]
+        public OdooDecimal TaxAmount { get; set; }
+
+        [JsonProperty("base")]
+        public OdooDecimal Base { get; set; }
+
         [JsonProperty("base_amount")]
         public OdooDecimal BaseAmount { get; set; }
 
-        [JsonProperty("tax_amount")]
-        public OdooDecimal TaxAmount { get; set; }
+        [JsonProperty("factor_base")]
+        public OdooDecimal FactorBase { get; set; }
+
+        [JsonProperty("factor_tax")]
+        public OdooDecimal FactorTax { get; set; }
+
+        
+
+
         
     }
 
@@ -430,6 +506,33 @@ namespace OcerraOdoo.Models
 
         [JsonProperty("categ_id")]
         public OdooKeyValue ProductCategory { get; set; }
+
+        [JsonProperty("type")]
+        public string Type { get; set; }
+
+    }
+
+    public class OdooUser {
+        public long Id { get; set; }
+
+        public string login { get; set; }
+    }
+
+    public class OdooMessage {
+        public long Id { get; set; }
+
+        public string Subject { get; set; }
+
+        public string Body { get; set; }
+
+        public OdooKeyValue Author_Id { get; set; }
+
+        public string Email_From { get; set; }
+
+        public string Reply_To { get; set; }
+
+        [JsonProperty("date")]
+        public OdooDate Date { get; set; }
 
     }
 }
