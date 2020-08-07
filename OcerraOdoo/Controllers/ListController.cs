@@ -24,6 +24,10 @@ namespace OcerraOdoo.Controllers
 
                 string search = Request.Query.search;
                 string exportState = Request.Query.exportState;
+                string state = Request.Query.state;
+                string odooState = Request.Query.odooState;
+                string poState = Request.Query.poState;
+                string poMatches = Request.Query.poMatches;
 
                 var workflowStates = odata.WorkflowState.ToList();
 
@@ -35,11 +39,26 @@ namespace OcerraOdoo.Controllers
                 if (!string.IsNullOrEmpty(search))
                     query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Number.Contains(search) || vh.Vendor.Name.Contains(search));
 
-                if (exportState == "True")
+                if (exportState == "Yes")
                     query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.ExternalId != null);
 
-                if (exportState == "False")
+                if (exportState == "No")
                     query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.ExternalId == null);
+
+                if (poMatches == "Yes")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.VoucherValidation.HasPoMatches == "Success");
+
+                if (poMatches == "No")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.VoucherValidation.HasPoMatches == "Fail" || vh.VoucherValidation.HasPoMatches == "Missing");
+
+                if (IsDefined(state))
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Workflow.WorkflowState.Name == state);
+
+                if (IsDefined(odooState))
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Extra2 == odooState);
+
+                if (IsDefined(poState))
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.PurchaseOrderHeader.Status == poState);
 
 
                 query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.OrderByDescending(vh => vh.CreatedDate).Skip((page - 1) * 20).Take(20);
@@ -57,21 +76,23 @@ namespace OcerraOdoo.Controllers
                     DueDate = vh.DueDate != null ? vh.DueDate.Value.ToString("dd-MMM-yy") : "",
                     Amount = vh.FcGross != null ? vh.FcGross.Value.ToString("C") : "$0.00",
                     Exported = vh.ExternalId != null ? "Yes" : "",
-                    CanExport = vh.Vendor != null && vh.FcGross != null && vh.FcNet != null 
+                    CanExport = vh.Vendor != null && vh.FcGross != null && vh.FcNet != null
                         && vh.VoucherValidation.HasTotalMatches != "Fail" ? "" : "disabled='disabled'",
                     CanExportMessage =
                         vh.Vendor == null ? "You cannot export Invoice without vendor" :
                         vh.FcGross == null ? "You cannot export Invoice without amount" :
                         vh.VoucherValidation.HasTotalMatches == "Fail" ? "You cannot export Invoice without matching amounts" :
                         null,
-                    PoMatches = 
+                    PoMatches =
                         vh.VoucherValidation.HasPoMatches == "Ignore" ? "" :
-                        vh.VoucherValidation.HasPoMatches == "Success" ? "Yes" 
+                        vh.VoucherValidation.HasPoMatches == "Success" ? "Yes"
                             : "<b class='red'>No</b>",
                     TotalMatches =
                         vh.VoucherValidation.HasTotalMatches == "Ignore" ? "" :
                         vh.VoucherValidation.HasTotalMatches == "Success" ? "Yes"
                             : "<b class='red'>No</b>",
+                    Paid = vh.IsPaid ? "Yes" : "",
+                    OdooLink = vh.Extra1 != null ? $"<a href='https://erp.ohl.co.nz/web#id={vh.Extra1}&view_type=form&model=account.invoice&action=242' target='_blank'>{vh.Extra2}</a>" : ""
                     //PurchaseOrder = vh.VoucherPurchaseOrders.FirstOrDefault()?.PurchaseOrderHeader?.Number 
                 }).ToList();
 
@@ -80,7 +101,29 @@ namespace OcerraOdoo.Controllers
                 Model.Page = page;
                 Model.Count = totalCount;
                 Model.SearchStr = !string.IsNullOrEmpty(search) ? search.Replace("\"", "\\\"") : null;
-                Model.ExportState = exportState;
+                
+                Model.ExportStates = PickerModel.YesNo;
+                if (IsDefined(exportState))
+                    Model.ExportStates.Find(s => s.Value == exportState).Selected = "selected";
+
+                Model.PoMatches = PickerModel.YesNo;
+                if (IsDefined(poMatches))
+                    Model.PoMatches.Find(s => s.Value == poMatches).Selected = "selected";
+
+                Model.States = PickerModel.States;
+
+                if (IsDefined(state))
+                    Model.States.Find(s => s.Value == state).Selected = "selected";
+
+                Model.PoStates = PickerModel.PoStates;
+
+                if (IsDefined(poState))
+                    Model.PoStates.Find(s => s.Value == poState).Selected = "selected";
+
+                Model.OdooStates = PickerModel.OdooStates;
+
+                if (IsDefined(odooState))
+                    Model.OdooStates.Find(s => s.Value == odooState).Selected = "selected";
 
                 return View["List.html", Model];
             });
@@ -102,6 +145,11 @@ namespace OcerraOdoo.Controllers
                 }
                 
             });
+        }
+
+        private bool IsDefined(string value)
+        {
+            return !string.IsNullOrEmpty(value) && value != "null" && value != "undefined";
         }
 
         public override ListModel Init()

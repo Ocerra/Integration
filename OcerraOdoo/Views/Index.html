@@ -72,11 +72,47 @@
         });
     }
 
+    function syncJobPurchaseOrders() {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/SyncJobPurchaseOrders",
+            data: {},
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
     function syncProducts() {
         $(".btn").attr('disabled', true);
         $.ajax({
             method: "POST",
             url: window.location.pathname + "/SyncProducts",
+            data: {},
+            success: function (result) {
+                $(".btn").attr('disabled', null);
+                alert(result.message);
+            },
+            error: function (er) {
+                $(".btn").attr('disabled', null);
+                console.log(er)
+                alert("There was an error on import, check console for more details.");
+            }
+        });
+    }
+
+    function syncPayments() {
+        $(".btn").attr('disabled', true);
+        $.ajax({
+            method: "POST",
+            url: window.location.pathname + "/SyncPayments",
             data: {},
             success: function (result) {
                 $(".btn").attr('disabled', null);
@@ -150,6 +186,18 @@
     <div class="col-xs-2"><button class="btn" onclick="syncPurchaseOrders()">Sync</button></div>
     <div class="col-xs-3"><input id="LastPurchaseSyncDate" type="datetime-local" title="Last sync date" class="form-control" value='@Model.LastPurchaseSyncDate' /></div>
     <div class="col-xs-2"><button class="btn" onclick="updateTime('LastPurchaseSyncDate')">Update</button></div>
+</div>
+<div class="row mb-15">
+    <div class="col-xs-3">Sync Job Purchase Orders:</div>
+    <div class="col-xs-2"><button class="btn" onclick="syncJobPurchaseOrders()">Sync</button></div>
+    <div class="col-xs-3"><input id="LastJobPurchaseSyncDate" type="datetime-local" title="Last sync date" class="form-control" value='@Model.LastJobPurchaseSyncDate' /></div>
+    <div class="col-xs-2"><button class="btn" onclick="updateTime('LastJobPurchaseSyncDate')">Update</button></div>
+</div>
+<div class="row mb-15">
+    <div class="col-xs-3">Sync Payments:</div>
+    <div class="col-xs-2"><button class="btn" onclick="syncPayments()">Sync</button></div>
+    <div class="col-xs-3"><input id="LastPaymentSyncDate" type="datetime-local" title="Last sync date" class="form-control" value='@Model.LastPaymentSyncDate' /></div>
+    <div class="col-xs-2"><button class="btn" onclick="updateTime('LastPaymentSyncDate')">Update</button></div>
 </div>
 <h3>Export from Ocerra to Odoo</h3>
 <p>Trigger export functions manually.</p>

@@ -19,7 +19,13 @@ namespace OcerraOdoo.Models
         public int NextPage => Page > 1 ? Page + 1 : 2;
 
         public string SearchStr { get; set; }
-        public string ExportState { get; set; }
+
+        public List<PickerModel> PoMatches { get; set; }
+        public List<PickerModel> ExportStates { get; set; }
+        public List<PickerModel> States { get; set; }
+        public List<PickerModel> PoStates { get; set; }
+
+        public List<PickerModel> OdooStates { get; set; }
     }
 
     public class InvoiceModel 
@@ -44,5 +50,9 @@ namespace OcerraOdoo.Models
         public string CanExportMessage { get; set; }
 
         public string PurchaseOrder { get; set; }
+
+        public string Paid { get; set; }
+
+        public string OdooLink { get; set; }
     }
 }

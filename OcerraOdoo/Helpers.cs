@@ -20,7 +20,7 @@ namespace OcerraOdoo
         public static string Trim(this string value, int length)
         {
             if (value != null && value.Length > length)
-                return value.Substring(0, length);
+                value = value.Substring(0, length);
 
             if (value != null) {
                 value = value.Replace("\r\n", " ");
@@ -79,7 +79,18 @@ namespace OcerraOdoo
                     EventLogEntryType.Error,
                     1000);
 
-            File.AppendAllText("LogError.txt", textMessage);
+            File.AppendAllText(@"C:\Temp\OcerraOdooLogError.txt", textMessage);
+        }
+
+        public static void LogInfo(string message)
+        {
+            Console.WriteLine(message);
+            
+            EventLog.WriteEntry(
+                    ".NET Runtime",
+                    message,
+                    EventLogEntryType.Information,
+                    1000);
         }
 
         public static bool IsNullOrEmpty<T>(this IEnumerable<T> value)
@@ -435,10 +446,13 @@ namespace OcerraOdoo
             OdooPurchasesJournal = Settings.Default.OdooPurchasesJournal;
             ExportStatuses = Settings.Default.ExportStatuses;
             OdooInvoiceState = Settings.Default.OdooInvoiceState;
+            LastPaymentSyncDate = DateTime.Now.AddDays(-3).ToString(); //Default payment sync date
         }
 
         public string LastVendorSyncDate { get; set; }
         public string LastPurchaseSyncDate { get; set; }
+        public string LastPaymentSyncDate { get; set; }
+        public string LastJobPurchaseSyncDate { get; set; }
         public string LastInvoiceSyncDate { get; set; }
         public string LastProductSyncDate { get; set; }
         public string OdooExpenseAccount { get; set; }

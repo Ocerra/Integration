@@ -97,15 +97,17 @@ namespace OcerraOdoo
                 container.Register<OdataProxy>();
 
                 var initTask = Task.Run(async () => {
-                    Scheduler = new SchedulerService();
-                    //await Scheduler.Init(); -- start scheduler here
                     await InitModels(container);
+                    Scheduler = new SchedulerService();
+                    await Scheduler.Init(); // start scheduler here
                 });
 
                 initTask.Wait(TimeSpan.FromSeconds(15));
 
                 if (!initTask.IsCompleted)
                     throw new Exception("Init task has not been complete");
+
+                Bootstrapper.Container = container;
             }
             catch (Exception ex) {
                 ex.LogError("There was an error in App Startup function");
@@ -123,12 +125,12 @@ namespace OcerraOdoo
                 OcerraModel = new OcerraModel
                 {
                     ClientId = connectToOcerra.ClientId,
-                    ClientName = connectToOcerra.Name,
+                    ClientName = connectToOcerra.Name + " " + Settings.Default.OcerraUrl,
                     CountryCode = connectToOcerra.CurrencyCodes?.FirstOrDefault(cc => cc.IsDefault)?.CountryCode,
                     CurrencyCode = connectToOcerra.CurrencyCodes?.FirstOrDefault(cc => cc.IsDefault)?.Code,
                     CurrencyCodes = connectToOcerra.CurrencyCodes?.ToList(),
                     Connected = true,
-                    LastHeartBeat = Settings.Default.OcerraLastHeartBeat.ToDate(new DateTime(2020, 1, 1)),
+                    LastHeartBeat = Helpers.AppSetting().LastPurchaseSyncDate,
                 };
 
                 OdooModel = new OdooModel

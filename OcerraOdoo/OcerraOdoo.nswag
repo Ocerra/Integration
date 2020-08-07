@@ -1,10 +1,11 @@
-﻿{
-  "runtime": "WinX64",
+{
+  "runtime": "Default",
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
       "url": "http://localhost:9999/swagger/v2/swagger.json",
-      "output": null
+      "output": null,
+      "newLineBehavior": "Auto"
     }
   },
   "codeGenerators": {
@@ -13,6 +14,7 @@
       "configurationClass": null,
       "generateClientClasses": true,
       "generateClientInterfaces": false,
+      "clientBaseInterface": null,
       "injectHttpClient": true,
       "disposeHttpClient": true,
       "protectedMethods": [],
@@ -81,13 +83,15 @@
       "inlineNamedAny": false,
       "generateDtoTypes": true,
       "generateOptionalPropertiesAsNullable": false,
+      "generateNullableReferenceTypes": false,
       "templateDirectory": null,
       "typeNameGeneratorType": null,
       "propertyNameGeneratorType": null,
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "OcerraClient.cs"
+      "output": "OcerraClient.cs",
+      "newLineBehavior": "Auto"
     }
   }
 }

@@ -22,7 +22,10 @@ namespace OcerraOdoo.Controllers
                 page = page < 1 ? 1 : page;
 
                 string search = Request.Query.search;
-                string canNotify = Request.Query.canNotify;
+                string exportState = Request.Query.exportState;
+                string state = Request.Query.state;
+                string poState = Request.Query.poState;
+                string poMatches = Request.Query.poMatches;
 
                 var query = odata.VoucherHeader
                     .Expand("vendor,workflow($expand=workflowState),voucherValidation,purchaseOrderHeader");
@@ -31,20 +34,27 @@ namespace OcerraOdoo.Controllers
                 query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)
                     query.Where(vh => vh.IsActive && !vh.IsArchived && vh.PurchaseOrderHeaderId != null);
 
-                if (!string.IsNullOrEmpty(search))
+                if (IsDefined(search))
                     query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Number.Contains(search) || vh.Vendor.Name.Contains(search));
 
-                if (!string.IsNullOrEmpty(canNotify)) {
-                    var canNotifyBool = canNotify == "True";
-                    if (canNotifyBool) {
-                        query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.PurchaseOrderHeader != null && vh.PurchaseOrderHeader.Status != "Done");
-                    } 
-                    else
-                    {
-                        query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.PurchaseOrderHeader != null && vh.PurchaseOrderHeader.Status == "Done");
-                    }
-                }
-                
+                if (exportState == "Yes")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.ExternalId != null);
+
+                if (exportState == "No")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.ExternalId == null);
+
+                if (poMatches == "Yes")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.VoucherValidation.HasPoMatches == "Success");
+
+                if (poMatches == "No")
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.VoucherValidation.HasPoMatches == "Fail" || vh.VoucherValidation.HasPoMatches == "Missing");
+
+                if (IsDefined(state))
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Workflow.WorkflowState.Name == state);
+
+                if (IsDefined(poState))
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.PurchaseOrderHeader.Status == poState);
+
                 query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.OrderByDescending(vh => vh.CreatedDate).Skip((page - 1) * 20).Take(20);
 
                 Model.Reminders = query
@@ -56,15 +66,17 @@ namespace OcerraOdoo.Controllers
                     Vendor = vh.Vendor != null ? vh.Vendor.Name : "Unknown",
                     Number = vh.Number,
                     Date = (vh.Date ?? vh.CreatedDate).ToString("dd-MMM-yy"),
+                    State = vh.Workflow.WorkflowState.Name,
                     PONumber = vh.PurchaseOrderHeader?.Number ?? "Unknown",
                     POOriginator = vh.PurchaseOrderHeader?.PurchaserName,
                     POOriginatorEmail = vh.PurchaseOrderHeader?.PurchaserEmail,
                     POStatus = vh.PurchaseOrderHeader?.Status,
-                    CanNotify = vh.PurchaseOrderHeader != null && vh.PurchaseOrderHeader?.Status != "Done" ? "" : "disabled='disabled'",
+                    ExternalId = vh.PurchaseOrderHeader.ExternalId,
+                    CanNotify = vh.PurchaseOrderHeader != null ? "" : "disabled='disabled'",
                     CanNotifyMessage =
-                        vh.PurchaseOrderHeader == null ? "You cannot notify without Purchase Order" :
-                        vh.PurchaseOrderHeader?.Status == "Done" ? "This purchase order has already been done" :
+                        vh.PurchaseOrderHeader == null ? "You cannot notify without the Purchase Order" :
                         null,
+                    Total = vh.FcGross?.ToString("C") ?? "$0.00"
                 }).ToList();
 
                 var totalCount = query.Count();
@@ -72,7 +84,23 @@ namespace OcerraOdoo.Controllers
                 Model.Page = page;
                 Model.Count = totalCount;
                 Model.SearchStr = !string.IsNullOrEmpty(search) ? search.Replace("\"", "\\\"") : null;
-                
+
+                Model.ExportStates = PickerModel.YesNo;
+                if (IsDefined(exportState))
+                    Model.ExportStates.Find(s => s.Value == exportState).Selected = "selected";
+
+                Model.PoMatches = PickerModel.YesNo;
+                if (IsDefined(poMatches))
+                    Model.PoMatches.Find(s => s.Value == poMatches).Selected = "selected";
+
+                Model.States = PickerModel.States;
+                if (IsDefined(state))
+                    Model.States.Find(s => s.Value == state).Selected = "selected";
+
+                Model.PoStates = PickerModel.PoStates;
+                if (IsDefined(poState))
+                    Model.PoStates.Find(s => s.Value == poState).Selected = "selected";
+
                 return View["Reminders.html", Model];
             });
 
@@ -85,7 +113,7 @@ namespace OcerraOdoo.Controllers
 
                     var result = await reminderService.RemindPurchasersByIds(voucherHeaderIds);
 
-                    return Response.AsJson(new { message = $"Remint notification was sumitted: " + result + " times."});
+                    return Response.AsJson(new { message = $"The notification was submitted: " + result + " times."});
                 }
                 else
                 {
@@ -97,6 +125,9 @@ namespace OcerraOdoo.Controllers
             this.reminderService = reminderService;
         }
 
+        private bool IsDefined(string value) {
+            return !string.IsNullOrEmpty(value) && value != "null" && value != "undefined";
+        }
 
 
         public override NotifyModel Init()

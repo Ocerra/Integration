@@ -25,31 +25,69 @@
                 }
             });
         } else {
-            alert("You have not selected invoices for Export");
+            alert("You have not selected POs for Remind");
         }
     }
 
-    function searchInvoice() {
-        window.location = "?search=" + encodeURI($("#searchBox").val()) + "&canNotify=" + $("#canNotify").val();
-    }
+    function searchInvoice(pageNo) {
+        var searchStr = "?search=" + encodeURI($("#searchBox").val()) +
+            "&exportState=" + $("#cmbExported").val() +
+            "&state=" + $("#cmbState").val() +
+            "&poState=" + $("#cmbPoState").val() +
+            "&poMatches=" + $("#cmbPoMatches").val();
 
+        if (pageNo)
+            searchStr += "&page=" + pageNo;
+
+        window.location = searchStr;
+    }
+    
     $(document).ready(function () {
-        $("#canNotify").val($("#canNotifyVal").val());
+        
     });
 </script>
 <h3>Send Reminder to Purchaser</h3>
-<div class="form-group row">
-    <div class="col-xs-3">
+<div class="form-group row" style="zoom:80%;">
+    <div class="col-xs-2">
         <input id="searchBox" type="text" class="form-control" placeholder="Search by invoice number or vendor name" value="@Model.SearchStr">
     </div>
     <div class="col-xs-2">
-        <label for="canNotify" class="col-xs-5 form-label">Can Notify</label>
-        <input type="hidden" id="canNotifyVal" value="@Model.CanNotify" />
+        <label for="cmbExported" class="col-xs-4 form-label">Exported:</label>
+        <div class="col-xs-8">
+            <select id="cmbExported" class="form-control">
+                @Each.ExportStates
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <label for="cmbState" class="col-xs-3 form-label">State:</label>
+        <div class="col-xs-9">
+            <select id="cmbState" class="form-control">
+                @Each.States
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <label for="cmbPoState" class="col-xs-2 form-label">PO:</label>
+        <div class="col-xs-10">
+            <select id="cmbPoState" class="form-control">
+                @Each.PoStates
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <label for="cmbPoMatches" class="col-xs-5 form-label">PO Matches:</label>
         <div class="col-xs-7">
-            <select id="canNotify" class="form-control">
-                <option></option>
-                <option value="True">Yes</option>
-                <option value="False">No</option>
+            <select id="cmbPoMatches" class="form-control">
+                @Each.PoMatches
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
             </select>
         </div>
     </div>
@@ -66,6 +104,8 @@
             <th scope="col">Number</th>
             <th scope="col">Supplier</th>
             <th scope="col">Date</th>
+            <th scope="col">Amount</th>
+            <th scope="col">State</th>
             <th scope="col">PO Number</th>
             <th scope="col">PO Status</th>
             <th scope="col">Purchaser</th>
@@ -77,13 +117,19 @@
         @Each.Reminders
         <tr>
             <th scope="row">
-                <a href="https://app.ocerra.com/#/details/vouchers/(document:@Current.DocumentId)">
+                <a href="https://app.ocerra.com/#/details/vouchers/(document:@Current.DocumentId)" target="_blank">
                     @Current.Number
                 </a>
             </th>
             <td>@Current.Vendor</td>
             <td>@Current.Date</td>
-            <td>@Current.PONumber</td>
+            <td>@Current.Total</td>
+            <td>@Current.State</td>
+            <td>
+                <a href="https://erp.ohl.co.nz/web#id=@Current.ExternalId&view_type=form&model=purchase.order&menu_id=1564&action=870" target="_blank">
+                    @Current.PONumber
+                </a>
+            </td>
             <td>@Current.POStatus</td>
             <td>@Current.POOriginator</td>
             <td>@Current.POOriginatorEmail</td>
@@ -98,9 +144,9 @@
 <div class="row">
     <div class="col-xs-8">
         <ul class="pagination">
-            <li><a class="page-link" href="?page=@Model.PrevPage">Previous</a></li>
+            <li><a class="page-link" href="javascript:searchInvoice(@Model.PrevPage)">Previous</a></li>
             <li class="disabled"><a class="page-link">Total Items: @Model.Count</a></li>
-            <li><a class="page-link" href="?page=@Model.NextPage">Next</a></li>
+            <li><a class="page-link" href="javascript:searchInvoice(@Model.NextPage)">Next</a></li>
         </ul>
     </div>
     <div class="col-xs-4">

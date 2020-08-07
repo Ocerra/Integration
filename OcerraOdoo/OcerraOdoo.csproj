@@ -43,6 +43,9 @@
     <Reference Include="AWSSDK.SimpleEmail, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <HintPath>packages\AWSSDK.SimpleEmail.3.3.101.167\lib\net45\AWSSDK.SimpleEmail.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="JsonRpc.CoreCLR.Client, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\JsonRpc.CoreCLR.Client.1.0.1\lib\netstandard1.1\JsonRpc.CoreCLR.Client.dll</HintPath>
     </Reference>
@@ -57,6 +60,9 @@
     </Reference>
     <Reference Include="Microsoft.Spatial, Version=7.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Spatial.7.6.4\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.9.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>packages\MimeKit.2.9.1\lib\net46\MimeKit.dll</HintPath>
     </Reference>
     <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Nancy.2.0.0\lib\net452\Nancy.dll</HintPath>
@@ -85,6 +91,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -112,6 +119,7 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="OcerraClient.cs" />
+    <Compile Include="OcerraClientPartial.cs" />
     <Compile Include="OcerraOData\ODataClient.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

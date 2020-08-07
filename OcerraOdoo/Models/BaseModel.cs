@@ -18,7 +18,7 @@ namespace OcerraOdoo.Models
         public Guid ClientId { get; set; }
         public bool Connected { get; set; }
         public string ClientName { get; set; }
-        public DateTime LastHeartBeat { get; set; }
+        public string LastHeartBeat { get; set; }
 
         public string CountryCode { get; set; }
         public string CurrencyCode { get; set; }

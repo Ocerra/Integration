@@ -73,6 +73,8 @@ namespace OcerraOdoo
         {
             return value != null ? value.ToString() : null;
         }
+
+        public DateTime? Value => value;
     }
 
     public class OdooDecimal
@@ -94,6 +96,8 @@ namespace OcerraOdoo
         {
             return value != null ? value.ToString() : null;
         }
+
+        public Decimal? Value => value;
     }
 
     public interface IOdooArray

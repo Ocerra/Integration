@@ -29,30 +29,83 @@
         }
     }
 
-    function searchInvoice() {
-        window.location = "?search=" + encodeURI($("#searchBox").val()) + "&exportState=" + $("#exportState").val();
+    function searchInvoice(pageNo) {
+        var searchStr = "?search=" + encodeURI($("#searchBox").val()) +
+            "&exportState=" + $("#cmbExported").val() +
+            "&state=" + $("#cmbState").val() +
+            "&poState=" + $("#cmbPoState").val() +
+            "&odooState=" + $("#cmbOdooState").val() +
+            "&poMatches=" + $("#cmbPoMatches").val();
+
+        if (pageNo)
+            searchStr += "&page=" + pageNo;
+
+        window.location = searchStr;
     }
 
     $(document).ready(function () {
-        $("#exportState").val($("#exportStateVal").val());
+        
     });
 </script>
 <h3>Export invoices from Ocerra to Odoo</h3>
-<div class="form-group row">
-    <div class="col-xs-3">
+<div class="form-group row" style="zoom:80%;">
+    <div class="col-xs-2">
         <input id="searchBox" type="text" class="form-control" placeholder="Search by invoice number or vendor name" value="@Model.SearchStr">
     </div>
     <div class="col-xs-2">
-        <label for="exportState" class="col-xs-5 form-label">Exported</label>
-        <input type="hidden" id="exportStateVal" value="@Model.ExportState" />
+        <label for="cmbExported" class="col-xs-5 form-label">Exported:</label>
         <div class="col-xs-7">
-            <select id="exportState" class="form-control">
-                <option></option>
-                <option value="True">Yes</option>
-                <option value="False">No</option>
+            <select id="cmbExported" class="form-control">
+                @Each.ExportStates
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
             </select>
         </div>
     </div>
+    <div class="col-xs-2">
+        <label for="cmbState" class="col-xs-5 form-label">State:</label>
+        <div class="col-xs-7">
+            <select id="cmbState" class="form-control">
+                @Each.States
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row"  style="zoom:80%;">
+    <div class="col-xs-2">
+        <label for="cmbPoState" class="col-xs-2 form-label">PO:</label>
+        <div class="col-xs-10">
+            <select id="cmbPoState" class="form-control">
+                @Each.PoStates
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <label for="cmbPoMatches" class="col-xs-5 form-label">PO Matches:</label>
+        <div class="col-xs-7">
+            <select id="cmbPoMatches" class="form-control">
+                @Each.PoMatches
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+
+    <div class="col-xs-2">
+        <label for="cmbOdooState" class="col-xs-5 form-label">Odoo:</label>
+        <div class="col-xs-7">
+            <select id="cmbOdooState" class="form-control">
+                @Each.OdooStates
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+
     <div class="col-xs-2">
         <button class="btn btn-secondary" type="button" onclick="searchInvoice()">
             Search
@@ -67,20 +120,21 @@
             <th scope="col">Supplier</th>
             <th scope="col">Date</th>
             <th scope="col">Due Date</th>
-
-            <th scope="col">Status</th>
+            <th scope="col">State</th>
             <th scope="col">Amount</th>
+            <th scope="col">Paid</th>
             <th scope="col">PO Matches</th>
             <th scope="col">Total Matches</th>
             <th scope="col">Exported</th>
             <th scope="col"><input type="checkbox" id="exportAllInvoices" onclick="$('.export-invoice:enabled').prop('checked', $('#exportAllInvoices').prop('checked'))" /></th>
+            <th scope="col">Odoo</th>
         </tr>
     </thead>
     <tbody>
         @Each.Invoices
         <tr>
             <th scope="row">
-                <a href="https://app.ocerra.com/#/details/vouchers/(document:@Current.DocumentId)">
+                <a href="https://app.ocerra.com/#/details/vouchers/(document:@Current.DocumentId)" target="_blank">
                     @Current.Number
                 </a>
             </th>
@@ -89,12 +143,14 @@
             <td>@Current.DueDate</td>
             <td>@Current.Status</td>
             <td>@Current.Amount</td>
+            <td>@Current.Paid</td>
             <td>@Current.PoMatches</td>
             <td>@Current.TotalMatches</td>
             <td>@Current.Exported</td>
             <td title="@Current.CanExportMessage">
                 <input type="checkbox" class="export-invoice" name="VoucherHeaderId" value="@Current.Id" @Current.CanExport />
             </td>
+            <td>@Current.OdooLink</td>
         </tr>
         @EndEach
     </tbody>
@@ -103,9 +159,9 @@
 <div class="row">
     <div class="col-xs-8">
         <ul class="pagination">
-            <li><a class="page-link" href="?page=@Model.PrevPage">Previous</a></li>
+            <li><a class="page-link" href="javascript:searchInvoice(@Model.PrevPage)">Previous</a></li>
             <li class="disabled"><a class="page-link">Total Items: @Model.Count</a></li>
-            <li><a class="page-link" href="?page=@Model.NextPage">Next</a></li>
+            <li><a class="page-link" href="javascript:searchInvoice(@Model.NextPage)">Next</a></li>
         </ul>
     </div>
     <div class="col-xs-4">

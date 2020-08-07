@@ -2,8 +2,10 @@
 using OcerraOdoo.OcerraOData;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace OcerraOdoo.Services
@@ -27,17 +29,16 @@ namespace OcerraOdoo.Services
             int result = 0;
             try
             {
-                
                 foreach (var voucherHeaderId in voucherHeaderIds)
                 {
-
-                    var query = odata.VoucherHeader
-                        .Expand("Vendor,PurchaseOrderHeader");
-                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query
-                        .AddQueryOption("$filter", $"VoucherHeaderId eq {voucherHeaderId}"); //.Where(vh => vh.VoucherHeaderId == voucherHeaderId);
+                    var query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)odata.VoucherHeader.Expand("Vendor,PurchaseOrderHeader,Document");
+                    query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.VoucherHeaderId == voucherHeaderId);
+                    
+                    /*query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query
+                        .AddQueryOption("$filter", $"VoucherHeaderId eq {voucherHeaderId}"); //.Where(vh => vh.VoucherHeaderId == voucherHeaderId);*/
                     
                     //Export invoices one by one
-                    var ocerraInvoice = query.FirstOrDefault();
+                    var ocerraInvoice = query.Take(1).FirstOrDefault();
 
                     if (ocerraInvoice != null)
                     {
@@ -61,6 +62,28 @@ namespace OcerraOdoo.Services
         private async Task<bool> SendEmail(ODataClient.Proxies.VoucherHeader voucherHeader) {
 
             if (voucherHeader?.PurchaseOrderHeader?.PurchaserEmail == null || voucherHeader.PurchaseOrderHeader.PurchaserEmail.Split('@').Length > 2) return false;
+
+            string filePath = null;
+
+            var document = voucherHeader.Document; //odata.Document.Where(d => d.DocumentId == voucherHeader.DocumentId).FirstOrDefault(); //.Expand(d => d.StoredFile) - add original file name
+
+            var response = await ocerraClient.ApiFilesDownloadGetAsync(document.StoredFileId);
+
+            var folderPath = @"C:\Applications\OceaniaOdoo\FileAttachments";
+
+            if (!Directory.Exists(folderPath))
+                Directory.CreateDirectory(folderPath);
+
+            var fileName = $"{voucherHeader.Vendor?.Name ?? "unknown" }-{voucherHeader.Number ?? "unknown"}.pdf";
+            var regex = new Regex(@"[^0-9A-Za-z\.\-_]", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            fileName = regex.Replace(fileName, " ");
+            filePath = Path.Combine(folderPath, fileName);
+
+            using (var fileStream = File.Create(filePath))
+            {
+                response.Stream.CopyTo(fileStream);
+            }
+            
 
             var emailContent = $@"<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Strict//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"">
 <html xmlns=""http://www.w3.org/1999/xhtml"">
@@ -181,7 +204,7 @@ namespace OcerraOdoo.Services
   <tbody>
     <tr>
       <td style=""border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; border-radius: 4px; margin: 0;"" align=""center"" bgcolor=""#007bff"">
-        <a href=""https://uaterp.ohl.co.nz/web#id={voucherHeader.PurchaseOrderHeader?.ExternalId}&amp;view_type=form&amp;model=purchase.order&amp;menu_id=1564&amp;action=870"" target=""_blank"" style=""font-size: 20px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4.8px; line-height: 30px; display: inline-block; font-weight: normal; white-space: nowrap; background-color: #007bff; color: #ffffff; padding: 8px 16px; border: 1px solid #007bff;"">See Purchase Order</a>
+        <a href=""https://erp.ohl.co.nz/web#id={voucherHeader.PurchaseOrderHeader?.ExternalId}&amp;view_type=form&amp;model=purchase.order&amp;menu_id=1564&amp;action=870"" target=""_blank"" style=""font-size: 20px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4.8px; line-height: 30px; display: inline-block; font-weight: normal; white-space: nowrap; background-color: #007bff; color: #ffffff; padding: 8px 16px; border: 1px solid #007bff;"">See Purchase Order</a>
       </td>
     </tr>
   </tbody>
@@ -243,15 +266,15 @@ namespace OcerraOdoo.Services
   </tbody>
 </table-->
 
-<table class=""btn btn-primary btn-lg mx-auto "" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0"" style=""font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0px; border-collapse: separate !important; border-radius: 4px; margin: 0 auto;"">
+<!--table class=""btn btn-light btn-sm mx-auto "" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0"" style=""font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0px; border-collapse: separate !important; border-radius: 4px; margin: 0 auto;"">
   <tbody>
     <tr>
       <td style=""border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; border-radius: 4px; margin: 0;"" align=""center"" bgcolor=""#007bff"">
-        <a href=""https://app.ocerra.com"" style=""font-size: 20px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4.8px; line-height: 30px; display: inline-block; font-weight: normal; white-space: nowrap; background-color: #007bff; color: #ffffff; padding: 8px 16px; border: 1px solid #007bff;"">See Invoices</a>
+        <a href=""https://app.ocerra.com/#/v/{voucherHeader.DocumentId}"" style=""font-size: 20px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 4.8px; line-height: 30px; display: inline-block; font-weight: normal; white-space: nowrap; background-color: #007bff; color: #ffffff; padding: 8px 16px; border: 1px solid #007bff;"">See Invoice No: {voucherHeader.Number ?? "Unknown"}</a>
       </td>
     </tr>
   </tbody>
-</table>
+</table-->
 
     </div>
       </td>
@@ -350,7 +373,8 @@ namespace OcerraOdoo.Services
                 BodyHtml = true,
                 From = new EmailAddress("Ocerra", "noreply@ocerra.com"),
                 Subject = "Purchase Order status reminder for " + voucherHeader.PurchaseOrderHeader?.Number,
-                To = new ListEmailAddress(new EmailAddress(voucherHeader.PurchaseOrderHeader.PurchaserName, voucherHeader.PurchaseOrderHeader.PurchaserEmail))
+                To = new ListEmailAddress(new EmailAddress(voucherHeader.PurchaseOrderHeader.PurchaserName, voucherHeader.PurchaseOrderHeader.PurchaserEmail)),
+                FilePath = filePath
             });
 
             return result?.EmailId != null;

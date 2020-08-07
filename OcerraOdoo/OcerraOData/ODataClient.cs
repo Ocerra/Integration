@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 2/07/2020 9:09:20 PM
+// Generation date: 21/07/2020 9:24:03 PM
 namespace OcerraOdoo.ODataClient.Proxies
 {
     /// <summary>
@@ -2037,6 +2037,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         private string _TimeZoneInfo;
         partial void OnTimeZoneInfoChanging(string value);
         partial void OnTimeZoneInfoChanged();
+        /// <summary>
+        /// There are no comments for Property ExtraSettings in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("extraSettings")]
+        public string ExtraSettings
+        {
+            get
+            {
+                return this._ExtraSettings;
+            }
+            set
+            {
+                this.OnExtraSettingsChanging(value);
+                this._ExtraSettings = value;
+                this.OnExtraSettingsChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _ExtraSettings;
+        partial void OnExtraSettingsChanging(string value);
+        partial void OnExtraSettingsChanged();
         /// <summary>
         /// There are no comments for Property PricePlan in the schema.
         /// </summary>
@@ -8376,6 +8398,116 @@ namespace OcerraOdoo.ODataClient.Proxies
         partial void OnTaxNumberDigitsChanging(string value);
         partial void OnTaxNumberDigitsChanged();
         /// <summary>
+        /// There are no comments for Property Extra1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("extra1")]
+        public string Extra1
+        {
+            get
+            {
+                return this._Extra1;
+            }
+            set
+            {
+                this.OnExtra1Changing(value);
+                this._Extra1 = value;
+                this.OnExtra1Changed();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Extra1;
+        partial void OnExtra1Changing(string value);
+        partial void OnExtra1Changed();
+        /// <summary>
+        /// There are no comments for Property Extra2 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("extra2")]
+        public string Extra2
+        {
+            get
+            {
+                return this._Extra2;
+            }
+            set
+            {
+                this.OnExtra2Changing(value);
+                this._Extra2 = value;
+                this.OnExtra2Changed();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Extra2;
+        partial void OnExtra2Changing(string value);
+        partial void OnExtra2Changed();
+        /// <summary>
+        /// There are no comments for Property Extra3 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("extra3")]
+        public string Extra3
+        {
+            get
+            {
+                return this._Extra3;
+            }
+            set
+            {
+                this.OnExtra3Changing(value);
+                this._Extra3 = value;
+                this.OnExtra3Changed();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Extra3;
+        partial void OnExtra3Changing(string value);
+        partial void OnExtra3Changed();
+        /// <summary>
+        /// There are no comments for Property Extra4 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("extra4")]
+        public string Extra4
+        {
+            get
+            {
+                return this._Extra4;
+            }
+            set
+            {
+                this.OnExtra4Changing(value);
+                this._Extra4 = value;
+                this.OnExtra4Changed();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Extra4;
+        partial void OnExtra4Changing(string value);
+        partial void OnExtra4Changed();
+        /// <summary>
+        /// There are no comments for Property Extra5 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("extra5")]
+        public string Extra5
+        {
+            get
+            {
+                return this._Extra5;
+            }
+            set
+            {
+                this.OnExtra5Changing(value);
+                this._Extra5 = value;
+                this.OnExtra5Changed();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private string _Extra5;
+        partial void OnExtra5Changing(string value);
+        partial void OnExtra5Changed();
+        /// <summary>
         /// There are no comments for Property VoucherPurchaseOrders in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
@@ -12542,6 +12674,28 @@ namespace OcerraOdoo.ODataClient.Proxies
         private string _Status;
         partial void OnStatusChanging(string value);
         partial void OnStatusChanged();
+        /// <summary>
+        /// There are no comments for Property TaxAccountId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("taxAccountId")]
+        public global::System.Nullable<global::System.Guid> TaxAccountId
+        {
+            get
+            {
+                return this._TaxAccountId;
+            }
+            set
+            {
+                this.OnTaxAccountIdChanging(value);
+                this._TaxAccountId = value;
+                this.OnTaxAccountIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.5.0")]
+        private global::System.Nullable<global::System.Guid> _TaxAccountId;
+        partial void OnTaxAccountIdChanging(global::System.Nullable<global::System.Guid> value);
+        partial void OnTaxAccountIdChanged();
         /// <summary>
         /// There are no comments for Property VoucherPurchaseOrderLines in the schema.
         /// </summary>
@@ -29866,6 +30020,7 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""inbox"" Type=""Edm.String"" />
         <Property Name=""colour"" Type=""Edm.String"" />
         <Property Name=""timeZoneInfo"" Type=""Edm.String"" />
+        <Property Name=""extraSettings"" Type=""Edm.String"" />
         <NavigationProperty Name=""pricePlan"" Type=""Ocerra.Repository.Entities.PricePlan"">
           <ReferentialConstraint Property=""pricePlanId"" ReferencedProperty=""pricePlanId"" />
         </NavigationProperty>
@@ -30170,6 +30325,11 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""interVoucherHeaderId"" Type=""Edm.Guid"" />
         <Property Name=""purchaseOrderHeaderId"" Type=""Edm.Guid"" />
         <Property Name=""taxNumberDigits"" Type=""Edm.String"" />
+        <Property Name=""extra1"" Type=""Edm.String"" />
+        <Property Name=""extra2"" Type=""Edm.String"" />
+        <Property Name=""extra3"" Type=""Edm.String"" />
+        <Property Name=""extra4"" Type=""Edm.String"" />
+        <Property Name=""extra5"" Type=""Edm.String"" />
         <Property Name=""voucherPurchaseOrders"" Type=""Collection(Ocerra.Repository.Entities.VoucherPurchaseOrder)"" />
         <NavigationProperty Name=""creditHeader"" Type=""Ocerra.Repository.Entities.VoucherHeader"">
           <ReferentialConstraint Property=""voucherHeaderId"" ReferencedProperty=""voucherHeaderId"" />
@@ -30387,6 +30547,7 @@ namespace OcerraOdoo.ODataClient.Default
         <Property Name=""sequence"" Type=""Edm.Int16"" Nullable=""false"" />
         <Property Name=""attributes"" Type=""Edm.String"" />
         <Property Name=""status"" Type=""Edm.String"" />
+        <Property Name=""taxAccountId"" Type=""Edm.Guid"" />
         <Property Name=""voucherPurchaseOrderLines"" Type=""Collection(Ocerra.Repository.Entities.VoucherPurchaseOrderLine)"" />
         <NavigationProperty Name=""itemCode"" Type=""Ocerra.Repository.Entities.ItemCode"">
           <ReferentialConstraint Property=""itemCodeId"" ReferencedProperty=""itemCodeId"" />

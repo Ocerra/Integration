@@ -43,10 +43,23 @@ namespace OcerraOdoo.Controllers
                 return Response.AsJson(new { message = $"Purchase Orders: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems} from {lastPoSyncDate}" });
             });
 
+            Post("/SyncJobPurchaseOrders", async args => {
+                var lastPoSyncDate = Model.LastJobPurchaseSyncDate.ToDate(DateTime.Now.AddDays(-1));
+                var poResult = await importService.ImportJobPurchaseOrders(lastPoSyncDate);
+                Helpers.AddUpdateAppSettings("LastJobPurchaseSyncDate", DateTime.Now.ToString("s"));
+                return Response.AsJson(new { message = $"Job Purchase Orders: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems} from {lastPoSyncDate}" });
+            });
+
             Post("/SyncProducts", async args => {
                 var poResult = await importService.ImportProducts(Model.LastProductSyncDate.ToDate(DateTime.Now.AddDays(-1)));
                 Helpers.AddUpdateAppSettings("LastProductSyncDate", DateTime.Now.ToString("s"));
                 return Response.AsJson(new { message = $"Products: {poResult.Message}, New: {poResult.NewItems}, Updated: {poResult.UpdatedItems}" });
+            });
+
+            Post("/SyncPayments", async args => {
+                var paymentResult = await importService.ImportPayments(Model.LastPaymentSyncDate.ToDate(DateTime.Now.AddDays(-1)));
+                Helpers.AddUpdateAppSettings("LastPaymentSyncDate", DateTime.Now.ToString("s"));
+                return Response.AsJson(new { message = $"Payments Updated: {paymentResult.UpdatedItems}" });
             });
 
             Post("/SyncInvoices", async args => {
@@ -75,8 +88,10 @@ namespace OcerraOdoo.Controllers
             return new MainModel() { 
                 LastVendorSyncDate = Helpers.AppSetting("LastVendorSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
                 LastPurchaseSyncDate = Helpers.AppSetting("LastPurchaseSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
+                LastJobPurchaseSyncDate = Helpers.AppSetting("LastJobPurchaseSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
                 LastInvoiceSyncDate = Helpers.AppSetting("LastInvoiceSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
-                LastProductSyncDate = Helpers.AppSetting("LastProductSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
+                LastProductSyncDate = Helpers.AppSetting("LastProductSyncDate").ToDate(DateTime.Now.AddDays(-2)).ToString("s"),
+                LastPaymentSyncDate = Helpers.AppSetting("LastPaymentSyncDate").ToDate(DateTime.Now.AddDays(-1)).ToString("s"),
             };
         }
     }

@@ -6,6 +6,7 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace OcerraOdoo.Models
 {
     public class OdooCountry
@@ -187,9 +188,125 @@ namespace OcerraOdoo.Models
         public OdooKeyValue Taxes {get; set;}
     }
 
+    public class OdooJobPurchaseOrder
+    {
+        [JsonProperty("id")]
+        public int Id { get; set; }
+
+        [JsonProperty("approval_rejected_message")]
+        public OdooString ApprovalRejectedMessage { get; set; }
+        [JsonProperty("approval_stage")]
+        public OdooString ApprovalStage { get; set; }
+
+        [JsonProperty("company_id")]
+        public OdooKeyValue CompanyId { get; set; }
+
+        [JsonProperty("date_order")]
+        public OdooDate DateOrder { get; set; }
+
+        [JsonProperty("deliver_to_job")]
+        public OdooKeyValue DeliverToJob { get; set; }
+
+        [JsonProperty("delivery_address_id")]
+        public OdooKeyValue DeliveryAddressId { get; set; }
+
+        [JsonProperty("is_estimate")]
+        public bool IsEstimate { get; set; }
+
+        [JsonProperty("job_service_id")]
+        public OdooKeyValue JobServiceId { get; set; }
+
+        [JsonProperty("job_service_transaction_id")]
+        public List<long> JobServiceTransactionId { get; set; }
+
+        /*[JsonProperty("message_follower_ids")]
+        [JsonConverter(typeof(NullableArrayJsonConverter))]
+        public List<long> MessageFollowerIds { get; set; }*/
+
+        [JsonProperty("message_ids")]
+        
+        public List<long> MessageIds { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        //[JsonProperty("note")]
+        [JsonProperty("notes")]
+        public OdooString Notes { get; set; }
+        [JsonProperty("origin_jpo_id")]
+        public OdooKeyValue OriginJpoId { get; set; }
+        [JsonProperty("packing_slip_number")]
+        public OdooString PackingSlipNumber { get; set; }
+        [JsonProperty("show_contact")]
+        public bool ShowContact { get; set; }
+        [JsonProperty("state")]
+        public string State { get; set; }
+        [JsonProperty("supplier_address")]
+        public OdooKeyValue SupplierAddress { get; set; }
+        [JsonProperty("supplier_id")]
+        public OdooKeyValue SupplierId { get; set; }
+        [JsonProperty("supplier_ref")]
+        public OdooString SupplierRef { get; set; }
+        [JsonProperty("warehouse")]
+        public OdooKeyValue Warehouse { get; set; }        
+    }
+
+    public class OdooJobPurchaseOrderLine : IOdooLine {
+        [JsonProperty("cost_currency_id")]
+        public OdooKeyValue CostCurrencyId { get; set; }
+        [JsonProperty("cost_price")]
+        public OdooDecimal CostPrice { get; set; }
+        [JsonProperty("cost_price_default")]
+        public OdooDecimal CostPriceDefault { get; set; }
+        [JsonProperty("cost_price_special")]
+        public OdooDecimal CostPriceSpecial { get; set; }
+        [JsonProperty("create_date")]
+        public OdooDate CreateDate { get; set; }
+        [JsonProperty("curr_cost_price")]
+        public OdooDecimal CurrCostPrice { get; set; }
+        [JsonProperty("curr_ex_cost")]
+        public OdooDecimal CurrExCost { get; set; }
+        [JsonProperty("date_last_changed")]
+        public OdooDate DateLastChanged { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; set; }
+        [JsonProperty("discount")]
+        public OdooDecimal Discount { get; set; }
+        [JsonProperty("extended_cost")]
+        public OdooDecimal ExtendedCost { get; set; }
+        [JsonProperty("extended_sell")]
+        public OdooDecimal ExtendedSell { get; set; }
+        [JsonProperty("id")]
+        public long Id { get; set; }
+        [JsonProperty("method")]
+        public string Method { get; set; }
+        [JsonProperty("move_type")]
+        public string MoveType { get; set; }
+        [JsonProperty("note")]
+        public string Note { get; set; }
+        [JsonProperty("product_code")]
+        public string ProductCode { get; set; }
+        [JsonProperty("sell_price")]
+        public OdooDecimal SellPrice { get; set; }
+        [JsonProperty("show")]
+        public bool Show { get; set; }
+        [JsonProperty("signed_quantity")]
+        public OdooDecimal SignedQuantity { get; set; }
+        [JsonProperty("state")]
+        public string State { get; set; }
+        [JsonProperty("supplier_id")]
+        public OdooKeyValue SupplierId { get; set; }
+        [JsonProperty("transaction_type")]
+        public string TransactionType { get; set; }
+        [JsonProperty("warehouse_id")]
+        public OdooKeyValue WarehouseId { get; set; }
+    }
+
     public class OdooPurchaseOrderDetails {
         public long DraftInvoiceId { get; set; }
         public string Reference { get; set; }
+
+        public long? JobServiceId { get; set; }
+
+        public long? Warehouse { get; set; }
     }
 
     public class OdooPurchaseOrderLineAttributes
@@ -202,6 +319,14 @@ namespace OcerraOdoo.Models
 
         public long? TaxId { get; set; }
         public string TaxCode { get; set; }
+
+        public string MoveType { get; set; }
+
+        public string ProcurementMethod { get; set; }
+
+        public long? StageId { get; set; }
+
+        public string StageName { get; set; }
     }
 
     public class OdooBill
@@ -306,6 +431,10 @@ namespace OcerraOdoo.Models
         [JsonProperty("auto_post")]
         public bool AutoPost { get; set; }
 
+
+        /*Job Fields*/
+        [JsonProperty("job_service_id")]
+        public OdooKeyValue JobServiceId { get; set; }
     }
 
     public class OdooBillLineTax : IOdooLine
@@ -347,6 +476,9 @@ namespace OcerraOdoo.Models
 
         [JsonProperty("attribute2")]
         public OdooKeyValue BrandId { get; set; }
+
+        [JsonProperty("job_service_stage_id")]
+        public OdooKeyValue JobServiceStageId { get; set; }
 
     }
     public class OdooBillLine : IOdooLine
@@ -512,10 +644,33 @@ namespace OcerraOdoo.Models
 
     }
 
+    public class OdooJob
+    {
+        public long Id { get; set; }
+
+        [JsonProperty("attribute1")]
+        public OdooKeyValue Division { get; set; }
+
+        [JsonProperty("display_name")]
+        public string DisplayName { get; set; }
+    }
+
+    public class OdooJobStage
+    {
+        public long Id { get; set; }
+
+        public OdooKeyValue Name { get; set; }
+
+        [JsonProperty("job_service_id")]
+        public OdooKeyValue JobServiceId { get; set; }
+    }
+
     public class OdooUser {
         public long Id { get; set; }
 
         public string login { get; set; }
+
+        public OdooString email { get; set; }
     }
 
     public class OdooMessage {
@@ -526,6 +681,8 @@ namespace OcerraOdoo.Models
         public string Body { get; set; }
 
         public OdooKeyValue Author_Id { get; set; }
+
+        public long? User_Pid { get; set; }
 
         public string Email_From { get; set; }
 

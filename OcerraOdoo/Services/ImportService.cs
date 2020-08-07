@@ -3,6 +3,7 @@ using Nancy.TinyIoc;
 
 using OcerraOdoo.Models;
 using OcerraOdoo.OcerraOData;
+using OcerraOdoo.ODataClient.Proxies;
 using OcerraOdoo.Properties;
 using OdooRpc.CoreCLR.Client;
 using OdooRpc.CoreCLR.Client.Models;
@@ -115,6 +116,8 @@ namespace OcerraOdoo.Services
                 if (odooTaxes.HasItems())
                     foreach (var odooTax in odooTaxes.Where(t => validTaxTypes.Contains(t.Type_Tax_Use) && t.Amount < 100))
                     {
+                        var taxRateRate = odooTax.Amount < 1 && odooTax.Amount > 0 ? odooTax.Amount * 100 : odooTax.Amount;
+
                         var ocerraTax = ocerraTaxes.FirstOrDefault(t => t.ExternalId == odooTax.Id.ToString());
                         if (ocerraTax == null)
                         {
@@ -128,7 +131,7 @@ namespace OcerraOdoo.Services
                                 ExternalAccountId = odooTax.Cash_Basis_Base_Account_Id.ToInt(null)?.ToString(),
                                 IsActive = true,
                                 TaxType = odooTax.Type_Tax_Use,
-                                Rate = (double)odooTax.Amount
+                                Rate = taxRateRate
                             };
                             await ocerraClient.ApiTaxRatePostAsync(taxRate);
                             result.NewItems++;
@@ -136,6 +139,14 @@ namespace OcerraOdoo.Services
                         else
                         {
                             ocerraTax.ExternalAccountId = odooTax.Cash_Basis_Base_Account_Id.ToInt(null)?.ToString();
+                            ocerraTax.Code = odooTax.Name;
+                            ocerraTax.Description = odooTax.Description;
+                            ocerraTax.ExternalId = odooTax.Id.ToString();
+                            ocerraTax.ExternalAccountId = odooTax.Cash_Basis_Base_Account_Id.ToInt(null)?.ToString();
+                            ocerraTax.IsActive = true;
+                            ocerraTax.TaxType = odooTax.Type_Tax_Use;
+                            ocerraTax.Rate = taxRateRate;
+
                             await ocerraClient.ApiTaxRateByIdPutAsync(ocerraTax.TaxRateId, ocerraTax);
                             result.UpdatedItems++;
                         }
@@ -159,6 +170,9 @@ namespace OcerraOdoo.Services
         public async Task<ImportResult> ImportAccounts() {
             var result = new ImportResult();
 
+            OdooAccount currentOdooAccount = null;
+            TaxAccountModel currentOcerraAccount = null;
+
             try
             {
                 await Init();
@@ -166,23 +180,31 @@ namespace OcerraOdoo.Services
                 var odooAccounts = await odooClient.GetAll<OdooAccount[]>("account.account", new OdooFieldParameters());
 
                 var ocerraAccounts1000 = await ocerraClient.ApiTaxAccountGetAsync(0, 1000);
-                var ocerraAccounts2000 = await ocerraClient.ApiTaxAccountGetAsync(1000, 2000);
+                var ocerraAccounts2000 = await ocerraClient.ApiTaxAccountGetAsync(1, 1000);
                 var ocerraTaxes = await ocerraClient.ApiTaxRateGetAsync(0, 100);
 
-                var validAccountGroups = Settings.Default.OdooAccountGroups.Split(',');
+                var validAccountGroups = Helpers.AppSetting().OdooAccountGroups.Split(',');
 
                 if (odooAccounts.HasItems())
                 {
                     var accountsForImport = odooAccounts.Where(a => validAccountGroups.Any(vg =>
+                        a.Code.ToLower() == vg.ToLower() ||
                         a.Internal_Group == vg ||
                         (a.Parent_Id?.Value != null && a.Parent_Id.Value.ToLower().Contains(vg.ToLower())) ||
                         (a.User_Type?.Value != null && a.User_Type.Value.ToLower().Contains(vg.ToLower()))
-                    ) && !a.Deprecated);
+                    ) && !a.Deprecated).ToList();
+
+                    //var assetAccounts = accountsForImport.Where(a => a.Code == "12010").ToList();
 
                     foreach (var odooAccount in accountsForImport)
                     {
+                        currentOdooAccount = odooAccount;
                         var ocerraAccount = ocerraAccounts1000.FirstOrDefault(t => t.ExternalId == odooAccount.Id.ToString());
                         ocerraAccount = ocerraAccount ?? ocerraAccounts2000.FirstOrDefault(t => t.ExternalId == odooAccount.Id.ToString());
+                        ocerraAccount = ocerraAccount ?? ocerraAccounts1000.FirstOrDefault(t => t.Code == odooAccount.Code);
+                        ocerraAccount = ocerraAccount ?? ocerraAccounts2000.FirstOrDefault(t => t.Code == odooAccount.Code);
+
+                        currentOcerraAccount = ocerraAccount;
 
                         var taxRateId = ocerraTaxes.FirstOrDefault(r => r.ExternalAccountId == odooAccount.Id.ToString())?.TaxRateId ??
                                     ocerraTaxes.FirstOrDefault(t => t.Code == "Purch (15%)")?.TaxRateId ??
@@ -247,6 +269,8 @@ namespace OcerraOdoo.Services
             {
                 await Init();
 
+                var taxRates = odata.TaxRate.Take(100).ToList();
+
                 var filter = new OdooDomainFilter().Filter("write_date", ">=", lastSyncDate).Filter("supplier", "=", true).Filter("is_company", "=", true); //.Filter("customer", "=", false);
 
                 var odooCountryCodes = await odooClient.GetAll<OdooCountry[]>("res.country", new OdooFieldParameters(new[] { "id", "code" }));
@@ -304,13 +328,19 @@ namespace OcerraOdoo.Services
                         var countryCode = odooCountryCodes.FirstOrDefault(cc => cc.Id == odooVendor.Country_Id?.FirstOrDefault().ToInt(null))?.Code?.Value
                                     ?? Bootstrapper.OcerraModel.CountryCode;
 
+                        var vendorName = (odooVendor.Company_Name ?? odooVendor.Name).Trim(255);
+
+                        //Assign Zero tax rate auto for all USD suppliers
+                        var taxRate = new[] { "USD" }.Any(fc => vendorName != null && vendorName.Contains(fc)) ?
+                            taxRates.FirstOrDefault(tr=>tr.Rate == 0 && tr.Code.Contains("Zero")) : null;
+
                         if (ocerraVendor == null)
                         {
                             vendor = new VendorModel()
                             {
                                 VendorId = Guid.NewGuid(),
                                 ClientId = Bootstrapper.OcerraModel.ClientId,
-                                Name = (odooVendor.Company_Name ?? odooVendor.Name).Trim(255),
+                                Name = vendorName,
                                 CountryCode = countryCode,
                                 Email = email.Trim(50),
                                 DomainName = domain.Trim(255),
@@ -333,7 +363,7 @@ namespace OcerraOdoo.Services
                         else
                         {
                             vendor = ocerraVendor;
-                            ocerraVendor.Name = (odooVendor.Company_Name ?? odooVendor.Name).Trim(255);
+                            ocerraVendor.Name = vendorName;
                             ocerraVendor.CountryCode = countryCode;
                             ocerraVendor.Email = email.Trim(50);
                             ocerraVendor.DomainName = domain.Trim(255);
@@ -450,10 +480,21 @@ namespace OcerraOdoo.Services
                         var firstMessage = messages?.LastOrDefault();
 
                         var purchaserName = firstMessage?.Author_Id?.Value;
-                        var purchaserId = firstMessage?.Author_Id?.Key;
+                        
+                        //var purchaserId = firstMessage?.Author_Id?.Key;
+                        //var userPid = firstMessage?.User_Pid;
+                        
                         var purchaserEmailGroups = firstMessage?.Email_From != null ? exp.Match(firstMessage.Email_From).Groups : null;
                         var purchaserEmail = purchaserEmailGroups != null && purchaserEmailGroups.Count > 1 ? purchaserEmailGroups[1]?.Value : null;
-                        var odooUser = await GetOdooUserById(purchaserId); //odooPurchaseOrder?.User_Id?.Key ?? odooPurchaseOrder?.Validator?.Key
+                        
+                        var odooUser = await GetOdooUserByName(purchaserName); 
+                        
+                        //var odooUserById = await GetOdooUserById(purchaserId);
+                        //var odooUserByPid = await GetOdooUserById(userPid);
+
+                        purchaserEmail = odooUser?.email?.Value != null && odooUser.email.Value.Contains("@") ? odooUser.email.Value :
+                            odooUser?.login != null && odooUser.login.Contains("@") ? odooUser.login : 
+                            purchaserEmail;
 
                         if (vendor == null) {
                             ignored++;
@@ -461,139 +502,157 @@ namespace OcerraOdoo.Services
                         }
 
 
-                        if (ocerraPurchaseOrder == null)
+                        try
                         {
-                            var purchaseOrder = new PurchaseOrderHeaderModel()
+                            if (ocerraPurchaseOrder == null)
                             {
-                                PurchaseOrderHeaderId = Guid.NewGuid(),
-                                VendorId = vendor.VendorId,
-                                Number = odooPurchaseOrder.Name,
-                                ExternalId = odooPurchaseOrder.Id.ToString(),
-                                ApprovedDate = odooPurchaseOrder.Date_Approve.ToDateOffset(null),
-                                CurrencyCodeId = currency?.CurrencyCodeId ?? Bootstrapper.OcerraModel.CurrencyCodes.Find(cc => cc.IsDefault).CurrencyCodeId,
-                                DocDate = odooPurchaseOrder.Date_Order.ToDateOffset(DateTimeOffset.Now).Value,
-                                IsTaxInclusive = odooPurchaseOrder.Amount_Tax == 0,
-                                Total = odooPurchaseOrder.Amount_Total ?? 0,
-                                OutstandingCost = odooPurchaseOrder.Amount_Total ?? 0,
-                                PurchaserId = purchaserId?.ToString(),
-                                PurchaserName = purchaserName,
-                                PurchaserEmail = purchaserEmail,
-                                Status = odooPurchaseOrder.State.ToPascalCase(),
-                                Reference = odooPurchaseOrder.Origin.Trim(255),
-                                Attributes = new OdooPurchaseOrderDetails { 
-                                    DraftInvoiceId = odooPurchaseOrder.invoice_ids.HasItems() ? odooPurchaseOrder.invoice_ids[0].ToLong(0) : 0,
-                                    Reference = odooPurchaseOrder.Origin.Trim(255)
-                                }.ToJson(),
-                            };
-
-                            current = purchaseOrder;
-
-                            if (purchaseOrderLines.HasItems()) {
-                                
-                                purchaseOrder.PurchaseOrderLines = new List<PurchaseOrderLineModel>();
-
-                                var counter = 1;
-                                foreach (var odooLine in purchaseOrderLines) {
-                                    var poLine = new PurchaseOrderLineModel
+                                var purchaseOrder = new PurchaseOrderHeaderModel()
+                                {
+                                    PurchaseOrderHeaderId = Guid.NewGuid(),
+                                    VendorId = vendor.VendorId,
+                                    Number = odooPurchaseOrder.Name,
+                                    ExternalId = odooPurchaseOrder.Id.ToString(),
+                                    ApprovedDate = odooPurchaseOrder.Date_Approve.ToDateOffset(null),
+                                    CurrencyCodeId = currency?.CurrencyCodeId ?? Bootstrapper.OcerraModel.CurrencyCodes.Find(cc => cc.IsDefault).CurrencyCodeId,
+                                    DocDate = odooPurchaseOrder.Date_Order.ToDateOffset(DateTimeOffset.Now).Value,
+                                    IsTaxInclusive = odooPurchaseOrder.Amount_Tax == 0,
+                                    Total = odooPurchaseOrder.Amount_Total ?? 0,
+                                    OutstandingCost = odooPurchaseOrder.Amount_Total ?? 0,
+                                    PurchaserId = odooUser?.Id.ToString(),
+                                    PurchaserName = purchaserName,
+                                    PurchaserEmail = purchaserEmail,
+                                    Status = odooPurchaseOrder.State.ToPascalCase(),
+                                    Reference = odooPurchaseOrder.Origin.Trim(255),
+                                    Attributes = new OdooPurchaseOrderDetails
                                     {
-                                        PurchaseOrderLineId = Guid.NewGuid(),
-                                        ExternalId = odooLine.Id.ToString(),
-                                        Code = odooLine.ProductId.Value.Trim(50),
-                                        Cost = (double?)(decimal?)odooLine.Price_Subtotal ?? 0,
-                                        Quantity = (double?)(decimal?)odooLine.Product_Qty ?? 1,
-                                        Description = odooLine.Name.Trim(250),
-                                        ItemCodeId = odooLine.ProductId?.Key != null ? 
-                                            (await ocerraClient.ApiItemCodeByExternalGetAsync(odooLine.ProductId?.Key.ToString()))?.FirstOrDefault()?.ItemCodeId : null,
-                                        Sequence = counter,
-                                        Attributes = new OdooPurchaseOrderLineAttributes {
+                                        DraftInvoiceId = odooPurchaseOrder.invoice_ids.HasItems() ? odooPurchaseOrder.invoice_ids[0].ToLong(0) : 0,
+                                        Reference = odooPurchaseOrder.Origin.Trim(255)
+                                    }.ToJson(),
+                                };
+
+                                current = purchaseOrder;
+
+                                if (purchaseOrderLines.HasItems())
+                                {
+
+                                    purchaseOrder.PurchaseOrderLines = new List<PurchaseOrderLineModel>();
+
+                                    var counter = 1;
+                                    foreach (var odooLine in purchaseOrderLines)
+                                    {
+                                        var poLine = new PurchaseOrderLineModel
+                                        {
+                                            PurchaseOrderLineId = Guid.NewGuid(),
+                                            ExternalId = odooLine.Id.ToString(),
+                                            Code = odooLine.ProductId?.Value?.Trim(50),
+                                            Cost = (double?)(decimal?)odooLine.Price_Subtotal ?? 0,
+                                            Quantity = (double?)(decimal?)odooLine.Product_Qty ?? 1,
+                                            Description = odooLine.Name?.Trim(250),
+                                            ItemCodeId = odooLine.ProductId?.Key != null ?
+                                                (await ocerraClient.ApiItemCodeByExternalGetAsync(odooLine.ProductId?.Key.ToString()))?.FirstOrDefault()?.ItemCodeId : null,
+                                            Sequence = counter,
+                                            Attributes = new OdooPurchaseOrderLineAttributes
+                                            {
+                                                DivisionId = odooLine?.Attribute1?.Key,
+                                                DivisionCode = odooLine?.Attribute1?.Value,
+                                                BrandId = odooLine?.Attribute2?.Key,
+                                                BrandCode = odooLine?.Attribute2?.Value,
+                                                TaxId = odooLine?.Taxes?.Key
+                                            }.ToJson()
+                                        };
+
+                                        purchaseOrder.PurchaseOrderLines.Add(poLine);
+
+                                        counter++;
+                                    }
+                                }
+
+                                await ocerraClient.ApiPurchaseOrderPostAsync(purchaseOrder);
+
+                                result.NewItems++;
+                            }
+                            else
+                            {
+                                current = ocerraPurchaseOrder;
+
+                                ocerraPurchaseOrder.Number = odooPurchaseOrder.Name;
+                                ocerraPurchaseOrder.VendorId = vendor.VendorId;
+                                ocerraPurchaseOrder.ExternalId = odooPurchaseOrder.Id.ToString();
+                                ocerraPurchaseOrder.ApprovedDate = odooPurchaseOrder.Date_Approve.ToDateOffset(null);
+                                ocerraPurchaseOrder.CurrencyCodeId = currency?.CurrencyCodeId ?? Bootstrapper.OcerraModel.CurrencyCodes.Find(cc => cc.IsDefault).CurrencyCodeId;
+                                ocerraPurchaseOrder.DocDate = odooPurchaseOrder.Date_Order.ToDateOffset(DateTimeOffset.Now).Value;
+                                ocerraPurchaseOrder.IsTaxInclusive = odooPurchaseOrder.Amount_Tax == 0;
+                                ocerraPurchaseOrder.Total = odooPurchaseOrder.Amount_Total ?? 0;
+                                ocerraPurchaseOrder.OutstandingCost = odooPurchaseOrder.Amount_Total ?? 0;
+                                ocerraPurchaseOrder.PurchaserId = odooUser?.Id.ToString();
+                                ocerraPurchaseOrder.PurchaserName = purchaserName;
+                                ocerraPurchaseOrder.PurchaserEmail = purchaserEmail;
+                                ocerraPurchaseOrder.Reference = odooPurchaseOrder.Origin.Trim(255);
+                                ocerraPurchaseOrder.Attributes = new OdooPurchaseOrderDetails
+                                {
+                                    DraftInvoiceId = odooPurchaseOrder.invoice_ids.HasItems() ? odooPurchaseOrder.invoice_ids[0].ToLong(0) : 0
+                                }.ToJson();
+
+                                ocerraPurchaseOrder.Status = odooPurchaseOrder.State.ToPascalCase();
+
+                                if (purchaseOrderLines.HasItems())
+                                {
+                                    ocerraPurchaseOrder.PurchaseOrderLines = ocerraPurchaseOrder.PurchaseOrderLines ?? new List<PurchaseOrderLineModel>();
+
+                                    var counter = 1;
+                                    foreach (var odooLine in purchaseOrderLines)
+                                    {
+                                        if (odooLine == null) continue;
+
+                                        var poLine = ocerraPurchaseOrder?.PurchaseOrderLines?.FirstOrDefault(l => l.ExternalId == odooLine.Id.ToString())
+                                            ?? new PurchaseOrderLineModel
+                                            {
+                                                ExternalId = odooLine.Id.ToString(),
+                                            };
+
+                                        poLine.Code = odooLine.ProductId.Value.Trim(50);
+                                        poLine.Cost = (double?)(decimal?)odooLine.Price_Subtotal ?? 0;
+                                        poLine.Quantity = (double?)(decimal?)odooLine.Product_Qty ?? 1;
+                                        poLine.Description = odooLine.Name.Trim(250);
+                                        poLine.ItemCodeId = odooLine.ProductId?.Key != null ?
+                                            (await ocerraClient.ApiItemCodeByExternalGetAsync(odooLine.ProductId.Key.ToString()))?.FirstOrDefault()?.ItemCodeId : null;
+                                        poLine.Sequence = counter;
+                                        poLine.Attributes = new OdooPurchaseOrderLineAttributes
+                                        {
                                             DivisionId = odooLine?.Attribute1?.Key,
                                             DivisionCode = odooLine?.Attribute1?.Value,
                                             BrandId = odooLine?.Attribute2?.Key,
                                             BrandCode = odooLine?.Attribute2?.Value,
                                             TaxId = odooLine?.Taxes?.Key
-                                        }.ToJson()
-                                    };
-                                    
-                                    purchaseOrder.PurchaseOrderLines.Add(poLine);
-                                    
-                                    counter++;
-                                }
-                            }
+                                        }.ToJson();
 
-                            await ocerraClient.ApiPurchaseOrderPostAsync(purchaseOrder);
-
-                            result.NewItems++;
-                        }
-                        else
-                        {
-                            current = ocerraPurchaseOrder;
-
-                            ocerraPurchaseOrder.Number = odooPurchaseOrder.Name;
-                            ocerraPurchaseOrder.VendorId = vendor.VendorId;                                
-                            ocerraPurchaseOrder.ExternalId = odooPurchaseOrder.Id.ToString();
-                            ocerraPurchaseOrder.ApprovedDate = odooPurchaseOrder.Date_Approve.ToDateOffset(null);
-                            ocerraPurchaseOrder.CurrencyCodeId = currency?.CurrencyCodeId ?? Bootstrapper.OcerraModel.CurrencyCodes.Find(cc => cc.IsDefault).CurrencyCodeId;
-                            ocerraPurchaseOrder.DocDate = odooPurchaseOrder.Date_Order.ToDateOffset(DateTimeOffset.Now).Value;
-                            ocerraPurchaseOrder.IsTaxInclusive = odooPurchaseOrder.Amount_Tax == 0;
-                            ocerraPurchaseOrder.Total = odooPurchaseOrder.Amount_Total ?? 0;
-                            ocerraPurchaseOrder.OutstandingCost = odooPurchaseOrder.Amount_Total ?? 0;
-                            ocerraPurchaseOrder.PurchaserId = purchaserId?.ToString();
-                            ocerraPurchaseOrder.PurchaserName = purchaserName;
-                            ocerraPurchaseOrder.PurchaserEmail = purchaserEmail;
-                            ocerraPurchaseOrder.Reference = odooPurchaseOrder.Origin.Trim(255);
-                            ocerraPurchaseOrder.Attributes = new OdooPurchaseOrderDetails
-                            {
-                                DraftInvoiceId = odooPurchaseOrder.invoice_ids.HasItems() ? odooPurchaseOrder.invoice_ids[0].ToLong(0) : 0
-                            }.ToJson();
-
-                            ocerraPurchaseOrder.Status = odooPurchaseOrder.State.ToPascalCase();
-
-                            if (purchaseOrderLines.HasItems())
-                            {
-                                var counter = 1;
-                                foreach (var odooLine in purchaseOrderLines)
-                                {
-                                    var poLine = ocerraPurchaseOrder.PurchaseOrderLines?.FirstOrDefault(l => l.ExternalId == odooLine.Id.ToString()) 
-                                        ?? new PurchaseOrderLineModel
+                                        if (poLine.PurchaseOrderLineId == Guid.Empty)
                                         {
-                                            ExternalId = odooLine.Id.ToString(),
-                                        };
+                                            poLine.PurchaseOrderLineId = Guid.NewGuid();
+                                            poLine.IsNew = true;
+                                            ocerraPurchaseOrder.PurchaseOrderLines.Add(poLine);
+                                        }
 
-                                    poLine.Code = odooLine.ProductId.Value.Trim(50);
-                                    poLine.Cost = (double?)(decimal?)odooLine.Price_Subtotal ?? 0;
-                                    poLine.Quantity = (double?)(decimal?)odooLine.Product_Qty ?? 1;
-                                    poLine.Description = odooLine.Name.Trim(250);
-                                    poLine.ItemCodeId = odooLine.ProductId?.Key != null ? 
-                                        (await ocerraClient.ApiItemCodeByExternalGetAsync(odooLine.ProductId.Key.ToString()))?.FirstOrDefault()?.ItemCodeId : null;
-                                    poLine.Sequence = counter;
-                                    poLine.Attributes = new OdooPurchaseOrderLineAttributes
-                                    {
-                                        DivisionId = odooLine?.Attribute1?.Key,
-                                        DivisionCode = odooLine?.Attribute1?.Value,
-                                        BrandId = odooLine?.Attribute2?.Key,
-                                        BrandCode = odooLine?.Attribute2?.Value,
-                                        TaxId = odooLine?.Taxes?.Key
-                                    }.ToJson();
-
-                                    if (poLine.PurchaseOrderLineId == Guid.Empty) {
-                                        poLine.PurchaseOrderLineId = Guid.NewGuid();
-                                        poLine.IsNew = true;
-                                        ocerraPurchaseOrder.PurchaseOrderLines.Add(poLine);
+                                        counter++;
                                     }
-                                    
-                                    counter++;
+
+                                    var poLinesForDelete = ocerraPurchaseOrder.PurchaseOrderLines.HasItems() ?
+                                        ocerraPurchaseOrder.PurchaseOrderLines.Where(l => !purchaseOrderLines.Any(ol => ol.Id.ToString() == l.ExternalId)).ToList() : null;
+                                    if (poLinesForDelete.HasItems())
+                                        poLinesForDelete.ForEach(l => l.Delete = true);
                                 }
 
-                                var poLinesForDelete = ocerraPurchaseOrder.PurchaseOrderLines.HasItems() ? 
-                                    ocerraPurchaseOrder.PurchaseOrderLines.Where(l => !purchaseOrderLines.Any(ol => ol.Id.ToString() == l.ExternalId)).ToList() : null;
-                                if (poLinesForDelete.HasItems())
-                                    poLinesForDelete.ForEach(l => l.Delete = true);
-                            }
+                                await ocerraClient.ApiPurchaseOrderByIdPutAsync(ocerraPurchaseOrder.PurchaseOrderHeaderId, ocerraPurchaseOrder);
 
-                            await ocerraClient.ApiPurchaseOrderByIdPutAsync(ocerraPurchaseOrder.PurchaseOrderHeaderId, ocerraPurchaseOrder);
-                            
-                            result.UpdatedItems++;
+                                result.UpdatedItems++;
+                            }
                         }
+                        catch (Exception ex) {
+                            ex.LogError($"Error on PO Sync for POId:{odooPurchaseOrder.Id}, PONO:{odooPurchaseOrder.Name}");
+                            result.Message = "There was an error on vendor import procedure";
+                            ignored++;
+                        }
+                        
                     }
 
                 result.Message = "PurchaseOrders imported succsessfuly. Skipped: " + ignored;
@@ -607,6 +666,326 @@ namespace OcerraOdoo.Services
             }
         }
 
+        public async Task<ImportResult> ImportJobPurchaseOrders(DateTime lastSyncDate)
+        {
+            var result = new ImportResult();
+
+            PurchaseOrderHeaderModel current = null;
+            var exp = new Regex(@"\<(.+?)\>", RegexOptions.IgnoreCase);
+
+            try
+            {
+                await Init();
+
+                var filter = new OdooDomainFilter().Filter("write_date", ">", lastSyncDate);
+
+                var fieldNames = new[] {
+                    "id",
+                    "approval_rejected_message",
+                    "approval_stage",
+                    "company_id",
+                    "date_order",
+                    "deliver_to_job",
+                    "delivery_address_id",
+                    "is_estimate",
+                    "job_service_id",
+                    "job_service_transaction_id",
+                    "message_follower_ids",
+                    "message_ids",
+                    "name",
+                    "note",
+                    "notes",
+                    "origin_jpo_id",
+                    "packing_slip_number",
+                    "show_contact",
+                    "state",
+                    "supplier_address",
+                    "supplier_id",
+                    "supplier_ref",
+                    "warehouse",
+                };
+
+
+                var odooPurchaseOrders = new List<OdooJobPurchaseOrder>();
+                var odooPurchaseOrderLines = new List<OdooJobPurchaseOrderLine>();
+                var odooJobs = new List<OdooJob>();
+                var odooJobStages = new List<OdooJobStage>();
+                
+                for (int x = 0; x < 100; x++)
+                {
+
+                    var odooPurchaseOrderIds = await odooClient.Search<long[]>(new OdooSearchParameters("job.service.purchase_order",
+                        filter), new OdooPaginationParameters(x * 50, 50));
+
+                    if (!odooPurchaseOrderIds.HasItems())
+                        break;
+
+                    var odooPurchaseOrderPage = odooPurchaseOrderIds.HasItems() ?
+                        await odooClient.Get<OdooJobPurchaseOrder[]>(new OdooGetParameters("job.service.purchase_order", odooPurchaseOrderIds),
+                            new OdooFieldParameters(fieldNames)) : null;
+
+                    odooPurchaseOrders.AddRange(odooPurchaseOrderPage);
+
+                    var odooJobIds = odooPurchaseOrderPage.HasItems() ? odooPurchaseOrderPage.Select(po => po.JobServiceId?.Key ?? 0).Where(i => i > 0).ToList() : null;
+                    var odooJobPage = odooJobIds.HasItems() ? await odooClient.Get<OdooJob[]>(new OdooGetParameters("job.service.job", odooJobIds), new OdooFieldParameters(new[] {
+                        "id", "attribute1", "display_name"
+                    })) : null;
+
+                    if(odooJobPage != null)
+                        odooJobs.AddRange(odooJobPage);
+
+                    if (odooJobPage.HasItems())
+                    {
+                        var filterJobStages = new OdooDomainFilter();
+
+                        for (int jc = 0; jc < odooJobPage.Length - 1; jc++)
+                            filterJobStages.Or();
+
+                        foreach (var odooJob in odooJobPage)
+                            filterJobStages = filterJobStages.Filter("job_service_id", "=", odooJob.Id);
+
+                        var odooJobStagePage = odooJobIds.HasItems() ? await odooClient.Get<OdooJobStage[]>(new OdooSearchParameters("job.service.stage", filterJobStages),
+                            new OdooFieldParameters(new[] { "id", "job_service_id", "name" })) : null;
+
+                        if (odooJobStagePage != null)
+                            odooJobStages.AddRange(odooJobStagePage);
+                    }
+
+                    var lineFieldNames = new[] {
+                            "cost_currency_id",
+                            "cost_price",
+                            "cost_price_default",
+                            "cost_price_special",
+                            "create_date",
+                            "curr_cost_price",
+                            "curr_ex_cost",
+                            "date_last_changed",
+                            "description",
+                            "discount",
+                            "extended_cost",
+                            "extended_sell",
+                            "id",
+                            "method",
+                            "move_type",
+                            "note",
+                            "product_code",
+                            "sell_price",
+                            "show",
+                            "signed_quantity",
+                            "state",
+                            "supplier_id",
+                            "transaction_type",
+                            "warehouse_id"
+                        };
+
+                    var jobServiceTransactionIds = odooPurchaseOrderPage.Where(po => po.JobServiceTransactionId != null).SelectMany(po => po.JobServiceTransactionId).ToList();
+                    var odooPurchaseOrderLinePage = jobServiceTransactionIds.HasItems() ?
+                            await odooClient.Get<OdooJobPurchaseOrderLine[]>(new OdooGetParameters("job.service.transaction", jobServiceTransactionIds),
+                                new OdooFieldParameters(lineFieldNames)) : null;
+                    if (odooPurchaseOrderLinePage != null)
+                        odooPurchaseOrderLines.AddRange(odooPurchaseOrderLinePage);
+                }
+
+                int ignored = 0;
+
+                if (odooPurchaseOrders.HasItems())
+                    foreach (var odooPurchaseOrder in odooPurchaseOrders)
+                    {
+                        var externalId = "JSPO" + odooPurchaseOrder.Id.ToString();
+                        var purchaseOrderLines = odooPurchaseOrderLines?.Where(l => odooPurchaseOrder.JobServiceTransactionId?.Any(li => li == l.Id) ?? false).ToList();
+                        var firstLine = purchaseOrderLines?.FirstOrDefault();
+
+                        var ocerraPurchaseOrder = await ocerraClient.ApiPurchaseOrderExternalByIdGetAsync(externalId);
+                        var vendor = odooPurchaseOrder.SupplierId?.Key != null ? await ocerraClient.ApiVendorsExternalByIdGetAsync(odooPurchaseOrder.SupplierId.Key.ToString()) : null;
+                        
+                        var currency = firstLine?.CostCurrencyId?.Key != null ? 
+                                Bootstrapper.OcerraModel.CurrencyCodes.Find(cc => cc.ExternalId == firstLine?.CostCurrencyId?.Key?.ToString())
+                                    : Bootstrapper.OcerraModel.CurrencyCodes.Find(cc => cc.IsDefault);
+
+                        var messages = odooPurchaseOrder.MessageIds.HasItems() ?
+                            await odooClient.Get<OdooMessage[]>(new OdooGetParameters("mail.message", odooPurchaseOrder.MessageIds),
+                                new OdooFieldParameters()) : null;
+
+                        var firstMessage = messages?.LastOrDefault();
+
+                        var purchaserName = firstMessage?.Author_Id?.Value;
+                        var purchaserEmailGroups = firstMessage?.Email_From != null ? exp.Match(firstMessage.Email_From).Groups : null;
+                        var purchaserEmail = purchaserEmailGroups != null && purchaserEmailGroups.Count > 1 ? purchaserEmailGroups[1]?.Value : null;
+                        var odooUser = await GetOdooUserByName(purchaserName);
+
+                        purchaserEmail = odooUser?.email?.Value != null && odooUser.email.Value.Contains("@") ? odooUser.email.Value :
+                            odooUser?.login != null && odooUser.login.Contains("@") ? odooUser.login :
+                            purchaserEmail;
+
+                        if (vendor == null)
+                        {
+                            ignored++;
+                            continue;
+                        }
+
+                        var reference = !string.IsNullOrEmpty(odooPurchaseOrder?.Notes?.Value) ? 
+                            odooPurchaseOrder?.JobServiceId?.Value.Trim(25) + " : " + odooPurchaseOrder.Notes.Value.Trim(50) : 
+                                odooPurchaseOrder?.JobServiceId?.Value.Trim(255);
+                        var approvedDate = firstLine?.State?.ToLower()?.Contains("confirmed") ?? false ? (DateTime?)DateTime.Now : null;
+                        var currencyCodeId = currency?.CurrencyCodeId ?? Bootstrapper.OcerraModel.CurrencyCodes.Find(cc => cc.IsDefault).CurrencyCodeId;
+                        var odooJob = odooJobs != null ? odooJobs.FirstOrDefault(j => j.Id == odooPurchaseOrder?.JobServiceId?.Key) : null;
+                        var odooStage = odooJobStages != null && odooJob != null ? odooJobStages.FirstOrDefault(js => js.JobServiceId?.Key == odooJob.Id) : null;
+
+                        if (ocerraPurchaseOrder == null)
+                        {
+                            var purchaseOrder = new PurchaseOrderHeaderModel()
+                            {
+                                PurchaseOrderHeaderId = Guid.NewGuid(),
+                                VendorId = vendor.VendorId,
+                                Number = odooPurchaseOrder.Name,
+                                ExternalId = externalId,
+                                ApprovedDate = approvedDate,
+                                CurrencyCodeId = currencyCodeId,
+                                DocDate = firstLine?.CreateDate?.Value ?? DateTime.Now,
+                                IsTaxInclusive = false,
+                                Total = (double?)firstLine?.ExtendedCost?.Value ?? 0,
+                                OutstandingCost = (double?)firstLine?.ExtendedCost?.Value ?? 0,
+                                PurchaserId = odooUser?.Id.ToString(),
+                                PurchaserName = purchaserName,
+                                PurchaserEmail = purchaserEmail,
+                                Status = odooPurchaseOrder.State.ToPascalCase(),
+                                Reference = reference,
+                                Attributes = new OdooPurchaseOrderDetails
+                                {
+                                    JobServiceId = odooPurchaseOrder?.JobServiceId?.Key,
+                                    Warehouse = odooPurchaseOrder?.Warehouse?.Key,
+                                    Reference = odooPurchaseOrder?.JobServiceId?.Value
+                                }.ToJson(),
+                            };
+
+                            current = purchaseOrder;
+
+                            if (purchaseOrderLines.HasItems())
+                            {
+                                purchaseOrder.PurchaseOrderLines = new List<PurchaseOrderLineModel>();
+
+                                var counter = 1;
+                                foreach (var odooLine in purchaseOrderLines)
+                                {
+                                    var poLine = new PurchaseOrderLineModel
+                                    {
+                                        PurchaseOrderLineId = Guid.NewGuid(),
+                                        IsNew = true,
+                                        ExternalId = odooLine.Id.ToString(),
+                                        Code = odooLine.ProductCode,
+                                        Cost = (double?)odooLine.ExtendedCost?.Value ?? 0,
+                                        Quantity = (double?)odooLine.SignedQuantity?.Value ?? 1,
+                                        Description = odooLine.Description,
+                                        ItemCodeId = odooLine.ProductCode != null ? GetItemCodeByExternalId(odooLine.ProductCode)?.ItemCodeId : null,
+                                        Sequence = counter,
+                                        Attributes = new OdooPurchaseOrderLineAttributes
+                                        {
+                                            MoveType = odooLine.MoveType,
+                                            ProcurementMethod = odooLine.Method,
+                                            DivisionId = odooJob?.Division?.Key,
+                                            DivisionCode = odooJob?.Division?.Value,
+                                            StageId = odooStage?.Id,
+                                            StageName = odooStage.Name?.Value
+                                        }.ToJson()
+                                    };
+
+                                    purchaseOrder.PurchaseOrderLines.Add(poLine);
+
+                                    counter++;
+                                }
+                            }
+
+                            await ocerraClient.ApiPurchaseOrderPostAsync(purchaseOrder);
+
+                            result.NewItems++;
+                        }
+                        else
+                        {
+                            current = ocerraPurchaseOrder;
+
+                            ocerraPurchaseOrder.Number = odooPurchaseOrder.Name;
+                            ocerraPurchaseOrder.VendorId = vendor.VendorId;
+                            ocerraPurchaseOrder.ExternalId = externalId;
+                            ocerraPurchaseOrder.ApprovedDate = approvedDate;
+                            ocerraPurchaseOrder.CurrencyCodeId = currencyCodeId;
+                            ocerraPurchaseOrder.DocDate = firstLine?.CreateDate?.Value ?? DateTime.Now;
+                            ocerraPurchaseOrder.IsTaxInclusive = false;
+                            ocerraPurchaseOrder.Total = (double?)firstLine?.ExtendedCost?.Value ?? 0;
+                            ocerraPurchaseOrder.OutstandingCost = (double?)firstLine?.ExtendedCost?.Value ?? 0;
+                            ocerraPurchaseOrder.PurchaserId = odooUser?.Id.ToString();
+                            ocerraPurchaseOrder.PurchaserName = purchaserName;
+                            ocerraPurchaseOrder.PurchaserEmail = purchaserEmail;
+                            ocerraPurchaseOrder.Reference = reference;
+                            ocerraPurchaseOrder.Attributes = new OdooPurchaseOrderDetails
+                            {
+                                JobServiceId = odooPurchaseOrder?.JobServiceId?.Key,
+                                Warehouse = odooPurchaseOrder?.Warehouse?.Key,
+                                Reference = odooPurchaseOrder?.JobServiceId?.Value,
+
+                            }.ToJson();
+
+                            ocerraPurchaseOrder.Status = odooPurchaseOrder.State.ToPascalCase();
+
+                            if (purchaseOrderLines.HasItems())
+                            {
+                                var counter = 1;
+                                foreach (var odooLine in purchaseOrderLines)
+                                {
+                                    var poLine = ocerraPurchaseOrder.PurchaseOrderLines?.FirstOrDefault(l => l.ExternalId == odooLine.Id.ToString())
+                                        ?? new PurchaseOrderLineModel
+                                        {
+                                            ExternalId = odooLine.Id.ToString(),
+                                        };
+
+                                    poLine.ExternalId = odooLine.Id.ToString();
+                                    poLine.Code = odooLine.ProductCode;
+                                    poLine.Cost = (double?)odooLine.ExtendedCost?.Value ?? 0;
+                                    poLine.Quantity = (double?)odooLine.SignedQuantity?.Value ?? 1;
+                                    poLine.Description = odooLine.Description;
+                                    poLine.ItemCodeId = odooLine.ProductCode != null ? GetItemCodeByExternalId(odooLine.ProductCode)?.ItemCodeId : null;
+                                    poLine.Sequence = counter;
+                                    poLine.Attributes = new OdooPurchaseOrderLineAttributes
+                                    {
+                                        MoveType = odooLine.MoveType,
+                                        ProcurementMethod = odooLine.Method,
+                                        DivisionId = odooJob?.Division?.Key,
+                                        DivisionCode = odooJob?.Division?.Value,
+                                        StageId = odooStage?.Id,
+                                        StageName = odooStage.Name?.Value
+                                    }.ToJson();
+
+                                    if (poLine.PurchaseOrderLineId == Guid.Empty)
+                                    {
+                                        poLine.PurchaseOrderLineId = Guid.NewGuid();
+                                        poLine.IsNew = true;
+                                        ocerraPurchaseOrder.PurchaseOrderLines.Add(poLine);
+                                    }
+
+                                    counter++;
+                                }
+
+                                var poLinesForDelete = ocerraPurchaseOrder.PurchaseOrderLines.HasItems() ?
+                                    ocerraPurchaseOrder.PurchaseOrderLines.Where(l => !purchaseOrderLines.Any(ol => ol.Id.ToString() == l.ExternalId)).ToList() : null;
+                                if (poLinesForDelete.HasItems())
+                                    poLinesForDelete.ForEach(l => l.Delete = true);
+                            }
+
+                            await ocerraClient.ApiPurchaseOrderByIdPutAsync(ocerraPurchaseOrder.PurchaseOrderHeaderId, ocerraPurchaseOrder);
+
+                            result.UpdatedItems++;
+                        }
+                    }
+
+                result.Message = "PurchaseOrders imported succsessfuly. Skipped: " + ignored;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                ex.LogError("Error on Job PurchaseOrder Import");
+                result.Message = "There was an error on Job Purchase Order import procedure";
+                return result;
+            }
+        }
 
         Dictionary<string, TaxAccountModel> glAccountsCache = new Dictionary<string, TaxAccountModel>();
         private async Task<TaxAccountModel> GetTaxAccountByExternalId(string externalId) {
@@ -633,7 +1012,7 @@ namespace OcerraOdoo.Services
 
                 try
                 {
-                    var odooUsers = await odooClient.Get<OdooUser[]>(new OdooGetParameters("res.user",
+                    var odooUsers = await odooClient.Get<OdooUser[]>(new OdooGetParameters("res.users",
                     new[] { odooUserId.Value }), new OdooFieldParameters());
 
                     if (odooUsers != null && odooUsers.HasItems())
@@ -649,6 +1028,55 @@ namespace OcerraOdoo.Services
             return null;
         }
 
+        Dictionary<string, OdooUser> odooUserByNameCache = new Dictionary<string, OdooUser>();
+        private async Task<OdooUser> GetOdooUserByName(string name)
+        {
+            if (!string.IsNullOrEmpty(name))
+            {
+                if (odooUserByNameCache.ContainsKey(name))
+                    return odooUserByNameCache[name];
+
+                try
+                {
+                    var odooUsers = await odooClient.Get<OdooUser[]>(new OdooSearchParameters("res.users", 
+                        new OdooDomainFilter().Filter("name", "=", name)), new OdooFieldParameters(new[] {
+                            "id", "name", "login", "email"
+                        }));
+
+                    if (odooUsers != null && odooUsers.HasItems())
+                    {
+                        odooUserByNameCache[name] = odooUsers[0];
+                        return odooUsers[0];
+                    }
+                }
+                catch { }
+
+            }
+
+            return null;
+        }
+
+        Dictionary<string, ODataClient.Proxies.ItemCode> itemCodeByExternalIdCache = new Dictionary<string, ODataClient.Proxies.ItemCode>();
+        private ODataClient.Proxies.ItemCode GetItemCodeByExternalId(string externalId)
+        {
+            if (!string.IsNullOrEmpty(externalId))
+            {
+                if (itemCodeByExternalIdCache.ContainsKey(externalId))
+                    return itemCodeByExternalIdCache[externalId];
+
+                try
+                {
+                    var itemCode = odata.ItemCode.Where(ic => ic.Code == externalId).Take(1).FirstOrDefault();
+                    if (itemCode != null)
+                        itemCodeByExternalIdCache[externalId] = itemCode;
+                    return itemCode;
+                }
+                catch { }
+
+            }
+
+            return null;
+        }
         public async Task<ImportResult> ImportProducts(DateTime lastSyncDate)
         {
             var result = new ImportResult();
@@ -780,6 +1208,134 @@ namespace OcerraOdoo.Services
                 ex.LogError("Error on Product Import");
                 result.Message = "There was an error on product import procedure";
                 return result;
+            }
+        }
+
+        public async Task<ImportResult> ImportPayments(DateTime lastSyncDate)
+        {
+            var result = new ImportResult();
+
+            Regex regex = new Regex(@"(JSPO\d+|PO\d+)", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            
+            try
+            {
+                await Init();
+
+                var filter = new OdooDomainFilter().Filter("write_date", ">=", lastSyncDate).Filter("type", "=", "in_invoice");
+
+                var odooInvoices = await odooClient.Get<OdooBill[]>(new OdooSearchParameters("account.invoice",
+                    filter), new OdooPaginationParameters(0, 1000));
+
+                var invoicesForUpdates = new List<ODataClient.Proxies.VoucherHeader>();
+
+                if (odooInvoices.HasItems())
+                {
+                    foreach (var odooInvoice in odooInvoices)
+                    {
+                        var externalId = odooInvoice.Id.ToString();
+                        var externalVendorId = odooInvoice.PartnerId?.Key?.ToString();
+                        var number = odooInvoice.SupplierInvoiceNumberV8?.Value;
+                        var purchaseNumberMatch = odooInvoice.Origin != null ? regex.Match(odooInvoice.Origin) : null;
+                        var purchaseNumber = purchaseNumberMatch?.Value;
+                        
+                        var ocerraInvoicesByExternalId = externalId != null ?
+                            odata.VoucherHeader.Where(vh => vh.ExternalId == externalId).Take(20).ToList() : null;
+
+                        var ocerraInvoicesByNumber = !ocerraInvoicesByExternalId.HasItems() && externalVendorId != null && number != null ? 
+                            odata.VoucherHeader.Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.Number == number).Take(20).ToList() : null;
+
+                        var ocerraInvoicesByPurchaseOrderDraft = !ocerraInvoicesByNumber.HasItems() && externalVendorId != null && purchaseNumber != null && odooInvoice.State == "draft" ?
+                            odata.VoucherHeader.Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.PurchaseOrderHeader.Number == purchaseNumber).Take(20).ToList() : null;
+
+                        var ocerraInvoicesByPurchaseOrder = !ocerraInvoicesByNumber.HasItems() && externalVendorId != null && purchaseNumber != null ?
+                            odata.VoucherHeader.Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.PurchaseOrderHeader.Number == purchaseNumber).Take(20).ToList() : null;
+
+                        if (ocerraInvoicesByExternalId != null)
+                            foreach (var invoiceById in ocerraInvoicesByExternalId)
+                            {
+                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceById, true);
+                            }
+
+                        if (ocerraInvoicesByNumber != null)
+                            foreach (var invoiceByNumber in ocerraInvoicesByNumber) {
+                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceByNumber, true);
+                            }
+
+                        if (ocerraInvoicesByPurchaseOrderDraft != null)
+                            foreach (var invoiceByPo in ocerraInvoicesByPurchaseOrderDraft)
+                            {
+                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceByPo, false);
+                            }
+
+                        if (ocerraInvoicesByPurchaseOrder != null)
+                            foreach (var invoiceByPo in ocerraInvoicesByPurchaseOrder)
+                            {
+                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceByPo, false);
+                            }
+                    }
+
+                    invoicesForUpdates = invoicesForUpdates.Distinct().ToList();
+
+                    result.UpdatedItems = invoicesForUpdates.Count();
+
+                    foreach (var invoicesForUpdate in invoicesForUpdates)
+                    {
+                        var voucherHeader = await ocerraClient.ApiVoucherHeaderByIdGetAsync(invoicesForUpdate.VoucherHeaderId.Value);
+                        if (voucherHeader != null)
+                        {
+                            voucherHeader.Extra1 = invoicesForUpdate.Extra1;
+                            voucherHeader.Extra2 = invoicesForUpdate.Extra2;
+                            voucherHeader.IsPaid = invoicesForUpdate.IsPaid;
+
+                            //Trim edges, this is an issue on Ocerra side
+                            voucherHeader.CurrencyCode = null;
+                            voucherHeader.PurchaseOrderHeader = null;
+                            voucherHeader.Workflow = null;
+
+                            if (voucherHeader.VoucherLines.HasItems())
+                                foreach (var voucherLine in voucherHeader.VoucherLines)
+                                {
+                                    voucherLine.TaxRate = null;
+                                    voucherLine.TaxAccount = null;
+                                    voucherLine.ItemCode = null;
+                                    voucherLine.PurchaseOrderLine = null;
+                                }
+
+                            await ocerraClient.ApiVoucherHeaderByIdPutAsync(voucherHeader.VoucherHeaderId, voucherHeader);
+                        }
+                    }
+                }
+
+                result.Message = "Payments imported succsessfuly.";
+                return result;
+            }
+            catch (Exception ex)
+            {
+                ex.LogError("Error on Payments Import");
+                result.Message = "There was an error on payments import procedure";
+                return result;
+            }
+        }
+
+        private static void UpdateInvoiceFields(List<VoucherHeader> invoicesForUpdates, 
+            OdooBill odooInvoice, VoucherHeader invoiceById, bool updatePaidInfo)
+        {
+            if (invoiceById.Extra1 == null)
+            {
+                invoiceById.Extra1 = odooInvoice.Id.ToString(); //Copy OdooId to 
+                invoicesForUpdates.Add(invoiceById);
+            }
+
+            if (invoiceById.Extra2 != odooInvoice.State)
+            {
+                invoiceById.Extra2 = odooInvoice.State;
+                invoicesForUpdates.Add(invoiceById);
+            }
+
+            if (updatePaidInfo && odooInvoice.State == "paid" && !invoiceById.IsPaid)
+            {
+                invoiceById.IsPaid = true;
+                invoicesForUpdates.Add(invoiceById);
             }
         }
     }

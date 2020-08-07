@@ -47,7 +47,7 @@ namespace OcerraOdoo.Services
 
             await sched.ScheduleJob(importJob, importTrigger);
 
-            // define the job and tie it to our HelloJob class
+            /*// define the job and tie it to our HelloJob class
             var exportJob = JobBuilder.Create<ExportJob>()
                 .Build();
 
@@ -57,7 +57,7 @@ namespace OcerraOdoo.Services
                 .WithCronSchedule(Settings.Default.ExportCron)
                 .Build();
 
-            await sched.ScheduleJob(exportJob, exportTrigger);
+            await sched.ScheduleJob(exportJob, exportTrigger);*/
 
         }
 
@@ -67,16 +67,24 @@ namespace OcerraOdoo.Services
             {
                 try
                 {
+                    Helpers.LogInfo("Import Odoo entities to Ocerra");
+
                     var settings = Helpers.AppSetting();
                     var importService = (ImportService)Bootstrapper.Container.Resolve(typeof(ImportService));
 
                     await importService.ImportVendors(DateTime.Parse(settings.LastVendorSyncDate));
                     await importService.ImportProducts(DateTime.Parse(settings.LastProductSyncDate));
                     await importService.ImportPurchaseOrders(DateTime.Parse(settings.LastPurchaseSyncDate));
+                    await importService.ImportJobPurchaseOrders(DateTime.Parse(settings.LastJobPurchaseSyncDate));
+                    await importService.ImportPayments(DateTime.Parse(settings.LastPaymentSyncDate));
 
                     settings.LastVendorSyncDate = DateTime.Now.ToString("s");
                     settings.LastProductSyncDate = DateTime.Now.ToString("s");
                     settings.LastPurchaseSyncDate = DateTime.Now.ToString("s");
+                    settings.LastJobPurchaseSyncDate = DateTime.Now.ToString("s");
+                    settings.LastPaymentSyncDate = DateTime.Now.ToString("s");
+
+                    Helpers.AppSetting(settings);
                 } 
                 catch(Exception ex)
                 {
