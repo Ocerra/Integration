@@ -5458,15 +5458,15 @@ namespace OcerraOdoo
     
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public System.Threading.Tasks.Task<VendorModel> ApiVendorsByIdAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body)
+        public System.Threading.Tasks.Task<VendorModel> ApiVendorsByIdPatchAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body)
         {
-            return ApiVendorsByIdAsync(id, body, System.Threading.CancellationToken.None);
+            return ApiVendorsByIdPatchAsync(id, body, System.Threading.CancellationToken.None);
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<VendorModel> ApiVendorsByIdAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body, System.Threading.CancellationToken cancellationToken)
+        public async System.Threading.Tasks.Task<VendorModel> ApiVendorsByIdPatchAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body, System.Threading.CancellationToken cancellationToken)
         {
             if (id == null)
                 throw new System.ArgumentNullException("id");
@@ -5903,15 +5903,15 @@ namespace OcerraOdoo
     
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public System.Threading.Tasks.Task<VoucherHeaderModel> ApiVoucherHeaderByIdAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body)
+        public System.Threading.Tasks.Task<VoucherHeaderModel> ApiVoucherHeaderByIdPatchAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body)
         {
-            return ApiVoucherHeaderByIdAsync(id, body, System.Threading.CancellationToken.None);
+            return ApiVoucherHeaderByIdPatchAsync(id, body, System.Threading.CancellationToken.None);
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<VoucherHeaderModel> ApiVoucherHeaderByIdAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body, System.Threading.CancellationToken cancellationToken)
+        public async System.Threading.Tasks.Task<VoucherHeaderModel> ApiVoucherHeaderByIdPatchAsync(System.Guid id, System.Collections.Generic.IEnumerable<Operation> body, System.Threading.CancellationToken cancellationToken)
         {
             if (id == null)
                 throw new System.ArgumentNullException("id");
@@ -6936,6 +6936,9 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonProperty("previousLoginDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.DateTimeOffset? PreviousLoginDate { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("isActive", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool IsActive { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("person", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public PersonModel Person { get; set; }
     
@@ -6994,6 +6997,9 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonProperty("show", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool Show { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("canApproverEdit", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool CanApproverEdit { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("label", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Label { get; set; }
     
@@ -7018,6 +7024,9 @@ namespace OcerraOdoo
     {
         [Newtonsoft.Json.JsonProperty("canEditOnApprove", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool CanEditOnApprove { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("tabName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string TabName { get; set; }
     
         [Newtonsoft.Json.JsonProperty("extra1", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public ExtraSetting Extra1 { get; set; }
@@ -7146,8 +7155,8 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonProperty("personName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string PersonName { get; set; }
     
-        [Newtonsoft.Json.JsonProperty("extraSettings", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ExtraSettings ExtraSettings { get; set; }
+        [Newtonsoft.Json.JsonProperty("extraSettingsObj", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ExtraSettings ExtraSettingsObj { get; set; }
     
     
     }
@@ -7861,6 +7870,9 @@ namespace OcerraOdoo
         [Newtonsoft.Json.JsonProperty("sequence", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int Sequence { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("schemaName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SchemaName { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("workflowStateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public WorkflowStateTypeModel WorkflowStateType { get; set; }
     
@@ -8366,6 +8378,30 @@ namespace OcerraOdoo
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v11.0.0.0)")]
+    public partial class VoucherValidationModel 
+    {
+        [Newtonsoft.Json.JsonProperty("voucherHeaderId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Guid VoucherHeaderId { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("vendorTaxNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string VendorTaxNumber { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("voucherTaxNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string VoucherTaxNumber { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("hasTotalMatches", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string HasTotalMatches { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("hasGstMatches", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string HasGstMatches { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("hasPoMatches", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string HasPoMatches { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v11.0.0.0)")]
     public partial class VoucherHeaderModel 
     {
         [Newtonsoft.Json.JsonProperty("voucherHeaderId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8517,6 +8553,9 @@ namespace OcerraOdoo
     
         [Newtonsoft.Json.JsonProperty("voucherLines", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<VoucherLineModel> VoucherLines { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("voucherValidation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public VoucherValidationModel VoucherValidation { get; set; }
     
         [Newtonsoft.Json.JsonProperty("extra1", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Extra1 { get; set; }

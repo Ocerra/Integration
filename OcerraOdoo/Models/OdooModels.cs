@@ -77,11 +77,9 @@ namespace OcerraOdoo.Models
         [JsonConverter(typeof(NullableStringJsonConverter))]
         public string Company_Name { get; set; }
 
-        [JsonConverter(typeof(NullableArrayJsonConverter))]
-        public string[] Country_Id { get; set; }
+        public OdooKeyValue Country_Id { get; set; }
 
-        [JsonConverter(typeof(NullableArrayJsonConverter))]
-        public string[] Currency_Id { get; set; }
+        public OdooKeyValue Currency_Id { get; set; }
 
         [JsonProperty("property_account_payable_id")]
         public OdooKeyValue Property_Account_Payable_Id { get; set; }
@@ -465,7 +463,7 @@ namespace OcerraOdoo.Models
         [JsonProperty("product_id")]
         public OdooKeyValue ProductId { get; set; }
         [JsonProperty("invoice_line_tax_id")]
-        public List<List<object>> TaxLineIdsV8 { get; set; }
+        public OdooKeyValue TaxLineIdsV8 { get; set; }
         [JsonProperty("amount_total")]
         public OdooDecimal AmountTotal { get; set; }
         [JsonProperty("amount_untaxed")]

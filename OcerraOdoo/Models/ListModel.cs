@@ -43,6 +43,7 @@ namespace OcerraOdoo.Models
         public string Status { get; set; }
         public string Exported { get; set; }
 
+        public string PoNumber { get; set; }
         public string PoMatches { get; set; }
         public string TotalMatches { get; set; }
 

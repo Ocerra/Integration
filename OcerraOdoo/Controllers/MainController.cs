@@ -59,7 +59,7 @@ namespace OcerraOdoo.Controllers
             Post("/SyncPayments", async args => {
                 var paymentResult = await importService.ImportPayments(Model.LastPaymentSyncDate.ToDate(DateTime.Now.AddDays(-1)));
                 Helpers.AddUpdateAppSettings("LastPaymentSyncDate", DateTime.Now.ToString("s"));
-                return Response.AsJson(new { message = $"Payments Updated: {paymentResult.UpdatedItems}" });
+                return Response.AsJson(new { message = paymentResult.Message });
             });
 
             Post("/SyncInvoices", async args => {

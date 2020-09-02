@@ -15,7 +15,8 @@ namespace OcerraOdoo.OcerraOData
         public OdataProxy() : 
             base(new Uri(Settings.Default.OcerraUrl + "odata"))
         {
-            
+            this.MergeOption = MergeOption.NoTracking;
+
             this.Configurations.RequestPipeline.OnMessageCreating = (a) =>
             {
                 

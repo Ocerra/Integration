@@ -39,7 +39,7 @@ namespace OcerraOdoo
         }
         public static implicit operator string(OdooString d)
         {
-            return d.value;
+            return d?.value;
         }
         public static implicit operator OdooString(string d)
         {

@@ -34,6 +34,7 @@
             "&exportState=" + $("#cmbExported").val() +
             "&state=" + $("#cmbState").val() +
             "&poState=" + $("#cmbPoState").val() +
+            "&reminded=" + $("#cmbReminded").val() +
             "&poMatches=" + $("#cmbPoMatches").val();
 
         if (pageNo)
@@ -41,17 +42,17 @@
 
         window.location = searchStr;
     }
-    
+
     $(document).ready(function () {
-        
+
     });
 </script>
 <h3>Send Reminder to Purchaser</h3>
 <div class="form-group row" style="zoom:80%;">
-    <div class="col-xs-2">
+    <div class="col-xs-4">
         <input id="searchBox" type="text" class="form-control" placeholder="Search by invoice number or vendor name" value="@Model.SearchStr">
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-4">
         <label for="cmbExported" class="col-xs-4 form-label">Exported:</label>
         <div class="col-xs-8">
             <select id="cmbExported" class="form-control">
@@ -71,7 +72,9 @@
             </select>
         </div>
     </div>
-    <div class="col-xs-2">
+</div>
+<div class="form-group row" style="zoom:80%;">
+    <div class="col-xs-4">
         <label for="cmbPoState" class="col-xs-2 form-label">PO:</label>
         <div class="col-xs-10">
             <select id="cmbPoState" class="form-control">
@@ -81,7 +84,8 @@
             </select>
         </div>
     </div>
-    <div class="col-xs-2">
+
+    <div class="col-xs-4">
         <label for="cmbPoMatches" class="col-xs-5 form-label">PO Matches:</label>
         <div class="col-xs-7">
             <select id="cmbPoMatches" class="form-control">
@@ -92,7 +96,17 @@
         </div>
     </div>
     <div class="col-xs-2">
-        <button class="btn btn-secondary" type="button" onclick="searchInvoice()">
+        <label for="cmbReminded" class="col-xs-5 form-label">Reminded:</label>
+        <div class="col-xs-7">
+            <select id="cmbReminded" class="form-control">
+                @Each.Reminded
+                <option @Current.Selected value="@Current.Value">@Current.Value</option>
+                @EndEach
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <button class="btn btn-primary" type="button" onclick="searchInvoice()">
             Search
         </button>
     </div>
@@ -110,6 +124,7 @@
             <th scope="col">PO Status</th>
             <th scope="col">Purchaser</th>
             <th scope="col">Email</th>
+            <th scope="col">Reminded</th>
             <th scope="col"><input type="checkbox" id="exportAllInvoices" onclick="$('.export-invoice:enabled').prop('checked', $('#exportAllInvoices').prop('checked'))" /></th>
         </tr>
     </thead>
@@ -133,6 +148,7 @@
             <td>@Current.POStatus</td>
             <td>@Current.POOriginator</td>
             <td>@Current.POOriginatorEmail</td>
+            <td>@Current.Reminded</td>
             <td title="@Current.CanNotifyMessage">
                 <input type="checkbox" class="export-invoice" name="VoucherHeaderId" value="@Current.VoucherId" @Current.CanNotify />
             </td>

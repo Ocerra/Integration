@@ -8,12 +8,14 @@ using OcerraOdoo.Properties;
 using OdooRpc.CoreCLR.Client;
 using OdooRpc.CoreCLR.Client.Models;
 using OdooRpc.CoreCLR.Client.Models.Parameters;
+using Org.BouncyCastle.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web.Configuration;
 
 namespace OcerraOdoo.Services
 {
@@ -125,8 +127,8 @@ namespace OcerraOdoo.Services
                             {
                                 ClientId = Bootstrapper.OcerraModel.ClientId,
                                 TaxRateId = Guid.NewGuid(),
-                                Code = odooTax.Name,
-                                Description = odooTax.Description,
+                                Code = odooTax.Description,
+                                Description = odooTax.Name,
                                 ExternalId = odooTax.Id.ToString(),
                                 ExternalAccountId = odooTax.Cash_Basis_Base_Account_Id.ToInt(null)?.ToString(),
                                 IsActive = true,
@@ -139,8 +141,8 @@ namespace OcerraOdoo.Services
                         else
                         {
                             ocerraTax.ExternalAccountId = odooTax.Cash_Basis_Base_Account_Id.ToInt(null)?.ToString();
-                            ocerraTax.Code = odooTax.Name;
-                            ocerraTax.Description = odooTax.Description;
+                            ocerraTax.Code = odooTax.Description;
+                            ocerraTax.Description = odooTax.Name;
                             ocerraTax.ExternalId = odooTax.Id.ToString();
                             ocerraTax.ExternalAccountId = odooTax.Cash_Basis_Base_Account_Id.ToInt(null)?.ToString();
                             ocerraTax.IsActive = true;
@@ -325,14 +327,17 @@ namespace OcerraOdoo.Services
                             odooVendor.PropertyStockAccountInputCateg?.Key != null ? await GetTaxAccountByExternalId(odooVendor.PropertyStockAccountInputCateg.Key.ToString()) :
                             null;
 
-                        var countryCode = odooCountryCodes.FirstOrDefault(cc => cc.Id == odooVendor.Country_Id?.FirstOrDefault().ToInt(null))?.Code?.Value
+                        var countryCode = odooCountryCodes.FirstOrDefault(cc => cc.Id == odooVendor.Country_Id?.Key)?.Code?.Value
                                     ?? Bootstrapper.OcerraModel.CountryCode;
 
                         var vendorName = (odooVendor.Company_Name ?? odooVendor.Name).Trim(255);
 
+                        var foreighSupplier = !countryCode.Contains("NZ") || 
+                            (odooVendor.Currency_Id?.Value != null && !odooVendor.Currency_Id.Value.Contains("NZ")) || odooVendor.Name.Contains("USD");
+
                         //Assign Zero tax rate auto for all USD suppliers
-                        var taxRate = new[] { "USD" }.Any(fc => vendorName != null && vendorName.Contains(fc)) ?
-                            taxRates.FirstOrDefault(tr=>tr.Rate == 0 && tr.Code.Contains("Zero")) : null;
+                        var taxRateId = foreighSupplier ? taxRates.FirstOrDefault(tr => tr.Rate == 0 && (tr.Code == "PNT" || tr.Description == "PNT"))?.TaxRateId : null;
+                        taxRateId = taxRateId ?? defaultAccount?.TaxRateId;
 
                         if (ocerraVendor == null)
                         {
@@ -349,7 +354,7 @@ namespace OcerraOdoo.Services
                                 ExternalId = odooVendor.Id.ToString(),
                                 PhoneNumber = odooVendor.Phone,
                                 DefaultTaxAccountId = defaultAccount?.TaxAccountId,
-                                DefaultTaxRateId = defaultAccount?.TaxRateId,
+                                DefaultTaxRateId = taxRateId,
                                 TaxNumber = odooVendor.Vat
                             };
                             
@@ -375,7 +380,7 @@ namespace OcerraOdoo.Services
                             ocerraVendor.CurrencyCodeId = Bootstrapper.OcerraModel.CurrencyCodes?
                                 .FirstOrDefault(cc => cc.CountryCode == ocerraVendor.CountryCode)?.CurrencyCodeId;
                             ocerraVendor.DefaultTaxAccountId = defaultAccount?.TaxAccountId;
-                            ocerraVendor.DefaultTaxRateId = defaultAccount?.TaxRateId;
+                            ocerraVendor.DefaultTaxRateId = taxRateId;
                             ocerraVendor.TaxNumber = odooVendor.Vat ?? ocerraVendor.TaxNumber;
 
                             await ocerraClient.ApiVendorsByIdPutAsync(ocerraVendor.VendorId, ocerraVendor);
@@ -875,7 +880,7 @@ namespace OcerraOdoo.Services
                                         Code = odooLine.ProductCode,
                                         Cost = (double?)odooLine.ExtendedCost?.Value ?? 0,
                                         Quantity = (double?)odooLine.SignedQuantity?.Value ?? 1,
-                                        Description = odooLine.Description,
+                                        Description = odooLine.Description.Trim(255),
                                         ItemCodeId = odooLine.ProductCode != null ? GetItemCodeByExternalId(odooLine.ProductCode)?.ItemCodeId : null,
                                         Sequence = counter,
                                         Attributes = new OdooPurchaseOrderLineAttributes
@@ -1215,7 +1220,7 @@ namespace OcerraOdoo.Services
         {
             var result = new ImportResult();
 
-            Regex regex = new Regex(@"(JSPO\d+|PO\d+)", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            var regex = new Regex(@"(JSPO\d+|PO\d+)", RegexOptions.IgnoreCase | RegexOptions.Singleline);
             
             try
             {
@@ -1230,83 +1235,126 @@ namespace OcerraOdoo.Services
 
                 if (odooInvoices.HasItems())
                 {
-                    foreach (var odooInvoice in odooInvoices)
+                    foreach (var odooInvoice in odooInvoices.OrderBy(io => io.Id))
                     {
                         var externalId = odooInvoice.Id.ToString();
                         var externalVendorId = odooInvoice.PartnerId?.Key?.ToString();
                         var number = odooInvoice.SupplierInvoiceNumberV8?.Value;
+                        number = number != null && number.Length > 2 ? number : null;
                         var purchaseNumberMatch = odooInvoice.Origin != null ? regex.Match(odooInvoice.Origin) : null;
                         var purchaseNumber = purchaseNumberMatch?.Value;
-                        
+
                         var ocerraInvoicesByExternalId = externalId != null ?
-                            odata.VoucherHeader.Where(vh => vh.ExternalId == externalId).Take(20).ToList() : null;
+                            odata.VoucherHeader.Where(vh => vh.ExternalId == externalId || vh.Extra1 == externalId).Take(20).ToList() : null; //exclude duplicate matching
 
-                        var ocerraInvoicesByNumber = !ocerraInvoicesByExternalId.HasItems() && externalVendorId != null && number != null ? 
-                            odata.VoucherHeader.Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.Number == number).Take(20).ToList() : null;
+                        var ocerraInvoicesByNumber = !ocerraInvoicesByExternalId.HasItems() && externalVendorId != null && number != null ?
+                            odata.VoucherHeader.Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.Number == number && (vh.Extra1 == null || vh.Extra1 == "")).Take(20).ToList() : null;
 
-                        var ocerraInvoicesByPurchaseOrderDraft = !ocerraInvoicesByNumber.HasItems() && externalVendorId != null && purchaseNumber != null && odooInvoice.State == "draft" ?
-                            odata.VoucherHeader.Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.PurchaseOrderHeader.Number == purchaseNumber).Take(20).ToList() : null;
+                        var ocerraInvoicesByPurchaseOrder = !ocerraInvoicesByNumber.HasItems() && externalVendorId != null && purchaseNumber != null && number == null ?
+                            odata.VoucherHeader
+                                .Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.PurchaseOrderHeader.Number == purchaseNumber && (vh.Extra1 == null || vh.Extra1 == ""))
+                                .OrderBy(vh => vh.CreatedDate)
+                                .Take(20)
+                                .ToList() : null;
 
-                        var ocerraInvoicesByPurchaseOrder = !ocerraInvoicesByNumber.HasItems() && externalVendorId != null && purchaseNumber != null ?
-                            odata.VoucherHeader.Where(vh => vh.Vendor.ExternalId == externalVendorId && vh.PurchaseOrderHeader.Number == purchaseNumber).Take(20).ToList() : null;
 
-                        if (ocerraInvoicesByExternalId != null)
+                        if (ocerraInvoicesByExternalId.HasItems())
                             foreach (var invoiceById in ocerraInvoicesByExternalId)
                             {
-                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceById, true);
+                                var odooInvoiceTxt = $"{odooInvoice.SupplierInvoiceNumberV8} / {odooInvoice.AmountTotalV8?.Value}";
+                                var ocerraInvoiceTxt = $"{invoiceById.Number} / {invoiceById.FcGross}";
+                                await UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceById, true);
                             }
 
-                        if (ocerraInvoicesByNumber != null)
-                            foreach (var invoiceByNumber in ocerraInvoicesByNumber) {
-                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceByNumber, true);
-                            }
-
-                        if (ocerraInvoicesByPurchaseOrderDraft != null)
-                            foreach (var invoiceByPo in ocerraInvoicesByPurchaseOrderDraft)
+                        if (ocerraInvoicesByNumber.HasItems())
+                            foreach (var invoiceByNumber in ocerraInvoicesByNumber)
                             {
-                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceByPo, false);
+                                var odooInvoiceTxt = $"{odooInvoice.SupplierInvoiceNumberV8} / {odooInvoice.AmountTotalV8?.Value}";
+                                var ocerraInvoiceTxt = $"{invoiceByNumber.Number} / {invoiceByNumber.FcGross}";
+                                await UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceByNumber, true);
                             }
 
-                        if (ocerraInvoicesByPurchaseOrder != null)
-                            foreach (var invoiceByPo in ocerraInvoicesByPurchaseOrder)
-                            {
-                                UpdateInvoiceFields(invoicesForUpdates, odooInvoice, invoiceByPo, false);
-                            }
-                    }
-
-                    invoicesForUpdates = invoicesForUpdates.Distinct().ToList();
-
-                    result.UpdatedItems = invoicesForUpdates.Count();
-
-                    foreach (var invoicesForUpdate in invoicesForUpdates)
-                    {
-                        var voucherHeader = await ocerraClient.ApiVoucherHeaderByIdGetAsync(invoicesForUpdate.VoucherHeaderId.Value);
-                        if (voucherHeader != null)
+                        //search invoice by amount
+                        if (ocerraInvoicesByPurchaseOrder.HasItems())
                         {
-                            voucherHeader.Extra1 = invoicesForUpdate.Extra1;
-                            voucherHeader.Extra2 = invoicesForUpdate.Extra2;
-                            voucherHeader.IsPaid = invoicesForUpdate.IsPaid;
-
-                            //Trim edges, this is an issue on Ocerra side
-                            voucherHeader.CurrencyCode = null;
-                            voucherHeader.PurchaseOrderHeader = null;
-                            voucherHeader.Workflow = null;
-
-                            if (voucherHeader.VoucherLines.HasItems())
-                                foreach (var voucherLine in voucherHeader.VoucherLines)
-                                {
-                                    voucherLine.TaxRate = null;
-                                    voucherLine.TaxAccount = null;
-                                    voucherLine.ItemCode = null;
-                                    voucherLine.PurchaseOrderLine = null;
-                                }
-
-                            await ocerraClient.ApiVoucherHeaderByIdPutAsync(voucherHeader.VoucherHeaderId, voucherHeader);
+                            var matchingInvoice = ocerraInvoicesByPurchaseOrder
+                                .OrderBy(oi => Math.Abs((oi.FcGross ?? 0) - (odooInvoice.AmountTotalV8?.Value ?? 0)))
+                                    .ThenBy(oi => oi.CreatedDate)
+                                .FirstOrDefault();
+                            if (matchingInvoice != null)
+                            {
+                                var odooInvoiceTxt = $"{odooInvoice.SupplierInvoiceNumberV8} / {odooInvoice.AmountTotalV8?.Value}";
+                                var ocerraInvoiceTxt = $"{matchingInvoice.Number} / {matchingInvoice.FcGross}";
+                                await UpdateInvoiceFields(invoicesForUpdates, odooInvoice, matchingInvoice, false);
+                            }
                         }
                     }
                 }
 
-                result.Message = "Payments imported succsessfuly.";
+                //Find 100 last updated invoices without OdooId-draft invoice
+                var reverseSearch = odata.VoucherHeader
+                    .Expand("PurchaseOrderHeader($select=PurchaseOrderHeaderId,Number)")
+                    .Where(vh => vh.VendorId != null && vh.PurchaseOrderHeaderId != null && vh.UpdatedDate > lastSyncDate)
+                    .OrderBy(vh => vh.CreatedDate)
+                    .Take(100)
+                    .ToList();
+
+                //Reverse search by PO
+                foreach (var reverseInvoice in reverseSearch.Where(i => i.Extra1 == null || i.Extra1 == ""))
+                {
+                    var odooInvoiceFilter = new OdooDomainFilter()
+                        .Filter("origin", "ilike", reverseInvoice.PurchaseOrderHeader.Number)
+                        .Filter("type", "=", "in_invoice");
+
+                    var odooInvoicesByOrigin = await odooClient.Get<OdooBill[]>(new OdooSearchParameters("account.invoice",
+                        odooInvoiceFilter), new OdooPaginationParameters(0, 10));
+
+                    if (odooInvoicesByOrigin.HasItems())
+                    {
+                        var odooInvoiceByOrigin =
+                            odooInvoicesByOrigin.FirstOrDefault(ob => ob.SupplierInvoiceNumberV8 == reverseInvoice.Number) ??
+                            odooInvoicesByOrigin
+                                .Where(ob => !invoicesForUpdates.Any(i=>i.Extra1 == ob.Id.ToString()))
+                                .OrderBy(ob => Math.Abs((ob.AmountTotalV8.Value ?? 0) - (reverseInvoice.FcNet ?? 0)))
+                                .FirstOrDefault(ob => (string.IsNullOrEmpty(ob.SupplierInvoiceNumberV8) || ob.SupplierInvoiceNumberV8.Value.Length < 2) && ob.State == "draft");
+
+                        if (odooInvoiceByOrigin != null)
+                        {
+                            var odooInvoiceTxt = $"{odooInvoiceByOrigin.SupplierInvoiceNumberV8} / {odooInvoiceByOrigin.AmountTotalV8?.Value}";
+                            var ocerraInvoiceTxt = $"{reverseInvoice.Number} / {reverseInvoice.FcGross}";
+                            await UpdateInvoiceFields(invoicesForUpdates, odooInvoiceByOrigin, reverseInvoice, false);
+                        }
+                    }
+                }
+
+                //Reverse search by ExternalId
+                var odooBillIds = reverseSearch.Where(i => !string.IsNullOrEmpty(i.Extra1) || !string.IsNullOrEmpty(i.ExternalId))
+                    .Select(i => i.ExternalId != null ? i.ExternalId.ToLong(0) : i.Extra1.ToLong(0)).ToArray();
+
+                var reverseOdooBills = odooBillIds.HasItems() ? await odooClient.Get<OdooBill[]>(new OdooGetParameters("account.invoice", odooBillIds)) : null;
+
+                if(reverseOdooBills != null)
+                    foreach (var reverseOdooInvoice in reverseOdooBills)
+                    {
+                        var reverseInvoice = reverseSearch
+                            .FirstOrDefault(i => i.ExternalId == reverseOdooInvoice.Id.ToString() || i.Extra1 == reverseOdooInvoice.Id.ToString());
+
+                        if (reverseInvoice != null)
+                        {
+                            var odooInvoiceTxt = $"{reverseOdooInvoice.SupplierInvoiceNumberV8} / {reverseOdooInvoice.AmountTotalV8?.Value}";
+                            var ocerraInvoiceTxt = $"{reverseInvoice.Number} / {reverseInvoice.FcGross}";
+                            await UpdateInvoiceFields(invoicesForUpdates, reverseOdooInvoice, reverseInvoice, false);
+                        }
+                    }
+
+                invoicesForUpdates = invoicesForUpdates.Distinct().ToList();
+
+                result.UpdatedItems = invoicesForUpdates.Count();
+                
+                //await PatchInvoices(invoicesForUpdates); - update as we go
+
+                result.Message = "Payments imported succsessfuly: " + result.UpdatedItems;
+
                 return result;
             }
             catch (Exception ex)
@@ -1317,26 +1365,83 @@ namespace OcerraOdoo.Services
             }
         }
 
-        private static void UpdateInvoiceFields(List<VoucherHeader> invoicesForUpdates, 
+        private async Task PatchInvoices(List<VoucherHeader> invoicesForUpdates)
+        {
+            foreach (var invoicesForUpdate in invoicesForUpdates)
+            {
+                await ocerraClient.ApiVoucherHeaderByIdPatchAsync(invoicesForUpdate.VoucherHeaderId.Value, new List<Operation> {
+                            new Operation
+                            {
+                                Path = "Extra1",
+                                Op = "replace",
+                                Value = invoicesForUpdate.Extra1
+                            },
+                            new Operation
+                            {
+                                Path = "Extra2",
+                                Op = "replace",
+                                Value = invoicesForUpdate.Extra2
+                            },
+                            new Operation
+                            {
+                                Path = "IsPaid",
+                                Op = "replace",
+                                Value = invoicesForUpdate.IsPaid
+                            }
+                        });
+            }
+        }
+
+        private async Task UpdateInvoiceFields(List<VoucherHeader> invoicesForUpdates, 
             OdooBill odooInvoice, VoucherHeader invoiceById, bool updatePaidInfo)
         {
-            if (invoiceById.Extra1 == null)
+            //Ignore updated invoices
+            if (invoicesForUpdates.Any(u => u.VoucherHeaderId == invoiceById.VoucherHeaderId))
+                return;
+
+            var added = false;
+            if (string.IsNullOrEmpty(invoiceById.Extra1))
             {
                 invoiceById.Extra1 = odooInvoice.Id.ToString(); //Copy OdooId to 
                 invoicesForUpdates.Add(invoiceById);
+                added = true;
             }
 
             if (invoiceById.Extra2 != odooInvoice.State)
             {
                 invoiceById.Extra2 = odooInvoice.State;
                 invoicesForUpdates.Add(invoiceById);
+                added = true;
             }
 
             if (updatePaidInfo && odooInvoice.State == "paid" && !invoiceById.IsPaid)
             {
                 invoiceById.IsPaid = true;
                 invoicesForUpdates.Add(invoiceById);
+                added = true;
             }
+
+            if(added)
+                await ocerraClient.ApiVoucherHeaderByIdPatchAsync(invoiceById.VoucherHeaderId.Value, new List<Operation> {
+                    new Operation
+                    {
+                        Path = "Extra1",
+                        Op = "replace",
+                        Value = invoiceById.Extra1
+                    },
+                    new Operation
+                    {
+                        Path = "Extra2",
+                        Op = "replace",
+                        Value = invoiceById.Extra2
+                    },
+                    new Operation
+                    {
+                        Path = "IsPaid",
+                        Op = "replace",
+                        Value = invoiceById.IsPaid
+                    }
+                });
         }
     }
 }

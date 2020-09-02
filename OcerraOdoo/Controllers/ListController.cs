@@ -32,7 +32,7 @@ namespace OcerraOdoo.Controllers
                 var workflowStates = odata.WorkflowState.ToList();
 
                 var query = odata.VoucherHeader
-                    .Expand("vendor,workflow($expand=workflowState),voucherValidation");
+                    .Expand("vendor,workflow($expand=workflowState),voucherValidation,purchaseOrderHeader");
 
                 query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.IsActive && !vh.IsArchived);
 
@@ -76,13 +76,17 @@ namespace OcerraOdoo.Controllers
                     DueDate = vh.DueDate != null ? vh.DueDate.Value.ToString("dd-MMM-yy") : "",
                     Amount = vh.FcGross != null ? vh.FcGross.Value.ToString("C") : "$0.00",
                     Exported = vh.ExternalId != null ? "Yes" : "",
-                    CanExport = vh.Vendor != null && vh.FcGross != null && vh.FcNet != null
-                        && vh.VoucherValidation.HasTotalMatches != "Fail" ? "" : "disabled='disabled'",
+                    CanExport = 
+                        vh.PurchaseOrderHeader?.Number != null && vh.PurchaseOrderHeader.Number.Contains("JSPO") && vh.Extra1 == null ? "disabled='disabled'" :
+                        vh.Vendor != null && vh.FcGross != null && vh.FcNet != null && vh.VoucherValidation.HasTotalMatches != "Fail" ? "" : 
+                        "disabled='disabled'",
                     CanExportMessage =
+                        vh.PurchaseOrderHeader?.Number != null && vh.PurchaseOrderHeader.Number.Contains("JSPO") && vh.Extra1 == null ? "You cannot export Job Invoice without Draft invoice in Odoo." :
                         vh.Vendor == null ? "You cannot export Invoice without vendor" :
                         vh.FcGross == null ? "You cannot export Invoice without amount" :
                         vh.VoucherValidation.HasTotalMatches == "Fail" ? "You cannot export Invoice without matching amounts" :
                         null,
+                    PoNumber = vh.PurchaseOrderHeader?.Number,
                     PoMatches =
                         vh.VoucherValidation.HasPoMatches == "Ignore" ? "" :
                         vh.VoucherValidation.HasPoMatches == "Success" ? "Yes"
@@ -92,7 +96,7 @@ namespace OcerraOdoo.Controllers
                         vh.VoucherValidation.HasTotalMatches == "Success" ? "Yes"
                             : "<b class='red'>No</b>",
                     Paid = vh.IsPaid ? "Yes" : "",
-                    OdooLink = vh.Extra1 != null ? $"<a href='https://erp.ohl.co.nz/web#id={vh.Extra1}&view_type=form&model=account.invoice&action=242' target='_blank'>{vh.Extra2}</a>" : ""
+                    OdooLink = vh.Extra1 != null ? $"<a href='https://{Settings.Default.OdooUrl}/web#id={vh.Extra1}&view_type=form&model=account.invoice&action=242' target='_blank'>{vh.Extra2}</a>" : ""
                     //PurchaseOrder = vh.VoucherPurchaseOrders.FirstOrDefault()?.PurchaseOrderHeader?.Number 
                 }).ToList();
 

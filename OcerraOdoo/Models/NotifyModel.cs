@@ -22,7 +22,7 @@ namespace OcerraOdoo.Models
 
         public List<PickerModel> PoMatches { get; set; }
         public List<PickerModel> ExportStates { get; set; }
-
+        public List<PickerModel> Reminded { get; set; }
         public List<PickerModel> States { get; set; }
         public List<PickerModel> PoStates { get; set; }
     }
@@ -94,5 +94,7 @@ namespace OcerraOdoo.Models
         public string Date { get; set; }
 
         public string Total { get; set; }
+
+        public string Reminded { get; set; }
     }
 }

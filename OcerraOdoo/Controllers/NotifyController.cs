@@ -26,6 +26,7 @@ namespace OcerraOdoo.Controllers
                 string state = Request.Query.state;
                 string poState = Request.Query.poState;
                 string poMatches = Request.Query.poMatches;
+                string reminded = Request.Query.reminded;
 
                 var query = odata.VoucherHeader
                     .Expand("vendor,workflow($expand=workflowState),voucherValidation,purchaseOrderHeader");
@@ -55,6 +56,14 @@ namespace OcerraOdoo.Controllers
                 if (IsDefined(poState))
                     query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.PurchaseOrderHeader.Status == poState);
 
+                if (IsDefined(reminded)) {
+                    if (reminded == "Yes")
+                        query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Extra5 == "Yes");
+                    else 
+                        query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.Where(vh => vh.Extra5 == null);
+                }
+                    
+
                 query = (DataServiceQuery<ODataClient.Proxies.VoucherHeader>)query.OrderByDescending(vh => vh.CreatedDate).Skip((page - 1) * 20).Take(20);
 
                 Model.Reminders = query
@@ -76,7 +85,8 @@ namespace OcerraOdoo.Controllers
                     CanNotifyMessage =
                         vh.PurchaseOrderHeader == null ? "You cannot notify without the Purchase Order" :
                         null,
-                    Total = vh.FcGross?.ToString("C") ?? "$0.00"
+                    Total = vh.FcGross?.ToString("C") ?? "$0.00",
+                    Reminded = vh.Extra5 ?? ""
                 }).ToList();
 
                 var totalCount = query.Count();
@@ -88,6 +98,10 @@ namespace OcerraOdoo.Controllers
                 Model.ExportStates = PickerModel.YesNo;
                 if (IsDefined(exportState))
                     Model.ExportStates.Find(s => s.Value == exportState).Selected = "selected";
+
+                Model.Reminded = PickerModel.YesNo;
+                if (IsDefined(reminded))
+                    Model.Reminded.Find(s => s.Value == reminded).Selected = "selected";
 
                 Model.PoMatches = PickerModel.YesNo;
                 if (IsDefined(poMatches))

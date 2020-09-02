@@ -43,8 +43,17 @@ namespace OcerraOdoo.Services
                     if (ocerraInvoice != null)
                     {
                         var reminded = await SendEmail(ocerraInvoice);
-                        if (reminded)
+                        if (reminded) {
                             result++;
+                            await ocerraClient.ApiVoucherHeaderByIdPatchAsync(ocerraInvoice.VoucherHeaderId.Value,new List<Operation> { new Operation
+                                {
+                                    Path = "/Extra5",
+                                    Op = "replace",
+                                    Value = "Yes"
+                                } 
+                            });
+                        }
+                            
                     }
                     else
                     {
