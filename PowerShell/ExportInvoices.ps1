@@ -83,7 +83,8 @@ function ExportFiles {
     #convert invoices to a custom format
     ForEach($invoice In $allInvoices.value){
         $invoiceNumber = If($invoice.number) { $invoice.number } Else { 'Unknown' }
-        $fileName = $invoiceNumber + " - " + $invoice.document.storedFile.originalName;
+        #$fileName = $invoiceNumber + " - " + $invoice.document.storedFile.originalName;
+		$fileName = $invoice.vendor.name + " - " + $invoiceNumber + ".pdf";
         $fileId = $invoice.document.storedFile.storedFileId;
         
         [System.Collections.ArrayList]$invoiceLines = @();
