@@ -69,8 +69,8 @@ function ExportFiles {
 
     $odataRequest = 'https://app.ocerra.com/odata/VoucherHeader?' + 
 		'$skip=0&' + 
-		'$top=500&' + 
-		'$orderby=CreatedDate desc&' + 
+		'$top=1000&' + 
+		'$orderby=CreatedDate asc&' + 
 		'$count=true&' + 
 		'$filter=IsActive eq true and UpdatedDate ge ' + $timeStamp.ToString("yyyy-MM-ddTHH:mm:ss.000Z") + ' and (Workflow/WorkflowState/Name eq ''Approved'')&' + 
 		'$expand=Vendor,VoucherLines,Workflow($expand=WorkflowState),Document($expand=DocumentType,StoredFile)'
@@ -85,6 +85,7 @@ function ExportFiles {
         $invoiceNumber = If($invoice.number) { $invoice.number } Else { 'Unknown' }
         #$fileName = $invoiceNumber + " - " + $invoice.document.storedFile.originalName;
 		$fileName = $invoice.vendor.name + " - " + $invoiceNumber + ".pdf";
+        $fileName = $fileName -replace "[\\/]", "-";
         $fileId = $invoice.document.storedFile.storedFileId;
         
         [System.Collections.ArrayList]$invoiceLines = @();
@@ -105,6 +106,12 @@ function ExportFiles {
             "Lines" = $invoiceLines;
         });
 
+        $invoiceDate = [datetime]$invoice.createdDate;
+
+        $folderMonth = $folder + "\" + $invoiceDate.ToString("yyyy-MM") +"\"
+    
+        $dest = New-Item -ItemType Directory -Force -Path $folderMonth
+	
         $url = "https://app.ocerra.com/api/Files/Download?storedFileId=$($fileId)"
         $fileHandler = Invoke-WebRequest `
             -Uri $url `
