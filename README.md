@@ -1,4 +1,4 @@
 # Integration
 Ocerra is [AP Automation Software](https://www.ocerra.com) that integrates with powershell scripts, Power BI Dashboards and exposes Open API (Swagger) specification 
 
-Ocerra is an AP automation software that takes away manual data entry, keep track of all supplier invoices in one system. We capture, recognize invoices, extracts invoice data and export into your accounting system.
+Ocerra is an AP automation software that eliminates manual data entry by capturing and recognising supplier invoices. It extracts invoice data and exports it into accounting systems. Additionally, Ocerra integrates with PowerShell scripts, Power BI dashboards, and exposes an Open API with Swagger specification. This allows for enhanced tracking and management of all supplier invoices in one system.
